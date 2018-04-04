@@ -1,0 +1,10 @@
+/root/ikn/Oevelse6/C#/Exercise_6_c#_V7/file_client/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/root/ikn/Oevelse6/C#/Exercise_6_c#_V7/file_client/bin/Debug/file_client.exe.mdb
+/root/ikn/Oevelse6/C#/Exercise_6_c#_V7/file_client/bin/Debug/file_client.exe
+/root/ikn/Oevelse6/C#/Exercise_6_c#_V7/file_client/obj/x86/Debug/file_client.exe
+/root/ikn/Oevelse6/C#/Exercise_6_c#_V7/file_client/obj/x86/Debug/file_client.exe.mdb
+/root/ikn/Oevelse6/C#/Exercise_6_c#_V8/file_client/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/root/ikn/Oevelse6/C#/Exercise_6_c#_V8/file_client/bin/Debug/file_client.exe.mdb
+/root/ikn/Oevelse6/C#/Exercise_6_c#_V8/file_client/bin/Debug/file_client.exe
+/root/ikn/Oevelse6/C#/Exercise_6_c#_V8/file_client/obj/x86/Debug/file_client.exe
+/root/ikn/Oevelse6/C#/Exercise_6_c#_V8/file_client/obj/x86/Debug/file_client.exe.mdb
