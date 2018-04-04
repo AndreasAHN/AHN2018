@@ -1,0 +1,3697 @@
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"stepperRight.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.stepperRight,"ax",%progbits
+  20              		.align	2
+  21              		.global	stepperRight
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	stepperRight, %function
+  25              	stepperRight:
+  26              	.LFB0:
+  27              		.file 1 "stepperRight.c"
+   1:stepperRight.c **** /* ========================================
+   2:stepperRight.c ****  *
+   3:stepperRight.c ****  * Copyright YOUR COMPANY, THE YEAR
+   4:stepperRight.c ****  * All Rights Reserved
+   5:stepperRight.c ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:stepperRight.c ****  *
+   7:stepperRight.c ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:stepperRight.c ****  * WHICH IS THE PROPERTY OF your company.
+   9:stepperRight.c ****  *
+  10:stepperRight.c ****  * ========================================
+  11:stepperRight.c **** */
+  12:stepperRight.c **** 
+  13:stepperRight.c **** void stepperRight(int stepMode, int status, int hastighed)
+  14:stepperRight.c **** {
+  28              		.loc 1 14 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              	.LVL0:
+  33 0000 38B5     		push	{r3, r4, r5, lr}
+  34              		.cfi_def_cfa_offset 16
+  35              		.cfi_offset 3, -16
+  36              		.cfi_offset 4, -12
+  37              		.cfi_offset 5, -8
+  38              		.cfi_offset 14, -4
+  39 0002 0C46     		mov	r4, r1
+  40 0004 1546     		mov	r5, r2
+  15:stepperRight.c **** 
+  16:stepperRight.c ****         
+  17:stepperRight.c ****              if(stepMode == 1) //Full mode
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 2
+
+
+  41              		.loc 1 17 0
+  42 0006 0128     		cmp	r0, #1
+  43 0008 7CD1     		bne	.L2
+  18:stepperRight.c ****             {
+  19:stepperRight.c ****                  if(status == 2)//Kører forlæns
+  44              		.loc 1 19 0
+  45 000a 0229     		cmp	r1, #2
+  46 000c 3AD1     		bne	.L3
+  47              	.LBB2:
+  20:stepperRight.c ****                     {
+  21:stepperRight.c ****                         //Step 1
+  22:stepperRight.c ****                         A3_Write(1);
+  48              		.loc 1 22 0
+  49 000e FFF7FEFF 		bl	A3_Write
+  50              	.LVL1:
+  23:stepperRight.c ****                         A4_Write(0);
+  51              		.loc 1 23 0
+  52 0012 0020     		movs	r0, #0
+  53 0014 FFF7FEFF 		bl	A4_Write
+  54              	.LVL2:
+  24:stepperRight.c ****                         B3_Write(0);
+  55              		.loc 1 24 0
+  56 0018 0020     		movs	r0, #0
+  57 001a FFF7FEFF 		bl	B3_Write
+  58              	.LVL3:
+  25:stepperRight.c ****                         B4_Write(1);
+  59              		.loc 1 25 0
+  60 001e 0120     		movs	r0, #1
+  61 0020 FFF7FEFF 		bl	B4_Write
+  62              	.LVL4:
+  26:stepperRight.c ****                         CyDelayUs(hastighed);
+  63              		.loc 1 26 0
+  64 0024 2846     		mov	r0, r5
+  65 0026 FFF7FEFF 		bl	CyDelayUs
+  66              	.LVL5:
+  27:stepperRight.c ****                         
+  28:stepperRight.c ****                         //Step 2
+  29:stepperRight.c ****                         A3_Write(1);
+  67              		.loc 1 29 0
+  68 002a 0120     		movs	r0, #1
+  69 002c FFF7FEFF 		bl	A3_Write
+  70              	.LVL6:
+  30:stepperRight.c ****                         A4_Write(1);
+  71              		.loc 1 30 0
+  72 0030 0120     		movs	r0, #1
+  73 0032 FFF7FEFF 		bl	A4_Write
+  74              	.LVL7:
+  31:stepperRight.c ****                         B3_Write(0);
+  75              		.loc 1 31 0
+  76 0036 0020     		movs	r0, #0
+  77 0038 FFF7FEFF 		bl	B3_Write
+  78              	.LVL8:
+  32:stepperRight.c ****                         B4_Write(0);
+  79              		.loc 1 32 0
+  80 003c 0020     		movs	r0, #0
+  81 003e FFF7FEFF 		bl	B4_Write
+  82              	.LVL9:
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 3
+
+
+  33:stepperRight.c ****                         CyDelayUs(hastighed);
+  83              		.loc 1 33 0
+  84 0042 2846     		mov	r0, r5
+  85 0044 FFF7FEFF 		bl	CyDelayUs
+  86              	.LVL10:
+  34:stepperRight.c ****                                                            
+  35:stepperRight.c ****                         //Step 3
+  36:stepperRight.c ****                         A3_Write(0);
+  87              		.loc 1 36 0
+  88 0048 0020     		movs	r0, #0
+  89 004a FFF7FEFF 		bl	A3_Write
+  90              	.LVL11:
+  37:stepperRight.c ****                         A4_Write(1);
+  91              		.loc 1 37 0
+  92 004e 0120     		movs	r0, #1
+  93 0050 FFF7FEFF 		bl	A4_Write
+  94              	.LVL12:
+  38:stepperRight.c ****                         B3_Write(1);
+  95              		.loc 1 38 0
+  96 0054 0120     		movs	r0, #1
+  97 0056 FFF7FEFF 		bl	B3_Write
+  98              	.LVL13:
+  39:stepperRight.c ****                         B4_Write(0);
+  99              		.loc 1 39 0
+ 100 005a 0020     		movs	r0, #0
+ 101 005c FFF7FEFF 		bl	B4_Write
+ 102              	.LVL14:
+  40:stepperRight.c ****                         CyDelayUs(hastighed);
+ 103              		.loc 1 40 0
+ 104 0060 2846     		mov	r0, r5
+ 105 0062 FFF7FEFF 		bl	CyDelayUs
+ 106              	.LVL15:
+  41:stepperRight.c ****                                     
+  42:stepperRight.c ****                                                          
+  43:stepperRight.c ****                         //Step 4
+  44:stepperRight.c ****                         A3_Write(0);
+ 107              		.loc 1 44 0
+ 108 0066 0020     		movs	r0, #0
+ 109 0068 FFF7FEFF 		bl	A3_Write
+ 110              	.LVL16:
+  45:stepperRight.c ****                         A4_Write(0);
+ 111              		.loc 1 45 0
+ 112 006c 0020     		movs	r0, #0
+ 113 006e FFF7FEFF 		bl	A4_Write
+ 114              	.LVL17:
+  46:stepperRight.c ****                         B3_Write(1);
+ 115              		.loc 1 46 0
+ 116 0072 0120     		movs	r0, #1
+ 117 0074 FFF7FEFF 		bl	B3_Write
+ 118              	.LVL18:
+  47:stepperRight.c ****                         B4_Write(1);
+ 119              		.loc 1 47 0
+ 120 0078 0120     		movs	r0, #1
+ 121 007a FFF7FEFF 		bl	B4_Write
+ 122              	.LVL19:
+  48:stepperRight.c ****                         CyDelayUs(hastighed);
+ 123              		.loc 1 48 0
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 4
+
+
+ 124 007e 2846     		mov	r0, r5
+ 125 0080 FFF7FEFF 		bl	CyDelayUs
+ 126              	.LVL20:
+ 127              	.L3:
+ 128              	.LBE2:
+  49:stepperRight.c ****                         
+  50:stepperRight.c **** 
+  51:stepperRight.c ****                         
+  52:stepperRight.c **** 
+  53:stepperRight.c ****                     }
+  54:stepperRight.c ****                     
+  55:stepperRight.c ****            
+  56:stepperRight.c ****                     
+  57:stepperRight.c ****                    if(status == 1) //Kører baglæns
+ 129              		.loc 1 57 0
+ 130 0084 012C     		cmp	r4, #1
+ 131 0086 40F0B481 		bne	.L1
+ 132              	.LBB3:
+  58:stepperRight.c ****                     {
+  59:stepperRight.c ****                         //Step 1
+  60:stepperRight.c ****                         A3_Write(0);
+ 133              		.loc 1 60 0
+ 134 008a 0020     		movs	r0, #0
+ 135 008c FFF7FEFF 		bl	A3_Write
+ 136              	.LVL21:
+  61:stepperRight.c ****                         A4_Write(0);
+ 137              		.loc 1 61 0
+ 138 0090 0020     		movs	r0, #0
+ 139 0092 FFF7FEFF 		bl	A4_Write
+ 140              	.LVL22:
+  62:stepperRight.c ****                         B3_Write(1);
+ 141              		.loc 1 62 0
+ 142 0096 0120     		movs	r0, #1
+ 143 0098 FFF7FEFF 		bl	B3_Write
+ 144              	.LVL23:
+  63:stepperRight.c ****                         B4_Write(1);
+ 145              		.loc 1 63 0
+ 146 009c 0120     		movs	r0, #1
+ 147 009e FFF7FEFF 		bl	B4_Write
+ 148              	.LVL24:
+  64:stepperRight.c ****                         CyDelayUs(hastighed);
+ 149              		.loc 1 64 0
+ 150 00a2 2846     		mov	r0, r5
+ 151 00a4 FFF7FEFF 		bl	CyDelayUs
+ 152              	.LVL25:
+  65:stepperRight.c ****                         
+  66:stepperRight.c ****                         //Step 2
+  67:stepperRight.c ****                         A3_Write(0);
+ 153              		.loc 1 67 0
+ 154 00a8 0020     		movs	r0, #0
+ 155 00aa FFF7FEFF 		bl	A3_Write
+ 156              	.LVL26:
+  68:stepperRight.c ****                         A4_Write(1);
+ 157              		.loc 1 68 0
+ 158 00ae 0120     		movs	r0, #1
+ 159 00b0 FFF7FEFF 		bl	A4_Write
+ 160              	.LVL27:
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 5
+
+
+  69:stepperRight.c ****                         B3_Write(1);
+ 161              		.loc 1 69 0
+ 162 00b4 0120     		movs	r0, #1
+ 163 00b6 FFF7FEFF 		bl	B3_Write
+ 164              	.LVL28:
+  70:stepperRight.c ****                         B4_Write(0);
+ 165              		.loc 1 70 0
+ 166 00ba 0020     		movs	r0, #0
+ 167 00bc FFF7FEFF 		bl	B4_Write
+ 168              	.LVL29:
+  71:stepperRight.c ****                         CyDelayUs(hastighed);
+ 169              		.loc 1 71 0
+ 170 00c0 2846     		mov	r0, r5
+ 171 00c2 FFF7FEFF 		bl	CyDelayUs
+ 172              	.LVL30:
+  72:stepperRight.c ****                                                            
+  73:stepperRight.c ****                         //Step 3
+  74:stepperRight.c ****                         A3_Write(1);
+ 173              		.loc 1 74 0
+ 174 00c6 0120     		movs	r0, #1
+ 175 00c8 FFF7FEFF 		bl	A3_Write
+ 176              	.LVL31:
+  75:stepperRight.c ****                         A4_Write(1);
+ 177              		.loc 1 75 0
+ 178 00cc 0120     		movs	r0, #1
+ 179 00ce FFF7FEFF 		bl	A4_Write
+ 180              	.LVL32:
+  76:stepperRight.c ****                         B3_Write(0);
+ 181              		.loc 1 76 0
+ 182 00d2 0020     		movs	r0, #0
+ 183 00d4 FFF7FEFF 		bl	B3_Write
+ 184              	.LVL33:
+  77:stepperRight.c ****                         B4_Write(0);
+ 185              		.loc 1 77 0
+ 186 00d8 0020     		movs	r0, #0
+ 187 00da FFF7FEFF 		bl	B4_Write
+ 188              	.LVL34:
+  78:stepperRight.c ****                         CyDelayUs(hastighed);
+ 189              		.loc 1 78 0
+ 190 00de 2846     		mov	r0, r5
+ 191 00e0 FFF7FEFF 		bl	CyDelayUs
+ 192              	.LVL35:
+  79:stepperRight.c ****                                     
+  80:stepperRight.c ****                                                          
+  81:stepperRight.c ****                         //Step 4
+  82:stepperRight.c ****                         A3_Write(1);
+ 193              		.loc 1 82 0
+ 194 00e4 0120     		movs	r0, #1
+ 195 00e6 FFF7FEFF 		bl	A3_Write
+ 196              	.LVL36:
+  83:stepperRight.c ****                         A4_Write(0);
+ 197              		.loc 1 83 0
+ 198 00ea 0020     		movs	r0, #0
+ 199 00ec FFF7FEFF 		bl	A4_Write
+ 200              	.LVL37:
+  84:stepperRight.c ****                         B3_Write(0);
+ 201              		.loc 1 84 0
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 6
+
+
+ 202 00f0 0020     		movs	r0, #0
+ 203 00f2 FFF7FEFF 		bl	B3_Write
+ 204              	.LVL38:
+  85:stepperRight.c ****                         B4_Write(1);
+ 205              		.loc 1 85 0
+ 206 00f6 0120     		movs	r0, #1
+ 207 00f8 FFF7FEFF 		bl	B4_Write
+ 208              	.LVL39:
+  86:stepperRight.c ****                         CyDelayUs(hastighed);
+ 209              		.loc 1 86 0
+ 210 00fc 2846     		mov	r0, r5
+ 211 00fe FFF7FEFF 		bl	CyDelayUs
+ 212              	.LVL40:
+ 213 0102 38BD     		pop	{r3, r4, r5, pc}
+ 214              	.LVL41:
+ 215              	.L2:
+ 216              	.LBE3:
+  87:stepperRight.c ****                         
+  88:stepperRight.c **** 
+  89:stepperRight.c **** 
+  90:stepperRight.c ****                     }
+  91:stepperRight.c ****                     
+  92:stepperRight.c ****             
+  93:stepperRight.c ****                     
+  94:stepperRight.c ****             }
+  95:stepperRight.c ****             else if(stepMode == 2) //Half mode
+ 217              		.loc 1 95 0
+ 218 0104 0228     		cmp	r0, #2
+ 219 0106 40F0F680 		bne	.L5
+  96:stepperRight.c ****             {
+  97:stepperRight.c ****                 
+  98:stepperRight.c ****                 if(status == 2)//Kører forlæns
+ 220              		.loc 1 98 0
+ 221 010a 0229     		cmp	r1, #2
+ 222 010c 77D1     		bne	.L6
+ 223              	.LBB4:
+  99:stepperRight.c ****                     {
+ 100:stepperRight.c ****                         //Step 1
+ 101:stepperRight.c ****                         A3_Write(0);
+ 224              		.loc 1 101 0
+ 225 010e 0020     		movs	r0, #0
+ 226              	.LVL42:
+ 227 0110 FFF7FEFF 		bl	A3_Write
+ 228              	.LVL43:
+ 102:stepperRight.c ****                         A4_Write(0);
+ 229              		.loc 1 102 0
+ 230 0114 0020     		movs	r0, #0
+ 231 0116 FFF7FEFF 		bl	A4_Write
+ 232              	.LVL44:
+ 103:stepperRight.c ****                         B3_Write(0);
+ 233              		.loc 1 103 0
+ 234 011a 0020     		movs	r0, #0
+ 235 011c FFF7FEFF 		bl	B3_Write
+ 236              	.LVL45:
+ 104:stepperRight.c ****                         B4_Write(1);
+ 237              		.loc 1 104 0
+ 238 0120 0120     		movs	r0, #1
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 7
+
+
+ 239 0122 FFF7FEFF 		bl	B4_Write
+ 240              	.LVL46:
+ 105:stepperRight.c ****                         CyDelayUs(hastighed);
+ 241              		.loc 1 105 0
+ 242 0126 2846     		mov	r0, r5
+ 243 0128 FFF7FEFF 		bl	CyDelayUs
+ 244              	.LVL47:
+ 106:stepperRight.c ****                                     
+ 107:stepperRight.c ****                         //Step 2
+ 108:stepperRight.c ****                         A3_Write(1);
+ 245              		.loc 1 108 0
+ 246 012c 0120     		movs	r0, #1
+ 247 012e FFF7FEFF 		bl	A3_Write
+ 248              	.LVL48:
+ 109:stepperRight.c ****                         A4_Write(0);
+ 249              		.loc 1 109 0
+ 250 0132 0020     		movs	r0, #0
+ 251 0134 FFF7FEFF 		bl	A4_Write
+ 252              	.LVL49:
+ 110:stepperRight.c ****                         B3_Write(0);
+ 253              		.loc 1 110 0
+ 254 0138 0020     		movs	r0, #0
+ 255 013a FFF7FEFF 		bl	B3_Write
+ 256              	.LVL50:
+ 111:stepperRight.c ****                         B4_Write(1);
+ 257              		.loc 1 111 0
+ 258 013e 0120     		movs	r0, #1
+ 259 0140 FFF7FEFF 		bl	B4_Write
+ 260              	.LVL51:
+ 112:stepperRight.c ****                         CyDelayUs(hastighed);
+ 261              		.loc 1 112 0
+ 262 0144 2846     		mov	r0, r5
+ 263 0146 FFF7FEFF 		bl	CyDelayUs
+ 264              	.LVL52:
+ 113:stepperRight.c ****                                     
+ 114:stepperRight.c ****                         //Step 3
+ 115:stepperRight.c ****                         A3_Write(1);
+ 265              		.loc 1 115 0
+ 266 014a 0120     		movs	r0, #1
+ 267 014c FFF7FEFF 		bl	A3_Write
+ 268              	.LVL53:
+ 116:stepperRight.c ****                         A4_Write(0);
+ 269              		.loc 1 116 0
+ 270 0150 0020     		movs	r0, #0
+ 271 0152 FFF7FEFF 		bl	A4_Write
+ 272              	.LVL54:
+ 117:stepperRight.c ****                         B3_Write(0);
+ 273              		.loc 1 117 0
+ 274 0156 0020     		movs	r0, #0
+ 275 0158 FFF7FEFF 		bl	B3_Write
+ 276              	.LVL55:
+ 118:stepperRight.c ****                         B4_Write(0);
+ 277              		.loc 1 118 0
+ 278 015c 0020     		movs	r0, #0
+ 279 015e FFF7FEFF 		bl	B4_Write
+ 280              	.LVL56:
+ 119:stepperRight.c ****                         CyDelayUs(hastighed);
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 8
+
+
+ 281              		.loc 1 119 0
+ 282 0162 2846     		mov	r0, r5
+ 283 0164 FFF7FEFF 		bl	CyDelayUs
+ 284              	.LVL57:
+ 120:stepperRight.c ****                                    
+ 121:stepperRight.c ****                         //Step 4
+ 122:stepperRight.c ****                         A3_Write(1);
+ 285              		.loc 1 122 0
+ 286 0168 0120     		movs	r0, #1
+ 287 016a FFF7FEFF 		bl	A3_Write
+ 288              	.LVL58:
+ 123:stepperRight.c ****                         A4_Write(1);
+ 289              		.loc 1 123 0
+ 290 016e 0120     		movs	r0, #1
+ 291 0170 FFF7FEFF 		bl	A4_Write
+ 292              	.LVL59:
+ 124:stepperRight.c ****                         B3_Write(0);
+ 293              		.loc 1 124 0
+ 294 0174 0020     		movs	r0, #0
+ 295 0176 FFF7FEFF 		bl	B3_Write
+ 296              	.LVL60:
+ 125:stepperRight.c ****                         B4_Write(0);
+ 297              		.loc 1 125 0
+ 298 017a 0020     		movs	r0, #0
+ 299 017c FFF7FEFF 		bl	B4_Write
+ 300              	.LVL61:
+ 126:stepperRight.c ****                         CyDelayUs(hastighed);
+ 301              		.loc 1 126 0
+ 302 0180 2846     		mov	r0, r5
+ 303 0182 FFF7FEFF 		bl	CyDelayUs
+ 304              	.LVL62:
+ 127:stepperRight.c ****                         
+ 128:stepperRight.c ****                         //Step 5
+ 129:stepperRight.c ****                         A3_Write(0);
+ 305              		.loc 1 129 0
+ 306 0186 0020     		movs	r0, #0
+ 307 0188 FFF7FEFF 		bl	A3_Write
+ 308              	.LVL63:
+ 130:stepperRight.c ****                         A4_Write(1);
+ 309              		.loc 1 130 0
+ 310 018c 0120     		movs	r0, #1
+ 311 018e FFF7FEFF 		bl	A4_Write
+ 312              	.LVL64:
+ 131:stepperRight.c ****                         B3_Write(0);
+ 313              		.loc 1 131 0
+ 314 0192 0020     		movs	r0, #0
+ 315 0194 FFF7FEFF 		bl	B3_Write
+ 316              	.LVL65:
+ 132:stepperRight.c ****                         B4_Write(0);
+ 317              		.loc 1 132 0
+ 318 0198 0020     		movs	r0, #0
+ 319 019a FFF7FEFF 		bl	B4_Write
+ 320              	.LVL66:
+ 133:stepperRight.c ****                         CyDelayUs(hastighed);
+ 321              		.loc 1 133 0
+ 322 019e 2846     		mov	r0, r5
+ 323 01a0 FFF7FEFF 		bl	CyDelayUs
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 9
+
+
+ 324              	.LVL67:
+ 134:stepperRight.c ****                         
+ 135:stepperRight.c ****                         //Step 6
+ 136:stepperRight.c ****                         A3_Write(0);
+ 325              		.loc 1 136 0
+ 326 01a4 0020     		movs	r0, #0
+ 327 01a6 FFF7FEFF 		bl	A3_Write
+ 328              	.LVL68:
+ 137:stepperRight.c ****                         A4_Write(1);
+ 329              		.loc 1 137 0
+ 330 01aa 0120     		movs	r0, #1
+ 331 01ac FFF7FEFF 		bl	A4_Write
+ 332              	.LVL69:
+ 138:stepperRight.c ****                         B3_Write(1);
+ 333              		.loc 1 138 0
+ 334 01b0 0120     		movs	r0, #1
+ 335 01b2 FFF7FEFF 		bl	B3_Write
+ 336              	.LVL70:
+ 139:stepperRight.c ****                         B4_Write(0);
+ 337              		.loc 1 139 0
+ 338 01b6 0020     		movs	r0, #0
+ 339 01b8 FFF7FEFF 		bl	B4_Write
+ 340              	.LVL71:
+ 140:stepperRight.c ****                         CyDelayUs(hastighed);
+ 341              		.loc 1 140 0
+ 342 01bc 2846     		mov	r0, r5
+ 343 01be FFF7FEFF 		bl	CyDelayUs
+ 344              	.LVL72:
+ 141:stepperRight.c ****                                     
+ 142:stepperRight.c ****                         //Step 7
+ 143:stepperRight.c ****                         A3_Write(0);
+ 345              		.loc 1 143 0
+ 346 01c2 0020     		movs	r0, #0
+ 347 01c4 FFF7FEFF 		bl	A3_Write
+ 348              	.LVL73:
+ 144:stepperRight.c ****                         A4_Write(0);
+ 349              		.loc 1 144 0
+ 350 01c8 0020     		movs	r0, #0
+ 351 01ca FFF7FEFF 		bl	A4_Write
+ 352              	.LVL74:
+ 145:stepperRight.c ****                         B3_Write(1);
+ 353              		.loc 1 145 0
+ 354 01ce 0120     		movs	r0, #1
+ 355 01d0 FFF7FEFF 		bl	B3_Write
+ 356              	.LVL75:
+ 146:stepperRight.c ****                         B4_Write(0);
+ 357              		.loc 1 146 0
+ 358 01d4 0020     		movs	r0, #0
+ 359 01d6 FFF7FEFF 		bl	B4_Write
+ 360              	.LVL76:
+ 147:stepperRight.c ****                         CyDelayUs(hastighed);
+ 361              		.loc 1 147 0
+ 362 01da 2846     		mov	r0, r5
+ 363 01dc FFF7FEFF 		bl	CyDelayUs
+ 364              	.LVL77:
+ 148:stepperRight.c ****                                     
+ 149:stepperRight.c ****                         //Step 8
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 10
+
+
+ 150:stepperRight.c ****                         A3_Write(0);
+ 365              		.loc 1 150 0
+ 366 01e0 0020     		movs	r0, #0
+ 367 01e2 FFF7FEFF 		bl	A3_Write
+ 368              	.LVL78:
+ 151:stepperRight.c ****                         A4_Write(0);
+ 369              		.loc 1 151 0
+ 370 01e6 0020     		movs	r0, #0
+ 371 01e8 FFF7FEFF 		bl	A4_Write
+ 372              	.LVL79:
+ 152:stepperRight.c ****                         B3_Write(1);
+ 373              		.loc 1 152 0
+ 374 01ec 0120     		movs	r0, #1
+ 375 01ee FFF7FEFF 		bl	B3_Write
+ 376              	.LVL80:
+ 153:stepperRight.c ****                         B4_Write(1);
+ 377              		.loc 1 153 0
+ 378 01f2 0120     		movs	r0, #1
+ 379 01f4 FFF7FEFF 		bl	B4_Write
+ 380              	.LVL81:
+ 154:stepperRight.c ****                         CyDelayUs(hastighed);
+ 381              		.loc 1 154 0
+ 382 01f8 2846     		mov	r0, r5
+ 383 01fa FFF7FEFF 		bl	CyDelayUs
+ 384              	.LVL82:
+ 385              	.L6:
+ 386              	.LBE4:
+ 155:stepperRight.c ****                                    
+ 156:stepperRight.c ****                                              
+ 157:stepperRight.c **** 
+ 158:stepperRight.c **** 
+ 159:stepperRight.c ****                     }
+ 160:stepperRight.c ****                     
+ 161:stepperRight.c ****             
+ 162:stepperRight.c ****                     
+ 163:stepperRight.c ****                    if(status == 1) //Kører baglæns
+ 387              		.loc 1 163 0
+ 388 01fe 012C     		cmp	r4, #1
+ 389 0200 40F0F780 		bne	.L1
+ 390              	.LBB5:
+ 164:stepperRight.c ****                     {
+ 165:stepperRight.c ****                         //Step 1
+ 166:stepperRight.c ****                         A3_Write(0);
+ 391              		.loc 1 166 0
+ 392 0204 0020     		movs	r0, #0
+ 393 0206 FFF7FEFF 		bl	A3_Write
+ 394              	.LVL83:
+ 167:stepperRight.c ****                         A4_Write(0);
+ 395              		.loc 1 167 0
+ 396 020a 0020     		movs	r0, #0
+ 397 020c FFF7FEFF 		bl	A4_Write
+ 398              	.LVL84:
+ 168:stepperRight.c ****                         B3_Write(0);
+ 399              		.loc 1 168 0
+ 400 0210 0020     		movs	r0, #0
+ 401 0212 FFF7FEFF 		bl	B3_Write
+ 402              	.LVL85:
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 11
+
+
+ 169:stepperRight.c ****                         B4_Write(1);
+ 403              		.loc 1 169 0
+ 404 0216 0120     		movs	r0, #1
+ 405 0218 FFF7FEFF 		bl	B4_Write
+ 406              	.LVL86:
+ 170:stepperRight.c ****                         CyDelayUs(hastighed);
+ 407              		.loc 1 170 0
+ 408 021c 2846     		mov	r0, r5
+ 409 021e FFF7FEFF 		bl	CyDelayUs
+ 410              	.LVL87:
+ 171:stepperRight.c ****                                     
+ 172:stepperRight.c ****                         //Step 2
+ 173:stepperRight.c ****                         A3_Write(0);
+ 411              		.loc 1 173 0
+ 412 0222 0020     		movs	r0, #0
+ 413 0224 FFF7FEFF 		bl	A3_Write
+ 414              	.LVL88:
+ 174:stepperRight.c ****                         A4_Write(0);
+ 415              		.loc 1 174 0
+ 416 0228 0020     		movs	r0, #0
+ 417 022a FFF7FEFF 		bl	A4_Write
+ 418              	.LVL89:
+ 175:stepperRight.c ****                         B3_Write(1);
+ 419              		.loc 1 175 0
+ 420 022e 0120     		movs	r0, #1
+ 421 0230 FFF7FEFF 		bl	B3_Write
+ 422              	.LVL90:
+ 176:stepperRight.c ****                         B4_Write(1);
+ 423              		.loc 1 176 0
+ 424 0234 0120     		movs	r0, #1
+ 425 0236 FFF7FEFF 		bl	B4_Write
+ 426              	.LVL91:
+ 177:stepperRight.c ****                         CyDelayUs(hastighed);
+ 427              		.loc 1 177 0
+ 428 023a 2846     		mov	r0, r5
+ 429 023c FFF7FEFF 		bl	CyDelayUs
+ 430              	.LVL92:
+ 178:stepperRight.c ****                                     
+ 179:stepperRight.c ****                         //Step 3
+ 180:stepperRight.c ****                         A3_Write(0);
+ 431              		.loc 1 180 0
+ 432 0240 0020     		movs	r0, #0
+ 433 0242 FFF7FEFF 		bl	A3_Write
+ 434              	.LVL93:
+ 181:stepperRight.c ****                         A4_Write(0);
+ 435              		.loc 1 181 0
+ 436 0246 0020     		movs	r0, #0
+ 437 0248 FFF7FEFF 		bl	A4_Write
+ 438              	.LVL94:
+ 182:stepperRight.c ****                         B3_Write(1);
+ 439              		.loc 1 182 0
+ 440 024c 0120     		movs	r0, #1
+ 441 024e FFF7FEFF 		bl	B3_Write
+ 442              	.LVL95:
+ 183:stepperRight.c ****                         B4_Write(0);
+ 443              		.loc 1 183 0
+ 444 0252 0020     		movs	r0, #0
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 12
+
+
+ 445 0254 FFF7FEFF 		bl	B4_Write
+ 446              	.LVL96:
+ 184:stepperRight.c ****                         CyDelayUs(hastighed);
+ 447              		.loc 1 184 0
+ 448 0258 2846     		mov	r0, r5
+ 449 025a FFF7FEFF 		bl	CyDelayUs
+ 450              	.LVL97:
+ 185:stepperRight.c ****                                    
+ 186:stepperRight.c ****                         //Step 4
+ 187:stepperRight.c ****                         A3_Write(0);
+ 451              		.loc 1 187 0
+ 452 025e 0020     		movs	r0, #0
+ 453 0260 FFF7FEFF 		bl	A3_Write
+ 454              	.LVL98:
+ 188:stepperRight.c ****                         A4_Write(1);
+ 455              		.loc 1 188 0
+ 456 0264 0120     		movs	r0, #1
+ 457 0266 FFF7FEFF 		bl	A4_Write
+ 458              	.LVL99:
+ 189:stepperRight.c ****                         B3_Write(1);
+ 459              		.loc 1 189 0
+ 460 026a 0120     		movs	r0, #1
+ 461 026c FFF7FEFF 		bl	B3_Write
+ 462              	.LVL100:
+ 190:stepperRight.c ****                         B4_Write(0);
+ 463              		.loc 1 190 0
+ 464 0270 0020     		movs	r0, #0
+ 465 0272 FFF7FEFF 		bl	B4_Write
+ 466              	.LVL101:
+ 191:stepperRight.c ****                         CyDelayUs(hastighed);
+ 467              		.loc 1 191 0
+ 468 0276 2846     		mov	r0, r5
+ 469 0278 FFF7FEFF 		bl	CyDelayUs
+ 470              	.LVL102:
+ 192:stepperRight.c ****                         
+ 193:stepperRight.c ****                         //Step 5
+ 194:stepperRight.c ****                         A3_Write(0);
+ 471              		.loc 1 194 0
+ 472 027c 0020     		movs	r0, #0
+ 473 027e FFF7FEFF 		bl	A3_Write
+ 474              	.LVL103:
+ 195:stepperRight.c ****                         A4_Write(1);
+ 475              		.loc 1 195 0
+ 476 0282 0120     		movs	r0, #1
+ 477 0284 FFF7FEFF 		bl	A4_Write
+ 478              	.LVL104:
+ 196:stepperRight.c ****                         B3_Write(0);
+ 479              		.loc 1 196 0
+ 480 0288 0020     		movs	r0, #0
+ 481 028a FFF7FEFF 		bl	B3_Write
+ 482              	.LVL105:
+ 197:stepperRight.c ****                         B4_Write(0);
+ 483              		.loc 1 197 0
+ 484 028e 0020     		movs	r0, #0
+ 485 0290 FFF7FEFF 		bl	B4_Write
+ 486              	.LVL106:
+ 198:stepperRight.c ****                         CyDelayUs(hastighed);
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 13
+
+
+ 487              		.loc 1 198 0
+ 488 0294 2846     		mov	r0, r5
+ 489 0296 FFF7FEFF 		bl	CyDelayUs
+ 490              	.LVL107:
+ 199:stepperRight.c ****                                     
+ 200:stepperRight.c ****                         //Step 6
+ 201:stepperRight.c ****                         A3_Write(1);
+ 491              		.loc 1 201 0
+ 492 029a 0120     		movs	r0, #1
+ 493 029c FFF7FEFF 		bl	A3_Write
+ 494              	.LVL108:
+ 202:stepperRight.c ****                         A4_Write(1);
+ 495              		.loc 1 202 0
+ 496 02a0 0120     		movs	r0, #1
+ 497 02a2 FFF7FEFF 		bl	A4_Write
+ 498              	.LVL109:
+ 203:stepperRight.c ****                         B3_Write(0);
+ 499              		.loc 1 203 0
+ 500 02a6 0020     		movs	r0, #0
+ 501 02a8 FFF7FEFF 		bl	B3_Write
+ 502              	.LVL110:
+ 204:stepperRight.c ****                         B4_Write(0);
+ 503              		.loc 1 204 0
+ 504 02ac 0020     		movs	r0, #0
+ 505 02ae FFF7FEFF 		bl	B4_Write
+ 506              	.LVL111:
+ 205:stepperRight.c ****                         CyDelayUs(hastighed);
+ 507              		.loc 1 205 0
+ 508 02b2 2846     		mov	r0, r5
+ 509 02b4 FFF7FEFF 		bl	CyDelayUs
+ 510              	.LVL112:
+ 206:stepperRight.c ****                                     
+ 207:stepperRight.c ****                         //Step 7
+ 208:stepperRight.c ****                         A3_Write(1);
+ 511              		.loc 1 208 0
+ 512 02b8 0120     		movs	r0, #1
+ 513 02ba FFF7FEFF 		bl	A3_Write
+ 514              	.LVL113:
+ 209:stepperRight.c ****                         A4_Write(0);
+ 515              		.loc 1 209 0
+ 516 02be 0020     		movs	r0, #0
+ 517 02c0 FFF7FEFF 		bl	A4_Write
+ 518              	.LVL114:
+ 210:stepperRight.c ****                         B3_Write(0);
+ 519              		.loc 1 210 0
+ 520 02c4 0020     		movs	r0, #0
+ 521 02c6 FFF7FEFF 		bl	B3_Write
+ 522              	.LVL115:
+ 211:stepperRight.c ****                         B4_Write(0);
+ 523              		.loc 1 211 0
+ 524 02ca 0020     		movs	r0, #0
+ 525 02cc FFF7FEFF 		bl	B4_Write
+ 526              	.LVL116:
+ 212:stepperRight.c ****                         CyDelayUs(hastighed);
+ 527              		.loc 1 212 0
+ 528 02d0 2846     		mov	r0, r5
+ 529 02d2 FFF7FEFF 		bl	CyDelayUs
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 14
+
+
+ 530              	.LVL117:
+ 213:stepperRight.c ****                                    
+ 214:stepperRight.c ****                         //Step 8
+ 215:stepperRight.c ****                         A3_Write(1);
+ 531              		.loc 1 215 0
+ 532 02d6 0120     		movs	r0, #1
+ 533 02d8 FFF7FEFF 		bl	A3_Write
+ 534              	.LVL118:
+ 216:stepperRight.c ****                         A4_Write(0);
+ 535              		.loc 1 216 0
+ 536 02dc 0020     		movs	r0, #0
+ 537 02de FFF7FEFF 		bl	A4_Write
+ 538              	.LVL119:
+ 217:stepperRight.c ****                         B3_Write(0);
+ 539              		.loc 1 217 0
+ 540 02e2 0020     		movs	r0, #0
+ 541 02e4 FFF7FEFF 		bl	B3_Write
+ 542              	.LVL120:
+ 218:stepperRight.c ****                         B4_Write(1);
+ 543              		.loc 1 218 0
+ 544 02e8 0120     		movs	r0, #1
+ 545 02ea FFF7FEFF 		bl	B4_Write
+ 546              	.LVL121:
+ 219:stepperRight.c ****                         CyDelayUs(hastighed);
+ 547              		.loc 1 219 0
+ 548 02ee 2846     		mov	r0, r5
+ 549 02f0 FFF7FEFF 		bl	CyDelayUs
+ 550              	.LVL122:
+ 551 02f4 38BD     		pop	{r3, r4, r5, pc}
+ 552              	.LVL123:
+ 553              	.L5:
+ 554              	.LBE5:
+ 220:stepperRight.c **** 
+ 221:stepperRight.c ****                     }
+ 222:stepperRight.c ****                     
+ 223:stepperRight.c ****            
+ 224:stepperRight.c ****                 
+ 225:stepperRight.c ****             }
+ 226:stepperRight.c ****             else if(stepMode == 3) //wave mode
+ 555              		.loc 1 226 0
+ 556 02f6 0328     		cmp	r0, #3
+ 557 02f8 7BD1     		bne	.L1
+ 227:stepperRight.c ****             {
+ 228:stepperRight.c ****                  if(status == 2)//Kører forlæns
+ 558              		.loc 1 228 0
+ 559 02fa 0229     		cmp	r1, #2
+ 560 02fc 3BD1     		bne	.L7
+ 561              	.LBB6:
+ 229:stepperRight.c ****                     {
+ 230:stepperRight.c ****                         //Step 1
+ 231:stepperRight.c ****                         A3_Write(0);
+ 562              		.loc 1 231 0
+ 563 02fe 0020     		movs	r0, #0
+ 564              	.LVL124:
+ 565 0300 FFF7FEFF 		bl	A3_Write
+ 566              	.LVL125:
+ 232:stepperRight.c ****                         A4_Write(0);
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 15
+
+
+ 567              		.loc 1 232 0
+ 568 0304 0020     		movs	r0, #0
+ 569 0306 FFF7FEFF 		bl	A4_Write
+ 570              	.LVL126:
+ 233:stepperRight.c ****                         B3_Write(0);
+ 571              		.loc 1 233 0
+ 572 030a 0020     		movs	r0, #0
+ 573 030c FFF7FEFF 		bl	B3_Write
+ 574              	.LVL127:
+ 234:stepperRight.c ****                         B4_Write(1);
+ 575              		.loc 1 234 0
+ 576 0310 0120     		movs	r0, #1
+ 577 0312 FFF7FEFF 		bl	B4_Write
+ 578              	.LVL128:
+ 235:stepperRight.c ****                         CyDelayUs(hastighed);
+ 579              		.loc 1 235 0
+ 580 0316 2846     		mov	r0, r5
+ 581 0318 FFF7FEFF 		bl	CyDelayUs
+ 582              	.LVL129:
+ 236:stepperRight.c ****                         
+ 237:stepperRight.c ****                         //Step 2
+ 238:stepperRight.c ****                         A3_Write(1);
+ 583              		.loc 1 238 0
+ 584 031c 0120     		movs	r0, #1
+ 585 031e FFF7FEFF 		bl	A3_Write
+ 586              	.LVL130:
+ 239:stepperRight.c ****                         A4_Write(0);
+ 587              		.loc 1 239 0
+ 588 0322 0020     		movs	r0, #0
+ 589 0324 FFF7FEFF 		bl	A4_Write
+ 590              	.LVL131:
+ 240:stepperRight.c ****                         B3_Write(0);
+ 591              		.loc 1 240 0
+ 592 0328 0020     		movs	r0, #0
+ 593 032a FFF7FEFF 		bl	B3_Write
+ 594              	.LVL132:
+ 241:stepperRight.c ****                         B4_Write(0);
+ 595              		.loc 1 241 0
+ 596 032e 0020     		movs	r0, #0
+ 597 0330 FFF7FEFF 		bl	B4_Write
+ 598              	.LVL133:
+ 242:stepperRight.c ****                         CyDelayUs(hastighed);
+ 599              		.loc 1 242 0
+ 600 0334 2846     		mov	r0, r5
+ 601 0336 FFF7FEFF 		bl	CyDelayUs
+ 602              	.LVL134:
+ 243:stepperRight.c ****                                                            
+ 244:stepperRight.c ****                         //Step 3
+ 245:stepperRight.c ****                         A3_Write(0);
+ 603              		.loc 1 245 0
+ 604 033a 0020     		movs	r0, #0
+ 605 033c FFF7FEFF 		bl	A3_Write
+ 606              	.LVL135:
+ 246:stepperRight.c ****                         A4_Write(1);
+ 607              		.loc 1 246 0
+ 608 0340 0120     		movs	r0, #1
+ 609 0342 FFF7FEFF 		bl	A4_Write
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 16
+
+
+ 610              	.LVL136:
+ 247:stepperRight.c ****                         B3_Write(0);
+ 611              		.loc 1 247 0
+ 612 0346 0020     		movs	r0, #0
+ 613 0348 FFF7FEFF 		bl	B3_Write
+ 614              	.LVL137:
+ 248:stepperRight.c ****                         B4_Write(0);
+ 615              		.loc 1 248 0
+ 616 034c 0020     		movs	r0, #0
+ 617 034e FFF7FEFF 		bl	B4_Write
+ 618              	.LVL138:
+ 249:stepperRight.c ****                         CyDelayUs(hastighed);
+ 619              		.loc 1 249 0
+ 620 0352 2846     		mov	r0, r5
+ 621 0354 FFF7FEFF 		bl	CyDelayUs
+ 622              	.LVL139:
+ 250:stepperRight.c ****                                     
+ 251:stepperRight.c ****                                                          
+ 252:stepperRight.c ****                         //Step 4
+ 253:stepperRight.c ****                         A3_Write(0);
+ 623              		.loc 1 253 0
+ 624 0358 0020     		movs	r0, #0
+ 625 035a FFF7FEFF 		bl	A3_Write
+ 626              	.LVL140:
+ 254:stepperRight.c ****                         A4_Write(0);
+ 627              		.loc 1 254 0
+ 628 035e 0020     		movs	r0, #0
+ 629 0360 FFF7FEFF 		bl	A4_Write
+ 630              	.LVL141:
+ 255:stepperRight.c ****                         B3_Write(1);
+ 631              		.loc 1 255 0
+ 632 0364 0120     		movs	r0, #1
+ 633 0366 FFF7FEFF 		bl	B3_Write
+ 634              	.LVL142:
+ 256:stepperRight.c ****                         B4_Write(0);
+ 635              		.loc 1 256 0
+ 636 036a 0020     		movs	r0, #0
+ 637 036c FFF7FEFF 		bl	B4_Write
+ 638              	.LVL143:
+ 257:stepperRight.c ****                         CyDelayUs(hastighed);
+ 639              		.loc 1 257 0
+ 640 0370 2846     		mov	r0, r5
+ 641 0372 FFF7FEFF 		bl	CyDelayUs
+ 642              	.LVL144:
+ 643              	.L7:
+ 644              	.LBE6:
+ 258:stepperRight.c ****                         
+ 259:stepperRight.c **** 
+ 260:stepperRight.c ****                     }
+ 261:stepperRight.c ****                     
+ 262:stepperRight.c ****             
+ 263:stepperRight.c ****                     
+ 264:stepperRight.c ****                    if(status == 1) //Kører baglæns
+ 645              		.loc 1 264 0
+ 646 0376 012C     		cmp	r4, #1
+ 647 0378 3BD1     		bne	.L1
+ 648              	.LBB7:
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 17
+
+
+ 265:stepperRight.c ****                     {
+ 266:stepperRight.c ****                         //Step 1
+ 267:stepperRight.c ****                         A3_Write(0);
+ 649              		.loc 1 267 0
+ 650 037a 0020     		movs	r0, #0
+ 651 037c FFF7FEFF 		bl	A3_Write
+ 652              	.LVL145:
+ 268:stepperRight.c ****                         A4_Write(0);
+ 653              		.loc 1 268 0
+ 654 0380 0020     		movs	r0, #0
+ 655 0382 FFF7FEFF 		bl	A4_Write
+ 656              	.LVL146:
+ 269:stepperRight.c ****                         B3_Write(0);
+ 657              		.loc 1 269 0
+ 658 0386 0020     		movs	r0, #0
+ 659 0388 FFF7FEFF 		bl	B3_Write
+ 660              	.LVL147:
+ 270:stepperRight.c ****                         B4_Write(1);
+ 661              		.loc 1 270 0
+ 662 038c 0120     		movs	r0, #1
+ 663 038e FFF7FEFF 		bl	B4_Write
+ 664              	.LVL148:
+ 271:stepperRight.c ****                         CyDelayUs(hastighed);
+ 665              		.loc 1 271 0
+ 666 0392 2846     		mov	r0, r5
+ 667 0394 FFF7FEFF 		bl	CyDelayUs
+ 668              	.LVL149:
+ 272:stepperRight.c ****                         
+ 273:stepperRight.c ****                         //Step 2
+ 274:stepperRight.c ****                         A3_Write(0);
+ 669              		.loc 1 274 0
+ 670 0398 0020     		movs	r0, #0
+ 671 039a FFF7FEFF 		bl	A3_Write
+ 672              	.LVL150:
+ 275:stepperRight.c ****                         A4_Write(0);
+ 673              		.loc 1 275 0
+ 674 039e 0020     		movs	r0, #0
+ 675 03a0 FFF7FEFF 		bl	A4_Write
+ 676              	.LVL151:
+ 276:stepperRight.c ****                         B3_Write(1);
+ 677              		.loc 1 276 0
+ 678 03a4 0120     		movs	r0, #1
+ 679 03a6 FFF7FEFF 		bl	B3_Write
+ 680              	.LVL152:
+ 277:stepperRight.c ****                         B4_Write(0);
+ 681              		.loc 1 277 0
+ 682 03aa 0020     		movs	r0, #0
+ 683 03ac FFF7FEFF 		bl	B4_Write
+ 684              	.LVL153:
+ 278:stepperRight.c ****                         CyDelayUs(hastighed);
+ 685              		.loc 1 278 0
+ 686 03b0 2846     		mov	r0, r5
+ 687 03b2 FFF7FEFF 		bl	CyDelayUs
+ 688              	.LVL154:
+ 279:stepperRight.c ****                                                            
+ 280:stepperRight.c ****                         //Step 3
+ 281:stepperRight.c ****                         A3_Write(0);
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 18
+
+
+ 689              		.loc 1 281 0
+ 690 03b6 0020     		movs	r0, #0
+ 691 03b8 FFF7FEFF 		bl	A3_Write
+ 692              	.LVL155:
+ 282:stepperRight.c ****                         A4_Write(1);
+ 693              		.loc 1 282 0
+ 694 03bc 0120     		movs	r0, #1
+ 695 03be FFF7FEFF 		bl	A4_Write
+ 696              	.LVL156:
+ 283:stepperRight.c ****                         B3_Write(0);
+ 697              		.loc 1 283 0
+ 698 03c2 0020     		movs	r0, #0
+ 699 03c4 FFF7FEFF 		bl	B3_Write
+ 700              	.LVL157:
+ 284:stepperRight.c ****                         B4_Write(0);
+ 701              		.loc 1 284 0
+ 702 03c8 0020     		movs	r0, #0
+ 703 03ca FFF7FEFF 		bl	B4_Write
+ 704              	.LVL158:
+ 285:stepperRight.c ****                         CyDelayUs(hastighed);
+ 705              		.loc 1 285 0
+ 706 03ce 2846     		mov	r0, r5
+ 707 03d0 FFF7FEFF 		bl	CyDelayUs
+ 708              	.LVL159:
+ 286:stepperRight.c ****                                     
+ 287:stepperRight.c ****                                                          
+ 288:stepperRight.c ****                         //Step 4
+ 289:stepperRight.c ****                         A3_Write(1);
+ 709              		.loc 1 289 0
+ 710 03d4 0120     		movs	r0, #1
+ 711 03d6 FFF7FEFF 		bl	A3_Write
+ 712              	.LVL160:
+ 290:stepperRight.c ****                         A4_Write(0);
+ 713              		.loc 1 290 0
+ 714 03da 0020     		movs	r0, #0
+ 715 03dc FFF7FEFF 		bl	A4_Write
+ 716              	.LVL161:
+ 291:stepperRight.c ****                         B3_Write(0);
+ 717              		.loc 1 291 0
+ 718 03e0 0020     		movs	r0, #0
+ 719 03e2 FFF7FEFF 		bl	B3_Write
+ 720              	.LVL162:
+ 292:stepperRight.c ****                         B4_Write(0);
+ 721              		.loc 1 292 0
+ 722 03e6 0020     		movs	r0, #0
+ 723 03e8 FFF7FEFF 		bl	B4_Write
+ 724              	.LVL163:
+ 293:stepperRight.c ****                         CyDelayUs(hastighed);
+ 725              		.loc 1 293 0
+ 726 03ec 2846     		mov	r0, r5
+ 727 03ee FFF7FEFF 		bl	CyDelayUs
+ 728              	.LVL164:
+ 729              	.L1:
+ 730 03f2 38BD     		pop	{r3, r4, r5, pc}
+ 731              	.LBE7:
+ 732              		.cfi_endproc
+ 733              	.LFE0:
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 19
+
+
+ 734              		.size	stepperRight, .-stepperRight
+ 735              		.section	.text.resetRight,"ax",%progbits
+ 736              		.align	2
+ 737              		.global	resetRight
+ 738              		.thumb
+ 739              		.thumb_func
+ 740              		.type	resetRight, %function
+ 741              	resetRight:
+ 742              	.LFB1:
+ 294:stepperRight.c ****                         
+ 295:stepperRight.c **** 
+ 296:stepperRight.c ****                     }
+ 297:stepperRight.c **** 
+ 298:stepperRight.c ****                     
+ 299:stepperRight.c ****             }
+ 300:stepperRight.c **** 
+ 301:stepperRight.c **** }
+ 302:stepperRight.c **** 
+ 303:stepperRight.c **** void resetRight()
+ 304:stepperRight.c **** {
+ 743              		.loc 1 304 0
+ 744              		.cfi_startproc
+ 745              		@ args = 0, pretend = 0, frame = 0
+ 746              		@ frame_needed = 0, uses_anonymous_args = 0
+ 747 0000 08B5     		push	{r3, lr}
+ 748              		.cfi_def_cfa_offset 8
+ 749              		.cfi_offset 3, -8
+ 750              		.cfi_offset 14, -4
+ 305:stepperRight.c ****                         
+ 306:stepperRight.c ****                     //Reset mod kortslutning
+ 307:stepperRight.c ****                     A3_Write(0);
+ 751              		.loc 1 307 0
+ 752 0002 0020     		movs	r0, #0
+ 753 0004 FFF7FEFF 		bl	A3_Write
+ 754              	.LVL165:
+ 308:stepperRight.c ****                     A4_Write(0);
+ 755              		.loc 1 308 0
+ 756 0008 0020     		movs	r0, #0
+ 757 000a FFF7FEFF 		bl	A4_Write
+ 758              	.LVL166:
+ 309:stepperRight.c ****                     B3_Write(0);
+ 759              		.loc 1 309 0
+ 760 000e 0020     		movs	r0, #0
+ 761 0010 FFF7FEFF 		bl	B3_Write
+ 762              	.LVL167:
+ 310:stepperRight.c ****                     B4_Write(0);
+ 763              		.loc 1 310 0
+ 764 0014 0020     		movs	r0, #0
+ 765 0016 FFF7FEFF 		bl	B4_Write
+ 766              	.LVL168:
+ 767 001a 08BD     		pop	{r3, pc}
+ 768              		.cfi_endproc
+ 769              	.LFE1:
+ 770              		.size	resetRight, .-resetRight
+ 771              		.text
+ 772              	.Letext0:
+ 773              		.section	.debug_info,"",%progbits
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 20
+
+
+ 774              	.Ldebug_info0:
+ 775 0000 7E0F0000 		.4byte	0xf7e
+ 776 0004 0400     		.2byte	0x4
+ 777 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 778 000a 04       		.byte	0x4
+ 779 000b 01       		.uleb128 0x1
+ 780 000c AC000000 		.4byte	.LASF8
+ 781 0010 0C       		.byte	0xc
+ 782 0011 16000000 		.4byte	.LASF9
+ 783 0015 4B000000 		.4byte	.LASF10
+ 784 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 785 001d 00000000 		.4byte	0
+ 786 0021 00000000 		.4byte	.Ldebug_line0
+ 787 0025 02       		.uleb128 0x2
+ 788 0026 00000000 		.4byte	.LASF11
+ 789 002a 01       		.byte	0x1
+ 790 002b 0D       		.byte	0xd
+ 791 002c 00000000 		.4byte	.LFB0
+ 792 0030 F4030000 		.4byte	.LFE0-.LFB0
+ 793 0034 01       		.uleb128 0x1
+ 794 0035 9C       		.byte	0x9c
+ 795 0036 A00E0000 		.4byte	0xea0
+ 796 003a 03       		.uleb128 0x3
+ 797 003b 88000000 		.4byte	.LASF0
+ 798 003f 01       		.byte	0x1
+ 799 0040 0D       		.byte	0xd
+ 800 0041 A00E0000 		.4byte	0xea0
+ 801 0045 00000000 		.4byte	.LLST0
+ 802 0049 03       		.uleb128 0x3
+ 803 004a 91000000 		.4byte	.LASF1
+ 804 004e 01       		.byte	0x1
+ 805 004f 0D       		.byte	0xd
+ 806 0050 A00E0000 		.4byte	0xea0
+ 807 0054 53000000 		.4byte	.LLST1
+ 808 0058 03       		.uleb128 0x3
+ 809 0059 2F000000 		.4byte	.LASF2
+ 810 005d 01       		.byte	0x1
+ 811 005e 0D       		.byte	0xd
+ 812 005f A00E0000 		.4byte	0xea0
+ 813 0063 9D000000 		.4byte	.LLST2
+ 814 0067 04       		.uleb128 0x4
+ 815 0068 0E000000 		.4byte	.LBB2
+ 816 006c 76000000 		.4byte	.LBE2-.LBB2
+ 817 0070 48020000 		.4byte	0x248
+ 818 0074 05       		.uleb128 0x5
+ 819 0075 39000000 		.4byte	.LASF3
+ 820 0079 01       		.byte	0x1
+ 821 007a 16       		.byte	0x16
+ 822 007b A00E0000 		.4byte	0xea0
+ 823 007f 85000000 		.4byte	0x85
+ 824 0083 06       		.uleb128 0x6
+ 825 0084 00       		.byte	0
+ 826 0085 05       		.uleb128 0x5
+ 827 0086 0D000000 		.4byte	.LASF4
+ 828 008a 01       		.byte	0x1
+ 829 008b 17       		.byte	0x17
+ 830 008c A00E0000 		.4byte	0xea0
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 21
+
+
+ 831 0090 96000000 		.4byte	0x96
+ 832 0094 06       		.uleb128 0x6
+ 833 0095 00       		.byte	0
+ 834 0096 05       		.uleb128 0x5
+ 835 0097 42000000 		.4byte	.LASF5
+ 836 009b 01       		.byte	0x1
+ 837 009c 18       		.byte	0x18
+ 838 009d A00E0000 		.4byte	0xea0
+ 839 00a1 A7000000 		.4byte	0xa7
+ 840 00a5 06       		.uleb128 0x6
+ 841 00a6 00       		.byte	0
+ 842 00a7 05       		.uleb128 0x5
+ 843 00a8 A3000000 		.4byte	.LASF6
+ 844 00ac 01       		.byte	0x1
+ 845 00ad 19       		.byte	0x19
+ 846 00ae A00E0000 		.4byte	0xea0
+ 847 00b2 B8000000 		.4byte	0xb8
+ 848 00b6 06       		.uleb128 0x6
+ 849 00b7 00       		.byte	0
+ 850 00b8 05       		.uleb128 0x5
+ 851 00b9 25000000 		.4byte	.LASF7
+ 852 00bd 01       		.byte	0x1
+ 853 00be 1A       		.byte	0x1a
+ 854 00bf A00E0000 		.4byte	0xea0
+ 855 00c3 C9000000 		.4byte	0xc9
+ 856 00c7 06       		.uleb128 0x6
+ 857 00c8 00       		.byte	0
+ 858 00c9 07       		.uleb128 0x7
+ 859 00ca 12000000 		.4byte	.LVL1
+ 860 00ce 4A0F0000 		.4byte	0xf4a
+ 861 00d2 DE000000 		.4byte	0xde
+ 862 00d6 08       		.uleb128 0x8
+ 863 00d7 01       		.uleb128 0x1
+ 864 00d8 50       		.byte	0x50
+ 865 00d9 03       		.uleb128 0x3
+ 866 00da F3       		.byte	0xf3
+ 867 00db 01       		.uleb128 0x1
+ 868 00dc 50       		.byte	0x50
+ 869 00dd 00       		.byte	0
+ 870 00de 07       		.uleb128 0x7
+ 871 00df 18000000 		.4byte	.LVL2
+ 872 00e3 550F0000 		.4byte	0xf55
+ 873 00e7 F1000000 		.4byte	0xf1
+ 874 00eb 08       		.uleb128 0x8
+ 875 00ec 01       		.uleb128 0x1
+ 876 00ed 50       		.byte	0x50
+ 877 00ee 01       		.uleb128 0x1
+ 878 00ef 30       		.byte	0x30
+ 879 00f0 00       		.byte	0
+ 880 00f1 07       		.uleb128 0x7
+ 881 00f2 1E000000 		.4byte	.LVL3
+ 882 00f6 600F0000 		.4byte	0xf60
+ 883 00fa 04010000 		.4byte	0x104
+ 884 00fe 08       		.uleb128 0x8
+ 885 00ff 01       		.uleb128 0x1
+ 886 0100 50       		.byte	0x50
+ 887 0101 01       		.uleb128 0x1
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 22
+
+
+ 888 0102 30       		.byte	0x30
+ 889 0103 00       		.byte	0
+ 890 0104 07       		.uleb128 0x7
+ 891 0105 24000000 		.4byte	.LVL4
+ 892 0109 6B0F0000 		.4byte	0xf6b
+ 893 010d 17010000 		.4byte	0x117
+ 894 0111 08       		.uleb128 0x8
+ 895 0112 01       		.uleb128 0x1
+ 896 0113 50       		.byte	0x50
+ 897 0114 01       		.uleb128 0x1
+ 898 0115 31       		.byte	0x31
+ 899 0116 00       		.byte	0
+ 900 0117 07       		.uleb128 0x7
+ 901 0118 2A000000 		.4byte	.LVL5
+ 902 011c 760F0000 		.4byte	0xf76
+ 903 0120 2B010000 		.4byte	0x12b
+ 904 0124 08       		.uleb128 0x8
+ 905 0125 01       		.uleb128 0x1
+ 906 0126 50       		.byte	0x50
+ 907 0127 02       		.uleb128 0x2
+ 908 0128 75       		.byte	0x75
+ 909 0129 00       		.sleb128 0
+ 910 012a 00       		.byte	0
+ 911 012b 07       		.uleb128 0x7
+ 912 012c 30000000 		.4byte	.LVL6
+ 913 0130 4A0F0000 		.4byte	0xf4a
+ 914 0134 3E010000 		.4byte	0x13e
+ 915 0138 08       		.uleb128 0x8
+ 916 0139 01       		.uleb128 0x1
+ 917 013a 50       		.byte	0x50
+ 918 013b 01       		.uleb128 0x1
+ 919 013c 31       		.byte	0x31
+ 920 013d 00       		.byte	0
+ 921 013e 07       		.uleb128 0x7
+ 922 013f 36000000 		.4byte	.LVL7
+ 923 0143 550F0000 		.4byte	0xf55
+ 924 0147 51010000 		.4byte	0x151
+ 925 014b 08       		.uleb128 0x8
+ 926 014c 01       		.uleb128 0x1
+ 927 014d 50       		.byte	0x50
+ 928 014e 01       		.uleb128 0x1
+ 929 014f 31       		.byte	0x31
+ 930 0150 00       		.byte	0
+ 931 0151 07       		.uleb128 0x7
+ 932 0152 3C000000 		.4byte	.LVL8
+ 933 0156 600F0000 		.4byte	0xf60
+ 934 015a 64010000 		.4byte	0x164
+ 935 015e 08       		.uleb128 0x8
+ 936 015f 01       		.uleb128 0x1
+ 937 0160 50       		.byte	0x50
+ 938 0161 01       		.uleb128 0x1
+ 939 0162 30       		.byte	0x30
+ 940 0163 00       		.byte	0
+ 941 0164 07       		.uleb128 0x7
+ 942 0165 42000000 		.4byte	.LVL9
+ 943 0169 6B0F0000 		.4byte	0xf6b
+ 944 016d 77010000 		.4byte	0x177
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 23
+
+
+ 945 0171 08       		.uleb128 0x8
+ 946 0172 01       		.uleb128 0x1
+ 947 0173 50       		.byte	0x50
+ 948 0174 01       		.uleb128 0x1
+ 949 0175 30       		.byte	0x30
+ 950 0176 00       		.byte	0
+ 951 0177 07       		.uleb128 0x7
+ 952 0178 48000000 		.4byte	.LVL10
+ 953 017c 760F0000 		.4byte	0xf76
+ 954 0180 8B010000 		.4byte	0x18b
+ 955 0184 08       		.uleb128 0x8
+ 956 0185 01       		.uleb128 0x1
+ 957 0186 50       		.byte	0x50
+ 958 0187 02       		.uleb128 0x2
+ 959 0188 75       		.byte	0x75
+ 960 0189 00       		.sleb128 0
+ 961 018a 00       		.byte	0
+ 962 018b 07       		.uleb128 0x7
+ 963 018c 4E000000 		.4byte	.LVL11
+ 964 0190 4A0F0000 		.4byte	0xf4a
+ 965 0194 9E010000 		.4byte	0x19e
+ 966 0198 08       		.uleb128 0x8
+ 967 0199 01       		.uleb128 0x1
+ 968 019a 50       		.byte	0x50
+ 969 019b 01       		.uleb128 0x1
+ 970 019c 30       		.byte	0x30
+ 971 019d 00       		.byte	0
+ 972 019e 07       		.uleb128 0x7
+ 973 019f 54000000 		.4byte	.LVL12
+ 974 01a3 550F0000 		.4byte	0xf55
+ 975 01a7 B1010000 		.4byte	0x1b1
+ 976 01ab 08       		.uleb128 0x8
+ 977 01ac 01       		.uleb128 0x1
+ 978 01ad 50       		.byte	0x50
+ 979 01ae 01       		.uleb128 0x1
+ 980 01af 31       		.byte	0x31
+ 981 01b0 00       		.byte	0
+ 982 01b1 07       		.uleb128 0x7
+ 983 01b2 5A000000 		.4byte	.LVL13
+ 984 01b6 600F0000 		.4byte	0xf60
+ 985 01ba C4010000 		.4byte	0x1c4
+ 986 01be 08       		.uleb128 0x8
+ 987 01bf 01       		.uleb128 0x1
+ 988 01c0 50       		.byte	0x50
+ 989 01c1 01       		.uleb128 0x1
+ 990 01c2 31       		.byte	0x31
+ 991 01c3 00       		.byte	0
+ 992 01c4 07       		.uleb128 0x7
+ 993 01c5 60000000 		.4byte	.LVL14
+ 994 01c9 6B0F0000 		.4byte	0xf6b
+ 995 01cd D7010000 		.4byte	0x1d7
+ 996 01d1 08       		.uleb128 0x8
+ 997 01d2 01       		.uleb128 0x1
+ 998 01d3 50       		.byte	0x50
+ 999 01d4 01       		.uleb128 0x1
+ 1000 01d5 30       		.byte	0x30
+ 1001 01d6 00       		.byte	0
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 24
+
+
+ 1002 01d7 07       		.uleb128 0x7
+ 1003 01d8 66000000 		.4byte	.LVL15
+ 1004 01dc 760F0000 		.4byte	0xf76
+ 1005 01e0 EB010000 		.4byte	0x1eb
+ 1006 01e4 08       		.uleb128 0x8
+ 1007 01e5 01       		.uleb128 0x1
+ 1008 01e6 50       		.byte	0x50
+ 1009 01e7 02       		.uleb128 0x2
+ 1010 01e8 75       		.byte	0x75
+ 1011 01e9 00       		.sleb128 0
+ 1012 01ea 00       		.byte	0
+ 1013 01eb 07       		.uleb128 0x7
+ 1014 01ec 6C000000 		.4byte	.LVL16
+ 1015 01f0 4A0F0000 		.4byte	0xf4a
+ 1016 01f4 FE010000 		.4byte	0x1fe
+ 1017 01f8 08       		.uleb128 0x8
+ 1018 01f9 01       		.uleb128 0x1
+ 1019 01fa 50       		.byte	0x50
+ 1020 01fb 01       		.uleb128 0x1
+ 1021 01fc 30       		.byte	0x30
+ 1022 01fd 00       		.byte	0
+ 1023 01fe 07       		.uleb128 0x7
+ 1024 01ff 72000000 		.4byte	.LVL17
+ 1025 0203 550F0000 		.4byte	0xf55
+ 1026 0207 11020000 		.4byte	0x211
+ 1027 020b 08       		.uleb128 0x8
+ 1028 020c 01       		.uleb128 0x1
+ 1029 020d 50       		.byte	0x50
+ 1030 020e 01       		.uleb128 0x1
+ 1031 020f 30       		.byte	0x30
+ 1032 0210 00       		.byte	0
+ 1033 0211 07       		.uleb128 0x7
+ 1034 0212 78000000 		.4byte	.LVL18
+ 1035 0216 600F0000 		.4byte	0xf60
+ 1036 021a 24020000 		.4byte	0x224
+ 1037 021e 08       		.uleb128 0x8
+ 1038 021f 01       		.uleb128 0x1
+ 1039 0220 50       		.byte	0x50
+ 1040 0221 01       		.uleb128 0x1
+ 1041 0222 31       		.byte	0x31
+ 1042 0223 00       		.byte	0
+ 1043 0224 07       		.uleb128 0x7
+ 1044 0225 7E000000 		.4byte	.LVL19
+ 1045 0229 6B0F0000 		.4byte	0xf6b
+ 1046 022d 37020000 		.4byte	0x237
+ 1047 0231 08       		.uleb128 0x8
+ 1048 0232 01       		.uleb128 0x1
+ 1049 0233 50       		.byte	0x50
+ 1050 0234 01       		.uleb128 0x1
+ 1051 0235 31       		.byte	0x31
+ 1052 0236 00       		.byte	0
+ 1053 0237 09       		.uleb128 0x9
+ 1054 0238 84000000 		.4byte	.LVL20
+ 1055 023c 760F0000 		.4byte	0xf76
+ 1056 0240 08       		.uleb128 0x8
+ 1057 0241 01       		.uleb128 0x1
+ 1058 0242 50       		.byte	0x50
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 25
+
+
+ 1059 0243 02       		.uleb128 0x2
+ 1060 0244 75       		.byte	0x75
+ 1061 0245 00       		.sleb128 0
+ 1062 0246 00       		.byte	0
+ 1063 0247 00       		.byte	0
+ 1064 0248 04       		.uleb128 0x4
+ 1065 0249 8A000000 		.4byte	.LBB3
+ 1066 024d 7A000000 		.4byte	.LBE3-.LBB3
+ 1067 0251 27040000 		.4byte	0x427
+ 1068 0255 05       		.uleb128 0x5
+ 1069 0256 39000000 		.4byte	.LASF3
+ 1070 025a 01       		.byte	0x1
+ 1071 025b 16       		.byte	0x16
+ 1072 025c A00E0000 		.4byte	0xea0
+ 1073 0260 66020000 		.4byte	0x266
+ 1074 0264 06       		.uleb128 0x6
+ 1075 0265 00       		.byte	0
+ 1076 0266 05       		.uleb128 0x5
+ 1077 0267 0D000000 		.4byte	.LASF4
+ 1078 026b 01       		.byte	0x1
+ 1079 026c 17       		.byte	0x17
+ 1080 026d A00E0000 		.4byte	0xea0
+ 1081 0271 77020000 		.4byte	0x277
+ 1082 0275 06       		.uleb128 0x6
+ 1083 0276 00       		.byte	0
+ 1084 0277 05       		.uleb128 0x5
+ 1085 0278 42000000 		.4byte	.LASF5
+ 1086 027c 01       		.byte	0x1
+ 1087 027d 18       		.byte	0x18
+ 1088 027e A00E0000 		.4byte	0xea0
+ 1089 0282 88020000 		.4byte	0x288
+ 1090 0286 06       		.uleb128 0x6
+ 1091 0287 00       		.byte	0
+ 1092 0288 05       		.uleb128 0x5
+ 1093 0289 A3000000 		.4byte	.LASF6
+ 1094 028d 01       		.byte	0x1
+ 1095 028e 19       		.byte	0x19
+ 1096 028f A00E0000 		.4byte	0xea0
+ 1097 0293 99020000 		.4byte	0x299
+ 1098 0297 06       		.uleb128 0x6
+ 1099 0298 00       		.byte	0
+ 1100 0299 05       		.uleb128 0x5
+ 1101 029a 25000000 		.4byte	.LASF7
+ 1102 029e 01       		.byte	0x1
+ 1103 029f 1A       		.byte	0x1a
+ 1104 02a0 A00E0000 		.4byte	0xea0
+ 1105 02a4 AA020000 		.4byte	0x2aa
+ 1106 02a8 06       		.uleb128 0x6
+ 1107 02a9 00       		.byte	0
+ 1108 02aa 07       		.uleb128 0x7
+ 1109 02ab 90000000 		.4byte	.LVL21
+ 1110 02af 4A0F0000 		.4byte	0xf4a
+ 1111 02b3 BD020000 		.4byte	0x2bd
+ 1112 02b7 08       		.uleb128 0x8
+ 1113 02b8 01       		.uleb128 0x1
+ 1114 02b9 50       		.byte	0x50
+ 1115 02ba 01       		.uleb128 0x1
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 26
+
+
+ 1116 02bb 30       		.byte	0x30
+ 1117 02bc 00       		.byte	0
+ 1118 02bd 07       		.uleb128 0x7
+ 1119 02be 96000000 		.4byte	.LVL22
+ 1120 02c2 550F0000 		.4byte	0xf55
+ 1121 02c6 D0020000 		.4byte	0x2d0
+ 1122 02ca 08       		.uleb128 0x8
+ 1123 02cb 01       		.uleb128 0x1
+ 1124 02cc 50       		.byte	0x50
+ 1125 02cd 01       		.uleb128 0x1
+ 1126 02ce 30       		.byte	0x30
+ 1127 02cf 00       		.byte	0
+ 1128 02d0 07       		.uleb128 0x7
+ 1129 02d1 9C000000 		.4byte	.LVL23
+ 1130 02d5 600F0000 		.4byte	0xf60
+ 1131 02d9 E3020000 		.4byte	0x2e3
+ 1132 02dd 08       		.uleb128 0x8
+ 1133 02de 01       		.uleb128 0x1
+ 1134 02df 50       		.byte	0x50
+ 1135 02e0 01       		.uleb128 0x1
+ 1136 02e1 31       		.byte	0x31
+ 1137 02e2 00       		.byte	0
+ 1138 02e3 07       		.uleb128 0x7
+ 1139 02e4 A2000000 		.4byte	.LVL24
+ 1140 02e8 6B0F0000 		.4byte	0xf6b
+ 1141 02ec F6020000 		.4byte	0x2f6
+ 1142 02f0 08       		.uleb128 0x8
+ 1143 02f1 01       		.uleb128 0x1
+ 1144 02f2 50       		.byte	0x50
+ 1145 02f3 01       		.uleb128 0x1
+ 1146 02f4 31       		.byte	0x31
+ 1147 02f5 00       		.byte	0
+ 1148 02f6 07       		.uleb128 0x7
+ 1149 02f7 A8000000 		.4byte	.LVL25
+ 1150 02fb 760F0000 		.4byte	0xf76
+ 1151 02ff 0A030000 		.4byte	0x30a
+ 1152 0303 08       		.uleb128 0x8
+ 1153 0304 01       		.uleb128 0x1
+ 1154 0305 50       		.byte	0x50
+ 1155 0306 02       		.uleb128 0x2
+ 1156 0307 75       		.byte	0x75
+ 1157 0308 00       		.sleb128 0
+ 1158 0309 00       		.byte	0
+ 1159 030a 07       		.uleb128 0x7
+ 1160 030b AE000000 		.4byte	.LVL26
+ 1161 030f 4A0F0000 		.4byte	0xf4a
+ 1162 0313 1D030000 		.4byte	0x31d
+ 1163 0317 08       		.uleb128 0x8
+ 1164 0318 01       		.uleb128 0x1
+ 1165 0319 50       		.byte	0x50
+ 1166 031a 01       		.uleb128 0x1
+ 1167 031b 30       		.byte	0x30
+ 1168 031c 00       		.byte	0
+ 1169 031d 07       		.uleb128 0x7
+ 1170 031e B4000000 		.4byte	.LVL27
+ 1171 0322 550F0000 		.4byte	0xf55
+ 1172 0326 30030000 		.4byte	0x330
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 27
+
+
+ 1173 032a 08       		.uleb128 0x8
+ 1174 032b 01       		.uleb128 0x1
+ 1175 032c 50       		.byte	0x50
+ 1176 032d 01       		.uleb128 0x1
+ 1177 032e 31       		.byte	0x31
+ 1178 032f 00       		.byte	0
+ 1179 0330 07       		.uleb128 0x7
+ 1180 0331 BA000000 		.4byte	.LVL28
+ 1181 0335 600F0000 		.4byte	0xf60
+ 1182 0339 43030000 		.4byte	0x343
+ 1183 033d 08       		.uleb128 0x8
+ 1184 033e 01       		.uleb128 0x1
+ 1185 033f 50       		.byte	0x50
+ 1186 0340 01       		.uleb128 0x1
+ 1187 0341 31       		.byte	0x31
+ 1188 0342 00       		.byte	0
+ 1189 0343 07       		.uleb128 0x7
+ 1190 0344 C0000000 		.4byte	.LVL29
+ 1191 0348 6B0F0000 		.4byte	0xf6b
+ 1192 034c 56030000 		.4byte	0x356
+ 1193 0350 08       		.uleb128 0x8
+ 1194 0351 01       		.uleb128 0x1
+ 1195 0352 50       		.byte	0x50
+ 1196 0353 01       		.uleb128 0x1
+ 1197 0354 30       		.byte	0x30
+ 1198 0355 00       		.byte	0
+ 1199 0356 07       		.uleb128 0x7
+ 1200 0357 C6000000 		.4byte	.LVL30
+ 1201 035b 760F0000 		.4byte	0xf76
+ 1202 035f 6A030000 		.4byte	0x36a
+ 1203 0363 08       		.uleb128 0x8
+ 1204 0364 01       		.uleb128 0x1
+ 1205 0365 50       		.byte	0x50
+ 1206 0366 02       		.uleb128 0x2
+ 1207 0367 75       		.byte	0x75
+ 1208 0368 00       		.sleb128 0
+ 1209 0369 00       		.byte	0
+ 1210 036a 07       		.uleb128 0x7
+ 1211 036b CC000000 		.4byte	.LVL31
+ 1212 036f 4A0F0000 		.4byte	0xf4a
+ 1213 0373 7D030000 		.4byte	0x37d
+ 1214 0377 08       		.uleb128 0x8
+ 1215 0378 01       		.uleb128 0x1
+ 1216 0379 50       		.byte	0x50
+ 1217 037a 01       		.uleb128 0x1
+ 1218 037b 31       		.byte	0x31
+ 1219 037c 00       		.byte	0
+ 1220 037d 07       		.uleb128 0x7
+ 1221 037e D2000000 		.4byte	.LVL32
+ 1222 0382 550F0000 		.4byte	0xf55
+ 1223 0386 90030000 		.4byte	0x390
+ 1224 038a 08       		.uleb128 0x8
+ 1225 038b 01       		.uleb128 0x1
+ 1226 038c 50       		.byte	0x50
+ 1227 038d 01       		.uleb128 0x1
+ 1228 038e 31       		.byte	0x31
+ 1229 038f 00       		.byte	0
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 28
+
+
+ 1230 0390 07       		.uleb128 0x7
+ 1231 0391 D8000000 		.4byte	.LVL33
+ 1232 0395 600F0000 		.4byte	0xf60
+ 1233 0399 A3030000 		.4byte	0x3a3
+ 1234 039d 08       		.uleb128 0x8
+ 1235 039e 01       		.uleb128 0x1
+ 1236 039f 50       		.byte	0x50
+ 1237 03a0 01       		.uleb128 0x1
+ 1238 03a1 30       		.byte	0x30
+ 1239 03a2 00       		.byte	0
+ 1240 03a3 07       		.uleb128 0x7
+ 1241 03a4 DE000000 		.4byte	.LVL34
+ 1242 03a8 6B0F0000 		.4byte	0xf6b
+ 1243 03ac B6030000 		.4byte	0x3b6
+ 1244 03b0 08       		.uleb128 0x8
+ 1245 03b1 01       		.uleb128 0x1
+ 1246 03b2 50       		.byte	0x50
+ 1247 03b3 01       		.uleb128 0x1
+ 1248 03b4 30       		.byte	0x30
+ 1249 03b5 00       		.byte	0
+ 1250 03b6 07       		.uleb128 0x7
+ 1251 03b7 E4000000 		.4byte	.LVL35
+ 1252 03bb 760F0000 		.4byte	0xf76
+ 1253 03bf CA030000 		.4byte	0x3ca
+ 1254 03c3 08       		.uleb128 0x8
+ 1255 03c4 01       		.uleb128 0x1
+ 1256 03c5 50       		.byte	0x50
+ 1257 03c6 02       		.uleb128 0x2
+ 1258 03c7 75       		.byte	0x75
+ 1259 03c8 00       		.sleb128 0
+ 1260 03c9 00       		.byte	0
+ 1261 03ca 07       		.uleb128 0x7
+ 1262 03cb EA000000 		.4byte	.LVL36
+ 1263 03cf 4A0F0000 		.4byte	0xf4a
+ 1264 03d3 DD030000 		.4byte	0x3dd
+ 1265 03d7 08       		.uleb128 0x8
+ 1266 03d8 01       		.uleb128 0x1
+ 1267 03d9 50       		.byte	0x50
+ 1268 03da 01       		.uleb128 0x1
+ 1269 03db 31       		.byte	0x31
+ 1270 03dc 00       		.byte	0
+ 1271 03dd 07       		.uleb128 0x7
+ 1272 03de F0000000 		.4byte	.LVL37
+ 1273 03e2 550F0000 		.4byte	0xf55
+ 1274 03e6 F0030000 		.4byte	0x3f0
+ 1275 03ea 08       		.uleb128 0x8
+ 1276 03eb 01       		.uleb128 0x1
+ 1277 03ec 50       		.byte	0x50
+ 1278 03ed 01       		.uleb128 0x1
+ 1279 03ee 30       		.byte	0x30
+ 1280 03ef 00       		.byte	0
+ 1281 03f0 07       		.uleb128 0x7
+ 1282 03f1 F6000000 		.4byte	.LVL38
+ 1283 03f5 600F0000 		.4byte	0xf60
+ 1284 03f9 03040000 		.4byte	0x403
+ 1285 03fd 08       		.uleb128 0x8
+ 1286 03fe 01       		.uleb128 0x1
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 29
+
+
+ 1287 03ff 50       		.byte	0x50
+ 1288 0400 01       		.uleb128 0x1
+ 1289 0401 30       		.byte	0x30
+ 1290 0402 00       		.byte	0
+ 1291 0403 07       		.uleb128 0x7
+ 1292 0404 FC000000 		.4byte	.LVL39
+ 1293 0408 6B0F0000 		.4byte	0xf6b
+ 1294 040c 16040000 		.4byte	0x416
+ 1295 0410 08       		.uleb128 0x8
+ 1296 0411 01       		.uleb128 0x1
+ 1297 0412 50       		.byte	0x50
+ 1298 0413 01       		.uleb128 0x1
+ 1299 0414 31       		.byte	0x31
+ 1300 0415 00       		.byte	0
+ 1301 0416 09       		.uleb128 0x9
+ 1302 0417 02010000 		.4byte	.LVL40
+ 1303 041b 760F0000 		.4byte	0xf76
+ 1304 041f 08       		.uleb128 0x8
+ 1305 0420 01       		.uleb128 0x1
+ 1306 0421 50       		.byte	0x50
+ 1307 0422 02       		.uleb128 0x2
+ 1308 0423 75       		.byte	0x75
+ 1309 0424 00       		.sleb128 0
+ 1310 0425 00       		.byte	0
+ 1311 0426 00       		.byte	0
+ 1312 0427 04       		.uleb128 0x4
+ 1313 0428 0E010000 		.4byte	.LBB4
+ 1314 042c F0000000 		.4byte	.LBE4-.LBB4
+ 1315 0430 86070000 		.4byte	0x786
+ 1316 0434 05       		.uleb128 0x5
+ 1317 0435 39000000 		.4byte	.LASF3
+ 1318 0439 01       		.byte	0x1
+ 1319 043a 16       		.byte	0x16
+ 1320 043b A00E0000 		.4byte	0xea0
+ 1321 043f 45040000 		.4byte	0x445
+ 1322 0443 06       		.uleb128 0x6
+ 1323 0444 00       		.byte	0
+ 1324 0445 05       		.uleb128 0x5
+ 1325 0446 0D000000 		.4byte	.LASF4
+ 1326 044a 01       		.byte	0x1
+ 1327 044b 17       		.byte	0x17
+ 1328 044c A00E0000 		.4byte	0xea0
+ 1329 0450 56040000 		.4byte	0x456
+ 1330 0454 06       		.uleb128 0x6
+ 1331 0455 00       		.byte	0
+ 1332 0456 05       		.uleb128 0x5
+ 1333 0457 42000000 		.4byte	.LASF5
+ 1334 045b 01       		.byte	0x1
+ 1335 045c 18       		.byte	0x18
+ 1336 045d A00E0000 		.4byte	0xea0
+ 1337 0461 67040000 		.4byte	0x467
+ 1338 0465 06       		.uleb128 0x6
+ 1339 0466 00       		.byte	0
+ 1340 0467 05       		.uleb128 0x5
+ 1341 0468 A3000000 		.4byte	.LASF6
+ 1342 046c 01       		.byte	0x1
+ 1343 046d 19       		.byte	0x19
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 30
+
+
+ 1344 046e A00E0000 		.4byte	0xea0
+ 1345 0472 78040000 		.4byte	0x478
+ 1346 0476 06       		.uleb128 0x6
+ 1347 0477 00       		.byte	0
+ 1348 0478 05       		.uleb128 0x5
+ 1349 0479 25000000 		.4byte	.LASF7
+ 1350 047d 01       		.byte	0x1
+ 1351 047e 1A       		.byte	0x1a
+ 1352 047f A00E0000 		.4byte	0xea0
+ 1353 0483 89040000 		.4byte	0x489
+ 1354 0487 06       		.uleb128 0x6
+ 1355 0488 00       		.byte	0
+ 1356 0489 07       		.uleb128 0x7
+ 1357 048a 14010000 		.4byte	.LVL43
+ 1358 048e 4A0F0000 		.4byte	0xf4a
+ 1359 0492 9C040000 		.4byte	0x49c
+ 1360 0496 08       		.uleb128 0x8
+ 1361 0497 01       		.uleb128 0x1
+ 1362 0498 50       		.byte	0x50
+ 1363 0499 01       		.uleb128 0x1
+ 1364 049a 30       		.byte	0x30
+ 1365 049b 00       		.byte	0
+ 1366 049c 07       		.uleb128 0x7
+ 1367 049d 1A010000 		.4byte	.LVL44
+ 1368 04a1 550F0000 		.4byte	0xf55
+ 1369 04a5 AF040000 		.4byte	0x4af
+ 1370 04a9 08       		.uleb128 0x8
+ 1371 04aa 01       		.uleb128 0x1
+ 1372 04ab 50       		.byte	0x50
+ 1373 04ac 01       		.uleb128 0x1
+ 1374 04ad 30       		.byte	0x30
+ 1375 04ae 00       		.byte	0
+ 1376 04af 07       		.uleb128 0x7
+ 1377 04b0 20010000 		.4byte	.LVL45
+ 1378 04b4 600F0000 		.4byte	0xf60
+ 1379 04b8 C2040000 		.4byte	0x4c2
+ 1380 04bc 08       		.uleb128 0x8
+ 1381 04bd 01       		.uleb128 0x1
+ 1382 04be 50       		.byte	0x50
+ 1383 04bf 01       		.uleb128 0x1
+ 1384 04c0 30       		.byte	0x30
+ 1385 04c1 00       		.byte	0
+ 1386 04c2 07       		.uleb128 0x7
+ 1387 04c3 26010000 		.4byte	.LVL46
+ 1388 04c7 6B0F0000 		.4byte	0xf6b
+ 1389 04cb D5040000 		.4byte	0x4d5
+ 1390 04cf 08       		.uleb128 0x8
+ 1391 04d0 01       		.uleb128 0x1
+ 1392 04d1 50       		.byte	0x50
+ 1393 04d2 01       		.uleb128 0x1
+ 1394 04d3 31       		.byte	0x31
+ 1395 04d4 00       		.byte	0
+ 1396 04d5 07       		.uleb128 0x7
+ 1397 04d6 2C010000 		.4byte	.LVL47
+ 1398 04da 760F0000 		.4byte	0xf76
+ 1399 04de E9040000 		.4byte	0x4e9
+ 1400 04e2 08       		.uleb128 0x8
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 31
+
+
+ 1401 04e3 01       		.uleb128 0x1
+ 1402 04e4 50       		.byte	0x50
+ 1403 04e5 02       		.uleb128 0x2
+ 1404 04e6 75       		.byte	0x75
+ 1405 04e7 00       		.sleb128 0
+ 1406 04e8 00       		.byte	0
+ 1407 04e9 07       		.uleb128 0x7
+ 1408 04ea 32010000 		.4byte	.LVL48
+ 1409 04ee 4A0F0000 		.4byte	0xf4a
+ 1410 04f2 FC040000 		.4byte	0x4fc
+ 1411 04f6 08       		.uleb128 0x8
+ 1412 04f7 01       		.uleb128 0x1
+ 1413 04f8 50       		.byte	0x50
+ 1414 04f9 01       		.uleb128 0x1
+ 1415 04fa 31       		.byte	0x31
+ 1416 04fb 00       		.byte	0
+ 1417 04fc 07       		.uleb128 0x7
+ 1418 04fd 38010000 		.4byte	.LVL49
+ 1419 0501 550F0000 		.4byte	0xf55
+ 1420 0505 0F050000 		.4byte	0x50f
+ 1421 0509 08       		.uleb128 0x8
+ 1422 050a 01       		.uleb128 0x1
+ 1423 050b 50       		.byte	0x50
+ 1424 050c 01       		.uleb128 0x1
+ 1425 050d 30       		.byte	0x30
+ 1426 050e 00       		.byte	0
+ 1427 050f 07       		.uleb128 0x7
+ 1428 0510 3E010000 		.4byte	.LVL50
+ 1429 0514 600F0000 		.4byte	0xf60
+ 1430 0518 22050000 		.4byte	0x522
+ 1431 051c 08       		.uleb128 0x8
+ 1432 051d 01       		.uleb128 0x1
+ 1433 051e 50       		.byte	0x50
+ 1434 051f 01       		.uleb128 0x1
+ 1435 0520 30       		.byte	0x30
+ 1436 0521 00       		.byte	0
+ 1437 0522 07       		.uleb128 0x7
+ 1438 0523 44010000 		.4byte	.LVL51
+ 1439 0527 6B0F0000 		.4byte	0xf6b
+ 1440 052b 35050000 		.4byte	0x535
+ 1441 052f 08       		.uleb128 0x8
+ 1442 0530 01       		.uleb128 0x1
+ 1443 0531 50       		.byte	0x50
+ 1444 0532 01       		.uleb128 0x1
+ 1445 0533 31       		.byte	0x31
+ 1446 0534 00       		.byte	0
+ 1447 0535 07       		.uleb128 0x7
+ 1448 0536 4A010000 		.4byte	.LVL52
+ 1449 053a 760F0000 		.4byte	0xf76
+ 1450 053e 49050000 		.4byte	0x549
+ 1451 0542 08       		.uleb128 0x8
+ 1452 0543 01       		.uleb128 0x1
+ 1453 0544 50       		.byte	0x50
+ 1454 0545 02       		.uleb128 0x2
+ 1455 0546 75       		.byte	0x75
+ 1456 0547 00       		.sleb128 0
+ 1457 0548 00       		.byte	0
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 32
+
+
+ 1458 0549 07       		.uleb128 0x7
+ 1459 054a 50010000 		.4byte	.LVL53
+ 1460 054e 4A0F0000 		.4byte	0xf4a
+ 1461 0552 5C050000 		.4byte	0x55c
+ 1462 0556 08       		.uleb128 0x8
+ 1463 0557 01       		.uleb128 0x1
+ 1464 0558 50       		.byte	0x50
+ 1465 0559 01       		.uleb128 0x1
+ 1466 055a 31       		.byte	0x31
+ 1467 055b 00       		.byte	0
+ 1468 055c 07       		.uleb128 0x7
+ 1469 055d 56010000 		.4byte	.LVL54
+ 1470 0561 550F0000 		.4byte	0xf55
+ 1471 0565 6F050000 		.4byte	0x56f
+ 1472 0569 08       		.uleb128 0x8
+ 1473 056a 01       		.uleb128 0x1
+ 1474 056b 50       		.byte	0x50
+ 1475 056c 01       		.uleb128 0x1
+ 1476 056d 30       		.byte	0x30
+ 1477 056e 00       		.byte	0
+ 1478 056f 07       		.uleb128 0x7
+ 1479 0570 5C010000 		.4byte	.LVL55
+ 1480 0574 600F0000 		.4byte	0xf60
+ 1481 0578 82050000 		.4byte	0x582
+ 1482 057c 08       		.uleb128 0x8
+ 1483 057d 01       		.uleb128 0x1
+ 1484 057e 50       		.byte	0x50
+ 1485 057f 01       		.uleb128 0x1
+ 1486 0580 30       		.byte	0x30
+ 1487 0581 00       		.byte	0
+ 1488 0582 07       		.uleb128 0x7
+ 1489 0583 62010000 		.4byte	.LVL56
+ 1490 0587 6B0F0000 		.4byte	0xf6b
+ 1491 058b 95050000 		.4byte	0x595
+ 1492 058f 08       		.uleb128 0x8
+ 1493 0590 01       		.uleb128 0x1
+ 1494 0591 50       		.byte	0x50
+ 1495 0592 01       		.uleb128 0x1
+ 1496 0593 30       		.byte	0x30
+ 1497 0594 00       		.byte	0
+ 1498 0595 07       		.uleb128 0x7
+ 1499 0596 68010000 		.4byte	.LVL57
+ 1500 059a 760F0000 		.4byte	0xf76
+ 1501 059e A9050000 		.4byte	0x5a9
+ 1502 05a2 08       		.uleb128 0x8
+ 1503 05a3 01       		.uleb128 0x1
+ 1504 05a4 50       		.byte	0x50
+ 1505 05a5 02       		.uleb128 0x2
+ 1506 05a6 75       		.byte	0x75
+ 1507 05a7 00       		.sleb128 0
+ 1508 05a8 00       		.byte	0
+ 1509 05a9 07       		.uleb128 0x7
+ 1510 05aa 6E010000 		.4byte	.LVL58
+ 1511 05ae 4A0F0000 		.4byte	0xf4a
+ 1512 05b2 BC050000 		.4byte	0x5bc
+ 1513 05b6 08       		.uleb128 0x8
+ 1514 05b7 01       		.uleb128 0x1
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 33
+
+
+ 1515 05b8 50       		.byte	0x50
+ 1516 05b9 01       		.uleb128 0x1
+ 1517 05ba 31       		.byte	0x31
+ 1518 05bb 00       		.byte	0
+ 1519 05bc 07       		.uleb128 0x7
+ 1520 05bd 74010000 		.4byte	.LVL59
+ 1521 05c1 550F0000 		.4byte	0xf55
+ 1522 05c5 CF050000 		.4byte	0x5cf
+ 1523 05c9 08       		.uleb128 0x8
+ 1524 05ca 01       		.uleb128 0x1
+ 1525 05cb 50       		.byte	0x50
+ 1526 05cc 01       		.uleb128 0x1
+ 1527 05cd 31       		.byte	0x31
+ 1528 05ce 00       		.byte	0
+ 1529 05cf 07       		.uleb128 0x7
+ 1530 05d0 7A010000 		.4byte	.LVL60
+ 1531 05d4 600F0000 		.4byte	0xf60
+ 1532 05d8 E2050000 		.4byte	0x5e2
+ 1533 05dc 08       		.uleb128 0x8
+ 1534 05dd 01       		.uleb128 0x1
+ 1535 05de 50       		.byte	0x50
+ 1536 05df 01       		.uleb128 0x1
+ 1537 05e0 30       		.byte	0x30
+ 1538 05e1 00       		.byte	0
+ 1539 05e2 07       		.uleb128 0x7
+ 1540 05e3 80010000 		.4byte	.LVL61
+ 1541 05e7 6B0F0000 		.4byte	0xf6b
+ 1542 05eb F5050000 		.4byte	0x5f5
+ 1543 05ef 08       		.uleb128 0x8
+ 1544 05f0 01       		.uleb128 0x1
+ 1545 05f1 50       		.byte	0x50
+ 1546 05f2 01       		.uleb128 0x1
+ 1547 05f3 30       		.byte	0x30
+ 1548 05f4 00       		.byte	0
+ 1549 05f5 07       		.uleb128 0x7
+ 1550 05f6 86010000 		.4byte	.LVL62
+ 1551 05fa 760F0000 		.4byte	0xf76
+ 1552 05fe 09060000 		.4byte	0x609
+ 1553 0602 08       		.uleb128 0x8
+ 1554 0603 01       		.uleb128 0x1
+ 1555 0604 50       		.byte	0x50
+ 1556 0605 02       		.uleb128 0x2
+ 1557 0606 75       		.byte	0x75
+ 1558 0607 00       		.sleb128 0
+ 1559 0608 00       		.byte	0
+ 1560 0609 07       		.uleb128 0x7
+ 1561 060a 8C010000 		.4byte	.LVL63
+ 1562 060e 4A0F0000 		.4byte	0xf4a
+ 1563 0612 1C060000 		.4byte	0x61c
+ 1564 0616 08       		.uleb128 0x8
+ 1565 0617 01       		.uleb128 0x1
+ 1566 0618 50       		.byte	0x50
+ 1567 0619 01       		.uleb128 0x1
+ 1568 061a 30       		.byte	0x30
+ 1569 061b 00       		.byte	0
+ 1570 061c 07       		.uleb128 0x7
+ 1571 061d 92010000 		.4byte	.LVL64
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 34
+
+
+ 1572 0621 550F0000 		.4byte	0xf55
+ 1573 0625 2F060000 		.4byte	0x62f
+ 1574 0629 08       		.uleb128 0x8
+ 1575 062a 01       		.uleb128 0x1
+ 1576 062b 50       		.byte	0x50
+ 1577 062c 01       		.uleb128 0x1
+ 1578 062d 31       		.byte	0x31
+ 1579 062e 00       		.byte	0
+ 1580 062f 07       		.uleb128 0x7
+ 1581 0630 98010000 		.4byte	.LVL65
+ 1582 0634 600F0000 		.4byte	0xf60
+ 1583 0638 42060000 		.4byte	0x642
+ 1584 063c 08       		.uleb128 0x8
+ 1585 063d 01       		.uleb128 0x1
+ 1586 063e 50       		.byte	0x50
+ 1587 063f 01       		.uleb128 0x1
+ 1588 0640 30       		.byte	0x30
+ 1589 0641 00       		.byte	0
+ 1590 0642 07       		.uleb128 0x7
+ 1591 0643 9E010000 		.4byte	.LVL66
+ 1592 0647 6B0F0000 		.4byte	0xf6b
+ 1593 064b 55060000 		.4byte	0x655
+ 1594 064f 08       		.uleb128 0x8
+ 1595 0650 01       		.uleb128 0x1
+ 1596 0651 50       		.byte	0x50
+ 1597 0652 01       		.uleb128 0x1
+ 1598 0653 30       		.byte	0x30
+ 1599 0654 00       		.byte	0
+ 1600 0655 07       		.uleb128 0x7
+ 1601 0656 A4010000 		.4byte	.LVL67
+ 1602 065a 760F0000 		.4byte	0xf76
+ 1603 065e 69060000 		.4byte	0x669
+ 1604 0662 08       		.uleb128 0x8
+ 1605 0663 01       		.uleb128 0x1
+ 1606 0664 50       		.byte	0x50
+ 1607 0665 02       		.uleb128 0x2
+ 1608 0666 75       		.byte	0x75
+ 1609 0667 00       		.sleb128 0
+ 1610 0668 00       		.byte	0
+ 1611 0669 07       		.uleb128 0x7
+ 1612 066a AA010000 		.4byte	.LVL68
+ 1613 066e 4A0F0000 		.4byte	0xf4a
+ 1614 0672 7C060000 		.4byte	0x67c
+ 1615 0676 08       		.uleb128 0x8
+ 1616 0677 01       		.uleb128 0x1
+ 1617 0678 50       		.byte	0x50
+ 1618 0679 01       		.uleb128 0x1
+ 1619 067a 30       		.byte	0x30
+ 1620 067b 00       		.byte	0
+ 1621 067c 07       		.uleb128 0x7
+ 1622 067d B0010000 		.4byte	.LVL69
+ 1623 0681 550F0000 		.4byte	0xf55
+ 1624 0685 8F060000 		.4byte	0x68f
+ 1625 0689 08       		.uleb128 0x8
+ 1626 068a 01       		.uleb128 0x1
+ 1627 068b 50       		.byte	0x50
+ 1628 068c 01       		.uleb128 0x1
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 35
+
+
+ 1629 068d 31       		.byte	0x31
+ 1630 068e 00       		.byte	0
+ 1631 068f 07       		.uleb128 0x7
+ 1632 0690 B6010000 		.4byte	.LVL70
+ 1633 0694 600F0000 		.4byte	0xf60
+ 1634 0698 A2060000 		.4byte	0x6a2
+ 1635 069c 08       		.uleb128 0x8
+ 1636 069d 01       		.uleb128 0x1
+ 1637 069e 50       		.byte	0x50
+ 1638 069f 01       		.uleb128 0x1
+ 1639 06a0 31       		.byte	0x31
+ 1640 06a1 00       		.byte	0
+ 1641 06a2 07       		.uleb128 0x7
+ 1642 06a3 BC010000 		.4byte	.LVL71
+ 1643 06a7 6B0F0000 		.4byte	0xf6b
+ 1644 06ab B5060000 		.4byte	0x6b5
+ 1645 06af 08       		.uleb128 0x8
+ 1646 06b0 01       		.uleb128 0x1
+ 1647 06b1 50       		.byte	0x50
+ 1648 06b2 01       		.uleb128 0x1
+ 1649 06b3 30       		.byte	0x30
+ 1650 06b4 00       		.byte	0
+ 1651 06b5 07       		.uleb128 0x7
+ 1652 06b6 C2010000 		.4byte	.LVL72
+ 1653 06ba 760F0000 		.4byte	0xf76
+ 1654 06be C9060000 		.4byte	0x6c9
+ 1655 06c2 08       		.uleb128 0x8
+ 1656 06c3 01       		.uleb128 0x1
+ 1657 06c4 50       		.byte	0x50
+ 1658 06c5 02       		.uleb128 0x2
+ 1659 06c6 75       		.byte	0x75
+ 1660 06c7 00       		.sleb128 0
+ 1661 06c8 00       		.byte	0
+ 1662 06c9 07       		.uleb128 0x7
+ 1663 06ca C8010000 		.4byte	.LVL73
+ 1664 06ce 4A0F0000 		.4byte	0xf4a
+ 1665 06d2 DC060000 		.4byte	0x6dc
+ 1666 06d6 08       		.uleb128 0x8
+ 1667 06d7 01       		.uleb128 0x1
+ 1668 06d8 50       		.byte	0x50
+ 1669 06d9 01       		.uleb128 0x1
+ 1670 06da 30       		.byte	0x30
+ 1671 06db 00       		.byte	0
+ 1672 06dc 07       		.uleb128 0x7
+ 1673 06dd CE010000 		.4byte	.LVL74
+ 1674 06e1 550F0000 		.4byte	0xf55
+ 1675 06e5 EF060000 		.4byte	0x6ef
+ 1676 06e9 08       		.uleb128 0x8
+ 1677 06ea 01       		.uleb128 0x1
+ 1678 06eb 50       		.byte	0x50
+ 1679 06ec 01       		.uleb128 0x1
+ 1680 06ed 30       		.byte	0x30
+ 1681 06ee 00       		.byte	0
+ 1682 06ef 07       		.uleb128 0x7
+ 1683 06f0 D4010000 		.4byte	.LVL75
+ 1684 06f4 600F0000 		.4byte	0xf60
+ 1685 06f8 02070000 		.4byte	0x702
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 36
+
+
+ 1686 06fc 08       		.uleb128 0x8
+ 1687 06fd 01       		.uleb128 0x1
+ 1688 06fe 50       		.byte	0x50
+ 1689 06ff 01       		.uleb128 0x1
+ 1690 0700 31       		.byte	0x31
+ 1691 0701 00       		.byte	0
+ 1692 0702 07       		.uleb128 0x7
+ 1693 0703 DA010000 		.4byte	.LVL76
+ 1694 0707 6B0F0000 		.4byte	0xf6b
+ 1695 070b 15070000 		.4byte	0x715
+ 1696 070f 08       		.uleb128 0x8
+ 1697 0710 01       		.uleb128 0x1
+ 1698 0711 50       		.byte	0x50
+ 1699 0712 01       		.uleb128 0x1
+ 1700 0713 30       		.byte	0x30
+ 1701 0714 00       		.byte	0
+ 1702 0715 07       		.uleb128 0x7
+ 1703 0716 E0010000 		.4byte	.LVL77
+ 1704 071a 760F0000 		.4byte	0xf76
+ 1705 071e 29070000 		.4byte	0x729
+ 1706 0722 08       		.uleb128 0x8
+ 1707 0723 01       		.uleb128 0x1
+ 1708 0724 50       		.byte	0x50
+ 1709 0725 02       		.uleb128 0x2
+ 1710 0726 75       		.byte	0x75
+ 1711 0727 00       		.sleb128 0
+ 1712 0728 00       		.byte	0
+ 1713 0729 07       		.uleb128 0x7
+ 1714 072a E6010000 		.4byte	.LVL78
+ 1715 072e 4A0F0000 		.4byte	0xf4a
+ 1716 0732 3C070000 		.4byte	0x73c
+ 1717 0736 08       		.uleb128 0x8
+ 1718 0737 01       		.uleb128 0x1
+ 1719 0738 50       		.byte	0x50
+ 1720 0739 01       		.uleb128 0x1
+ 1721 073a 30       		.byte	0x30
+ 1722 073b 00       		.byte	0
+ 1723 073c 07       		.uleb128 0x7
+ 1724 073d EC010000 		.4byte	.LVL79
+ 1725 0741 550F0000 		.4byte	0xf55
+ 1726 0745 4F070000 		.4byte	0x74f
+ 1727 0749 08       		.uleb128 0x8
+ 1728 074a 01       		.uleb128 0x1
+ 1729 074b 50       		.byte	0x50
+ 1730 074c 01       		.uleb128 0x1
+ 1731 074d 30       		.byte	0x30
+ 1732 074e 00       		.byte	0
+ 1733 074f 07       		.uleb128 0x7
+ 1734 0750 F2010000 		.4byte	.LVL80
+ 1735 0754 600F0000 		.4byte	0xf60
+ 1736 0758 62070000 		.4byte	0x762
+ 1737 075c 08       		.uleb128 0x8
+ 1738 075d 01       		.uleb128 0x1
+ 1739 075e 50       		.byte	0x50
+ 1740 075f 01       		.uleb128 0x1
+ 1741 0760 31       		.byte	0x31
+ 1742 0761 00       		.byte	0
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 37
+
+
+ 1743 0762 07       		.uleb128 0x7
+ 1744 0763 F8010000 		.4byte	.LVL81
+ 1745 0767 6B0F0000 		.4byte	0xf6b
+ 1746 076b 75070000 		.4byte	0x775
+ 1747 076f 08       		.uleb128 0x8
+ 1748 0770 01       		.uleb128 0x1
+ 1749 0771 50       		.byte	0x50
+ 1750 0772 01       		.uleb128 0x1
+ 1751 0773 31       		.byte	0x31
+ 1752 0774 00       		.byte	0
+ 1753 0775 09       		.uleb128 0x9
+ 1754 0776 FE010000 		.4byte	.LVL82
+ 1755 077a 760F0000 		.4byte	0xf76
+ 1756 077e 08       		.uleb128 0x8
+ 1757 077f 01       		.uleb128 0x1
+ 1758 0780 50       		.byte	0x50
+ 1759 0781 02       		.uleb128 0x2
+ 1760 0782 75       		.byte	0x75
+ 1761 0783 00       		.sleb128 0
+ 1762 0784 00       		.byte	0
+ 1763 0785 00       		.byte	0
+ 1764 0786 04       		.uleb128 0x4
+ 1765 0787 04020000 		.4byte	.LBB5
+ 1766 078b F2000000 		.4byte	.LBE5-.LBB5
+ 1767 078f E50A0000 		.4byte	0xae5
+ 1768 0793 05       		.uleb128 0x5
+ 1769 0794 39000000 		.4byte	.LASF3
+ 1770 0798 01       		.byte	0x1
+ 1771 0799 16       		.byte	0x16
+ 1772 079a A00E0000 		.4byte	0xea0
+ 1773 079e A4070000 		.4byte	0x7a4
+ 1774 07a2 06       		.uleb128 0x6
+ 1775 07a3 00       		.byte	0
+ 1776 07a4 05       		.uleb128 0x5
+ 1777 07a5 0D000000 		.4byte	.LASF4
+ 1778 07a9 01       		.byte	0x1
+ 1779 07aa 17       		.byte	0x17
+ 1780 07ab A00E0000 		.4byte	0xea0
+ 1781 07af B5070000 		.4byte	0x7b5
+ 1782 07b3 06       		.uleb128 0x6
+ 1783 07b4 00       		.byte	0
+ 1784 07b5 05       		.uleb128 0x5
+ 1785 07b6 42000000 		.4byte	.LASF5
+ 1786 07ba 01       		.byte	0x1
+ 1787 07bb 18       		.byte	0x18
+ 1788 07bc A00E0000 		.4byte	0xea0
+ 1789 07c0 C6070000 		.4byte	0x7c6
+ 1790 07c4 06       		.uleb128 0x6
+ 1791 07c5 00       		.byte	0
+ 1792 07c6 05       		.uleb128 0x5
+ 1793 07c7 A3000000 		.4byte	.LASF6
+ 1794 07cb 01       		.byte	0x1
+ 1795 07cc 19       		.byte	0x19
+ 1796 07cd A00E0000 		.4byte	0xea0
+ 1797 07d1 D7070000 		.4byte	0x7d7
+ 1798 07d5 06       		.uleb128 0x6
+ 1799 07d6 00       		.byte	0
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 38
+
+
+ 1800 07d7 05       		.uleb128 0x5
+ 1801 07d8 25000000 		.4byte	.LASF7
+ 1802 07dc 01       		.byte	0x1
+ 1803 07dd 1A       		.byte	0x1a
+ 1804 07de A00E0000 		.4byte	0xea0
+ 1805 07e2 E8070000 		.4byte	0x7e8
+ 1806 07e6 06       		.uleb128 0x6
+ 1807 07e7 00       		.byte	0
+ 1808 07e8 07       		.uleb128 0x7
+ 1809 07e9 0A020000 		.4byte	.LVL83
+ 1810 07ed 4A0F0000 		.4byte	0xf4a
+ 1811 07f1 FB070000 		.4byte	0x7fb
+ 1812 07f5 08       		.uleb128 0x8
+ 1813 07f6 01       		.uleb128 0x1
+ 1814 07f7 50       		.byte	0x50
+ 1815 07f8 01       		.uleb128 0x1
+ 1816 07f9 30       		.byte	0x30
+ 1817 07fa 00       		.byte	0
+ 1818 07fb 07       		.uleb128 0x7
+ 1819 07fc 10020000 		.4byte	.LVL84
+ 1820 0800 550F0000 		.4byte	0xf55
+ 1821 0804 0E080000 		.4byte	0x80e
+ 1822 0808 08       		.uleb128 0x8
+ 1823 0809 01       		.uleb128 0x1
+ 1824 080a 50       		.byte	0x50
+ 1825 080b 01       		.uleb128 0x1
+ 1826 080c 30       		.byte	0x30
+ 1827 080d 00       		.byte	0
+ 1828 080e 07       		.uleb128 0x7
+ 1829 080f 16020000 		.4byte	.LVL85
+ 1830 0813 600F0000 		.4byte	0xf60
+ 1831 0817 21080000 		.4byte	0x821
+ 1832 081b 08       		.uleb128 0x8
+ 1833 081c 01       		.uleb128 0x1
+ 1834 081d 50       		.byte	0x50
+ 1835 081e 01       		.uleb128 0x1
+ 1836 081f 30       		.byte	0x30
+ 1837 0820 00       		.byte	0
+ 1838 0821 07       		.uleb128 0x7
+ 1839 0822 1C020000 		.4byte	.LVL86
+ 1840 0826 6B0F0000 		.4byte	0xf6b
+ 1841 082a 34080000 		.4byte	0x834
+ 1842 082e 08       		.uleb128 0x8
+ 1843 082f 01       		.uleb128 0x1
+ 1844 0830 50       		.byte	0x50
+ 1845 0831 01       		.uleb128 0x1
+ 1846 0832 31       		.byte	0x31
+ 1847 0833 00       		.byte	0
+ 1848 0834 07       		.uleb128 0x7
+ 1849 0835 22020000 		.4byte	.LVL87
+ 1850 0839 760F0000 		.4byte	0xf76
+ 1851 083d 48080000 		.4byte	0x848
+ 1852 0841 08       		.uleb128 0x8
+ 1853 0842 01       		.uleb128 0x1
+ 1854 0843 50       		.byte	0x50
+ 1855 0844 02       		.uleb128 0x2
+ 1856 0845 75       		.byte	0x75
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 39
+
+
+ 1857 0846 00       		.sleb128 0
+ 1858 0847 00       		.byte	0
+ 1859 0848 07       		.uleb128 0x7
+ 1860 0849 28020000 		.4byte	.LVL88
+ 1861 084d 4A0F0000 		.4byte	0xf4a
+ 1862 0851 5B080000 		.4byte	0x85b
+ 1863 0855 08       		.uleb128 0x8
+ 1864 0856 01       		.uleb128 0x1
+ 1865 0857 50       		.byte	0x50
+ 1866 0858 01       		.uleb128 0x1
+ 1867 0859 30       		.byte	0x30
+ 1868 085a 00       		.byte	0
+ 1869 085b 07       		.uleb128 0x7
+ 1870 085c 2E020000 		.4byte	.LVL89
+ 1871 0860 550F0000 		.4byte	0xf55
+ 1872 0864 6E080000 		.4byte	0x86e
+ 1873 0868 08       		.uleb128 0x8
+ 1874 0869 01       		.uleb128 0x1
+ 1875 086a 50       		.byte	0x50
+ 1876 086b 01       		.uleb128 0x1
+ 1877 086c 30       		.byte	0x30
+ 1878 086d 00       		.byte	0
+ 1879 086e 07       		.uleb128 0x7
+ 1880 086f 34020000 		.4byte	.LVL90
+ 1881 0873 600F0000 		.4byte	0xf60
+ 1882 0877 81080000 		.4byte	0x881
+ 1883 087b 08       		.uleb128 0x8
+ 1884 087c 01       		.uleb128 0x1
+ 1885 087d 50       		.byte	0x50
+ 1886 087e 01       		.uleb128 0x1
+ 1887 087f 31       		.byte	0x31
+ 1888 0880 00       		.byte	0
+ 1889 0881 07       		.uleb128 0x7
+ 1890 0882 3A020000 		.4byte	.LVL91
+ 1891 0886 6B0F0000 		.4byte	0xf6b
+ 1892 088a 94080000 		.4byte	0x894
+ 1893 088e 08       		.uleb128 0x8
+ 1894 088f 01       		.uleb128 0x1
+ 1895 0890 50       		.byte	0x50
+ 1896 0891 01       		.uleb128 0x1
+ 1897 0892 31       		.byte	0x31
+ 1898 0893 00       		.byte	0
+ 1899 0894 07       		.uleb128 0x7
+ 1900 0895 40020000 		.4byte	.LVL92
+ 1901 0899 760F0000 		.4byte	0xf76
+ 1902 089d A8080000 		.4byte	0x8a8
+ 1903 08a1 08       		.uleb128 0x8
+ 1904 08a2 01       		.uleb128 0x1
+ 1905 08a3 50       		.byte	0x50
+ 1906 08a4 02       		.uleb128 0x2
+ 1907 08a5 75       		.byte	0x75
+ 1908 08a6 00       		.sleb128 0
+ 1909 08a7 00       		.byte	0
+ 1910 08a8 07       		.uleb128 0x7
+ 1911 08a9 46020000 		.4byte	.LVL93
+ 1912 08ad 4A0F0000 		.4byte	0xf4a
+ 1913 08b1 BB080000 		.4byte	0x8bb
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 40
+
+
+ 1914 08b5 08       		.uleb128 0x8
+ 1915 08b6 01       		.uleb128 0x1
+ 1916 08b7 50       		.byte	0x50
+ 1917 08b8 01       		.uleb128 0x1
+ 1918 08b9 30       		.byte	0x30
+ 1919 08ba 00       		.byte	0
+ 1920 08bb 07       		.uleb128 0x7
+ 1921 08bc 4C020000 		.4byte	.LVL94
+ 1922 08c0 550F0000 		.4byte	0xf55
+ 1923 08c4 CE080000 		.4byte	0x8ce
+ 1924 08c8 08       		.uleb128 0x8
+ 1925 08c9 01       		.uleb128 0x1
+ 1926 08ca 50       		.byte	0x50
+ 1927 08cb 01       		.uleb128 0x1
+ 1928 08cc 30       		.byte	0x30
+ 1929 08cd 00       		.byte	0
+ 1930 08ce 07       		.uleb128 0x7
+ 1931 08cf 52020000 		.4byte	.LVL95
+ 1932 08d3 600F0000 		.4byte	0xf60
+ 1933 08d7 E1080000 		.4byte	0x8e1
+ 1934 08db 08       		.uleb128 0x8
+ 1935 08dc 01       		.uleb128 0x1
+ 1936 08dd 50       		.byte	0x50
+ 1937 08de 01       		.uleb128 0x1
+ 1938 08df 31       		.byte	0x31
+ 1939 08e0 00       		.byte	0
+ 1940 08e1 07       		.uleb128 0x7
+ 1941 08e2 58020000 		.4byte	.LVL96
+ 1942 08e6 6B0F0000 		.4byte	0xf6b
+ 1943 08ea F4080000 		.4byte	0x8f4
+ 1944 08ee 08       		.uleb128 0x8
+ 1945 08ef 01       		.uleb128 0x1
+ 1946 08f0 50       		.byte	0x50
+ 1947 08f1 01       		.uleb128 0x1
+ 1948 08f2 30       		.byte	0x30
+ 1949 08f3 00       		.byte	0
+ 1950 08f4 07       		.uleb128 0x7
+ 1951 08f5 5E020000 		.4byte	.LVL97
+ 1952 08f9 760F0000 		.4byte	0xf76
+ 1953 08fd 08090000 		.4byte	0x908
+ 1954 0901 08       		.uleb128 0x8
+ 1955 0902 01       		.uleb128 0x1
+ 1956 0903 50       		.byte	0x50
+ 1957 0904 02       		.uleb128 0x2
+ 1958 0905 75       		.byte	0x75
+ 1959 0906 00       		.sleb128 0
+ 1960 0907 00       		.byte	0
+ 1961 0908 07       		.uleb128 0x7
+ 1962 0909 64020000 		.4byte	.LVL98
+ 1963 090d 4A0F0000 		.4byte	0xf4a
+ 1964 0911 1B090000 		.4byte	0x91b
+ 1965 0915 08       		.uleb128 0x8
+ 1966 0916 01       		.uleb128 0x1
+ 1967 0917 50       		.byte	0x50
+ 1968 0918 01       		.uleb128 0x1
+ 1969 0919 30       		.byte	0x30
+ 1970 091a 00       		.byte	0
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 41
+
+
+ 1971 091b 07       		.uleb128 0x7
+ 1972 091c 6A020000 		.4byte	.LVL99
+ 1973 0920 550F0000 		.4byte	0xf55
+ 1974 0924 2E090000 		.4byte	0x92e
+ 1975 0928 08       		.uleb128 0x8
+ 1976 0929 01       		.uleb128 0x1
+ 1977 092a 50       		.byte	0x50
+ 1978 092b 01       		.uleb128 0x1
+ 1979 092c 31       		.byte	0x31
+ 1980 092d 00       		.byte	0
+ 1981 092e 07       		.uleb128 0x7
+ 1982 092f 70020000 		.4byte	.LVL100
+ 1983 0933 600F0000 		.4byte	0xf60
+ 1984 0937 41090000 		.4byte	0x941
+ 1985 093b 08       		.uleb128 0x8
+ 1986 093c 01       		.uleb128 0x1
+ 1987 093d 50       		.byte	0x50
+ 1988 093e 01       		.uleb128 0x1
+ 1989 093f 31       		.byte	0x31
+ 1990 0940 00       		.byte	0
+ 1991 0941 07       		.uleb128 0x7
+ 1992 0942 76020000 		.4byte	.LVL101
+ 1993 0946 6B0F0000 		.4byte	0xf6b
+ 1994 094a 54090000 		.4byte	0x954
+ 1995 094e 08       		.uleb128 0x8
+ 1996 094f 01       		.uleb128 0x1
+ 1997 0950 50       		.byte	0x50
+ 1998 0951 01       		.uleb128 0x1
+ 1999 0952 30       		.byte	0x30
+ 2000 0953 00       		.byte	0
+ 2001 0954 07       		.uleb128 0x7
+ 2002 0955 7C020000 		.4byte	.LVL102
+ 2003 0959 760F0000 		.4byte	0xf76
+ 2004 095d 68090000 		.4byte	0x968
+ 2005 0961 08       		.uleb128 0x8
+ 2006 0962 01       		.uleb128 0x1
+ 2007 0963 50       		.byte	0x50
+ 2008 0964 02       		.uleb128 0x2
+ 2009 0965 75       		.byte	0x75
+ 2010 0966 00       		.sleb128 0
+ 2011 0967 00       		.byte	0
+ 2012 0968 07       		.uleb128 0x7
+ 2013 0969 82020000 		.4byte	.LVL103
+ 2014 096d 4A0F0000 		.4byte	0xf4a
+ 2015 0971 7B090000 		.4byte	0x97b
+ 2016 0975 08       		.uleb128 0x8
+ 2017 0976 01       		.uleb128 0x1
+ 2018 0977 50       		.byte	0x50
+ 2019 0978 01       		.uleb128 0x1
+ 2020 0979 30       		.byte	0x30
+ 2021 097a 00       		.byte	0
+ 2022 097b 07       		.uleb128 0x7
+ 2023 097c 88020000 		.4byte	.LVL104
+ 2024 0980 550F0000 		.4byte	0xf55
+ 2025 0984 8E090000 		.4byte	0x98e
+ 2026 0988 08       		.uleb128 0x8
+ 2027 0989 01       		.uleb128 0x1
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 42
+
+
+ 2028 098a 50       		.byte	0x50
+ 2029 098b 01       		.uleb128 0x1
+ 2030 098c 31       		.byte	0x31
+ 2031 098d 00       		.byte	0
+ 2032 098e 07       		.uleb128 0x7
+ 2033 098f 8E020000 		.4byte	.LVL105
+ 2034 0993 600F0000 		.4byte	0xf60
+ 2035 0997 A1090000 		.4byte	0x9a1
+ 2036 099b 08       		.uleb128 0x8
+ 2037 099c 01       		.uleb128 0x1
+ 2038 099d 50       		.byte	0x50
+ 2039 099e 01       		.uleb128 0x1
+ 2040 099f 30       		.byte	0x30
+ 2041 09a0 00       		.byte	0
+ 2042 09a1 07       		.uleb128 0x7
+ 2043 09a2 94020000 		.4byte	.LVL106
+ 2044 09a6 6B0F0000 		.4byte	0xf6b
+ 2045 09aa B4090000 		.4byte	0x9b4
+ 2046 09ae 08       		.uleb128 0x8
+ 2047 09af 01       		.uleb128 0x1
+ 2048 09b0 50       		.byte	0x50
+ 2049 09b1 01       		.uleb128 0x1
+ 2050 09b2 30       		.byte	0x30
+ 2051 09b3 00       		.byte	0
+ 2052 09b4 07       		.uleb128 0x7
+ 2053 09b5 9A020000 		.4byte	.LVL107
+ 2054 09b9 760F0000 		.4byte	0xf76
+ 2055 09bd C8090000 		.4byte	0x9c8
+ 2056 09c1 08       		.uleb128 0x8
+ 2057 09c2 01       		.uleb128 0x1
+ 2058 09c3 50       		.byte	0x50
+ 2059 09c4 02       		.uleb128 0x2
+ 2060 09c5 75       		.byte	0x75
+ 2061 09c6 00       		.sleb128 0
+ 2062 09c7 00       		.byte	0
+ 2063 09c8 07       		.uleb128 0x7
+ 2064 09c9 A0020000 		.4byte	.LVL108
+ 2065 09cd 4A0F0000 		.4byte	0xf4a
+ 2066 09d1 DB090000 		.4byte	0x9db
+ 2067 09d5 08       		.uleb128 0x8
+ 2068 09d6 01       		.uleb128 0x1
+ 2069 09d7 50       		.byte	0x50
+ 2070 09d8 01       		.uleb128 0x1
+ 2071 09d9 31       		.byte	0x31
+ 2072 09da 00       		.byte	0
+ 2073 09db 07       		.uleb128 0x7
+ 2074 09dc A6020000 		.4byte	.LVL109
+ 2075 09e0 550F0000 		.4byte	0xf55
+ 2076 09e4 EE090000 		.4byte	0x9ee
+ 2077 09e8 08       		.uleb128 0x8
+ 2078 09e9 01       		.uleb128 0x1
+ 2079 09ea 50       		.byte	0x50
+ 2080 09eb 01       		.uleb128 0x1
+ 2081 09ec 31       		.byte	0x31
+ 2082 09ed 00       		.byte	0
+ 2083 09ee 07       		.uleb128 0x7
+ 2084 09ef AC020000 		.4byte	.LVL110
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 43
+
+
+ 2085 09f3 600F0000 		.4byte	0xf60
+ 2086 09f7 010A0000 		.4byte	0xa01
+ 2087 09fb 08       		.uleb128 0x8
+ 2088 09fc 01       		.uleb128 0x1
+ 2089 09fd 50       		.byte	0x50
+ 2090 09fe 01       		.uleb128 0x1
+ 2091 09ff 30       		.byte	0x30
+ 2092 0a00 00       		.byte	0
+ 2093 0a01 07       		.uleb128 0x7
+ 2094 0a02 B2020000 		.4byte	.LVL111
+ 2095 0a06 6B0F0000 		.4byte	0xf6b
+ 2096 0a0a 140A0000 		.4byte	0xa14
+ 2097 0a0e 08       		.uleb128 0x8
+ 2098 0a0f 01       		.uleb128 0x1
+ 2099 0a10 50       		.byte	0x50
+ 2100 0a11 01       		.uleb128 0x1
+ 2101 0a12 30       		.byte	0x30
+ 2102 0a13 00       		.byte	0
+ 2103 0a14 07       		.uleb128 0x7
+ 2104 0a15 B8020000 		.4byte	.LVL112
+ 2105 0a19 760F0000 		.4byte	0xf76
+ 2106 0a1d 280A0000 		.4byte	0xa28
+ 2107 0a21 08       		.uleb128 0x8
+ 2108 0a22 01       		.uleb128 0x1
+ 2109 0a23 50       		.byte	0x50
+ 2110 0a24 02       		.uleb128 0x2
+ 2111 0a25 75       		.byte	0x75
+ 2112 0a26 00       		.sleb128 0
+ 2113 0a27 00       		.byte	0
+ 2114 0a28 07       		.uleb128 0x7
+ 2115 0a29 BE020000 		.4byte	.LVL113
+ 2116 0a2d 4A0F0000 		.4byte	0xf4a
+ 2117 0a31 3B0A0000 		.4byte	0xa3b
+ 2118 0a35 08       		.uleb128 0x8
+ 2119 0a36 01       		.uleb128 0x1
+ 2120 0a37 50       		.byte	0x50
+ 2121 0a38 01       		.uleb128 0x1
+ 2122 0a39 31       		.byte	0x31
+ 2123 0a3a 00       		.byte	0
+ 2124 0a3b 07       		.uleb128 0x7
+ 2125 0a3c C4020000 		.4byte	.LVL114
+ 2126 0a40 550F0000 		.4byte	0xf55
+ 2127 0a44 4E0A0000 		.4byte	0xa4e
+ 2128 0a48 08       		.uleb128 0x8
+ 2129 0a49 01       		.uleb128 0x1
+ 2130 0a4a 50       		.byte	0x50
+ 2131 0a4b 01       		.uleb128 0x1
+ 2132 0a4c 30       		.byte	0x30
+ 2133 0a4d 00       		.byte	0
+ 2134 0a4e 07       		.uleb128 0x7
+ 2135 0a4f CA020000 		.4byte	.LVL115
+ 2136 0a53 600F0000 		.4byte	0xf60
+ 2137 0a57 610A0000 		.4byte	0xa61
+ 2138 0a5b 08       		.uleb128 0x8
+ 2139 0a5c 01       		.uleb128 0x1
+ 2140 0a5d 50       		.byte	0x50
+ 2141 0a5e 01       		.uleb128 0x1
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 44
+
+
+ 2142 0a5f 30       		.byte	0x30
+ 2143 0a60 00       		.byte	0
+ 2144 0a61 07       		.uleb128 0x7
+ 2145 0a62 D0020000 		.4byte	.LVL116
+ 2146 0a66 6B0F0000 		.4byte	0xf6b
+ 2147 0a6a 740A0000 		.4byte	0xa74
+ 2148 0a6e 08       		.uleb128 0x8
+ 2149 0a6f 01       		.uleb128 0x1
+ 2150 0a70 50       		.byte	0x50
+ 2151 0a71 01       		.uleb128 0x1
+ 2152 0a72 30       		.byte	0x30
+ 2153 0a73 00       		.byte	0
+ 2154 0a74 07       		.uleb128 0x7
+ 2155 0a75 D6020000 		.4byte	.LVL117
+ 2156 0a79 760F0000 		.4byte	0xf76
+ 2157 0a7d 880A0000 		.4byte	0xa88
+ 2158 0a81 08       		.uleb128 0x8
+ 2159 0a82 01       		.uleb128 0x1
+ 2160 0a83 50       		.byte	0x50
+ 2161 0a84 02       		.uleb128 0x2
+ 2162 0a85 75       		.byte	0x75
+ 2163 0a86 00       		.sleb128 0
+ 2164 0a87 00       		.byte	0
+ 2165 0a88 07       		.uleb128 0x7
+ 2166 0a89 DC020000 		.4byte	.LVL118
+ 2167 0a8d 4A0F0000 		.4byte	0xf4a
+ 2168 0a91 9B0A0000 		.4byte	0xa9b
+ 2169 0a95 08       		.uleb128 0x8
+ 2170 0a96 01       		.uleb128 0x1
+ 2171 0a97 50       		.byte	0x50
+ 2172 0a98 01       		.uleb128 0x1
+ 2173 0a99 31       		.byte	0x31
+ 2174 0a9a 00       		.byte	0
+ 2175 0a9b 07       		.uleb128 0x7
+ 2176 0a9c E2020000 		.4byte	.LVL119
+ 2177 0aa0 550F0000 		.4byte	0xf55
+ 2178 0aa4 AE0A0000 		.4byte	0xaae
+ 2179 0aa8 08       		.uleb128 0x8
+ 2180 0aa9 01       		.uleb128 0x1
+ 2181 0aaa 50       		.byte	0x50
+ 2182 0aab 01       		.uleb128 0x1
+ 2183 0aac 30       		.byte	0x30
+ 2184 0aad 00       		.byte	0
+ 2185 0aae 07       		.uleb128 0x7
+ 2186 0aaf E8020000 		.4byte	.LVL120
+ 2187 0ab3 600F0000 		.4byte	0xf60
+ 2188 0ab7 C10A0000 		.4byte	0xac1
+ 2189 0abb 08       		.uleb128 0x8
+ 2190 0abc 01       		.uleb128 0x1
+ 2191 0abd 50       		.byte	0x50
+ 2192 0abe 01       		.uleb128 0x1
+ 2193 0abf 30       		.byte	0x30
+ 2194 0ac0 00       		.byte	0
+ 2195 0ac1 07       		.uleb128 0x7
+ 2196 0ac2 EE020000 		.4byte	.LVL121
+ 2197 0ac6 6B0F0000 		.4byte	0xf6b
+ 2198 0aca D40A0000 		.4byte	0xad4
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 45
+
+
+ 2199 0ace 08       		.uleb128 0x8
+ 2200 0acf 01       		.uleb128 0x1
+ 2201 0ad0 50       		.byte	0x50
+ 2202 0ad1 01       		.uleb128 0x1
+ 2203 0ad2 31       		.byte	0x31
+ 2204 0ad3 00       		.byte	0
+ 2205 0ad4 09       		.uleb128 0x9
+ 2206 0ad5 F4020000 		.4byte	.LVL122
+ 2207 0ad9 760F0000 		.4byte	0xf76
+ 2208 0add 08       		.uleb128 0x8
+ 2209 0ade 01       		.uleb128 0x1
+ 2210 0adf 50       		.byte	0x50
+ 2211 0ae0 02       		.uleb128 0x2
+ 2212 0ae1 75       		.byte	0x75
+ 2213 0ae2 00       		.sleb128 0
+ 2214 0ae3 00       		.byte	0
+ 2215 0ae4 00       		.byte	0
+ 2216 0ae5 04       		.uleb128 0x4
+ 2217 0ae6 FE020000 		.4byte	.LBB6
+ 2218 0aea 78000000 		.4byte	.LBE6-.LBB6
+ 2219 0aee C40C0000 		.4byte	0xcc4
+ 2220 0af2 05       		.uleb128 0x5
+ 2221 0af3 39000000 		.4byte	.LASF3
+ 2222 0af7 01       		.byte	0x1
+ 2223 0af8 16       		.byte	0x16
+ 2224 0af9 A00E0000 		.4byte	0xea0
+ 2225 0afd 030B0000 		.4byte	0xb03
+ 2226 0b01 06       		.uleb128 0x6
+ 2227 0b02 00       		.byte	0
+ 2228 0b03 05       		.uleb128 0x5
+ 2229 0b04 0D000000 		.4byte	.LASF4
+ 2230 0b08 01       		.byte	0x1
+ 2231 0b09 17       		.byte	0x17
+ 2232 0b0a A00E0000 		.4byte	0xea0
+ 2233 0b0e 140B0000 		.4byte	0xb14
+ 2234 0b12 06       		.uleb128 0x6
+ 2235 0b13 00       		.byte	0
+ 2236 0b14 05       		.uleb128 0x5
+ 2237 0b15 42000000 		.4byte	.LASF5
+ 2238 0b19 01       		.byte	0x1
+ 2239 0b1a 18       		.byte	0x18
+ 2240 0b1b A00E0000 		.4byte	0xea0
+ 2241 0b1f 250B0000 		.4byte	0xb25
+ 2242 0b23 06       		.uleb128 0x6
+ 2243 0b24 00       		.byte	0
+ 2244 0b25 05       		.uleb128 0x5
+ 2245 0b26 A3000000 		.4byte	.LASF6
+ 2246 0b2a 01       		.byte	0x1
+ 2247 0b2b 19       		.byte	0x19
+ 2248 0b2c A00E0000 		.4byte	0xea0
+ 2249 0b30 360B0000 		.4byte	0xb36
+ 2250 0b34 06       		.uleb128 0x6
+ 2251 0b35 00       		.byte	0
+ 2252 0b36 05       		.uleb128 0x5
+ 2253 0b37 25000000 		.4byte	.LASF7
+ 2254 0b3b 01       		.byte	0x1
+ 2255 0b3c 1A       		.byte	0x1a
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 46
+
+
+ 2256 0b3d A00E0000 		.4byte	0xea0
+ 2257 0b41 470B0000 		.4byte	0xb47
+ 2258 0b45 06       		.uleb128 0x6
+ 2259 0b46 00       		.byte	0
+ 2260 0b47 07       		.uleb128 0x7
+ 2261 0b48 04030000 		.4byte	.LVL125
+ 2262 0b4c 4A0F0000 		.4byte	0xf4a
+ 2263 0b50 5A0B0000 		.4byte	0xb5a
+ 2264 0b54 08       		.uleb128 0x8
+ 2265 0b55 01       		.uleb128 0x1
+ 2266 0b56 50       		.byte	0x50
+ 2267 0b57 01       		.uleb128 0x1
+ 2268 0b58 30       		.byte	0x30
+ 2269 0b59 00       		.byte	0
+ 2270 0b5a 07       		.uleb128 0x7
+ 2271 0b5b 0A030000 		.4byte	.LVL126
+ 2272 0b5f 550F0000 		.4byte	0xf55
+ 2273 0b63 6D0B0000 		.4byte	0xb6d
+ 2274 0b67 08       		.uleb128 0x8
+ 2275 0b68 01       		.uleb128 0x1
+ 2276 0b69 50       		.byte	0x50
+ 2277 0b6a 01       		.uleb128 0x1
+ 2278 0b6b 30       		.byte	0x30
+ 2279 0b6c 00       		.byte	0
+ 2280 0b6d 07       		.uleb128 0x7
+ 2281 0b6e 10030000 		.4byte	.LVL127
+ 2282 0b72 600F0000 		.4byte	0xf60
+ 2283 0b76 800B0000 		.4byte	0xb80
+ 2284 0b7a 08       		.uleb128 0x8
+ 2285 0b7b 01       		.uleb128 0x1
+ 2286 0b7c 50       		.byte	0x50
+ 2287 0b7d 01       		.uleb128 0x1
+ 2288 0b7e 30       		.byte	0x30
+ 2289 0b7f 00       		.byte	0
+ 2290 0b80 07       		.uleb128 0x7
+ 2291 0b81 16030000 		.4byte	.LVL128
+ 2292 0b85 6B0F0000 		.4byte	0xf6b
+ 2293 0b89 930B0000 		.4byte	0xb93
+ 2294 0b8d 08       		.uleb128 0x8
+ 2295 0b8e 01       		.uleb128 0x1
+ 2296 0b8f 50       		.byte	0x50
+ 2297 0b90 01       		.uleb128 0x1
+ 2298 0b91 31       		.byte	0x31
+ 2299 0b92 00       		.byte	0
+ 2300 0b93 07       		.uleb128 0x7
+ 2301 0b94 1C030000 		.4byte	.LVL129
+ 2302 0b98 760F0000 		.4byte	0xf76
+ 2303 0b9c A70B0000 		.4byte	0xba7
+ 2304 0ba0 08       		.uleb128 0x8
+ 2305 0ba1 01       		.uleb128 0x1
+ 2306 0ba2 50       		.byte	0x50
+ 2307 0ba3 02       		.uleb128 0x2
+ 2308 0ba4 75       		.byte	0x75
+ 2309 0ba5 00       		.sleb128 0
+ 2310 0ba6 00       		.byte	0
+ 2311 0ba7 07       		.uleb128 0x7
+ 2312 0ba8 22030000 		.4byte	.LVL130
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 47
+
+
+ 2313 0bac 4A0F0000 		.4byte	0xf4a
+ 2314 0bb0 BA0B0000 		.4byte	0xbba
+ 2315 0bb4 08       		.uleb128 0x8
+ 2316 0bb5 01       		.uleb128 0x1
+ 2317 0bb6 50       		.byte	0x50
+ 2318 0bb7 01       		.uleb128 0x1
+ 2319 0bb8 31       		.byte	0x31
+ 2320 0bb9 00       		.byte	0
+ 2321 0bba 07       		.uleb128 0x7
+ 2322 0bbb 28030000 		.4byte	.LVL131
+ 2323 0bbf 550F0000 		.4byte	0xf55
+ 2324 0bc3 CD0B0000 		.4byte	0xbcd
+ 2325 0bc7 08       		.uleb128 0x8
+ 2326 0bc8 01       		.uleb128 0x1
+ 2327 0bc9 50       		.byte	0x50
+ 2328 0bca 01       		.uleb128 0x1
+ 2329 0bcb 30       		.byte	0x30
+ 2330 0bcc 00       		.byte	0
+ 2331 0bcd 07       		.uleb128 0x7
+ 2332 0bce 2E030000 		.4byte	.LVL132
+ 2333 0bd2 600F0000 		.4byte	0xf60
+ 2334 0bd6 E00B0000 		.4byte	0xbe0
+ 2335 0bda 08       		.uleb128 0x8
+ 2336 0bdb 01       		.uleb128 0x1
+ 2337 0bdc 50       		.byte	0x50
+ 2338 0bdd 01       		.uleb128 0x1
+ 2339 0bde 30       		.byte	0x30
+ 2340 0bdf 00       		.byte	0
+ 2341 0be0 07       		.uleb128 0x7
+ 2342 0be1 34030000 		.4byte	.LVL133
+ 2343 0be5 6B0F0000 		.4byte	0xf6b
+ 2344 0be9 F30B0000 		.4byte	0xbf3
+ 2345 0bed 08       		.uleb128 0x8
+ 2346 0bee 01       		.uleb128 0x1
+ 2347 0bef 50       		.byte	0x50
+ 2348 0bf0 01       		.uleb128 0x1
+ 2349 0bf1 30       		.byte	0x30
+ 2350 0bf2 00       		.byte	0
+ 2351 0bf3 07       		.uleb128 0x7
+ 2352 0bf4 3A030000 		.4byte	.LVL134
+ 2353 0bf8 760F0000 		.4byte	0xf76
+ 2354 0bfc 070C0000 		.4byte	0xc07
+ 2355 0c00 08       		.uleb128 0x8
+ 2356 0c01 01       		.uleb128 0x1
+ 2357 0c02 50       		.byte	0x50
+ 2358 0c03 02       		.uleb128 0x2
+ 2359 0c04 75       		.byte	0x75
+ 2360 0c05 00       		.sleb128 0
+ 2361 0c06 00       		.byte	0
+ 2362 0c07 07       		.uleb128 0x7
+ 2363 0c08 40030000 		.4byte	.LVL135
+ 2364 0c0c 4A0F0000 		.4byte	0xf4a
+ 2365 0c10 1A0C0000 		.4byte	0xc1a
+ 2366 0c14 08       		.uleb128 0x8
+ 2367 0c15 01       		.uleb128 0x1
+ 2368 0c16 50       		.byte	0x50
+ 2369 0c17 01       		.uleb128 0x1
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 48
+
+
+ 2370 0c18 30       		.byte	0x30
+ 2371 0c19 00       		.byte	0
+ 2372 0c1a 07       		.uleb128 0x7
+ 2373 0c1b 46030000 		.4byte	.LVL136
+ 2374 0c1f 550F0000 		.4byte	0xf55
+ 2375 0c23 2D0C0000 		.4byte	0xc2d
+ 2376 0c27 08       		.uleb128 0x8
+ 2377 0c28 01       		.uleb128 0x1
+ 2378 0c29 50       		.byte	0x50
+ 2379 0c2a 01       		.uleb128 0x1
+ 2380 0c2b 31       		.byte	0x31
+ 2381 0c2c 00       		.byte	0
+ 2382 0c2d 07       		.uleb128 0x7
+ 2383 0c2e 4C030000 		.4byte	.LVL137
+ 2384 0c32 600F0000 		.4byte	0xf60
+ 2385 0c36 400C0000 		.4byte	0xc40
+ 2386 0c3a 08       		.uleb128 0x8
+ 2387 0c3b 01       		.uleb128 0x1
+ 2388 0c3c 50       		.byte	0x50
+ 2389 0c3d 01       		.uleb128 0x1
+ 2390 0c3e 30       		.byte	0x30
+ 2391 0c3f 00       		.byte	0
+ 2392 0c40 07       		.uleb128 0x7
+ 2393 0c41 52030000 		.4byte	.LVL138
+ 2394 0c45 6B0F0000 		.4byte	0xf6b
+ 2395 0c49 530C0000 		.4byte	0xc53
+ 2396 0c4d 08       		.uleb128 0x8
+ 2397 0c4e 01       		.uleb128 0x1
+ 2398 0c4f 50       		.byte	0x50
+ 2399 0c50 01       		.uleb128 0x1
+ 2400 0c51 30       		.byte	0x30
+ 2401 0c52 00       		.byte	0
+ 2402 0c53 07       		.uleb128 0x7
+ 2403 0c54 58030000 		.4byte	.LVL139
+ 2404 0c58 760F0000 		.4byte	0xf76
+ 2405 0c5c 670C0000 		.4byte	0xc67
+ 2406 0c60 08       		.uleb128 0x8
+ 2407 0c61 01       		.uleb128 0x1
+ 2408 0c62 50       		.byte	0x50
+ 2409 0c63 02       		.uleb128 0x2
+ 2410 0c64 75       		.byte	0x75
+ 2411 0c65 00       		.sleb128 0
+ 2412 0c66 00       		.byte	0
+ 2413 0c67 07       		.uleb128 0x7
+ 2414 0c68 5E030000 		.4byte	.LVL140
+ 2415 0c6c 4A0F0000 		.4byte	0xf4a
+ 2416 0c70 7A0C0000 		.4byte	0xc7a
+ 2417 0c74 08       		.uleb128 0x8
+ 2418 0c75 01       		.uleb128 0x1
+ 2419 0c76 50       		.byte	0x50
+ 2420 0c77 01       		.uleb128 0x1
+ 2421 0c78 30       		.byte	0x30
+ 2422 0c79 00       		.byte	0
+ 2423 0c7a 07       		.uleb128 0x7
+ 2424 0c7b 64030000 		.4byte	.LVL141
+ 2425 0c7f 550F0000 		.4byte	0xf55
+ 2426 0c83 8D0C0000 		.4byte	0xc8d
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 49
+
+
+ 2427 0c87 08       		.uleb128 0x8
+ 2428 0c88 01       		.uleb128 0x1
+ 2429 0c89 50       		.byte	0x50
+ 2430 0c8a 01       		.uleb128 0x1
+ 2431 0c8b 30       		.byte	0x30
+ 2432 0c8c 00       		.byte	0
+ 2433 0c8d 07       		.uleb128 0x7
+ 2434 0c8e 6A030000 		.4byte	.LVL142
+ 2435 0c92 600F0000 		.4byte	0xf60
+ 2436 0c96 A00C0000 		.4byte	0xca0
+ 2437 0c9a 08       		.uleb128 0x8
+ 2438 0c9b 01       		.uleb128 0x1
+ 2439 0c9c 50       		.byte	0x50
+ 2440 0c9d 01       		.uleb128 0x1
+ 2441 0c9e 31       		.byte	0x31
+ 2442 0c9f 00       		.byte	0
+ 2443 0ca0 07       		.uleb128 0x7
+ 2444 0ca1 70030000 		.4byte	.LVL143
+ 2445 0ca5 6B0F0000 		.4byte	0xf6b
+ 2446 0ca9 B30C0000 		.4byte	0xcb3
+ 2447 0cad 08       		.uleb128 0x8
+ 2448 0cae 01       		.uleb128 0x1
+ 2449 0caf 50       		.byte	0x50
+ 2450 0cb0 01       		.uleb128 0x1
+ 2451 0cb1 30       		.byte	0x30
+ 2452 0cb2 00       		.byte	0
+ 2453 0cb3 09       		.uleb128 0x9
+ 2454 0cb4 76030000 		.4byte	.LVL144
+ 2455 0cb8 760F0000 		.4byte	0xf76
+ 2456 0cbc 08       		.uleb128 0x8
+ 2457 0cbd 01       		.uleb128 0x1
+ 2458 0cbe 50       		.byte	0x50
+ 2459 0cbf 02       		.uleb128 0x2
+ 2460 0cc0 75       		.byte	0x75
+ 2461 0cc1 00       		.sleb128 0
+ 2462 0cc2 00       		.byte	0
+ 2463 0cc3 00       		.byte	0
+ 2464 0cc4 0A       		.uleb128 0xa
+ 2465 0cc5 7A030000 		.4byte	.LBB7
+ 2466 0cc9 7A000000 		.4byte	.LBE7-.LBB7
+ 2467 0ccd 05       		.uleb128 0x5
+ 2468 0cce 39000000 		.4byte	.LASF3
+ 2469 0cd2 01       		.byte	0x1
+ 2470 0cd3 16       		.byte	0x16
+ 2471 0cd4 A00E0000 		.4byte	0xea0
+ 2472 0cd8 DE0C0000 		.4byte	0xcde
+ 2473 0cdc 06       		.uleb128 0x6
+ 2474 0cdd 00       		.byte	0
+ 2475 0cde 05       		.uleb128 0x5
+ 2476 0cdf 0D000000 		.4byte	.LASF4
+ 2477 0ce3 01       		.byte	0x1
+ 2478 0ce4 17       		.byte	0x17
+ 2479 0ce5 A00E0000 		.4byte	0xea0
+ 2480 0ce9 EF0C0000 		.4byte	0xcef
+ 2481 0ced 06       		.uleb128 0x6
+ 2482 0cee 00       		.byte	0
+ 2483 0cef 05       		.uleb128 0x5
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 50
+
+
+ 2484 0cf0 42000000 		.4byte	.LASF5
+ 2485 0cf4 01       		.byte	0x1
+ 2486 0cf5 18       		.byte	0x18
+ 2487 0cf6 A00E0000 		.4byte	0xea0
+ 2488 0cfa 000D0000 		.4byte	0xd00
+ 2489 0cfe 06       		.uleb128 0x6
+ 2490 0cff 00       		.byte	0
+ 2491 0d00 05       		.uleb128 0x5
+ 2492 0d01 A3000000 		.4byte	.LASF6
+ 2493 0d05 01       		.byte	0x1
+ 2494 0d06 19       		.byte	0x19
+ 2495 0d07 A00E0000 		.4byte	0xea0
+ 2496 0d0b 110D0000 		.4byte	0xd11
+ 2497 0d0f 06       		.uleb128 0x6
+ 2498 0d10 00       		.byte	0
+ 2499 0d11 05       		.uleb128 0x5
+ 2500 0d12 25000000 		.4byte	.LASF7
+ 2501 0d16 01       		.byte	0x1
+ 2502 0d17 1A       		.byte	0x1a
+ 2503 0d18 A00E0000 		.4byte	0xea0
+ 2504 0d1c 220D0000 		.4byte	0xd22
+ 2505 0d20 06       		.uleb128 0x6
+ 2506 0d21 00       		.byte	0
+ 2507 0d22 07       		.uleb128 0x7
+ 2508 0d23 80030000 		.4byte	.LVL145
+ 2509 0d27 4A0F0000 		.4byte	0xf4a
+ 2510 0d2b 350D0000 		.4byte	0xd35
+ 2511 0d2f 08       		.uleb128 0x8
+ 2512 0d30 01       		.uleb128 0x1
+ 2513 0d31 50       		.byte	0x50
+ 2514 0d32 01       		.uleb128 0x1
+ 2515 0d33 30       		.byte	0x30
+ 2516 0d34 00       		.byte	0
+ 2517 0d35 07       		.uleb128 0x7
+ 2518 0d36 86030000 		.4byte	.LVL146
+ 2519 0d3a 550F0000 		.4byte	0xf55
+ 2520 0d3e 480D0000 		.4byte	0xd48
+ 2521 0d42 08       		.uleb128 0x8
+ 2522 0d43 01       		.uleb128 0x1
+ 2523 0d44 50       		.byte	0x50
+ 2524 0d45 01       		.uleb128 0x1
+ 2525 0d46 30       		.byte	0x30
+ 2526 0d47 00       		.byte	0
+ 2527 0d48 07       		.uleb128 0x7
+ 2528 0d49 8C030000 		.4byte	.LVL147
+ 2529 0d4d 600F0000 		.4byte	0xf60
+ 2530 0d51 5B0D0000 		.4byte	0xd5b
+ 2531 0d55 08       		.uleb128 0x8
+ 2532 0d56 01       		.uleb128 0x1
+ 2533 0d57 50       		.byte	0x50
+ 2534 0d58 01       		.uleb128 0x1
+ 2535 0d59 30       		.byte	0x30
+ 2536 0d5a 00       		.byte	0
+ 2537 0d5b 07       		.uleb128 0x7
+ 2538 0d5c 92030000 		.4byte	.LVL148
+ 2539 0d60 6B0F0000 		.4byte	0xf6b
+ 2540 0d64 6E0D0000 		.4byte	0xd6e
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 51
+
+
+ 2541 0d68 08       		.uleb128 0x8
+ 2542 0d69 01       		.uleb128 0x1
+ 2543 0d6a 50       		.byte	0x50
+ 2544 0d6b 01       		.uleb128 0x1
+ 2545 0d6c 31       		.byte	0x31
+ 2546 0d6d 00       		.byte	0
+ 2547 0d6e 07       		.uleb128 0x7
+ 2548 0d6f 98030000 		.4byte	.LVL149
+ 2549 0d73 760F0000 		.4byte	0xf76
+ 2550 0d77 820D0000 		.4byte	0xd82
+ 2551 0d7b 08       		.uleb128 0x8
+ 2552 0d7c 01       		.uleb128 0x1
+ 2553 0d7d 50       		.byte	0x50
+ 2554 0d7e 02       		.uleb128 0x2
+ 2555 0d7f 75       		.byte	0x75
+ 2556 0d80 00       		.sleb128 0
+ 2557 0d81 00       		.byte	0
+ 2558 0d82 07       		.uleb128 0x7
+ 2559 0d83 9E030000 		.4byte	.LVL150
+ 2560 0d87 4A0F0000 		.4byte	0xf4a
+ 2561 0d8b 950D0000 		.4byte	0xd95
+ 2562 0d8f 08       		.uleb128 0x8
+ 2563 0d90 01       		.uleb128 0x1
+ 2564 0d91 50       		.byte	0x50
+ 2565 0d92 01       		.uleb128 0x1
+ 2566 0d93 30       		.byte	0x30
+ 2567 0d94 00       		.byte	0
+ 2568 0d95 07       		.uleb128 0x7
+ 2569 0d96 A4030000 		.4byte	.LVL151
+ 2570 0d9a 550F0000 		.4byte	0xf55
+ 2571 0d9e A80D0000 		.4byte	0xda8
+ 2572 0da2 08       		.uleb128 0x8
+ 2573 0da3 01       		.uleb128 0x1
+ 2574 0da4 50       		.byte	0x50
+ 2575 0da5 01       		.uleb128 0x1
+ 2576 0da6 30       		.byte	0x30
+ 2577 0da7 00       		.byte	0
+ 2578 0da8 07       		.uleb128 0x7
+ 2579 0da9 AA030000 		.4byte	.LVL152
+ 2580 0dad 600F0000 		.4byte	0xf60
+ 2581 0db1 BB0D0000 		.4byte	0xdbb
+ 2582 0db5 08       		.uleb128 0x8
+ 2583 0db6 01       		.uleb128 0x1
+ 2584 0db7 50       		.byte	0x50
+ 2585 0db8 01       		.uleb128 0x1
+ 2586 0db9 31       		.byte	0x31
+ 2587 0dba 00       		.byte	0
+ 2588 0dbb 07       		.uleb128 0x7
+ 2589 0dbc B0030000 		.4byte	.LVL153
+ 2590 0dc0 6B0F0000 		.4byte	0xf6b
+ 2591 0dc4 CE0D0000 		.4byte	0xdce
+ 2592 0dc8 08       		.uleb128 0x8
+ 2593 0dc9 01       		.uleb128 0x1
+ 2594 0dca 50       		.byte	0x50
+ 2595 0dcb 01       		.uleb128 0x1
+ 2596 0dcc 30       		.byte	0x30
+ 2597 0dcd 00       		.byte	0
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 52
+
+
+ 2598 0dce 07       		.uleb128 0x7
+ 2599 0dcf B6030000 		.4byte	.LVL154
+ 2600 0dd3 760F0000 		.4byte	0xf76
+ 2601 0dd7 E20D0000 		.4byte	0xde2
+ 2602 0ddb 08       		.uleb128 0x8
+ 2603 0ddc 01       		.uleb128 0x1
+ 2604 0ddd 50       		.byte	0x50
+ 2605 0dde 02       		.uleb128 0x2
+ 2606 0ddf 75       		.byte	0x75
+ 2607 0de0 00       		.sleb128 0
+ 2608 0de1 00       		.byte	0
+ 2609 0de2 07       		.uleb128 0x7
+ 2610 0de3 BC030000 		.4byte	.LVL155
+ 2611 0de7 4A0F0000 		.4byte	0xf4a
+ 2612 0deb F50D0000 		.4byte	0xdf5
+ 2613 0def 08       		.uleb128 0x8
+ 2614 0df0 01       		.uleb128 0x1
+ 2615 0df1 50       		.byte	0x50
+ 2616 0df2 01       		.uleb128 0x1
+ 2617 0df3 30       		.byte	0x30
+ 2618 0df4 00       		.byte	0
+ 2619 0df5 07       		.uleb128 0x7
+ 2620 0df6 C2030000 		.4byte	.LVL156
+ 2621 0dfa 550F0000 		.4byte	0xf55
+ 2622 0dfe 080E0000 		.4byte	0xe08
+ 2623 0e02 08       		.uleb128 0x8
+ 2624 0e03 01       		.uleb128 0x1
+ 2625 0e04 50       		.byte	0x50
+ 2626 0e05 01       		.uleb128 0x1
+ 2627 0e06 31       		.byte	0x31
+ 2628 0e07 00       		.byte	0
+ 2629 0e08 07       		.uleb128 0x7
+ 2630 0e09 C8030000 		.4byte	.LVL157
+ 2631 0e0d 600F0000 		.4byte	0xf60
+ 2632 0e11 1B0E0000 		.4byte	0xe1b
+ 2633 0e15 08       		.uleb128 0x8
+ 2634 0e16 01       		.uleb128 0x1
+ 2635 0e17 50       		.byte	0x50
+ 2636 0e18 01       		.uleb128 0x1
+ 2637 0e19 30       		.byte	0x30
+ 2638 0e1a 00       		.byte	0
+ 2639 0e1b 07       		.uleb128 0x7
+ 2640 0e1c CE030000 		.4byte	.LVL158
+ 2641 0e20 6B0F0000 		.4byte	0xf6b
+ 2642 0e24 2E0E0000 		.4byte	0xe2e
+ 2643 0e28 08       		.uleb128 0x8
+ 2644 0e29 01       		.uleb128 0x1
+ 2645 0e2a 50       		.byte	0x50
+ 2646 0e2b 01       		.uleb128 0x1
+ 2647 0e2c 30       		.byte	0x30
+ 2648 0e2d 00       		.byte	0
+ 2649 0e2e 07       		.uleb128 0x7
+ 2650 0e2f D4030000 		.4byte	.LVL159
+ 2651 0e33 760F0000 		.4byte	0xf76
+ 2652 0e37 420E0000 		.4byte	0xe42
+ 2653 0e3b 08       		.uleb128 0x8
+ 2654 0e3c 01       		.uleb128 0x1
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 53
+
+
+ 2655 0e3d 50       		.byte	0x50
+ 2656 0e3e 02       		.uleb128 0x2
+ 2657 0e3f 75       		.byte	0x75
+ 2658 0e40 00       		.sleb128 0
+ 2659 0e41 00       		.byte	0
+ 2660 0e42 07       		.uleb128 0x7
+ 2661 0e43 DA030000 		.4byte	.LVL160
+ 2662 0e47 4A0F0000 		.4byte	0xf4a
+ 2663 0e4b 550E0000 		.4byte	0xe55
+ 2664 0e4f 08       		.uleb128 0x8
+ 2665 0e50 01       		.uleb128 0x1
+ 2666 0e51 50       		.byte	0x50
+ 2667 0e52 01       		.uleb128 0x1
+ 2668 0e53 31       		.byte	0x31
+ 2669 0e54 00       		.byte	0
+ 2670 0e55 07       		.uleb128 0x7
+ 2671 0e56 E0030000 		.4byte	.LVL161
+ 2672 0e5a 550F0000 		.4byte	0xf55
+ 2673 0e5e 680E0000 		.4byte	0xe68
+ 2674 0e62 08       		.uleb128 0x8
+ 2675 0e63 01       		.uleb128 0x1
+ 2676 0e64 50       		.byte	0x50
+ 2677 0e65 01       		.uleb128 0x1
+ 2678 0e66 30       		.byte	0x30
+ 2679 0e67 00       		.byte	0
+ 2680 0e68 07       		.uleb128 0x7
+ 2681 0e69 E6030000 		.4byte	.LVL162
+ 2682 0e6d 600F0000 		.4byte	0xf60
+ 2683 0e71 7B0E0000 		.4byte	0xe7b
+ 2684 0e75 08       		.uleb128 0x8
+ 2685 0e76 01       		.uleb128 0x1
+ 2686 0e77 50       		.byte	0x50
+ 2687 0e78 01       		.uleb128 0x1
+ 2688 0e79 30       		.byte	0x30
+ 2689 0e7a 00       		.byte	0
+ 2690 0e7b 07       		.uleb128 0x7
+ 2691 0e7c EC030000 		.4byte	.LVL163
+ 2692 0e80 6B0F0000 		.4byte	0xf6b
+ 2693 0e84 8E0E0000 		.4byte	0xe8e
+ 2694 0e88 08       		.uleb128 0x8
+ 2695 0e89 01       		.uleb128 0x1
+ 2696 0e8a 50       		.byte	0x50
+ 2697 0e8b 01       		.uleb128 0x1
+ 2698 0e8c 30       		.byte	0x30
+ 2699 0e8d 00       		.byte	0
+ 2700 0e8e 09       		.uleb128 0x9
+ 2701 0e8f F2030000 		.4byte	.LVL164
+ 2702 0e93 760F0000 		.4byte	0xf76
+ 2703 0e97 08       		.uleb128 0x8
+ 2704 0e98 01       		.uleb128 0x1
+ 2705 0e99 50       		.byte	0x50
+ 2706 0e9a 02       		.uleb128 0x2
+ 2707 0e9b 75       		.byte	0x75
+ 2708 0e9c 00       		.sleb128 0
+ 2709 0e9d 00       		.byte	0
+ 2710 0e9e 00       		.byte	0
+ 2711 0e9f 00       		.byte	0
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 54
+
+
+ 2712 0ea0 0B       		.uleb128 0xb
+ 2713 0ea1 04       		.byte	0x4
+ 2714 0ea2 05       		.byte	0x5
+ 2715 0ea3 696E7400 		.ascii	"int\000"
+ 2716 0ea7 0C       		.uleb128 0xc
+ 2717 0ea8 98000000 		.4byte	.LASF12
+ 2718 0eac 01       		.byte	0x1
+ 2719 0ead 2F01     		.2byte	0x12f
+ 2720 0eaf 00000000 		.4byte	.LFB1
+ 2721 0eb3 1C000000 		.4byte	.LFE1-.LFB1
+ 2722 0eb7 01       		.uleb128 0x1
+ 2723 0eb8 9C       		.byte	0x9c
+ 2724 0eb9 4A0F0000 		.4byte	0xf4a
+ 2725 0ebd 05       		.uleb128 0x5
+ 2726 0ebe 39000000 		.4byte	.LASF3
+ 2727 0ec2 01       		.byte	0x1
+ 2728 0ec3 16       		.byte	0x16
+ 2729 0ec4 A00E0000 		.4byte	0xea0
+ 2730 0ec8 CE0E0000 		.4byte	0xece
+ 2731 0ecc 06       		.uleb128 0x6
+ 2732 0ecd 00       		.byte	0
+ 2733 0ece 05       		.uleb128 0x5
+ 2734 0ecf 0D000000 		.4byte	.LASF4
+ 2735 0ed3 01       		.byte	0x1
+ 2736 0ed4 17       		.byte	0x17
+ 2737 0ed5 A00E0000 		.4byte	0xea0
+ 2738 0ed9 DF0E0000 		.4byte	0xedf
+ 2739 0edd 06       		.uleb128 0x6
+ 2740 0ede 00       		.byte	0
+ 2741 0edf 05       		.uleb128 0x5
+ 2742 0ee0 42000000 		.4byte	.LASF5
+ 2743 0ee4 01       		.byte	0x1
+ 2744 0ee5 18       		.byte	0x18
+ 2745 0ee6 A00E0000 		.4byte	0xea0
+ 2746 0eea F00E0000 		.4byte	0xef0
+ 2747 0eee 06       		.uleb128 0x6
+ 2748 0eef 00       		.byte	0
+ 2749 0ef0 05       		.uleb128 0x5
+ 2750 0ef1 A3000000 		.4byte	.LASF6
+ 2751 0ef5 01       		.byte	0x1
+ 2752 0ef6 19       		.byte	0x19
+ 2753 0ef7 A00E0000 		.4byte	0xea0
+ 2754 0efb 010F0000 		.4byte	0xf01
+ 2755 0eff 06       		.uleb128 0x6
+ 2756 0f00 00       		.byte	0
+ 2757 0f01 07       		.uleb128 0x7
+ 2758 0f02 08000000 		.4byte	.LVL165
+ 2759 0f06 4A0F0000 		.4byte	0xf4a
+ 2760 0f0a 140F0000 		.4byte	0xf14
+ 2761 0f0e 08       		.uleb128 0x8
+ 2762 0f0f 01       		.uleb128 0x1
+ 2763 0f10 50       		.byte	0x50
+ 2764 0f11 01       		.uleb128 0x1
+ 2765 0f12 30       		.byte	0x30
+ 2766 0f13 00       		.byte	0
+ 2767 0f14 07       		.uleb128 0x7
+ 2768 0f15 0E000000 		.4byte	.LVL166
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 55
+
+
+ 2769 0f19 550F0000 		.4byte	0xf55
+ 2770 0f1d 270F0000 		.4byte	0xf27
+ 2771 0f21 08       		.uleb128 0x8
+ 2772 0f22 01       		.uleb128 0x1
+ 2773 0f23 50       		.byte	0x50
+ 2774 0f24 01       		.uleb128 0x1
+ 2775 0f25 30       		.byte	0x30
+ 2776 0f26 00       		.byte	0
+ 2777 0f27 07       		.uleb128 0x7
+ 2778 0f28 14000000 		.4byte	.LVL167
+ 2779 0f2c 600F0000 		.4byte	0xf60
+ 2780 0f30 3A0F0000 		.4byte	0xf3a
+ 2781 0f34 08       		.uleb128 0x8
+ 2782 0f35 01       		.uleb128 0x1
+ 2783 0f36 50       		.byte	0x50
+ 2784 0f37 01       		.uleb128 0x1
+ 2785 0f38 30       		.byte	0x30
+ 2786 0f39 00       		.byte	0
+ 2787 0f3a 09       		.uleb128 0x9
+ 2788 0f3b 1A000000 		.4byte	.LVL168
+ 2789 0f3f 6B0F0000 		.4byte	0xf6b
+ 2790 0f43 08       		.uleb128 0x8
+ 2791 0f44 01       		.uleb128 0x1
+ 2792 0f45 50       		.byte	0x50
+ 2793 0f46 01       		.uleb128 0x1
+ 2794 0f47 30       		.byte	0x30
+ 2795 0f48 00       		.byte	0
+ 2796 0f49 00       		.byte	0
+ 2797 0f4a 0D       		.uleb128 0xd
+ 2798 0f4b 39000000 		.4byte	.LASF3
+ 2799 0f4f 39000000 		.4byte	.LASF3
+ 2800 0f53 01       		.byte	0x1
+ 2801 0f54 16       		.byte	0x16
+ 2802 0f55 0D       		.uleb128 0xd
+ 2803 0f56 0D000000 		.4byte	.LASF4
+ 2804 0f5a 0D000000 		.4byte	.LASF4
+ 2805 0f5e 01       		.byte	0x1
+ 2806 0f5f 17       		.byte	0x17
+ 2807 0f60 0D       		.uleb128 0xd
+ 2808 0f61 42000000 		.4byte	.LASF5
+ 2809 0f65 42000000 		.4byte	.LASF5
+ 2810 0f69 01       		.byte	0x1
+ 2811 0f6a 18       		.byte	0x18
+ 2812 0f6b 0D       		.uleb128 0xd
+ 2813 0f6c A3000000 		.4byte	.LASF6
+ 2814 0f70 A3000000 		.4byte	.LASF6
+ 2815 0f74 01       		.byte	0x1
+ 2816 0f75 19       		.byte	0x19
+ 2817 0f76 0D       		.uleb128 0xd
+ 2818 0f77 25000000 		.4byte	.LASF7
+ 2819 0f7b 25000000 		.4byte	.LASF7
+ 2820 0f7f 01       		.byte	0x1
+ 2821 0f80 1A       		.byte	0x1a
+ 2822 0f81 00       		.byte	0
+ 2823              		.section	.debug_abbrev,"",%progbits
+ 2824              	.Ldebug_abbrev0:
+ 2825 0000 01       		.uleb128 0x1
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 56
+
+
+ 2826 0001 11       		.uleb128 0x11
+ 2827 0002 01       		.byte	0x1
+ 2828 0003 25       		.uleb128 0x25
+ 2829 0004 0E       		.uleb128 0xe
+ 2830 0005 13       		.uleb128 0x13
+ 2831 0006 0B       		.uleb128 0xb
+ 2832 0007 03       		.uleb128 0x3
+ 2833 0008 0E       		.uleb128 0xe
+ 2834 0009 1B       		.uleb128 0x1b
+ 2835 000a 0E       		.uleb128 0xe
+ 2836 000b 55       		.uleb128 0x55
+ 2837 000c 17       		.uleb128 0x17
+ 2838 000d 11       		.uleb128 0x11
+ 2839 000e 01       		.uleb128 0x1
+ 2840 000f 10       		.uleb128 0x10
+ 2841 0010 17       		.uleb128 0x17
+ 2842 0011 00       		.byte	0
+ 2843 0012 00       		.byte	0
+ 2844 0013 02       		.uleb128 0x2
+ 2845 0014 2E       		.uleb128 0x2e
+ 2846 0015 01       		.byte	0x1
+ 2847 0016 3F       		.uleb128 0x3f
+ 2848 0017 19       		.uleb128 0x19
+ 2849 0018 03       		.uleb128 0x3
+ 2850 0019 0E       		.uleb128 0xe
+ 2851 001a 3A       		.uleb128 0x3a
+ 2852 001b 0B       		.uleb128 0xb
+ 2853 001c 3B       		.uleb128 0x3b
+ 2854 001d 0B       		.uleb128 0xb
+ 2855 001e 27       		.uleb128 0x27
+ 2856 001f 19       		.uleb128 0x19
+ 2857 0020 11       		.uleb128 0x11
+ 2858 0021 01       		.uleb128 0x1
+ 2859 0022 12       		.uleb128 0x12
+ 2860 0023 06       		.uleb128 0x6
+ 2861 0024 40       		.uleb128 0x40
+ 2862 0025 18       		.uleb128 0x18
+ 2863 0026 9742     		.uleb128 0x2117
+ 2864 0028 19       		.uleb128 0x19
+ 2865 0029 01       		.uleb128 0x1
+ 2866 002a 13       		.uleb128 0x13
+ 2867 002b 00       		.byte	0
+ 2868 002c 00       		.byte	0
+ 2869 002d 03       		.uleb128 0x3
+ 2870 002e 05       		.uleb128 0x5
+ 2871 002f 00       		.byte	0
+ 2872 0030 03       		.uleb128 0x3
+ 2873 0031 0E       		.uleb128 0xe
+ 2874 0032 3A       		.uleb128 0x3a
+ 2875 0033 0B       		.uleb128 0xb
+ 2876 0034 3B       		.uleb128 0x3b
+ 2877 0035 0B       		.uleb128 0xb
+ 2878 0036 49       		.uleb128 0x49
+ 2879 0037 13       		.uleb128 0x13
+ 2880 0038 02       		.uleb128 0x2
+ 2881 0039 17       		.uleb128 0x17
+ 2882 003a 00       		.byte	0
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 57
+
+
+ 2883 003b 00       		.byte	0
+ 2884 003c 04       		.uleb128 0x4
+ 2885 003d 0B       		.uleb128 0xb
+ 2886 003e 01       		.byte	0x1
+ 2887 003f 11       		.uleb128 0x11
+ 2888 0040 01       		.uleb128 0x1
+ 2889 0041 12       		.uleb128 0x12
+ 2890 0042 06       		.uleb128 0x6
+ 2891 0043 01       		.uleb128 0x1
+ 2892 0044 13       		.uleb128 0x13
+ 2893 0045 00       		.byte	0
+ 2894 0046 00       		.byte	0
+ 2895 0047 05       		.uleb128 0x5
+ 2896 0048 2E       		.uleb128 0x2e
+ 2897 0049 01       		.byte	0x1
+ 2898 004a 3F       		.uleb128 0x3f
+ 2899 004b 19       		.uleb128 0x19
+ 2900 004c 03       		.uleb128 0x3
+ 2901 004d 0E       		.uleb128 0xe
+ 2902 004e 3A       		.uleb128 0x3a
+ 2903 004f 0B       		.uleb128 0xb
+ 2904 0050 3B       		.uleb128 0x3b
+ 2905 0051 0B       		.uleb128 0xb
+ 2906 0052 49       		.uleb128 0x49
+ 2907 0053 13       		.uleb128 0x13
+ 2908 0054 3C       		.uleb128 0x3c
+ 2909 0055 19       		.uleb128 0x19
+ 2910 0056 01       		.uleb128 0x1
+ 2911 0057 13       		.uleb128 0x13
+ 2912 0058 00       		.byte	0
+ 2913 0059 00       		.byte	0
+ 2914 005a 06       		.uleb128 0x6
+ 2915 005b 18       		.uleb128 0x18
+ 2916 005c 00       		.byte	0
+ 2917 005d 00       		.byte	0
+ 2918 005e 00       		.byte	0
+ 2919 005f 07       		.uleb128 0x7
+ 2920 0060 898201   		.uleb128 0x4109
+ 2921 0063 01       		.byte	0x1
+ 2922 0064 11       		.uleb128 0x11
+ 2923 0065 01       		.uleb128 0x1
+ 2924 0066 31       		.uleb128 0x31
+ 2925 0067 13       		.uleb128 0x13
+ 2926 0068 01       		.uleb128 0x1
+ 2927 0069 13       		.uleb128 0x13
+ 2928 006a 00       		.byte	0
+ 2929 006b 00       		.byte	0
+ 2930 006c 08       		.uleb128 0x8
+ 2931 006d 8A8201   		.uleb128 0x410a
+ 2932 0070 00       		.byte	0
+ 2933 0071 02       		.uleb128 0x2
+ 2934 0072 18       		.uleb128 0x18
+ 2935 0073 9142     		.uleb128 0x2111
+ 2936 0075 18       		.uleb128 0x18
+ 2937 0076 00       		.byte	0
+ 2938 0077 00       		.byte	0
+ 2939 0078 09       		.uleb128 0x9
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 58
+
+
+ 2940 0079 898201   		.uleb128 0x4109
+ 2941 007c 01       		.byte	0x1
+ 2942 007d 11       		.uleb128 0x11
+ 2943 007e 01       		.uleb128 0x1
+ 2944 007f 31       		.uleb128 0x31
+ 2945 0080 13       		.uleb128 0x13
+ 2946 0081 00       		.byte	0
+ 2947 0082 00       		.byte	0
+ 2948 0083 0A       		.uleb128 0xa
+ 2949 0084 0B       		.uleb128 0xb
+ 2950 0085 01       		.byte	0x1
+ 2951 0086 11       		.uleb128 0x11
+ 2952 0087 01       		.uleb128 0x1
+ 2953 0088 12       		.uleb128 0x12
+ 2954 0089 06       		.uleb128 0x6
+ 2955 008a 00       		.byte	0
+ 2956 008b 00       		.byte	0
+ 2957 008c 0B       		.uleb128 0xb
+ 2958 008d 24       		.uleb128 0x24
+ 2959 008e 00       		.byte	0
+ 2960 008f 0B       		.uleb128 0xb
+ 2961 0090 0B       		.uleb128 0xb
+ 2962 0091 3E       		.uleb128 0x3e
+ 2963 0092 0B       		.uleb128 0xb
+ 2964 0093 03       		.uleb128 0x3
+ 2965 0094 08       		.uleb128 0x8
+ 2966 0095 00       		.byte	0
+ 2967 0096 00       		.byte	0
+ 2968 0097 0C       		.uleb128 0xc
+ 2969 0098 2E       		.uleb128 0x2e
+ 2970 0099 01       		.byte	0x1
+ 2971 009a 3F       		.uleb128 0x3f
+ 2972 009b 19       		.uleb128 0x19
+ 2973 009c 03       		.uleb128 0x3
+ 2974 009d 0E       		.uleb128 0xe
+ 2975 009e 3A       		.uleb128 0x3a
+ 2976 009f 0B       		.uleb128 0xb
+ 2977 00a0 3B       		.uleb128 0x3b
+ 2978 00a1 05       		.uleb128 0x5
+ 2979 00a2 11       		.uleb128 0x11
+ 2980 00a3 01       		.uleb128 0x1
+ 2981 00a4 12       		.uleb128 0x12
+ 2982 00a5 06       		.uleb128 0x6
+ 2983 00a6 40       		.uleb128 0x40
+ 2984 00a7 18       		.uleb128 0x18
+ 2985 00a8 9742     		.uleb128 0x2117
+ 2986 00aa 19       		.uleb128 0x19
+ 2987 00ab 01       		.uleb128 0x1
+ 2988 00ac 13       		.uleb128 0x13
+ 2989 00ad 00       		.byte	0
+ 2990 00ae 00       		.byte	0
+ 2991 00af 0D       		.uleb128 0xd
+ 2992 00b0 2E       		.uleb128 0x2e
+ 2993 00b1 00       		.byte	0
+ 2994 00b2 3F       		.uleb128 0x3f
+ 2995 00b3 19       		.uleb128 0x19
+ 2996 00b4 3C       		.uleb128 0x3c
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 59
+
+
+ 2997 00b5 19       		.uleb128 0x19
+ 2998 00b6 6E       		.uleb128 0x6e
+ 2999 00b7 0E       		.uleb128 0xe
+ 3000 00b8 03       		.uleb128 0x3
+ 3001 00b9 0E       		.uleb128 0xe
+ 3002 00ba 3A       		.uleb128 0x3a
+ 3003 00bb 0B       		.uleb128 0xb
+ 3004 00bc 3B       		.uleb128 0x3b
+ 3005 00bd 0B       		.uleb128 0xb
+ 3006 00be 00       		.byte	0
+ 3007 00bf 00       		.byte	0
+ 3008 00c0 00       		.byte	0
+ 3009              		.section	.debug_loc,"",%progbits
+ 3010              	.Ldebug_loc0:
+ 3011              	.LLST0:
+ 3012 0000 00000000 		.4byte	.LVL0
+ 3013 0004 11000000 		.4byte	.LVL1-1
+ 3014 0008 0100     		.2byte	0x1
+ 3015 000a 50       		.byte	0x50
+ 3016 000b 11000000 		.4byte	.LVL1-1
+ 3017 000f 04010000 		.4byte	.LVL41
+ 3018 0013 0400     		.2byte	0x4
+ 3019 0015 F3       		.byte	0xf3
+ 3020 0016 01       		.uleb128 0x1
+ 3021 0017 50       		.byte	0x50
+ 3022 0018 9F       		.byte	0x9f
+ 3023 0019 04010000 		.4byte	.LVL41
+ 3024 001d 10010000 		.4byte	.LVL42
+ 3025 0021 0100     		.2byte	0x1
+ 3026 0023 50       		.byte	0x50
+ 3027 0024 10010000 		.4byte	.LVL42
+ 3028 0028 F6020000 		.4byte	.LVL123
+ 3029 002c 0400     		.2byte	0x4
+ 3030 002e F3       		.byte	0xf3
+ 3031 002f 01       		.uleb128 0x1
+ 3032 0030 50       		.byte	0x50
+ 3033 0031 9F       		.byte	0x9f
+ 3034 0032 F6020000 		.4byte	.LVL123
+ 3035 0036 00030000 		.4byte	.LVL124
+ 3036 003a 0100     		.2byte	0x1
+ 3037 003c 50       		.byte	0x50
+ 3038 003d 00030000 		.4byte	.LVL124
+ 3039 0041 F4030000 		.4byte	.LFE0
+ 3040 0045 0400     		.2byte	0x4
+ 3041 0047 F3       		.byte	0xf3
+ 3042 0048 01       		.uleb128 0x1
+ 3043 0049 50       		.byte	0x50
+ 3044 004a 9F       		.byte	0x9f
+ 3045 004b 00000000 		.4byte	0
+ 3046 004f 00000000 		.4byte	0
+ 3047              	.LLST1:
+ 3048 0053 00000000 		.4byte	.LVL0
+ 3049 0057 11000000 		.4byte	.LVL1-1
+ 3050 005b 0100     		.2byte	0x1
+ 3051 005d 51       		.byte	0x51
+ 3052 005e 11000000 		.4byte	.LVL1-1
+ 3053 0062 04010000 		.4byte	.LVL41
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 60
+
+
+ 3054 0066 0100     		.2byte	0x1
+ 3055 0068 54       		.byte	0x54
+ 3056 0069 04010000 		.4byte	.LVL41
+ 3057 006d 13010000 		.4byte	.LVL43-1
+ 3058 0071 0100     		.2byte	0x1
+ 3059 0073 51       		.byte	0x51
+ 3060 0074 13010000 		.4byte	.LVL43-1
+ 3061 0078 F6020000 		.4byte	.LVL123
+ 3062 007c 0100     		.2byte	0x1
+ 3063 007e 54       		.byte	0x54
+ 3064 007f F6020000 		.4byte	.LVL123
+ 3065 0083 03030000 		.4byte	.LVL125-1
+ 3066 0087 0100     		.2byte	0x1
+ 3067 0089 51       		.byte	0x51
+ 3068 008a 03030000 		.4byte	.LVL125-1
+ 3069 008e F4030000 		.4byte	.LFE0
+ 3070 0092 0100     		.2byte	0x1
+ 3071 0094 54       		.byte	0x54
+ 3072 0095 00000000 		.4byte	0
+ 3073 0099 00000000 		.4byte	0
+ 3074              	.LLST2:
+ 3075 009d 00000000 		.4byte	.LVL0
+ 3076 00a1 11000000 		.4byte	.LVL1-1
+ 3077 00a5 0100     		.2byte	0x1
+ 3078 00a7 52       		.byte	0x52
+ 3079 00a8 11000000 		.4byte	.LVL1-1
+ 3080 00ac 04010000 		.4byte	.LVL41
+ 3081 00b0 0100     		.2byte	0x1
+ 3082 00b2 55       		.byte	0x55
+ 3083 00b3 04010000 		.4byte	.LVL41
+ 3084 00b7 13010000 		.4byte	.LVL43-1
+ 3085 00bb 0100     		.2byte	0x1
+ 3086 00bd 52       		.byte	0x52
+ 3087 00be 13010000 		.4byte	.LVL43-1
+ 3088 00c2 F6020000 		.4byte	.LVL123
+ 3089 00c6 0100     		.2byte	0x1
+ 3090 00c8 55       		.byte	0x55
+ 3091 00c9 F6020000 		.4byte	.LVL123
+ 3092 00cd 03030000 		.4byte	.LVL125-1
+ 3093 00d1 0100     		.2byte	0x1
+ 3094 00d3 52       		.byte	0x52
+ 3095 00d4 03030000 		.4byte	.LVL125-1
+ 3096 00d8 F4030000 		.4byte	.LFE0
+ 3097 00dc 0100     		.2byte	0x1
+ 3098 00de 55       		.byte	0x55
+ 3099 00df 00000000 		.4byte	0
+ 3100 00e3 00000000 		.4byte	0
+ 3101              		.section	.debug_aranges,"",%progbits
+ 3102 0000 24000000 		.4byte	0x24
+ 3103 0004 0200     		.2byte	0x2
+ 3104 0006 00000000 		.4byte	.Ldebug_info0
+ 3105 000a 04       		.byte	0x4
+ 3106 000b 00       		.byte	0
+ 3107 000c 0000     		.2byte	0
+ 3108 000e 0000     		.2byte	0
+ 3109 0010 00000000 		.4byte	.LFB0
+ 3110 0014 F4030000 		.4byte	.LFE0-.LFB0
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 61
+
+
+ 3111 0018 00000000 		.4byte	.LFB1
+ 3112 001c 1C000000 		.4byte	.LFE1-.LFB1
+ 3113 0020 00000000 		.4byte	0
+ 3114 0024 00000000 		.4byte	0
+ 3115              		.section	.debug_ranges,"",%progbits
+ 3116              	.Ldebug_ranges0:
+ 3117 0000 00000000 		.4byte	.LFB0
+ 3118 0004 F4030000 		.4byte	.LFE0
+ 3119 0008 00000000 		.4byte	.LFB1
+ 3120 000c 1C000000 		.4byte	.LFE1
+ 3121 0010 00000000 		.4byte	0
+ 3122 0014 00000000 		.4byte	0
+ 3123              		.section	.debug_line,"",%progbits
+ 3124              	.Ldebug_line0:
+ 3125 0000 FD000000 		.section	.debug_str,"MS",%progbits,1
+ 3125      02002500 
+ 3125      00000201 
+ 3125      FB0E0D00 
+ 3125      01010101 
+ 3126              	.LASF11:
+ 3127 0000 73746570 		.ascii	"stepperRight\000"
+ 3127      70657252 
+ 3127      69676874 
+ 3127      00
+ 3128              	.LASF4:
+ 3129 000d 41345F57 		.ascii	"A4_Write\000"
+ 3129      72697465 
+ 3129      00
+ 3130              	.LASF9:
+ 3131 0016 73746570 		.ascii	"stepperRight.c\000"
+ 3131      70657252 
+ 3131      69676874 
+ 3131      2E6300
+ 3132              	.LASF7:
+ 3133 0025 43794465 		.ascii	"CyDelayUs\000"
+ 3133      6C617955 
+ 3133      7300
+ 3134              	.LASF2:
+ 3135 002f 68617374 		.ascii	"hastighed\000"
+ 3135      69676865 
+ 3135      6400
+ 3136              	.LASF3:
+ 3137 0039 41335F57 		.ascii	"A3_Write\000"
+ 3137      72697465 
+ 3137      00
+ 3138              	.LASF5:
+ 3139 0042 42335F57 		.ascii	"B3_Write\000"
+ 3139      72697465 
+ 3139      00
+ 3140              	.LASF10:
+ 3141 004b 443A5C44 		.ascii	"D:\\Dropbox\\AarhusUNI\\Andet2017\\Stepper\\Stepper"
+ 3141      726F7062 
+ 3141      6F785C41 
+ 3141      61726875 
+ 3141      73554E49 
+ 3142 0079 5C537465 		.ascii	"\\Stepper.cydsn\000"
+ 3142      70706572 
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccE9mtAK.s 			page 62
+
+
+ 3142      2E637964 
+ 3142      736E00
+ 3143              	.LASF0:
+ 3144 0088 73746570 		.ascii	"stepMode\000"
+ 3144      4D6F6465 
+ 3144      00
+ 3145              	.LASF1:
+ 3146 0091 73746174 		.ascii	"status\000"
+ 3146      757300
+ 3147              	.LASF12:
+ 3148 0098 72657365 		.ascii	"resetRight\000"
+ 3148      74526967 
+ 3148      687400
+ 3149              	.LASF6:
+ 3150 00a3 42345F57 		.ascii	"B4_Write\000"
+ 3150      72697465 
+ 3150      00
+ 3151              	.LASF8:
+ 3152 00ac 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 3152      43313120 
+ 3152      352E342E 
+ 3152      31203230 
+ 3152      31363036 
+ 3153 00df 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 3153      20726576 
+ 3153      6973696F 
+ 3153      6E203233 
+ 3153      37373135 
+ 3154 0112 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 3154      66756E63 
+ 3154      74696F6E 
+ 3154      2D736563 
+ 3154      74696F6E 
+ 3155              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

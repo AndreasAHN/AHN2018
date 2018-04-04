@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\ReeksamenJan16">
+      <UniqueIdentifier>{e6d03742-fd0f-4b28-9347-4cbcc51ac19f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ReeksamenJan16">
+      <UniqueIdentifier>{f26602e2-f607-46fa-8bac-aa14211200d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Vintereksamen16">
+      <UniqueIdentifier>{39a5f3f8-78b8-489c-a373-905610720f16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Vintereksamen16">
+      <UniqueIdentifier>{f1ae94a3-b463-444e-81f5-74e05b0b7422}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ReeksamenJan15">
+      <UniqueIdentifier>{d2a39055-db2b-4332-aab8-3ffb66d8072c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ReeksamenJan15">
+      <UniqueIdentifier>{36a85595-3d5f-429c-b723-98f7eaa6115b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Vintereksamen15">
+      <UniqueIdentifier>{db2ca4ca-daa1-4e00-b5d0-b7d9ee4f483f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Vintereksamen15">
+      <UniqueIdentifier>{3a546612-211b-4dad-beb1-c0f536c8790d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Vintereksamen14">
+      <UniqueIdentifier>{24cd40c8-2f5f-4736-a63e-6424f6a18390}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Vintereksamen14">
+      <UniqueIdentifier>{c3a5c82d-c988-4627-ade7-4adfd06f8f31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Vintereksamen17">
+      <UniqueIdentifier>{6b23c991-9ff2-42ea-a291-88fc6923ee7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Vintereksamen17">
+      <UniqueIdentifier>{85777a0a-3321-4a3a-a17a-2867e3542a91}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ReeksamenJan16.cpp">
+      <Filter>Source Files\ReeksamenJan16</Filter>
+    </ClCompile>
+    <ClCompile Include="re16opg4.cpp">
+      <Filter>Source Files\ReeksamenJan16</Filter>
+    </ClCompile>
+    <ClCompile Include="re16opg3.cpp">
+      <Filter>Source Files\ReeksamenJan16</Filter>
+    </ClCompile>
+    <ClCompile Include="re16opg2.cpp">
+      <Filter>Source Files\ReeksamenJan16</Filter>
+    </ClCompile>
+    <ClCompile Include="re16opg1.cpp">
+      <Filter>Source Files\ReeksamenJan16</Filter>
+    </ClCompile>
+    <ClCompile Include="re16opg5.cpp">
+      <Filter>Source Files\ReeksamenJan16</Filter>
+    </ClCompile>
+    <ClCompile Include="Vintereksamen16.cpp">
+      <Filter>Source Files\Vintereksamen16</Filter>
+    </ClCompile>
+    <ClCompile Include="16opg3.cpp">
+      <Filter>Source Files\Vintereksamen16</Filter>
+    </ClCompile>
+    <ClCompile Include="16opg2.cpp">
+      <Filter>Source Files\Vintereksamen16</Filter>
+    </ClCompile>
+    <ClCompile Include="16opg1.cpp">
+      <Filter>Source Files\Vintereksamen16</Filter>
+    </ClCompile>
+    <ClCompile Include="e16opg4.cpp">
+      <Filter>Source Files\Vintereksamen16</Filter>
+    </ClCompile>
+    <ClCompile Include="e16opg5.cpp">
+      <Filter>Source Files\Vintereksamen16</Filter>
+    </ClCompile>
+    <ClCompile Include="ReeksamenJan15.cpp">
+      <Filter>Source Files\ReeksamenJan15</Filter>
+    </ClCompile>
+    <ClCompile Include="re15opg1.cpp">
+      <Filter>Source Files\ReeksamenJan15</Filter>
+    </ClCompile>
+    <ClCompile Include="re15opg2.cpp">
+      <Filter>Source Files\ReeksamenJan15</Filter>
+    </ClCompile>
+    <ClCompile Include="re15opg3.cpp">
+      <Filter>Source Files\ReeksamenJan15</Filter>
+    </ClCompile>
+    <ClCompile Include="Vintereksamen15.cpp">
+      <Filter>Source Files\Vintereksamen15</Filter>
+    </ClCompile>
+    <ClCompile Include="15opg1.cpp">
+      <Filter>Source Files\Vintereksamen15</Filter>
+    </ClCompile>
+    <ClCompile Include="e15opg2.cpp">
+      <Filter>Source Files\Vintereksamen15</Filter>
+    </ClCompile>
+    <ClCompile Include="Vintereksamen14.cpp">
+      <Filter>Source Files\Vintereksamen14</Filter>
+    </ClCompile>
+    <ClCompile Include="Vintereksamen17.cpp">
+      <Filter>Source Files\Vintereksamen17</Filter>
+    </ClCompile>
+    <ClCompile Include="e17opg3.cpp">
+      <Filter>Source Files\Vintereksamen17</Filter>
+    </ClCompile>
+    <ClCompile Include="e17opg2.cpp">
+      <Filter>Source Files\Vintereksamen17</Filter>
+    </ClCompile>
+    <ClCompile Include="e17opg1.cpp">
+      <Filter>Source Files\Vintereksamen17</Filter>
+    </ClCompile>
+    <ClCompile Include="e14opg1.cpp">
+      <Filter>Source Files\Vintereksamen14</Filter>
+    </ClCompile>
+    <ClCompile Include="e14opg1,1.cpp">
+      <Filter>Source Files\Vintereksamen14</Filter>
+    </ClCompile>
+    <ClCompile Include="e14opg2.cpp">
+      <Filter>Source Files\Vintereksamen14</Filter>
+    </ClCompile>
+    <ClCompile Include="e17opg4.cpp">
+      <Filter>Source Files\Vintereksamen17</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="re16opg1.h">
+      <Filter>Header Files\ReeksamenJan16</Filter>
+    </ClInclude>
+    <ClInclude Include="re16opg2.h">
+      <Filter>Header Files\ReeksamenJan16</Filter>
+    </ClInclude>
+    <ClInclude Include="re16opg3.h">
+      <Filter>Header Files\ReeksamenJan16</Filter>
+    </ClInclude>
+    <ClInclude Include="re16opg4.h">
+      <Filter>Header Files\ReeksamenJan16</Filter>
+    </ClInclude>
+    <ClInclude Include="ReeksamenJan16.h">
+      <Filter>Header Files\ReeksamenJan16</Filter>
+    </ClInclude>
+    <ClInclude Include="re16opg5.h">
+      <Filter>Header Files\ReeksamenJan16</Filter>
+    </ClInclude>
+    <ClInclude Include="Vintereksamen16.h">
+      <Filter>Header Files\Vintereksamen16</Filter>
+    </ClInclude>
+    <ClInclude Include="16opg1.h">
+      <Filter>Header Files\Vintereksamen16</Filter>
+    </ClInclude>
+    <ClInclude Include="16opg2.h">
+      <Filter>Header Files\Vintereksamen16</Filter>
+    </ClInclude>
+    <ClInclude Include="16opg3.h">
+      <Filter>Header Files\Vintereksamen16</Filter>
+    </ClInclude>
+    <ClInclude Include="e16opg4.h">
+      <Filter>Header Files\Vintereksamen16</Filter>
+    </ClInclude>
+    <ClInclude Include="e16opg5.h">
+      <Filter>Header Files\Vintereksamen16</Filter>
+    </ClInclude>
+    <ClInclude Include="ReeksamenJan15.h">
+      <Filter>Header Files\ReeksamenJan15</Filter>
+    </ClInclude>
+    <ClInclude Include="re15opg1.h">
+      <Filter>Header Files\ReeksamenJan15</Filter>
+    </ClInclude>
+    <ClInclude Include="re15opg2.h">
+      <Filter>Header Files\ReeksamenJan15</Filter>
+    </ClInclude>
+    <ClInclude Include="re15opg3.h">
+      <Filter>Header Files\ReeksamenJan15</Filter>
+    </ClInclude>
+    <ClInclude Include="Vintereksamen15.h">
+      <Filter>Header Files\Vintereksamen15</Filter>
+    </ClInclude>
+    <ClInclude Include="15opg1.h">
+      <Filter>Header Files\Vintereksamen15</Filter>
+    </ClInclude>
+    <ClInclude Include="e15opg2.h">
+      <Filter>Header Files\Vintereksamen15</Filter>
+    </ClInclude>
+    <ClInclude Include="Vintereksamen14.h">
+      <Filter>Header Files\Vintereksamen14</Filter>
+    </ClInclude>
+    <ClInclude Include="Vintereksamen17.h">
+      <Filter>Header Files\Vintereksamen17</Filter>
+    </ClInclude>
+    <ClInclude Include="e17opg1.h">
+      <Filter>Header Files\Vintereksamen17</Filter>
+    </ClInclude>
+    <ClInclude Include="e17opg2.h">
+      <Filter>Header Files\Vintereksamen17</Filter>
+    </ClInclude>
+    <ClInclude Include="e17opg3.h">
+      <Filter>Header Files\Vintereksamen17</Filter>
+    </ClInclude>
+    <ClInclude Include="e17opg4.h">
+      <Filter>Header Files\Vintereksamen17</Filter>
+    </ClInclude>
+    <ClInclude Include="e17opg5.h">
+      <Filter>Header Files\Vintereksamen17</Filter>
+    </ClInclude>
+    <ClInclude Include="e14opg1.h">
+      <Filter>Header Files\Vintereksamen14</Filter>
+    </ClInclude>
+    <ClInclude Include="e14opg1,1.h">
+      <Filter>Header Files\Vintereksamen14</Filter>
+    </ClInclude>
+    <ClInclude Include="e14opg2.h">
+      <Filter>Header Files\Vintereksamen14</Filter>
+    </ClInclude>
+    <ClInclude Include="e14opg3.h">
+      <Filter>Header Files\Vintereksamen14</Filter>
+    </ClInclude>
+    <ClInclude Include="stringToUnsignedInteger.h">
+      <Filter>Header Files\Vintereksamen17</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

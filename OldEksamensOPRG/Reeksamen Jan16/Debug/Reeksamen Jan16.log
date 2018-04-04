@@ -1,0 +1,73 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Reeksamen Jan16.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Vintereksamen17.cpp
+f:\onedrive - aarhus universitet\aarhusuni\foerste_semester\objt\eksamens forberedelse\reeksamen jan16\reeksamen jan16\vintereksamen17.cpp(27): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: see declaration of 'scanf'
+f:\onedrive - aarhus universitet\aarhusuni\foerste_semester\objt\eksamens forberedelse\reeksamen jan16\reeksamen jan16\vintereksamen17.cpp(13): warning C4101: 'i': unreferenced local variable
+f:\onedrive - aarhus universitet\aarhusuni\foerste_semester\objt\eksamens forberedelse\reeksamen jan16\reeksamen jan16\vintereksamen17.cpp(14): warning C4101: 'tjek': unreferenced local variable
+  Vintereksamen16.cpp
+f:\onedrive - aarhus universitet\aarhusuni\foerste_semester\objt\eksamens forberedelse\reeksamen jan16\reeksamen jan16\vintereksamen16.cpp(29): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: see declaration of 'scanf'
+  Vintereksamen15.cpp
+f:\onedrive - aarhus universitet\aarhusuni\foerste_semester\objt\eksamens forberedelse\reeksamen jan16\reeksamen jan16\vintereksamen15.cpp(25): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: see declaration of 'scanf'
+f:\onedrive - aarhus universitet\aarhusuni\foerste_semester\objt\eksamens forberedelse\reeksamen jan16\reeksamen jan16\vintereksamen15.cpp(13): warning C4101: 'i': unreferenced local variable
+f:\onedrive - aarhus universitet\aarhusuni\foerste_semester\objt\eksamens forberedelse\reeksamen jan16\reeksamen jan16\vintereksamen15.cpp(14): warning C4101: 'tjek': unreferenced local variable
+  Vintereksamen14.cpp
+f:\onedrive - aarhus universitet\aarhusuni\foerste_semester\objt\eksamens forberedelse\reeksamen jan16\reeksamen jan16\vintereksamen14.cpp(24): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: see declaration of 'scanf'
+f:\onedrive - aarhus universitet\aarhusuni\foerste_semester\objt\eksamens forberedelse\reeksamen jan16\reeksamen jan16\vintereksamen14.cpp(12): warning C4101: 'i': unreferenced local variable
+f:\onedrive - aarhus universitet\aarhusuni\foerste_semester\objt\eksamens forberedelse\reeksamen jan16\reeksamen jan16\vintereksamen14.cpp(13): warning C4101: 'tjek': unreferenced local variable
+  re16opg3.cpp
+  Source.cpp
+  ReeksamenJan16.cpp
+f:\onedrive - aarhus universitet\aarhusuni\foerste_semester\objt\eksamens forberedelse\reeksamen jan16\reeksamen jan16\reeksamenjan16.cpp(32): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: see declaration of 'scanf'
+f:\onedrive - aarhus universitet\aarhusuni\foerste_semester\objt\eksamens forberedelse\reeksamen jan16\reeksamen jan16\reeksamenjan16.cpp(45): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: see declaration of 'scanf'
+  ReeksamenJan15.cpp
+f:\onedrive - aarhus universitet\aarhusuni\foerste_semester\objt\eksamens forberedelse\reeksamen jan16\reeksamen jan16\reeksamenjan15.cpp(23): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: see declaration of 'scanf'
+f:\onedrive - aarhus universitet\aarhusuni\foerste_semester\objt\eksamens forberedelse\reeksamen jan16\reeksamen jan16\reeksamenjan15.cpp(11): warning C4101: 'i': unreferenced local variable
+f:\onedrive - aarhus universitet\aarhusuni\foerste_semester\objt\eksamens forberedelse\reeksamen jan16\reeksamen jan16\reeksamenjan15.cpp(12): warning C4101: 'tjek': unreferenced local variable
+  re16opg5.cpp
+  re16opg4.cpp
+  re16opg2.cpp
+  re16opg1.cpp
+f:\onedrive - aarhus universitet\aarhusuni\foerste_semester\objt\eksamens forberedelse\reeksamen jan16\reeksamen jan16\re16opg1.cpp(13): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: see declaration of 'scanf'
+  re15opg3.cpp
+  re15opg2.cpp
+  re15opg1.cpp
+f:\onedrive - aarhus universitet\aarhusuni\foerste_semester\objt\eksamens forberedelse\reeksamen jan16\reeksamen jan16\re15opg1.cpp(11): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: see declaration of 'scanf'
+  e17opg4.cpp
+  e17opg3.cpp
+  e17opg2.cpp
+  e17opg1.cpp
+f:\onedrive - aarhus universitet\aarhusuni\foerste_semester\objt\eksamens forberedelse\reeksamen jan16\reeksamen jan16\e17opg1.cpp(11): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: see declaration of 'scanf'
+  e16opg5.cpp
+  Generating Code...
+  Compiling...
+  e16opg4.cpp
+  e15opg2.cpp
+  e14opg2.cpp
+f:\onedrive - aarhus universitet\aarhusuni\foerste_semester\objt\eksamens forberedelse\reeksamen jan16\reeksamen jan16\e14opg2.cpp(13): warning C4838: conversion from 'double' to 'float' requires a narrowing conversion
+f:\onedrive - aarhus universitet\aarhusuni\foerste_semester\objt\eksamens forberedelse\reeksamen jan16\reeksamen jan16\e14opg2.cpp(13): warning C4305: 'initializing': truncation from 'double' to 'float'
+f:\onedrive - aarhus universitet\aarhusuni\foerste_semester\objt\eksamens forberedelse\reeksamen jan16\reeksamen jan16\e14opg2.cpp(18): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: see declaration of 'scanf'
+f:\onedrive - aarhus universitet\aarhusuni\foerste_semester\objt\eksamens forberedelse\reeksamen jan16\reeksamen jan16\e14opg2.cpp(20): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: see declaration of 'scanf'
+f:\onedrive - aarhus universitet\aarhusuni\foerste_semester\objt\eksamens forberedelse\reeksamen jan16\reeksamen jan16\e14opg2.cpp(22): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: see declaration of 'scanf'
+  e14opg1.cpp
+  e14opg1,1.cpp
+  16opg3.cpp
+  16opg2.cpp
+  16opg1.cpp
+  15opg1.cpp
+f:\onedrive - aarhus universitet\aarhusuni\foerste_semester\objt\eksamens forberedelse\reeksamen jan16\reeksamen jan16\15opg1.cpp(13): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: see declaration of 'scanf'
+  Generating Code...
+  Reeksamen Jan16.vcxproj -> F:\OneDrive - Aarhus universitet\AarhusUNI\Foerste_Semester\OBJT\Eksamens forberedelse\Reeksamen Jan16\Debug\OldEksamensOPRG.exe
+  Reeksamen Jan16.vcxproj -> F:\OneDrive - Aarhus universitet\AarhusUNI\Foerste_Semester\OBJT\Eksamens forberedelse\Reeksamen Jan16\Debug\OldEksamensOPRG.pdb (Full PDB)
