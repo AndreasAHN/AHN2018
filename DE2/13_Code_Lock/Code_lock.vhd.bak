@@ -1,0 +1,81 @@
+-------- MEE_MOO --------
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity MEE_MOO is
+	port( a: in std_logic;
+			b: in std_logic;
+			reset: in std_logic;
+			clk: in std_logic;
+			moo_out: out std_logic;
+			mee_out: out std_logic);
+end MEE_MOO;
+
+architecture mee_moo_fsm of MEE_MOO is
+
+type state is (Idle, Init, aktive);
+signal present_state, next_state : state;
+
+begin
+
+process (clk, reset)
+begin
+	if (reset = '0') then
+		present_state <= Idle;  --default state on reset.
+	elsif (rising_edge(clk)) then
+		present_state <= next_state;  --state change
+	end if;
+end process;
+
+process (present_state, a,b)	--state machine process.
+begin
+	--next_state <= present_state;
+	case present_state is
+		when Idle =>					----Første State Idle
+			if a = '1' then
+				next_state <= Init;
+			end if;
+			
+		when Init =>					------Anden State Init
+			if a = '0' AND b = '0' then
+				next_state <= Idle;
+			elsif (a = '0' AND b = '1') then
+				next_state <= aktive;
+			end if;
+			
+		when aktive =>					------Trejde state aktive
+				next_state <= Idle;				
+	end case;
+end process;
+
+process (present_state, a,b)	--state machine process.
+begin
+	--next_state <= present_state;
+	case present_state is
+		when Idle =>					----Første State Idle
+			MOO_out <= '0';
+			if a = '1' then
+				MEE_out <= '0';
+			else
+				MEE_out <= '0';
+			end if;
+			
+		when Init =>					------Anden State Init
+			moo_out <= '1';
+			if a = '1' AND b = '1' then
+				MEE_out <= '1';
+			elsif a = '0' AND b = '0' then
+				MEE_out <= '0';
+			elsif (a = '0' AND b = '1') then
+				MEE_out <= '0';
+			end if;
+			
+		when aktive =>					------Trejde state aktive
+			MOO_out <= '0';
+			if a = '0' AND a = '1' then
+				MEE_out <= '0';
+			end if;
+	end case;
+end process;
+
+end mee_moo_fsm;

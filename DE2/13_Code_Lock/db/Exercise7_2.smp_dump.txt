@@ -1,0 +1,7 @@
+
+State Machine - |code_lock_tester|code_lock:code_lock_tester|present_state
+Name present_state.Going_Idle present_state.Unlocked present_state.Evaluating_Code_1 present_state.Idle 
+present_state.Idle 0 0 0 0 
+present_state.Evaluating_Code_1 0 0 1 1 
+present_state.Unlocked 0 1 0 1 
+present_state.Going_Idle 1 0 0 1 
