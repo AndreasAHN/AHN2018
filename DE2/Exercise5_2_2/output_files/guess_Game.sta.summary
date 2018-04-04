@@ -1,0 +1,61 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'Knap2[0]'
+Slack : -2.668
+TNS   : -20.734
+
+Type  : Slow Model Setup 'Knap1[0]'
+Slack : -2.399
+TNS   : -15.707
+
+Type  : Slow Model Hold 'Knap1[0]'
+Slack : -2.420
+TNS   : -17.020
+
+Type  : Slow Model Hold 'Knap2[0]'
+Slack : -2.041
+TNS   : -14.008
+
+Type  : Slow Model Minimum Pulse Width 'KEY[3]'
+Slack : -1.222
+TNS   : -1.222
+
+Type  : Slow Model Minimum Pulse Width 'Knap1[0]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'Knap2[0]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Setup 'Knap2[0]'
+Slack : -0.871
+TNS   : -4.070
+
+Type  : Fast Model Setup 'Knap1[0]'
+Slack : -0.745
+TNS   : -3.400
+
+Type  : Fast Model Hold 'Knap1[0]'
+Slack : -1.412
+TNS   : -10.269
+
+Type  : Fast Model Hold 'Knap2[0]'
+Slack : -1.238
+TNS   : -8.822
+
+Type  : Fast Model Minimum Pulse Width 'KEY[3]'
+Slack : -1.222
+TNS   : -1.222
+
+Type  : Fast Model Minimum Pulse Width 'Knap1[0]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'Knap2[0]'
+Slack : 0.500
+TNS   : 0.000
+
+------------------------------------------------------------

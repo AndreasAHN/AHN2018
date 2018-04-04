@@ -1,0 +1,19 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity multi_counter_tester is
+port(
+	KEY0	:	in		std_logic;
+	SW		:	in		std_logic_vector(17 downto 16);
+	KEY3	:	in		std_logic;
+	HEX0	:	out	std_logic_vector(6 downto 0);
+	LEDR0	:	out	std_logic;
+);
+end multi_counter_tester;
+signal binc : std_logic_vector(3 downto 0);
+architecture structural of multi_counter_tester is
+
+begin
+	mtc: entity work.multi_counter 		port map(clk => KEY0, mode => SW, reset => KEY3, count => binc, cout => LEDR0);
+	b2h: entity work.sevenseg_decoder 	port map(bin => binc, seg => HEX0);
+end structural;

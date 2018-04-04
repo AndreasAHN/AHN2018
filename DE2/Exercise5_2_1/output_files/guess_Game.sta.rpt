@@ -1,0 +1,1246 @@
+TimeQuest Timing Analyzer report for guess_Game
+Thu Apr 20 09:32:52 2017
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'KEY[0]'
+ 12. Slow Model Hold: 'KEY[0]'
+ 13. Slow Model Minimum Pulse Width: 'KEY[0]'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'KEY[0]'
+ 24. Fast Model Hold: 'KEY[0]'
+ 25. Fast Model Minimum Pulse Width: 'KEY[0]'
+ 26. Setup Times
+ 27. Hold Times
+ 28. Clock to Output Times
+ 29. Minimum Clock to Output Times
+ 30. Multicorner Timing Analysis Summary
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; guess_Game                                                        ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-8         ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                             ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets    ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; KEY[0]     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { KEY[0] } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 224.82 MHz ; 224.82 MHz      ; KEY[0]     ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++---------------------------------+
+; Slow Model Setup Summary        ;
++--------+--------+---------------+
+; Clock  ; Slack  ; End Point TNS ;
++--------+--------+---------------+
+; KEY[0] ; -1.724 ; -17.236       ;
++--------+--------+---------------+
+
+
++---------------------------------+
+; Slow Model Hold Summary         ;
++--------+--------+---------------+
+; Clock  ; Slack  ; End Point TNS ;
++--------+--------+---------------+
+; KEY[0] ; -0.982 ; -7.215        ;
++--------+--------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++--------+--------+----------------------+
+; Clock  ; Slack  ; End Point TNS        ;
++--------+--------+----------------------+
+; KEY[0] ; -1.222 ; -1.222               ;
++--------+--------+----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'KEY[0]'                                                                                                                       ;
++--------+----------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                        ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.724 ; guess_game:Test|secret_number[0] ; guess_game:Test|display0OUT[4] ; KEY[0]       ; KEY[0]      ; 0.500        ; 1.533      ; 2.771      ;
+; -1.707 ; guess_game:Test|secret_number[0] ; guess_game:Test|display0OUT[0] ; KEY[0]       ; KEY[0]      ; 0.500        ; 1.526      ; 2.775      ;
+; -1.692 ; guess_game:Test|secret_number[0] ; guess_game:Test|display0OUT[6] ; KEY[0]       ; KEY[0]      ; 0.500        ; 1.528      ; 2.770      ;
+; -1.680 ; guess_game:Test|secret_number[0] ; guess_game:Test|display1OUT[6] ; KEY[0]       ; KEY[0]      ; 0.500        ; 1.533      ; 2.770      ;
+; -1.641 ; guess_game:Test|secret_number[1] ; guess_game:Test|display0OUT[4] ; KEY[0]       ; KEY[0]      ; 0.500        ; 1.532      ; 2.687      ;
+; -1.624 ; guess_game:Test|secret_number[1] ; guess_game:Test|display0OUT[0] ; KEY[0]       ; KEY[0]      ; 0.500        ; 1.525      ; 2.691      ;
+; -1.610 ; guess_game:Test|secret_number[3] ; guess_game:Test|display0OUT[4] ; KEY[0]       ; KEY[0]      ; 0.500        ; 1.479      ; 2.603      ;
+; -1.609 ; guess_game:Test|secret_number[1] ; guess_game:Test|display0OUT[6] ; KEY[0]       ; KEY[0]      ; 0.500        ; 1.527      ; 2.686      ;
+; -1.600 ; guess_game:Test|secret_number[2] ; guess_game:Test|display0OUT[4] ; KEY[0]       ; KEY[0]      ; 0.500        ; 1.484      ; 2.598      ;
+; -1.597 ; guess_game:Test|secret_number[1] ; guess_game:Test|display1OUT[6] ; KEY[0]       ; KEY[0]      ; 0.500        ; 1.532      ; 2.686      ;
+; -1.592 ; guess_game:Test|secret_number[3] ; guess_game:Test|display0OUT[0] ; KEY[0]       ; KEY[0]      ; 0.500        ; 1.472      ; 2.606      ;
+; -1.582 ; guess_game:Test|secret_number[2] ; guess_game:Test|display0OUT[0] ; KEY[0]       ; KEY[0]      ; 0.500        ; 1.477      ; 2.601      ;
+; -1.578 ; guess_game:Test|secret_number[3] ; guess_game:Test|display0OUT[6] ; KEY[0]       ; KEY[0]      ; 0.500        ; 1.474      ; 2.602      ;
+; -1.568 ; guess_game:Test|secret_number[2] ; guess_game:Test|display0OUT[6] ; KEY[0]       ; KEY[0]      ; 0.500        ; 1.479      ; 2.597      ;
+; -1.565 ; guess_game:Test|secret_number[3] ; guess_game:Test|display1OUT[6] ; KEY[0]       ; KEY[0]      ; 0.500        ; 1.479      ; 2.601      ;
+; -1.555 ; guess_game:Test|secret_number[2] ; guess_game:Test|display1OUT[6] ; KEY[0]       ; KEY[0]      ; 0.500        ; 1.484      ; 2.596      ;
+; -1.495 ; guess_game:Test|secret_number[4] ; guess_game:Test|display0OUT[4] ; KEY[0]       ; KEY[0]      ; 0.500        ; 1.484      ; 2.493      ;
+; -1.477 ; guess_game:Test|secret_number[4] ; guess_game:Test|display0OUT[0] ; KEY[0]       ; KEY[0]      ; 0.500        ; 1.477      ; 2.496      ;
+; -1.463 ; guess_game:Test|secret_number[4] ; guess_game:Test|display0OUT[6] ; KEY[0]       ; KEY[0]      ; 0.500        ; 1.479      ; 2.492      ;
+; -1.453 ; guess_game:Test|secret_number[5] ; guess_game:Test|display0OUT[4] ; KEY[0]       ; KEY[0]      ; 0.500        ; 1.485      ; 2.452      ;
+; -1.450 ; guess_game:Test|secret_number[4] ; guess_game:Test|display1OUT[6] ; KEY[0]       ; KEY[0]      ; 0.500        ; 1.484      ; 2.491      ;
+; -1.435 ; guess_game:Test|secret_number[5] ; guess_game:Test|display0OUT[0] ; KEY[0]       ; KEY[0]      ; 0.500        ; 1.478      ; 2.455      ;
+; -1.421 ; guess_game:Test|secret_number[5] ; guess_game:Test|display0OUT[6] ; KEY[0]       ; KEY[0]      ; 0.500        ; 1.480      ; 2.451      ;
+; -1.408 ; guess_game:Test|secret_number[5] ; guess_game:Test|display1OUT[6] ; KEY[0]       ; KEY[0]      ; 0.500        ; 1.485      ; 2.450      ;
+; -1.355 ; guess_game:Test|secret_number[6] ; guess_game:Test|display0OUT[4] ; KEY[0]       ; KEY[0]      ; 0.500        ; 1.478      ; 2.347      ;
+; -1.337 ; guess_game:Test|secret_number[6] ; guess_game:Test|display0OUT[0] ; KEY[0]       ; KEY[0]      ; 0.500        ; 1.471      ; 2.350      ;
+; -1.324 ; guess_game:Test|secret_number[5] ; guess_game:Test|display[5]     ; KEY[0]       ; KEY[0]      ; 1.000        ; 1.347      ; 2.848      ;
+; -1.323 ; guess_game:Test|secret_number[6] ; guess_game:Test|display0OUT[6] ; KEY[0]       ; KEY[0]      ; 0.500        ; 1.473      ; 2.346      ;
+; -1.312 ; guess_game:Test|secret_number[4] ; guess_game:Test|display[4]     ; KEY[0]       ; KEY[0]      ; 1.000        ; 1.345      ; 2.796      ;
+; -1.310 ; guess_game:Test|secret_number[6] ; guess_game:Test|display1OUT[6] ; KEY[0]       ; KEY[0]      ; 0.500        ; 1.478      ; 2.345      ;
+; -1.258 ; guess_game:Test|secret_number[6] ; guess_game:Test|display[6]     ; KEY[0]       ; KEY[0]      ; 1.000        ; 1.340      ; 2.770      ;
+; -1.204 ; guess_game:Test|secret_number[3] ; guess_game:Test|display[3]     ; KEY[0]       ; KEY[0]      ; 1.000        ; 1.340      ; 2.716      ;
+; -1.184 ; guess_game:Test|secret_number[7] ; guess_game:Test|display[7]     ; KEY[0]       ; KEY[0]      ; 1.000        ; 1.339      ; 2.696      ;
+; -1.175 ; guess_game:Test|secret_number[1] ; guess_game:Test|display[1]     ; KEY[0]       ; KEY[0]      ; 1.000        ; 1.473      ; 2.695      ;
+; -1.140 ; guess_game:Test|secret_number[0] ; guess_game:Test|display1OUT[1] ; KEY[0]       ; KEY[0]      ; 0.500        ; 1.500      ; 2.177      ;
+; -1.115 ; guess_game:Test|secret_number[3] ; guess_game:Test|display1OUT[1] ; KEY[0]       ; KEY[0]      ; 0.500        ; 1.446      ; 2.098      ;
+; -1.105 ; guess_game:Test|secret_number[2] ; guess_game:Test|display1OUT[1] ; KEY[0]       ; KEY[0]      ; 0.500        ; 1.451      ; 2.093      ;
+; -1.082 ; guess_game:Test|secret_number[1] ; guess_game:Test|display1OUT[1] ; KEY[0]       ; KEY[0]      ; 0.500        ; 1.499      ; 2.118      ;
+; -1.000 ; guess_game:Test|secret_number[4] ; guess_game:Test|display1OUT[1] ; KEY[0]       ; KEY[0]      ; 0.500        ; 1.451      ; 1.988      ;
+; -0.985 ; guess_game:Test|secret_number[2] ; guess_game:Test|display[2]     ; KEY[0]       ; KEY[0]      ; 1.000        ; 1.344      ; 2.501      ;
+; -0.958 ; guess_game:Test|secret_number[5] ; guess_game:Test|display1OUT[1] ; KEY[0]       ; KEY[0]      ; 0.500        ; 1.452      ; 1.947      ;
+; -0.947 ; guess_game:Test|secret_number[7] ; guess_game:Test|display0OUT[4] ; KEY[0]       ; KEY[0]      ; 0.500        ; 1.477      ; 1.938      ;
+; -0.929 ; guess_game:Test|secret_number[7] ; guess_game:Test|display0OUT[0] ; KEY[0]       ; KEY[0]      ; 0.500        ; 1.470      ; 1.941      ;
+; -0.915 ; guess_game:Test|secret_number[7] ; guess_game:Test|display0OUT[6] ; KEY[0]       ; KEY[0]      ; 0.500        ; 1.472      ; 1.937      ;
+; -0.902 ; guess_game:Test|secret_number[7] ; guess_game:Test|display1OUT[6] ; KEY[0]       ; KEY[0]      ; 0.500        ; 1.477      ; 1.936      ;
+; -0.860 ; guess_game:Test|secret_number[6] ; guess_game:Test|display1OUT[1] ; KEY[0]       ; KEY[0]      ; 0.500        ; 1.445      ; 1.842      ;
+; -0.851 ; guess_game:Test|secret_number[0] ; guess_game:Test|display[0]     ; KEY[0]       ; KEY[0]      ; 1.000        ; 1.344      ; 2.523      ;
+; -0.452 ; guess_game:Test|secret_number[7] ; guess_game:Test|display1OUT[1] ; KEY[0]       ; KEY[0]      ; 0.500        ; 1.444      ; 1.433      ;
+; 0.501  ; KEY[0]                           ; guess_game:Test|display[4]     ; KEY[0]       ; KEY[0]      ; 0.500        ; 4.416      ; 3.554      ;
+; 0.529  ; KEY[0]                           ; guess_game:Test|display[1]     ; KEY[0]       ; KEY[0]      ; 0.500        ; 4.496      ; 3.514      ;
+; 0.567  ; KEY[0]                           ; guess_game:Test|display[2]     ; KEY[0]       ; KEY[0]      ; 0.500        ; 4.415      ; 3.520      ;
+; 0.573  ; KEY[0]                           ; guess_game:Test|display[3]     ; KEY[0]       ; KEY[0]      ; 0.500        ; 4.416      ; 3.515      ;
+; 0.573  ; KEY[0]                           ; guess_game:Test|display[6]     ; KEY[0]       ; KEY[0]      ; 0.500        ; 4.417      ; 3.516      ;
+; 0.576  ; KEY[0]                           ; guess_game:Test|display[7]     ; KEY[0]       ; KEY[0]      ; 0.500        ; 4.417      ; 3.514      ;
+; 0.583  ; KEY[0]                           ; guess_game:Test|display[5]     ; KEY[0]       ; KEY[0]      ; 0.500        ; 4.417      ; 3.511      ;
+; 0.693  ; KEY[0]                           ; guess_game:Test|display[0]     ; KEY[0]       ; KEY[0]      ; 0.500        ; 4.366      ; 3.501      ;
+; 1.001  ; KEY[0]                           ; guess_game:Test|display[4]     ; KEY[0]       ; KEY[0]      ; 1.000        ; 4.416      ; 3.554      ;
+; 1.029  ; KEY[0]                           ; guess_game:Test|display[1]     ; KEY[0]       ; KEY[0]      ; 1.000        ; 4.496      ; 3.514      ;
+; 1.067  ; KEY[0]                           ; guess_game:Test|display[2]     ; KEY[0]       ; KEY[0]      ; 1.000        ; 4.415      ; 3.520      ;
+; 1.073  ; KEY[0]                           ; guess_game:Test|display[6]     ; KEY[0]       ; KEY[0]      ; 1.000        ; 4.417      ; 3.516      ;
+; 1.073  ; KEY[0]                           ; guess_game:Test|display[3]     ; KEY[0]       ; KEY[0]      ; 1.000        ; 4.416      ; 3.515      ;
+; 1.076  ; KEY[0]                           ; guess_game:Test|display[7]     ; KEY[0]       ; KEY[0]      ; 1.000        ; 4.417      ; 3.514      ;
+; 1.083  ; KEY[0]                           ; guess_game:Test|display[5]     ; KEY[0]       ; KEY[0]      ; 1.000        ; 4.417      ; 3.511      ;
+; 1.193  ; KEY[0]                           ; guess_game:Test|display[0]     ; KEY[0]       ; KEY[0]      ; 1.000        ; 4.366      ; 3.501      ;
++--------+----------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'KEY[0]'                                                                                                                        ;
++--------+----------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                        ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.982 ; KEY[0]                           ; guess_game:Test|display[1]     ; KEY[0]       ; KEY[0]      ; 0.000        ; 4.496      ; 3.514      ;
+; -0.906 ; KEY[0]                           ; guess_game:Test|display[5]     ; KEY[0]       ; KEY[0]      ; 0.000        ; 4.417      ; 3.511      ;
+; -0.903 ; KEY[0]                           ; guess_game:Test|display[7]     ; KEY[0]       ; KEY[0]      ; 0.000        ; 4.417      ; 3.514      ;
+; -0.901 ; KEY[0]                           ; guess_game:Test|display[3]     ; KEY[0]       ; KEY[0]      ; 0.000        ; 4.416      ; 3.515      ;
+; -0.901 ; KEY[0]                           ; guess_game:Test|display[6]     ; KEY[0]       ; KEY[0]      ; 0.000        ; 4.417      ; 3.516      ;
+; -0.895 ; KEY[0]                           ; guess_game:Test|display[2]     ; KEY[0]       ; KEY[0]      ; 0.000        ; 4.415      ; 3.520      ;
+; -0.865 ; KEY[0]                           ; guess_game:Test|display[0]     ; KEY[0]       ; KEY[0]      ; 0.000        ; 4.366      ; 3.501      ;
+; -0.862 ; KEY[0]                           ; guess_game:Test|display[4]     ; KEY[0]       ; KEY[0]      ; 0.000        ; 4.416      ; 3.554      ;
+; -0.482 ; KEY[0]                           ; guess_game:Test|display[1]     ; KEY[0]       ; KEY[0]      ; -0.500       ; 4.496      ; 3.514      ;
+; -0.406 ; KEY[0]                           ; guess_game:Test|display[5]     ; KEY[0]       ; KEY[0]      ; -0.500       ; 4.417      ; 3.511      ;
+; -0.403 ; KEY[0]                           ; guess_game:Test|display[7]     ; KEY[0]       ; KEY[0]      ; -0.500       ; 4.417      ; 3.514      ;
+; -0.401 ; KEY[0]                           ; guess_game:Test|display[3]     ; KEY[0]       ; KEY[0]      ; -0.500       ; 4.416      ; 3.515      ;
+; -0.401 ; KEY[0]                           ; guess_game:Test|display[6]     ; KEY[0]       ; KEY[0]      ; -0.500       ; 4.417      ; 3.516      ;
+; -0.395 ; KEY[0]                           ; guess_game:Test|display[2]     ; KEY[0]       ; KEY[0]      ; -0.500       ; 4.415      ; 3.520      ;
+; -0.365 ; KEY[0]                           ; guess_game:Test|display[0]     ; KEY[0]       ; KEY[0]      ; -0.500       ; 4.366      ; 3.501      ;
+; -0.362 ; KEY[0]                           ; guess_game:Test|display[4]     ; KEY[0]       ; KEY[0]      ; -0.500       ; 4.416      ; 3.554      ;
+; 0.420  ; guess_game:Test|secret_number[7] ; guess_game:Test|display1OUT[6] ; KEY[0]       ; KEY[0]      ; -0.500       ; 1.477      ; 1.397      ;
+; 0.421  ; guess_game:Test|secret_number[7] ; guess_game:Test|display0OUT[4] ; KEY[0]       ; KEY[0]      ; -0.500       ; 1.477      ; 1.398      ;
+; 0.425  ; guess_game:Test|secret_number[7] ; guess_game:Test|display0OUT[6] ; KEY[0]       ; KEY[0]      ; -0.500       ; 1.472      ; 1.397      ;
+; 0.432  ; guess_game:Test|secret_number[7] ; guess_game:Test|display0OUT[0] ; KEY[0]       ; KEY[0]      ; -0.500       ; 1.470      ; 1.402      ;
+; 0.489  ; guess_game:Test|secret_number[7] ; guess_game:Test|display1OUT[1] ; KEY[0]       ; KEY[0]      ; -0.500       ; 1.444      ; 1.433      ;
+; 0.897  ; guess_game:Test|secret_number[6] ; guess_game:Test|display1OUT[1] ; KEY[0]       ; KEY[0]      ; -0.500       ; 1.445      ; 1.842      ;
+; 0.995  ; guess_game:Test|secret_number[5] ; guess_game:Test|display1OUT[1] ; KEY[0]       ; KEY[0]      ; -0.500       ; 1.452      ; 1.947      ;
+; 1.037  ; guess_game:Test|secret_number[4] ; guess_game:Test|display1OUT[1] ; KEY[0]       ; KEY[0]      ; -0.500       ; 1.451      ; 1.988      ;
+; 1.104  ; guess_game:Test|secret_number[6] ; guess_game:Test|display1OUT[6] ; KEY[0]       ; KEY[0]      ; -0.500       ; 1.478      ; 2.082      ;
+; 1.105  ; guess_game:Test|secret_number[6] ; guess_game:Test|display0OUT[4] ; KEY[0]       ; KEY[0]      ; -0.500       ; 1.478      ; 2.083      ;
+; 1.109  ; guess_game:Test|secret_number[6] ; guess_game:Test|display0OUT[6] ; KEY[0]       ; KEY[0]      ; -0.500       ; 1.473      ; 2.082      ;
+; 1.116  ; guess_game:Test|secret_number[6] ; guess_game:Test|display0OUT[0] ; KEY[0]       ; KEY[0]      ; -0.500       ; 1.471      ; 2.087      ;
+; 1.119  ; guess_game:Test|secret_number[1] ; guess_game:Test|display1OUT[1] ; KEY[0]       ; KEY[0]      ; -0.500       ; 1.499      ; 2.118      ;
+; 1.142  ; guess_game:Test|secret_number[2] ; guess_game:Test|display1OUT[1] ; KEY[0]       ; KEY[0]      ; -0.500       ; 1.451      ; 2.093      ;
+; 1.152  ; guess_game:Test|secret_number[3] ; guess_game:Test|display1OUT[1] ; KEY[0]       ; KEY[0]      ; -0.500       ; 1.446      ; 2.098      ;
+; 1.153  ; guess_game:Test|secret_number[5] ; guess_game:Test|display1OUT[6] ; KEY[0]       ; KEY[0]      ; -0.500       ; 1.485      ; 2.138      ;
+; 1.154  ; guess_game:Test|secret_number[5] ; guess_game:Test|display0OUT[4] ; KEY[0]       ; KEY[0]      ; -0.500       ; 1.485      ; 2.139      ;
+; 1.157  ; guess_game:Test|secret_number[2] ; guess_game:Test|display[2]     ; KEY[0]       ; KEY[0]      ; 0.000        ; 1.344      ; 2.501      ;
+; 1.158  ; guess_game:Test|secret_number[5] ; guess_game:Test|display0OUT[6] ; KEY[0]       ; KEY[0]      ; -0.500       ; 1.480      ; 2.138      ;
+; 1.165  ; guess_game:Test|secret_number[5] ; guess_game:Test|display0OUT[0] ; KEY[0]       ; KEY[0]      ; -0.500       ; 1.478      ; 2.143      ;
+; 1.177  ; guess_game:Test|secret_number[0] ; guess_game:Test|display1OUT[1] ; KEY[0]       ; KEY[0]      ; -0.500       ; 1.500      ; 2.177      ;
+; 1.179  ; guess_game:Test|secret_number[0] ; guess_game:Test|display[0]     ; KEY[0]       ; KEY[0]      ; 0.000        ; 1.344      ; 2.523      ;
+; 1.222  ; guess_game:Test|secret_number[1] ; guess_game:Test|display[1]     ; KEY[0]       ; KEY[0]      ; 0.000        ; 1.473      ; 2.695      ;
+; 1.247  ; guess_game:Test|secret_number[4] ; guess_game:Test|display1OUT[6] ; KEY[0]       ; KEY[0]      ; -0.500       ; 1.484      ; 2.231      ;
+; 1.248  ; guess_game:Test|secret_number[4] ; guess_game:Test|display0OUT[4] ; KEY[0]       ; KEY[0]      ; -0.500       ; 1.484      ; 2.232      ;
+; 1.252  ; guess_game:Test|secret_number[4] ; guess_game:Test|display0OUT[6] ; KEY[0]       ; KEY[0]      ; -0.500       ; 1.479      ; 2.231      ;
+; 1.259  ; guess_game:Test|secret_number[4] ; guess_game:Test|display0OUT[0] ; KEY[0]       ; KEY[0]      ; -0.500       ; 1.477      ; 2.236      ;
+; 1.357  ; guess_game:Test|secret_number[7] ; guess_game:Test|display[7]     ; KEY[0]       ; KEY[0]      ; 0.000        ; 1.339      ; 2.696      ;
+; 1.376  ; guess_game:Test|secret_number[3] ; guess_game:Test|display[3]     ; KEY[0]       ; KEY[0]      ; 0.000        ; 1.340      ; 2.716      ;
+; 1.380  ; guess_game:Test|secret_number[3] ; guess_game:Test|display1OUT[6] ; KEY[0]       ; KEY[0]      ; -0.500       ; 1.479      ; 2.359      ;
+; 1.381  ; guess_game:Test|secret_number[3] ; guess_game:Test|display0OUT[4] ; KEY[0]       ; KEY[0]      ; -0.500       ; 1.479      ; 2.360      ;
+; 1.385  ; guess_game:Test|secret_number[3] ; guess_game:Test|display0OUT[6] ; KEY[0]       ; KEY[0]      ; -0.500       ; 1.474      ; 2.359      ;
+; 1.392  ; guess_game:Test|secret_number[3] ; guess_game:Test|display0OUT[0] ; KEY[0]       ; KEY[0]      ; -0.500       ; 1.472      ; 2.364      ;
+; 1.430  ; guess_game:Test|secret_number[6] ; guess_game:Test|display[6]     ; KEY[0]       ; KEY[0]      ; 0.000        ; 1.340      ; 2.770      ;
+; 1.451  ; guess_game:Test|secret_number[4] ; guess_game:Test|display[4]     ; KEY[0]       ; KEY[0]      ; 0.000        ; 1.345      ; 2.796      ;
+; 1.463  ; guess_game:Test|secret_number[2] ; guess_game:Test|display1OUT[6] ; KEY[0]       ; KEY[0]      ; -0.500       ; 1.484      ; 2.447      ;
+; 1.464  ; guess_game:Test|secret_number[2] ; guess_game:Test|display0OUT[4] ; KEY[0]       ; KEY[0]      ; -0.500       ; 1.484      ; 2.448      ;
+; 1.468  ; guess_game:Test|secret_number[2] ; guess_game:Test|display0OUT[6] ; KEY[0]       ; KEY[0]      ; -0.500       ; 1.479      ; 2.447      ;
+; 1.475  ; guess_game:Test|secret_number[2] ; guess_game:Test|display0OUT[0] ; KEY[0]       ; KEY[0]      ; -0.500       ; 1.477      ; 2.452      ;
+; 1.501  ; guess_game:Test|secret_number[5] ; guess_game:Test|display[5]     ; KEY[0]       ; KEY[0]      ; 0.000        ; 1.347      ; 2.848      ;
+; 1.589  ; guess_game:Test|secret_number[1] ; guess_game:Test|display1OUT[6] ; KEY[0]       ; KEY[0]      ; -0.500       ; 1.532      ; 2.621      ;
+; 1.591  ; guess_game:Test|secret_number[1] ; guess_game:Test|display0OUT[4] ; KEY[0]       ; KEY[0]      ; -0.500       ; 1.532      ; 2.623      ;
+; 1.595  ; guess_game:Test|secret_number[1] ; guess_game:Test|display0OUT[6] ; KEY[0]       ; KEY[0]      ; -0.500       ; 1.527      ; 2.622      ;
+; 1.601  ; guess_game:Test|secret_number[1] ; guess_game:Test|display0OUT[0] ; KEY[0]       ; KEY[0]      ; -0.500       ; 1.525      ; 2.626      ;
+; 1.647  ; guess_game:Test|secret_number[0] ; guess_game:Test|display1OUT[6] ; KEY[0]       ; KEY[0]      ; -0.500       ; 1.533      ; 2.680      ;
+; 1.649  ; guess_game:Test|secret_number[0] ; guess_game:Test|display0OUT[4] ; KEY[0]       ; KEY[0]      ; -0.500       ; 1.533      ; 2.682      ;
+; 1.653  ; guess_game:Test|secret_number[0] ; guess_game:Test|display0OUT[6] ; KEY[0]       ; KEY[0]      ; -0.500       ; 1.528      ; 2.681      ;
+; 1.659  ; guess_game:Test|secret_number[0] ; guess_game:Test|display0OUT[0] ; KEY[0]       ; KEY[0]      ; -0.500       ; 1.526      ; 2.685      ;
++--------+----------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'KEY[0]'                                                                                ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                                ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; KEY[0] ; Rise       ; KEY[0]                                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; KEY[0]|combout                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; KEY[0]|combout                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|display0OUT[0]|datac             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|display0OUT[0]|datac             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|display0OUT[0]~0clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|display0OUT[0]~0clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|display0OUT[0]~0clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|display0OUT[0]~0clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|display0OUT[0]~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|display0OUT[0]~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|display0OUT[0]~0|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|display0OUT[0]~0|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|display0OUT[4]|datac             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|display0OUT[4]|datac             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|display0OUT[6]|datac             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|display0OUT[6]|datac             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|display1OUT[1]|datac             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|display1OUT[1]|datac             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|display1OUT[6]|datac             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|display1OUT[6]|datac             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|display[0]|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|display[0]|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|display[1]|datac                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|display[1]|datac                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|display[2]|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|display[2]|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|display[3]|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|display[3]|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|display[4]|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|display[4]|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|display[5]|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|display[5]|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|display[6]|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|display[6]|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|display[7]|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|display[7]|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|secret_number[0]|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|secret_number[0]|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|secret_number[1]|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|secret_number[1]|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|secret_number[2]|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|secret_number[2]|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|secret_number[3]|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|secret_number[3]|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|secret_number[4]|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|secret_number[4]|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|secret_number[5]|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|secret_number[5]|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|secret_number[6]|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|secret_number[6]|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|secret_number[7]|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|secret_number[7]|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|status|datad                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|status|datad                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|status~0|combout                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|status~0|combout                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|status~0|datad                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|status~0|datad                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Fall       ; guess_game:Test|display0OUT[0]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Fall       ; guess_game:Test|display0OUT[0]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Fall       ; guess_game:Test|display0OUT[4]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Fall       ; guess_game:Test|display0OUT[4]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Fall       ; guess_game:Test|display0OUT[6]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Fall       ; guess_game:Test|display0OUT[6]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Fall       ; guess_game:Test|display1OUT[1]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Fall       ; guess_game:Test|display1OUT[1]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Fall       ; guess_game:Test|display1OUT[6]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Fall       ; guess_game:Test|display1OUT[6]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; guess_game:Test|display[0]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; guess_game:Test|display[0]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; guess_game:Test|display[1]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; guess_game:Test|display[1]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; guess_game:Test|display[2]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; guess_game:Test|display[2]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; guess_game:Test|display[3]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; guess_game:Test|display[3]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; guess_game:Test|display[4]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; guess_game:Test|display[4]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; guess_game:Test|display[5]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; guess_game:Test|display[5]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; guess_game:Test|display[6]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; guess_game:Test|display[6]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; guess_game:Test|display[7]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; guess_game:Test|display[7]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; guess_game:Test|secret_number[0]      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; guess_game:Test|secret_number[0]      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; guess_game:Test|secret_number[1]      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; guess_game:Test|secret_number[1]      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; guess_game:Test|secret_number[2]      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; guess_game:Test|secret_number[2]      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; guess_game:Test|secret_number[3]      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; guess_game:Test|secret_number[3]      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; guess_game:Test|secret_number[4]      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; guess_game:Test|secret_number[4]      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; guess_game:Test|secret_number[5]      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; guess_game:Test|secret_number[5]      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; guess_game:Test|secret_number[6]      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; guess_game:Test|secret_number[6]      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; guess_game:Test|secret_number[7]      ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; KEY[*]    ; KEY[0]     ; 3.414  ; 3.414  ; Rise       ; KEY[0]          ;
+;  KEY[0]   ; KEY[0]     ; -0.001 ; -0.001 ; Rise       ; KEY[0]          ;
+;  KEY[1]   ; KEY[0]     ; 3.414  ; 3.414  ; Rise       ; KEY[0]          ;
+; SW[*]     ; KEY[0]     ; 1.616  ; 1.616  ; Rise       ; KEY[0]          ;
+;  SW[0]    ; KEY[0]     ; 0.186  ; 0.186  ; Rise       ; KEY[0]          ;
+;  SW[1]    ; KEY[0]     ; 0.779  ; 0.779  ; Rise       ; KEY[0]          ;
+;  SW[2]    ; KEY[0]     ; 0.123  ; 0.123  ; Rise       ; KEY[0]          ;
+;  SW[3]    ; KEY[0]     ; 1.616  ; 1.616  ; Rise       ; KEY[0]          ;
+;  SW[4]    ; KEY[0]     ; 1.433  ; 1.433  ; Rise       ; KEY[0]          ;
+;  SW[5]    ; KEY[0]     ; 1.346  ; 1.346  ; Rise       ; KEY[0]          ;
+;  SW[6]    ; KEY[0]     ; 1.167  ; 1.167  ; Rise       ; KEY[0]          ;
+;  SW[7]    ; KEY[0]     ; 1.031  ; 1.031  ; Rise       ; KEY[0]          ;
+; KEY[*]    ; KEY[0]     ; 5.222  ; 5.222  ; Fall       ; KEY[0]          ;
+;  KEY[2]   ; KEY[0]     ; 5.222  ; 5.222  ; Fall       ; KEY[0]          ;
+; SW[*]     ; KEY[0]     ; 2.133  ; 2.133  ; Fall       ; KEY[0]          ;
+;  SW[0]    ; KEY[0]     ; 1.231  ; 1.231  ; Fall       ; KEY[0]          ;
+;  SW[1]    ; KEY[0]     ; 1.307  ; 1.307  ; Fall       ; KEY[0]          ;
+;  SW[2]    ; KEY[0]     ; 0.945  ; 0.945  ; Fall       ; KEY[0]          ;
+;  SW[3]    ; KEY[0]     ; 2.133  ; 2.133  ; Fall       ; KEY[0]          ;
+;  SW[4]    ; KEY[0]     ; 1.882  ; 1.882  ; Fall       ; KEY[0]          ;
+;  SW[5]    ; KEY[0]     ; 1.586  ; 1.586  ; Fall       ; KEY[0]          ;
+;  SW[6]    ; KEY[0]     ; 1.580  ; 1.580  ; Fall       ; KEY[0]          ;
+;  SW[7]    ; KEY[0]     ; 0.744  ; 0.744  ; Fall       ; KEY[0]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; KEY[*]    ; KEY[0]     ; 0.982  ; 0.982  ; Rise       ; KEY[0]          ;
+;  KEY[0]   ; KEY[0]     ; 0.982  ; 0.982  ; Rise       ; KEY[0]          ;
+;  KEY[1]   ; KEY[0]     ; -2.201 ; -2.201 ; Rise       ; KEY[0]          ;
+; SW[*]     ; KEY[0]     ; 1.662  ; 1.662  ; Rise       ; KEY[0]          ;
+;  SW[0]    ; KEY[0]     ; 1.398  ; 1.398  ; Rise       ; KEY[0]          ;
+;  SW[1]    ; KEY[0]     ; 1.662  ; 1.662  ; Rise       ; KEY[0]          ;
+;  SW[2]    ; KEY[0]     ; 1.259  ; 1.259  ; Rise       ; KEY[0]          ;
+;  SW[3]    ; KEY[0]     ; 0.167  ; 0.167  ; Rise       ; KEY[0]          ;
+;  SW[4]    ; KEY[0]     ; -0.091 ; -0.091 ; Rise       ; KEY[0]          ;
+;  SW[5]    ; KEY[0]     ; -0.106 ; -0.106 ; Rise       ; KEY[0]          ;
+;  SW[6]    ; KEY[0]     ; 0.262  ; 0.262  ; Rise       ; KEY[0]          ;
+;  SW[7]    ; KEY[0]     ; 0.402  ; 0.402  ; Rise       ; KEY[0]          ;
+; KEY[*]    ; KEY[0]     ; -4.361 ; -4.361 ; Fall       ; KEY[0]          ;
+;  KEY[2]   ; KEY[0]     ; -4.361 ; -4.361 ; Fall       ; KEY[0]          ;
+; SW[*]     ; KEY[0]     ; 0.714  ; 0.714  ; Fall       ; KEY[0]          ;
+;  SW[0]    ; KEY[0]     ; 0.227  ; 0.227  ; Fall       ; KEY[0]          ;
+;  SW[1]    ; KEY[0]     ; 0.151  ; 0.151  ; Fall       ; KEY[0]          ;
+;  SW[2]    ; KEY[0]     ; 0.526  ; 0.526  ; Fall       ; KEY[0]          ;
+;  SW[3]    ; KEY[0]     ; -0.675 ; -0.675 ; Fall       ; KEY[0]          ;
+;  SW[4]    ; KEY[0]     ; -0.424 ; -0.424 ; Fall       ; KEY[0]          ;
+;  SW[5]    ; KEY[0]     ; -0.128 ; -0.128 ; Fall       ; KEY[0]          ;
+;  SW[6]    ; KEY[0]     ; -0.122 ; -0.122 ; Fall       ; KEY[0]          ;
+;  SW[7]    ; KEY[0]     ; 0.714  ; 0.714  ; Fall       ; KEY[0]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; HEX0[*]   ; KEY[0]     ; 13.449 ; 13.449 ; Rise       ; KEY[0]          ;
+;  HEX0[0]  ; KEY[0]     ; 13.318 ; 13.318 ; Rise       ; KEY[0]          ;
+;  HEX0[1]  ; KEY[0]     ; 13.183 ; 13.183 ; Rise       ; KEY[0]          ;
+;  HEX0[2]  ; KEY[0]     ; 13.449 ; 13.449 ; Rise       ; KEY[0]          ;
+;  HEX0[3]  ; KEY[0]     ; 12.793 ; 12.793 ; Rise       ; KEY[0]          ;
+;  HEX0[4]  ; KEY[0]     ; 13.410 ; 13.410 ; Rise       ; KEY[0]          ;
+;  HEX0[5]  ; KEY[0]     ; 12.927 ; 12.927 ; Rise       ; KEY[0]          ;
+;  HEX0[6]  ; KEY[0]     ; 12.977 ; 12.977 ; Rise       ; KEY[0]          ;
+; HEX1[*]   ; KEY[0]     ; 11.109 ; 11.109 ; Rise       ; KEY[0]          ;
+;  HEX1[0]  ; KEY[0]     ; 10.935 ; 10.935 ; Rise       ; KEY[0]          ;
+;  HEX1[1]  ; KEY[0]     ; 11.109 ; 11.109 ; Rise       ; KEY[0]          ;
+;  HEX1[2]  ; KEY[0]     ; 10.605 ; 10.605 ; Rise       ; KEY[0]          ;
+;  HEX1[3]  ; KEY[0]     ; 10.778 ; 10.778 ; Rise       ; KEY[0]          ;
+;  HEX1[4]  ; KEY[0]     ; 11.024 ; 11.024 ; Rise       ; KEY[0]          ;
+;  HEX1[5]  ; KEY[0]     ; 10.693 ; 10.693 ; Rise       ; KEY[0]          ;
+;  HEX1[6]  ; KEY[0]     ; 10.698 ; 10.698 ; Rise       ; KEY[0]          ;
+; HEX0[*]   ; KEY[0]     ; 12.127 ; 12.127 ; Fall       ; KEY[0]          ;
+;  HEX0[0]  ; KEY[0]     ; 12.127 ; 12.127 ; Fall       ; KEY[0]          ;
+;  HEX0[1]  ; KEY[0]     ; 11.990 ; 11.990 ; Fall       ; KEY[0]          ;
+;  HEX0[2]  ; KEY[0]     ; 11.945 ; 11.945 ; Fall       ; KEY[0]          ;
+;  HEX0[3]  ; KEY[0]     ; 11.287 ; 11.287 ; Fall       ; KEY[0]          ;
+;  HEX0[4]  ; KEY[0]     ; 11.713 ; 11.713 ; Fall       ; KEY[0]          ;
+;  HEX0[5]  ; KEY[0]     ; 11.725 ; 11.725 ; Fall       ; KEY[0]          ;
+;  HEX0[6]  ; KEY[0]     ; 11.250 ; 11.250 ; Fall       ; KEY[0]          ;
+; HEX1[*]   ; KEY[0]     ; 10.694 ; 10.694 ; Fall       ; KEY[0]          ;
+;  HEX1[0]  ; KEY[0]     ; 9.360  ; 9.360  ; Fall       ; KEY[0]          ;
+;  HEX1[1]  ; KEY[0]     ; 10.630 ; 10.630 ; Fall       ; KEY[0]          ;
+;  HEX1[2]  ; KEY[0]     ; 10.445 ; 10.445 ; Fall       ; KEY[0]          ;
+;  HEX1[3]  ; KEY[0]     ; 10.382 ; 10.382 ; Fall       ; KEY[0]          ;
+;  HEX1[4]  ; KEY[0]     ; 10.406 ; 10.406 ; Fall       ; KEY[0]          ;
+;  HEX1[5]  ; KEY[0]     ; 10.694 ; 10.694 ; Fall       ; KEY[0]          ;
+;  HEX1[6]  ; KEY[0]     ; 10.508 ; 10.508 ; Fall       ; KEY[0]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; HEX0[*]   ; KEY[0]     ; 12.181 ; 12.181 ; Rise       ; KEY[0]          ;
+;  HEX0[0]  ; KEY[0]     ; 12.705 ; 12.705 ; Rise       ; KEY[0]          ;
+;  HEX0[1]  ; KEY[0]     ; 12.567 ; 12.567 ; Rise       ; KEY[0]          ;
+;  HEX0[2]  ; KEY[0]     ; 12.814 ; 12.814 ; Rise       ; KEY[0]          ;
+;  HEX0[3]  ; KEY[0]     ; 12.181 ; 12.181 ; Rise       ; KEY[0]          ;
+;  HEX0[4]  ; KEY[0]     ; 12.793 ; 12.793 ; Rise       ; KEY[0]          ;
+;  HEX0[5]  ; KEY[0]     ; 12.306 ; 12.306 ; Rise       ; KEY[0]          ;
+;  HEX0[6]  ; KEY[0]     ; 12.370 ; 12.370 ; Rise       ; KEY[0]          ;
+; HEX1[*]   ; KEY[0]     ; 10.420 ; 10.420 ; Rise       ; KEY[0]          ;
+;  HEX1[0]  ; KEY[0]     ; 10.710 ; 10.710 ; Rise       ; KEY[0]          ;
+;  HEX1[1]  ; KEY[0]     ; 10.907 ; 10.907 ; Rise       ; KEY[0]          ;
+;  HEX1[2]  ; KEY[0]     ; 10.420 ; 10.420 ; Rise       ; KEY[0]          ;
+;  HEX1[3]  ; KEY[0]     ; 10.565 ; 10.565 ; Rise       ; KEY[0]          ;
+;  HEX1[4]  ; KEY[0]     ; 10.797 ; 10.797 ; Rise       ; KEY[0]          ;
+;  HEX1[5]  ; KEY[0]     ; 10.471 ; 10.471 ; Rise       ; KEY[0]          ;
+;  HEX1[6]  ; KEY[0]     ; 10.485 ; 10.485 ; Rise       ; KEY[0]          ;
+; HEX0[*]   ; KEY[0]     ; 9.631  ; 9.631  ; Fall       ; KEY[0]          ;
+;  HEX0[0]  ; KEY[0]     ; 10.445 ; 10.445 ; Fall       ; KEY[0]          ;
+;  HEX0[1]  ; KEY[0]     ; 10.310 ; 10.310 ; Fall       ; KEY[0]          ;
+;  HEX0[2]  ; KEY[0]     ; 10.291 ; 10.291 ; Fall       ; KEY[0]          ;
+;  HEX0[3]  ; KEY[0]     ; 9.631  ; 9.631  ; Fall       ; KEY[0]          ;
+;  HEX0[4]  ; KEY[0]     ; 10.149 ; 10.149 ; Fall       ; KEY[0]          ;
+;  HEX0[5]  ; KEY[0]     ; 10.052 ; 10.052 ; Fall       ; KEY[0]          ;
+;  HEX0[6]  ; KEY[0]     ; 9.836  ; 9.836  ; Fall       ; KEY[0]          ;
+; HEX1[*]   ; KEY[0]     ; 8.921  ; 8.921  ; Fall       ; KEY[0]          ;
+;  HEX1[0]  ; KEY[0]     ; 9.360  ; 9.360  ; Fall       ; KEY[0]          ;
+;  HEX1[1]  ; KEY[0]     ; 9.359  ; 9.359  ; Fall       ; KEY[0]          ;
+;  HEX1[2]  ; KEY[0]     ; 9.153  ; 9.153  ; Fall       ; KEY[0]          ;
+;  HEX1[3]  ; KEY[0]     ; 8.921  ; 8.921  ; Fall       ; KEY[0]          ;
+;  HEX1[4]  ; KEY[0]     ; 9.245  ; 9.245  ; Fall       ; KEY[0]          ;
+;  HEX1[5]  ; KEY[0]     ; 9.210  ; 9.210  ; Fall       ; KEY[0]          ;
+;  HEX1[6]  ; KEY[0]     ; 9.236  ; 9.236  ; Fall       ; KEY[0]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------+
+; Fast Model Setup Summary        ;
++--------+--------+---------------+
+; Clock  ; Slack  ; End Point TNS ;
++--------+--------+---------------+
+; KEY[0] ; -0.185 ; -0.683        ;
++--------+--------+---------------+
+
+
++---------------------------------+
+; Fast Model Hold Summary         ;
++--------+--------+---------------+
+; Clock  ; Slack  ; End Point TNS ;
++--------+--------+---------------+
+; KEY[0] ; -0.705 ; -5.563        ;
++--------+--------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++--------+--------+----------------------+
+; Clock  ; Slack  ; End Point TNS        ;
++--------+--------+----------------------+
+; KEY[0] ; -1.222 ; -1.222               ;
++--------+--------+----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'KEY[0]'                                                                                                                       ;
++--------+----------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                        ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.185 ; guess_game:Test|secret_number[0] ; guess_game:Test|display0OUT[0] ; KEY[0]       ; KEY[0]      ; 0.500        ; 0.938      ; 1.227      ;
+; -0.172 ; guess_game:Test|secret_number[0] ; guess_game:Test|display1OUT[6] ; KEY[0]       ; KEY[0]      ; 0.500        ; 0.941      ; 1.222      ;
+; -0.171 ; guess_game:Test|secret_number[0] ; guess_game:Test|display0OUT[4] ; KEY[0]       ; KEY[0]      ; 0.500        ; 0.941      ; 1.203      ;
+; -0.155 ; guess_game:Test|secret_number[0] ; guess_game:Test|display0OUT[6] ; KEY[0]       ; KEY[0]      ; 0.500        ; 0.940      ; 1.203      ;
+; -0.149 ; guess_game:Test|secret_number[1] ; guess_game:Test|display0OUT[0] ; KEY[0]       ; KEY[0]      ; 0.500        ; 0.936      ; 1.189      ;
+; -0.136 ; guess_game:Test|secret_number[1] ; guess_game:Test|display1OUT[6] ; KEY[0]       ; KEY[0]      ; 0.500        ; 0.939      ; 1.184      ;
+; -0.135 ; guess_game:Test|secret_number[1] ; guess_game:Test|display0OUT[4] ; KEY[0]       ; KEY[0]      ; 0.500        ; 0.939      ; 1.165      ;
+; -0.119 ; guess_game:Test|secret_number[1] ; guess_game:Test|display0OUT[6] ; KEY[0]       ; KEY[0]      ; 0.500        ; 0.938      ; 1.165      ;
+; -0.104 ; guess_game:Test|secret_number[2] ; guess_game:Test|display0OUT[4] ; KEY[0]       ; KEY[0]      ; 0.500        ; 0.906      ; 1.101      ;
+; -0.103 ; guess_game:Test|secret_number[2] ; guess_game:Test|display0OUT[0] ; KEY[0]       ; KEY[0]      ; 0.500        ; 0.903      ; 1.110      ;
+; -0.098 ; guess_game:Test|secret_number[3] ; guess_game:Test|display0OUT[4] ; KEY[0]       ; KEY[0]      ; 0.500        ; 0.903      ; 1.092      ;
+; -0.097 ; guess_game:Test|secret_number[3] ; guess_game:Test|display0OUT[0] ; KEY[0]       ; KEY[0]      ; 0.500        ; 0.900      ; 1.101      ;
+; -0.090 ; guess_game:Test|secret_number[2] ; guess_game:Test|display1OUT[6] ; KEY[0]       ; KEY[0]      ; 0.500        ; 0.906      ; 1.105      ;
+; -0.088 ; guess_game:Test|secret_number[2] ; guess_game:Test|display0OUT[6] ; KEY[0]       ; KEY[0]      ; 0.500        ; 0.905      ; 1.101      ;
+; -0.084 ; guess_game:Test|secret_number[3] ; guess_game:Test|display1OUT[6] ; KEY[0]       ; KEY[0]      ; 0.500        ; 0.903      ; 1.096      ;
+; -0.082 ; guess_game:Test|secret_number[3] ; guess_game:Test|display0OUT[6] ; KEY[0]       ; KEY[0]      ; 0.500        ; 0.902      ; 1.092      ;
+; -0.043 ; guess_game:Test|secret_number[4] ; guess_game:Test|display0OUT[4] ; KEY[0]       ; KEY[0]      ; 0.500        ; 0.907      ; 1.041      ;
+; -0.042 ; guess_game:Test|secret_number[4] ; guess_game:Test|display0OUT[0] ; KEY[0]       ; KEY[0]      ; 0.500        ; 0.904      ; 1.050      ;
+; -0.029 ; guess_game:Test|secret_number[4] ; guess_game:Test|display1OUT[6] ; KEY[0]       ; KEY[0]      ; 0.500        ; 0.907      ; 1.045      ;
+; -0.027 ; guess_game:Test|secret_number[4] ; guess_game:Test|display0OUT[6] ; KEY[0]       ; KEY[0]      ; 0.500        ; 0.906      ; 1.041      ;
+; -0.019 ; guess_game:Test|secret_number[5] ; guess_game:Test|display0OUT[4] ; KEY[0]       ; KEY[0]      ; 0.500        ; 0.906      ; 1.016      ;
+; -0.018 ; guess_game:Test|secret_number[5] ; guess_game:Test|display0OUT[0] ; KEY[0]       ; KEY[0]      ; 0.500        ; 0.903      ; 1.025      ;
+; -0.005 ; guess_game:Test|secret_number[5] ; guess_game:Test|display1OUT[6] ; KEY[0]       ; KEY[0]      ; 0.500        ; 0.906      ; 1.020      ;
+; -0.003 ; guess_game:Test|secret_number[5] ; guess_game:Test|display0OUT[6] ; KEY[0]       ; KEY[0]      ; 0.500        ; 0.905      ; 1.016      ;
+; 0.023  ; guess_game:Test|secret_number[6] ; guess_game:Test|display0OUT[4] ; KEY[0]       ; KEY[0]      ; 0.500        ; 0.902      ; 0.970      ;
+; 0.024  ; guess_game:Test|secret_number[6] ; guess_game:Test|display0OUT[0] ; KEY[0]       ; KEY[0]      ; 0.500        ; 0.899      ; 0.979      ;
+; 0.037  ; guess_game:Test|secret_number[6] ; guess_game:Test|display1OUT[6] ; KEY[0]       ; KEY[0]      ; 0.500        ; 0.902      ; 0.974      ;
+; 0.039  ; guess_game:Test|secret_number[6] ; guess_game:Test|display0OUT[6] ; KEY[0]       ; KEY[0]      ; 0.500        ; 0.901      ; 0.970      ;
+; 0.069  ; guess_game:Test|secret_number[0] ; guess_game:Test|display1OUT[1] ; KEY[0]       ; KEY[0]      ; 0.500        ; 0.919      ; 0.948      ;
+; 0.093  ; guess_game:Test|secret_number[2] ; guess_game:Test|display1OUT[1] ; KEY[0]       ; KEY[0]      ; 0.500        ; 0.884      ; 0.889      ;
+; 0.099  ; guess_game:Test|secret_number[3] ; guess_game:Test|display1OUT[1] ; KEY[0]       ; KEY[0]      ; 0.500        ; 0.881      ; 0.880      ;
+; 0.103  ; guess_game:Test|secret_number[1] ; guess_game:Test|display1OUT[1] ; KEY[0]       ; KEY[0]      ; 0.500        ; 0.917      ; 0.912      ;
+; 0.154  ; guess_game:Test|secret_number[4] ; guess_game:Test|display1OUT[1] ; KEY[0]       ; KEY[0]      ; 0.500        ; 0.885      ; 0.829      ;
+; 0.168  ; guess_game:Test|secret_number[5] ; guess_game:Test|display[5]     ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.843      ; 1.330      ;
+; 0.169  ; guess_game:Test|secret_number[7] ; guess_game:Test|display0OUT[4] ; KEY[0]       ; KEY[0]      ; 0.500        ; 0.903      ; 0.825      ;
+; 0.170  ; guess_game:Test|secret_number[7] ; guess_game:Test|display0OUT[0] ; KEY[0]       ; KEY[0]      ; 0.500        ; 0.900      ; 0.834      ;
+; 0.178  ; guess_game:Test|secret_number[5] ; guess_game:Test|display1OUT[1] ; KEY[0]       ; KEY[0]      ; 0.500        ; 0.884      ; 0.804      ;
+; 0.183  ; guess_game:Test|secret_number[7] ; guess_game:Test|display1OUT[6] ; KEY[0]       ; KEY[0]      ; 0.500        ; 0.903      ; 0.829      ;
+; 0.185  ; guess_game:Test|secret_number[7] ; guess_game:Test|display0OUT[6] ; KEY[0]       ; KEY[0]      ; 0.500        ; 0.902      ; 0.825      ;
+; 0.218  ; guess_game:Test|secret_number[6] ; guess_game:Test|display[6]     ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.838      ; 1.272      ;
+; 0.220  ; guess_game:Test|secret_number[6] ; guess_game:Test|display1OUT[1] ; KEY[0]       ; KEY[0]      ; 0.500        ; 0.880      ; 0.758      ;
+; 0.223  ; guess_game:Test|secret_number[4] ; guess_game:Test|display[4]     ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.842      ; 1.257      ;
+; 0.233  ; guess_game:Test|secret_number[1] ; guess_game:Test|display[1]     ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.894      ; 1.270      ;
+; 0.250  ; guess_game:Test|secret_number[3] ; guess_game:Test|display[3]     ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.839      ; 1.241      ;
+; 0.273  ; guess_game:Test|secret_number[7] ; guess_game:Test|display[7]     ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.840      ; 1.220      ;
+; 0.335  ; guess_game:Test|secret_number[2] ; guess_game:Test|display[2]     ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.840      ; 1.156      ;
+; 0.366  ; guess_game:Test|secret_number[7] ; guess_game:Test|display1OUT[1] ; KEY[0]       ; KEY[0]      ; 0.500        ; 0.881      ; 0.613      ;
+; 0.436  ; guess_game:Test|secret_number[0] ; guess_game:Test|display[0]     ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.851      ; 1.141      ;
+; 0.811  ; KEY[0]                           ; guess_game:Test|display[1]     ; KEY[0]       ; KEY[0]      ; 0.500        ; 2.434      ; 1.732      ;
+; 0.822  ; KEY[0]                           ; guess_game:Test|display[4]     ; KEY[0]       ; KEY[0]      ; 0.500        ; 2.414      ; 1.730      ;
+; 0.846  ; KEY[0]                           ; guess_game:Test|display[2]     ; KEY[0]       ; KEY[0]      ; 0.500        ; 2.413      ; 1.718      ;
+; 0.852  ; KEY[0]                           ; guess_game:Test|display[3]     ; KEY[0]       ; KEY[0]      ; 0.500        ; 2.415      ; 1.715      ;
+; 0.853  ; KEY[0]                           ; guess_game:Test|display[6]     ; KEY[0]       ; KEY[0]      ; 0.500        ; 2.415      ; 1.714      ;
+; 0.857  ; KEY[0]                           ; guess_game:Test|display[7]     ; KEY[0]       ; KEY[0]      ; 0.500        ; 2.416      ; 1.712      ;
+; 0.860  ; KEY[0]                           ; guess_game:Test|display[5]     ; KEY[0]       ; KEY[0]      ; 0.500        ; 2.416      ; 1.711      ;
+; 0.898  ; KEY[0]                           ; guess_game:Test|display[0]     ; KEY[0]       ; KEY[0]      ; 0.500        ; 2.389      ; 1.717      ;
+; 1.311  ; KEY[0]                           ; guess_game:Test|display[1]     ; KEY[0]       ; KEY[0]      ; 1.000        ; 2.434      ; 1.732      ;
+; 1.322  ; KEY[0]                           ; guess_game:Test|display[4]     ; KEY[0]       ; KEY[0]      ; 1.000        ; 2.414      ; 1.730      ;
+; 1.346  ; KEY[0]                           ; guess_game:Test|display[2]     ; KEY[0]       ; KEY[0]      ; 1.000        ; 2.413      ; 1.718      ;
+; 1.352  ; KEY[0]                           ; guess_game:Test|display[3]     ; KEY[0]       ; KEY[0]      ; 1.000        ; 2.415      ; 1.715      ;
+; 1.353  ; KEY[0]                           ; guess_game:Test|display[6]     ; KEY[0]       ; KEY[0]      ; 1.000        ; 2.415      ; 1.714      ;
+; 1.357  ; KEY[0]                           ; guess_game:Test|display[7]     ; KEY[0]       ; KEY[0]      ; 1.000        ; 2.416      ; 1.712      ;
+; 1.360  ; KEY[0]                           ; guess_game:Test|display[5]     ; KEY[0]       ; KEY[0]      ; 1.000        ; 2.416      ; 1.711      ;
+; 1.398  ; KEY[0]                           ; guess_game:Test|display[0]     ; KEY[0]       ; KEY[0]      ; 1.000        ; 2.389      ; 1.717      ;
++--------+----------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'KEY[0]'                                                                                                                        ;
++--------+----------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                        ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.705 ; KEY[0]                           ; guess_game:Test|display[5]     ; KEY[0]       ; KEY[0]      ; 0.000        ; 2.416      ; 1.711      ;
+; -0.704 ; KEY[0]                           ; guess_game:Test|display[7]     ; KEY[0]       ; KEY[0]      ; 0.000        ; 2.416      ; 1.712      ;
+; -0.702 ; KEY[0]                           ; guess_game:Test|display[1]     ; KEY[0]       ; KEY[0]      ; 0.000        ; 2.434      ; 1.732      ;
+; -0.701 ; KEY[0]                           ; guess_game:Test|display[6]     ; KEY[0]       ; KEY[0]      ; 0.000        ; 2.415      ; 1.714      ;
+; -0.700 ; KEY[0]                           ; guess_game:Test|display[3]     ; KEY[0]       ; KEY[0]      ; 0.000        ; 2.415      ; 1.715      ;
+; -0.695 ; KEY[0]                           ; guess_game:Test|display[2]     ; KEY[0]       ; KEY[0]      ; 0.000        ; 2.413      ; 1.718      ;
+; -0.684 ; KEY[0]                           ; guess_game:Test|display[4]     ; KEY[0]       ; KEY[0]      ; 0.000        ; 2.414      ; 1.730      ;
+; -0.672 ; KEY[0]                           ; guess_game:Test|display[0]     ; KEY[0]       ; KEY[0]      ; 0.000        ; 2.389      ; 1.717      ;
+; -0.205 ; KEY[0]                           ; guess_game:Test|display[5]     ; KEY[0]       ; KEY[0]      ; -0.500       ; 2.416      ; 1.711      ;
+; -0.204 ; KEY[0]                           ; guess_game:Test|display[7]     ; KEY[0]       ; KEY[0]      ; -0.500       ; 2.416      ; 1.712      ;
+; -0.202 ; KEY[0]                           ; guess_game:Test|display[1]     ; KEY[0]       ; KEY[0]      ; -0.500       ; 2.434      ; 1.732      ;
+; -0.201 ; KEY[0]                           ; guess_game:Test|display[6]     ; KEY[0]       ; KEY[0]      ; -0.500       ; 2.415      ; 1.714      ;
+; -0.200 ; KEY[0]                           ; guess_game:Test|display[3]     ; KEY[0]       ; KEY[0]      ; -0.500       ; 2.415      ; 1.715      ;
+; -0.195 ; KEY[0]                           ; guess_game:Test|display[2]     ; KEY[0]       ; KEY[0]      ; -0.500       ; 2.413      ; 1.718      ;
+; -0.184 ; KEY[0]                           ; guess_game:Test|display[4]     ; KEY[0]       ; KEY[0]      ; -0.500       ; 2.414      ; 1.730      ;
+; -0.172 ; KEY[0]                           ; guess_game:Test|display[0]     ; KEY[0]       ; KEY[0]      ; -0.500       ; 2.389      ; 1.717      ;
+; 0.185  ; guess_game:Test|secret_number[7] ; guess_game:Test|display0OUT[4] ; KEY[0]       ; KEY[0]      ; -0.500       ; 0.903      ; 0.588      ;
+; 0.186  ; guess_game:Test|secret_number[7] ; guess_game:Test|display0OUT[6] ; KEY[0]       ; KEY[0]      ; -0.500       ; 0.902      ; 0.588      ;
+; 0.204  ; guess_game:Test|secret_number[7] ; guess_game:Test|display1OUT[6] ; KEY[0]       ; KEY[0]      ; -0.500       ; 0.903      ; 0.607      ;
+; 0.212  ; guess_game:Test|secret_number[7] ; guess_game:Test|display0OUT[0] ; KEY[0]       ; KEY[0]      ; -0.500       ; 0.900      ; 0.612      ;
+; 0.232  ; guess_game:Test|secret_number[7] ; guess_game:Test|display1OUT[1] ; KEY[0]       ; KEY[0]      ; -0.500       ; 0.881      ; 0.613      ;
+; 0.290  ; guess_game:Test|secret_number[0] ; guess_game:Test|display[0]     ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.851      ; 1.141      ;
+; 0.316  ; guess_game:Test|secret_number[2] ; guess_game:Test|display[2]     ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.840      ; 1.156      ;
+; 0.376  ; guess_game:Test|secret_number[1] ; guess_game:Test|display[1]     ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.894      ; 1.270      ;
+; 0.378  ; guess_game:Test|secret_number[6] ; guess_game:Test|display1OUT[1] ; KEY[0]       ; KEY[0]      ; -0.500       ; 0.880      ; 0.758      ;
+; 0.380  ; guess_game:Test|secret_number[7] ; guess_game:Test|display[7]     ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.840      ; 1.220      ;
+; 0.402  ; guess_game:Test|secret_number[3] ; guess_game:Test|display[3]     ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.839      ; 1.241      ;
+; 0.415  ; guess_game:Test|secret_number[4] ; guess_game:Test|display[4]     ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.842      ; 1.257      ;
+; 0.420  ; guess_game:Test|secret_number[5] ; guess_game:Test|display1OUT[1] ; KEY[0]       ; KEY[0]      ; -0.500       ; 0.884      ; 0.804      ;
+; 0.434  ; guess_game:Test|secret_number[6] ; guess_game:Test|display[6]     ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.838      ; 1.272      ;
+; 0.444  ; guess_game:Test|secret_number[4] ; guess_game:Test|display1OUT[1] ; KEY[0]       ; KEY[0]      ; -0.500       ; 0.885      ; 0.829      ;
+; 0.460  ; guess_game:Test|secret_number[6] ; guess_game:Test|display0OUT[4] ; KEY[0]       ; KEY[0]      ; -0.500       ; 0.902      ; 0.862      ;
+; 0.461  ; guess_game:Test|secret_number[6] ; guess_game:Test|display0OUT[6] ; KEY[0]       ; KEY[0]      ; -0.500       ; 0.901      ; 0.862      ;
+; 0.479  ; guess_game:Test|secret_number[6] ; guess_game:Test|display1OUT[6] ; KEY[0]       ; KEY[0]      ; -0.500       ; 0.902      ; 0.881      ;
+; 0.480  ; guess_game:Test|secret_number[5] ; guess_game:Test|display0OUT[4] ; KEY[0]       ; KEY[0]      ; -0.500       ; 0.906      ; 0.886      ;
+; 0.481  ; guess_game:Test|secret_number[5] ; guess_game:Test|display0OUT[6] ; KEY[0]       ; KEY[0]      ; -0.500       ; 0.905      ; 0.886      ;
+; 0.487  ; guess_game:Test|secret_number[5] ; guess_game:Test|display[5]     ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.843      ; 1.330      ;
+; 0.487  ; guess_game:Test|secret_number[6] ; guess_game:Test|display0OUT[0] ; KEY[0]       ; KEY[0]      ; -0.500       ; 0.899      ; 0.886      ;
+; 0.495  ; guess_game:Test|secret_number[1] ; guess_game:Test|display1OUT[1] ; KEY[0]       ; KEY[0]      ; -0.500       ; 0.917      ; 0.912      ;
+; 0.499  ; guess_game:Test|secret_number[5] ; guess_game:Test|display1OUT[6] ; KEY[0]       ; KEY[0]      ; -0.500       ; 0.906      ; 0.905      ;
+; 0.499  ; guess_game:Test|secret_number[3] ; guess_game:Test|display1OUT[1] ; KEY[0]       ; KEY[0]      ; -0.500       ; 0.881      ; 0.880      ;
+; 0.505  ; guess_game:Test|secret_number[2] ; guess_game:Test|display1OUT[1] ; KEY[0]       ; KEY[0]      ; -0.500       ; 0.884      ; 0.889      ;
+; 0.507  ; guess_game:Test|secret_number[5] ; guess_game:Test|display0OUT[0] ; KEY[0]       ; KEY[0]      ; -0.500       ; 0.903      ; 0.910      ;
+; 0.520  ; guess_game:Test|secret_number[4] ; guess_game:Test|display0OUT[4] ; KEY[0]       ; KEY[0]      ; -0.500       ; 0.907      ; 0.927      ;
+; 0.521  ; guess_game:Test|secret_number[4] ; guess_game:Test|display0OUT[6] ; KEY[0]       ; KEY[0]      ; -0.500       ; 0.906      ; 0.927      ;
+; 0.529  ; guess_game:Test|secret_number[0] ; guess_game:Test|display1OUT[1] ; KEY[0]       ; KEY[0]      ; -0.500       ; 0.919      ; 0.948      ;
+; 0.539  ; guess_game:Test|secret_number[4] ; guess_game:Test|display1OUT[6] ; KEY[0]       ; KEY[0]      ; -0.500       ; 0.907      ; 0.946      ;
+; 0.547  ; guess_game:Test|secret_number[4] ; guess_game:Test|display0OUT[0] ; KEY[0]       ; KEY[0]      ; -0.500       ; 0.904      ; 0.951      ;
+; 0.602  ; guess_game:Test|secret_number[3] ; guess_game:Test|display0OUT[4] ; KEY[0]       ; KEY[0]      ; -0.500       ; 0.903      ; 1.005      ;
+; 0.603  ; guess_game:Test|secret_number[3] ; guess_game:Test|display0OUT[6] ; KEY[0]       ; KEY[0]      ; -0.500       ; 0.902      ; 1.005      ;
+; 0.621  ; guess_game:Test|secret_number[3] ; guess_game:Test|display1OUT[6] ; KEY[0]       ; KEY[0]      ; -0.500       ; 0.903      ; 1.024      ;
+; 0.629  ; guess_game:Test|secret_number[3] ; guess_game:Test|display0OUT[0] ; KEY[0]       ; KEY[0]      ; -0.500       ; 0.900      ; 1.029      ;
+; 0.647  ; guess_game:Test|secret_number[2] ; guess_game:Test|display0OUT[4] ; KEY[0]       ; KEY[0]      ; -0.500       ; 0.906      ; 1.053      ;
+; 0.648  ; guess_game:Test|secret_number[2] ; guess_game:Test|display0OUT[6] ; KEY[0]       ; KEY[0]      ; -0.500       ; 0.905      ; 1.053      ;
+; 0.666  ; guess_game:Test|secret_number[2] ; guess_game:Test|display1OUT[6] ; KEY[0]       ; KEY[0]      ; -0.500       ; 0.906      ; 1.072      ;
+; 0.674  ; guess_game:Test|secret_number[2] ; guess_game:Test|display0OUT[0] ; KEY[0]       ; KEY[0]      ; -0.500       ; 0.903      ; 1.077      ;
+; 0.685  ; guess_game:Test|secret_number[1] ; guess_game:Test|display0OUT[4] ; KEY[0]       ; KEY[0]      ; -0.500       ; 0.939      ; 1.124      ;
+; 0.686  ; guess_game:Test|secret_number[1] ; guess_game:Test|display0OUT[6] ; KEY[0]       ; KEY[0]      ; -0.500       ; 0.938      ; 1.124      ;
+; 0.689  ; guess_game:Test|secret_number[1] ; guess_game:Test|display1OUT[6] ; KEY[0]       ; KEY[0]      ; -0.500       ; 0.939      ; 1.128      ;
+; 0.697  ; guess_game:Test|secret_number[1] ; guess_game:Test|display0OUT[0] ; KEY[0]       ; KEY[0]      ; -0.500       ; 0.936      ; 1.133      ;
+; 0.719  ; guess_game:Test|secret_number[0] ; guess_game:Test|display0OUT[4] ; KEY[0]       ; KEY[0]      ; -0.500       ; 0.941      ; 1.160      ;
+; 0.720  ; guess_game:Test|secret_number[0] ; guess_game:Test|display0OUT[6] ; KEY[0]       ; KEY[0]      ; -0.500       ; 0.940      ; 1.160      ;
+; 0.723  ; guess_game:Test|secret_number[0] ; guess_game:Test|display1OUT[6] ; KEY[0]       ; KEY[0]      ; -0.500       ; 0.941      ; 1.164      ;
+; 0.731  ; guess_game:Test|secret_number[0] ; guess_game:Test|display0OUT[0] ; KEY[0]       ; KEY[0]      ; -0.500       ; 0.938      ; 1.169      ;
++--------+----------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'KEY[0]'                                                                                ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                                ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; KEY[0] ; Rise       ; KEY[0]                                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; KEY[0]|combout                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; KEY[0]|combout                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|display0OUT[0]|datac             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|display0OUT[0]|datac             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|display0OUT[0]~0clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|display0OUT[0]~0clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|display0OUT[0]~0clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|display0OUT[0]~0clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|display0OUT[0]~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|display0OUT[0]~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|display0OUT[0]~0|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|display0OUT[0]~0|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|display0OUT[4]|datac             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|display0OUT[4]|datac             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|display0OUT[6]|datac             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|display0OUT[6]|datac             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|display1OUT[1]|datac             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|display1OUT[1]|datac             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|display1OUT[6]|datac             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|display1OUT[6]|datac             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|display[0]|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|display[0]|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|display[1]|datac                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|display[1]|datac                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|display[2]|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|display[2]|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|display[3]|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|display[3]|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|display[4]|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|display[4]|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|display[5]|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|display[5]|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|display[6]|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|display[6]|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|display[7]|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|display[7]|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|secret_number[0]|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|secret_number[0]|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|secret_number[1]|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|secret_number[1]|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|secret_number[2]|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|secret_number[2]|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|secret_number[3]|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|secret_number[3]|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|secret_number[4]|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|secret_number[4]|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|secret_number[5]|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|secret_number[5]|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|secret_number[6]|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|secret_number[6]|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|secret_number[7]|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|secret_number[7]|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|status|datad                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|status|datad                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|status~0|combout                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|status~0|combout                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; Test|status~0|datad                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Test|status~0|datad                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Fall       ; guess_game:Test|display0OUT[0]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Fall       ; guess_game:Test|display0OUT[0]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Fall       ; guess_game:Test|display0OUT[4]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Fall       ; guess_game:Test|display0OUT[4]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Fall       ; guess_game:Test|display0OUT[6]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Fall       ; guess_game:Test|display0OUT[6]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Fall       ; guess_game:Test|display1OUT[1]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Fall       ; guess_game:Test|display1OUT[1]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Fall       ; guess_game:Test|display1OUT[6]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Fall       ; guess_game:Test|display1OUT[6]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; guess_game:Test|display[0]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; guess_game:Test|display[0]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; guess_game:Test|display[1]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; guess_game:Test|display[1]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; guess_game:Test|display[2]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; guess_game:Test|display[2]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; guess_game:Test|display[3]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; guess_game:Test|display[3]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; guess_game:Test|display[4]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; guess_game:Test|display[4]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; guess_game:Test|display[5]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; guess_game:Test|display[5]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; guess_game:Test|display[6]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; guess_game:Test|display[6]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; guess_game:Test|display[7]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; guess_game:Test|display[7]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; guess_game:Test|secret_number[0]      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; guess_game:Test|secret_number[0]      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; guess_game:Test|secret_number[1]      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; guess_game:Test|secret_number[1]      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; guess_game:Test|secret_number[2]      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; guess_game:Test|secret_number[2]      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; guess_game:Test|secret_number[3]      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; guess_game:Test|secret_number[3]      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; guess_game:Test|secret_number[4]      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; guess_game:Test|secret_number[4]      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; guess_game:Test|secret_number[5]      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; guess_game:Test|secret_number[5]      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; guess_game:Test|secret_number[6]      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; guess_game:Test|secret_number[6]      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; guess_game:Test|secret_number[7]      ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; KEY[*]    ; KEY[0]     ; 1.858  ; 1.858  ; Rise       ; KEY[0]          ;
+;  KEY[0]   ; KEY[0]     ; -0.311 ; -0.311 ; Rise       ; KEY[0]          ;
+;  KEY[1]   ; KEY[0]     ; 1.858  ; 1.858  ; Rise       ; KEY[0]          ;
+; SW[*]     ; KEY[0]     ; 0.824  ; 0.824  ; Rise       ; KEY[0]          ;
+;  SW[0]    ; KEY[0]     ; 0.022  ; 0.022  ; Rise       ; KEY[0]          ;
+;  SW[1]    ; KEY[0]     ; 0.273  ; 0.273  ; Rise       ; KEY[0]          ;
+;  SW[2]    ; KEY[0]     ; -0.021 ; -0.021 ; Rise       ; KEY[0]          ;
+;  SW[3]    ; KEY[0]     ; 0.824  ; 0.824  ; Rise       ; KEY[0]          ;
+;  SW[4]    ; KEY[0]     ; 0.682  ; 0.682  ; Rise       ; KEY[0]          ;
+;  SW[5]    ; KEY[0]     ; 0.592  ; 0.592  ; Rise       ; KEY[0]          ;
+;  SW[6]    ; KEY[0]     ; 0.526  ; 0.526  ; Rise       ; KEY[0]          ;
+;  SW[7]    ; KEY[0]     ; 0.500  ; 0.500  ; Rise       ; KEY[0]          ;
+; KEY[*]    ; KEY[0]     ; 2.983  ; 2.983  ; Fall       ; KEY[0]          ;
+;  KEY[2]   ; KEY[0]     ; 2.983  ; 2.983  ; Fall       ; KEY[0]          ;
+; SW[*]     ; KEY[0]     ; 0.758  ; 0.758  ; Fall       ; KEY[0]          ;
+;  SW[0]    ; KEY[0]     ; 0.210  ; 0.210  ; Fall       ; KEY[0]          ;
+;  SW[1]    ; KEY[0]     ; 0.215  ; 0.215  ; Fall       ; KEY[0]          ;
+;  SW[2]    ; KEY[0]     ; 0.084  ; 0.084  ; Fall       ; KEY[0]          ;
+;  SW[3]    ; KEY[0]     ; 0.758  ; 0.758  ; Fall       ; KEY[0]          ;
+;  SW[4]    ; KEY[0]     ; 0.584  ; 0.584  ; Fall       ; KEY[0]          ;
+;  SW[5]    ; KEY[0]     ; 0.469  ; 0.469  ; Fall       ; KEY[0]          ;
+;  SW[6]    ; KEY[0]     ; 0.393  ; 0.393  ; Fall       ; KEY[0]          ;
+;  SW[7]    ; KEY[0]     ; 0.109  ; 0.109  ; Fall       ; KEY[0]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; KEY[*]    ; KEY[0]     ; 0.705  ; 0.705  ; Rise       ; KEY[0]          ;
+;  KEY[0]   ; KEY[0]     ; 0.705  ; 0.705  ; Rise       ; KEY[0]          ;
+;  KEY[1]   ; KEY[0]     ; -1.330 ; -1.330 ; Rise       ; KEY[0]          ;
+; SW[*]     ; KEY[0]     ; 1.033  ; 1.033  ; Rise       ; KEY[0]          ;
+;  SW[0]    ; KEY[0]     ; 0.963  ; 0.963  ; Rise       ; KEY[0]          ;
+;  SW[1]    ; KEY[0]     ; 1.033  ; 1.033  ; Rise       ; KEY[0]          ;
+;  SW[2]    ; KEY[0]     ; 0.892  ; 0.892  ; Rise       ; KEY[0]          ;
+;  SW[3]    ; KEY[0]     ; 0.275  ; 0.275  ; Rise       ; KEY[0]          ;
+;  SW[4]    ; KEY[0]     ; 0.094  ; 0.094  ; Rise       ; KEY[0]          ;
+;  SW[5]    ; KEY[0]     ; 0.112  ; 0.112  ; Rise       ; KEY[0]          ;
+;  SW[6]    ; KEY[0]     ; 0.338  ; 0.338  ; Rise       ; KEY[0]          ;
+;  SW[7]    ; KEY[0]     ; 0.399  ; 0.399  ; Rise       ; KEY[0]          ;
+; KEY[*]    ; KEY[0]     ; -2.629 ; -2.629 ; Fall       ; KEY[0]          ;
+;  KEY[2]   ; KEY[0]     ; -2.629 ; -2.629 ; Fall       ; KEY[0]          ;
+; SW[*]     ; KEY[0]     ; 0.558  ; 0.558  ; Fall       ; KEY[0]          ;
+;  SW[0]    ; KEY[0]     ; 0.389  ; 0.389  ; Fall       ; KEY[0]          ;
+;  SW[1]    ; KEY[0]     ; 0.384  ; 0.384  ; Fall       ; KEY[0]          ;
+;  SW[2]    ; KEY[0]     ; 0.558  ; 0.558  ; Fall       ; KEY[0]          ;
+;  SW[3]    ; KEY[0]     ; -0.157 ; -0.157 ; Fall       ; KEY[0]          ;
+;  SW[4]    ; KEY[0]     ; 0.015  ; 0.015  ; Fall       ; KEY[0]          ;
+;  SW[5]    ; KEY[0]     ; 0.130  ; 0.130  ; Fall       ; KEY[0]          ;
+;  SW[6]    ; KEY[0]     ; 0.206  ; 0.206  ; Fall       ; KEY[0]          ;
+;  SW[7]    ; KEY[0]     ; 0.490  ; 0.490  ; Fall       ; KEY[0]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; HEX0[*]   ; KEY[0]     ; 6.789 ; 6.789 ; Rise       ; KEY[0]          ;
+;  HEX0[0]  ; KEY[0]     ; 6.789 ; 6.789 ; Rise       ; KEY[0]          ;
+;  HEX0[1]  ; KEY[0]     ; 6.685 ; 6.685 ; Rise       ; KEY[0]          ;
+;  HEX0[2]  ; KEY[0]     ; 6.789 ; 6.789 ; Rise       ; KEY[0]          ;
+;  HEX0[3]  ; KEY[0]     ; 6.547 ; 6.547 ; Rise       ; KEY[0]          ;
+;  HEX0[4]  ; KEY[0]     ; 6.778 ; 6.778 ; Rise       ; KEY[0]          ;
+;  HEX0[5]  ; KEY[0]     ; 6.571 ; 6.571 ; Rise       ; KEY[0]          ;
+;  HEX0[6]  ; KEY[0]     ; 6.632 ; 6.632 ; Rise       ; KEY[0]          ;
+; HEX1[*]   ; KEY[0]     ; 5.741 ; 5.741 ; Rise       ; KEY[0]          ;
+;  HEX1[0]  ; KEY[0]     ; 5.662 ; 5.662 ; Rise       ; KEY[0]          ;
+;  HEX1[1]  ; KEY[0]     ; 5.741 ; 5.741 ; Rise       ; KEY[0]          ;
+;  HEX1[2]  ; KEY[0]     ; 5.461 ; 5.461 ; Rise       ; KEY[0]          ;
+;  HEX1[3]  ; KEY[0]     ; 5.522 ; 5.522 ; Rise       ; KEY[0]          ;
+;  HEX1[4]  ; KEY[0]     ; 5.645 ; 5.645 ; Rise       ; KEY[0]          ;
+;  HEX1[5]  ; KEY[0]     ; 5.501 ; 5.501 ; Rise       ; KEY[0]          ;
+;  HEX1[6]  ; KEY[0]     ; 5.510 ; 5.510 ; Rise       ; KEY[0]          ;
+; HEX0[*]   ; KEY[0]     ; 6.275 ; 6.275 ; Fall       ; KEY[0]          ;
+;  HEX0[0]  ; KEY[0]     ; 6.275 ; 6.275 ; Fall       ; KEY[0]          ;
+;  HEX0[1]  ; KEY[0]     ; 6.174 ; 6.174 ; Fall       ; KEY[0]          ;
+;  HEX0[2]  ; KEY[0]     ; 6.145 ; 6.145 ; Fall       ; KEY[0]          ;
+;  HEX0[3]  ; KEY[0]     ; 5.901 ; 5.901 ; Fall       ; KEY[0]          ;
+;  HEX0[4]  ; KEY[0]     ; 6.030 ; 6.030 ; Fall       ; KEY[0]          ;
+;  HEX0[5]  ; KEY[0]     ; 6.052 ; 6.052 ; Fall       ; KEY[0]          ;
+;  HEX0[6]  ; KEY[0]     ; 5.861 ; 5.861 ; Fall       ; KEY[0]          ;
+; HEX1[*]   ; KEY[0]     ; 5.509 ; 5.509 ; Fall       ; KEY[0]          ;
+;  HEX1[0]  ; KEY[0]     ; 4.708 ; 4.708 ; Fall       ; KEY[0]          ;
+;  HEX1[1]  ; KEY[0]     ; 5.509 ; 5.509 ; Fall       ; KEY[0]          ;
+;  HEX1[2]  ; KEY[0]     ; 5.370 ; 5.370 ; Fall       ; KEY[0]          ;
+;  HEX1[3]  ; KEY[0]     ; 5.360 ; 5.360 ; Fall       ; KEY[0]          ;
+;  HEX1[4]  ; KEY[0]     ; 5.373 ; 5.373 ; Fall       ; KEY[0]          ;
+;  HEX1[5]  ; KEY[0]     ; 5.481 ; 5.481 ; Fall       ; KEY[0]          ;
+;  HEX1[6]  ; KEY[0]     ; 5.411 ; 5.411 ; Fall       ; KEY[0]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; HEX0[*]   ; KEY[0]     ; 6.291 ; 6.291 ; Rise       ; KEY[0]          ;
+;  HEX0[0]  ; KEY[0]     ; 6.531 ; 6.531 ; Rise       ; KEY[0]          ;
+;  HEX0[1]  ; KEY[0]     ; 6.427 ; 6.427 ; Rise       ; KEY[0]          ;
+;  HEX0[2]  ; KEY[0]     ; 6.532 ; 6.532 ; Rise       ; KEY[0]          ;
+;  HEX0[3]  ; KEY[0]     ; 6.291 ; 6.291 ; Rise       ; KEY[0]          ;
+;  HEX0[4]  ; KEY[0]     ; 6.519 ; 6.519 ; Rise       ; KEY[0]          ;
+;  HEX0[5]  ; KEY[0]     ; 6.307 ; 6.307 ; Rise       ; KEY[0]          ;
+;  HEX0[6]  ; KEY[0]     ; 6.377 ; 6.377 ; Rise       ; KEY[0]          ;
+; HEX1[*]   ; KEY[0]     ; 5.395 ; 5.395 ; Rise       ; KEY[0]          ;
+;  HEX1[0]  ; KEY[0]     ; 5.592 ; 5.592 ; Rise       ; KEY[0]          ;
+;  HEX1[1]  ; KEY[0]     ; 5.666 ; 5.666 ; Rise       ; KEY[0]          ;
+;  HEX1[2]  ; KEY[0]     ; 5.395 ; 5.395 ; Rise       ; KEY[0]          ;
+;  HEX1[3]  ; KEY[0]     ; 5.459 ; 5.459 ; Rise       ; KEY[0]          ;
+;  HEX1[4]  ; KEY[0]     ; 5.573 ; 5.573 ; Rise       ; KEY[0]          ;
+;  HEX1[5]  ; KEY[0]     ; 5.428 ; 5.428 ; Rise       ; KEY[0]          ;
+;  HEX1[6]  ; KEY[0]     ; 5.448 ; 5.448 ; Rise       ; KEY[0]          ;
+; HEX0[*]   ; KEY[0]     ; 4.908 ; 4.908 ; Fall       ; KEY[0]          ;
+;  HEX0[0]  ; KEY[0]     ; 5.278 ; 5.278 ; Fall       ; KEY[0]          ;
+;  HEX0[1]  ; KEY[0]     ; 5.178 ; 5.178 ; Fall       ; KEY[0]          ;
+;  HEX0[2]  ; KEY[0]     ; 5.153 ; 5.153 ; Fall       ; KEY[0]          ;
+;  HEX0[3]  ; KEY[0]     ; 4.908 ; 4.908 ; Fall       ; KEY[0]          ;
+;  HEX0[4]  ; KEY[0]     ; 5.086 ; 5.086 ; Fall       ; KEY[0]          ;
+;  HEX0[5]  ; KEY[0]     ; 5.064 ; 5.064 ; Fall       ; KEY[0]          ;
+;  HEX0[6]  ; KEY[0]     ; 4.993 ; 4.993 ; Fall       ; KEY[0]          ;
+; HEX1[*]   ; KEY[0]     ; 4.458 ; 4.458 ; Fall       ; KEY[0]          ;
+;  HEX1[0]  ; KEY[0]     ; 4.708 ; 4.708 ; Fall       ; KEY[0]          ;
+;  HEX1[1]  ; KEY[0]     ; 4.707 ; 4.707 ; Fall       ; KEY[0]          ;
+;  HEX1[2]  ; KEY[0]     ; 4.570 ; 4.570 ; Fall       ; KEY[0]          ;
+;  HEX1[3]  ; KEY[0]     ; 4.458 ; 4.458 ; Fall       ; KEY[0]          ;
+;  HEX1[4]  ; KEY[0]     ; 4.610 ; 4.610 ; Fall       ; KEY[0]          ;
+;  HEX1[5]  ; KEY[0]     ; 4.602 ; 4.602 ; Fall       ; KEY[0]          ;
+;  HEX1[6]  ; KEY[0]     ; 4.607 ; 4.607 ; Fall       ; KEY[0]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+---------+--------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+--------+----------+---------+---------------------+
+; Worst-case Slack ; -1.724  ; -0.982 ; N/A      ; N/A     ; -1.222              ;
+;  KEY[0]          ; -1.724  ; -0.982 ; N/A      ; N/A     ; -1.222              ;
+; Design-wide TNS  ; -17.236 ; -7.215 ; 0.0      ; 0.0     ; -1.222              ;
+;  KEY[0]          ; -17.236 ; -7.215 ; N/A      ; N/A     ; -1.222              ;
++------------------+---------+--------+----------+---------+---------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; KEY[*]    ; KEY[0]     ; 3.414  ; 3.414  ; Rise       ; KEY[0]          ;
+;  KEY[0]   ; KEY[0]     ; -0.001 ; -0.001 ; Rise       ; KEY[0]          ;
+;  KEY[1]   ; KEY[0]     ; 3.414  ; 3.414  ; Rise       ; KEY[0]          ;
+; SW[*]     ; KEY[0]     ; 1.616  ; 1.616  ; Rise       ; KEY[0]          ;
+;  SW[0]    ; KEY[0]     ; 0.186  ; 0.186  ; Rise       ; KEY[0]          ;
+;  SW[1]    ; KEY[0]     ; 0.779  ; 0.779  ; Rise       ; KEY[0]          ;
+;  SW[2]    ; KEY[0]     ; 0.123  ; 0.123  ; Rise       ; KEY[0]          ;
+;  SW[3]    ; KEY[0]     ; 1.616  ; 1.616  ; Rise       ; KEY[0]          ;
+;  SW[4]    ; KEY[0]     ; 1.433  ; 1.433  ; Rise       ; KEY[0]          ;
+;  SW[5]    ; KEY[0]     ; 1.346  ; 1.346  ; Rise       ; KEY[0]          ;
+;  SW[6]    ; KEY[0]     ; 1.167  ; 1.167  ; Rise       ; KEY[0]          ;
+;  SW[7]    ; KEY[0]     ; 1.031  ; 1.031  ; Rise       ; KEY[0]          ;
+; KEY[*]    ; KEY[0]     ; 5.222  ; 5.222  ; Fall       ; KEY[0]          ;
+;  KEY[2]   ; KEY[0]     ; 5.222  ; 5.222  ; Fall       ; KEY[0]          ;
+; SW[*]     ; KEY[0]     ; 2.133  ; 2.133  ; Fall       ; KEY[0]          ;
+;  SW[0]    ; KEY[0]     ; 1.231  ; 1.231  ; Fall       ; KEY[0]          ;
+;  SW[1]    ; KEY[0]     ; 1.307  ; 1.307  ; Fall       ; KEY[0]          ;
+;  SW[2]    ; KEY[0]     ; 0.945  ; 0.945  ; Fall       ; KEY[0]          ;
+;  SW[3]    ; KEY[0]     ; 2.133  ; 2.133  ; Fall       ; KEY[0]          ;
+;  SW[4]    ; KEY[0]     ; 1.882  ; 1.882  ; Fall       ; KEY[0]          ;
+;  SW[5]    ; KEY[0]     ; 1.586  ; 1.586  ; Fall       ; KEY[0]          ;
+;  SW[6]    ; KEY[0]     ; 1.580  ; 1.580  ; Fall       ; KEY[0]          ;
+;  SW[7]    ; KEY[0]     ; 0.744  ; 0.744  ; Fall       ; KEY[0]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; KEY[*]    ; KEY[0]     ; 0.982  ; 0.982  ; Rise       ; KEY[0]          ;
+;  KEY[0]   ; KEY[0]     ; 0.982  ; 0.982  ; Rise       ; KEY[0]          ;
+;  KEY[1]   ; KEY[0]     ; -1.330 ; -1.330 ; Rise       ; KEY[0]          ;
+; SW[*]     ; KEY[0]     ; 1.662  ; 1.662  ; Rise       ; KEY[0]          ;
+;  SW[0]    ; KEY[0]     ; 1.398  ; 1.398  ; Rise       ; KEY[0]          ;
+;  SW[1]    ; KEY[0]     ; 1.662  ; 1.662  ; Rise       ; KEY[0]          ;
+;  SW[2]    ; KEY[0]     ; 1.259  ; 1.259  ; Rise       ; KEY[0]          ;
+;  SW[3]    ; KEY[0]     ; 0.275  ; 0.275  ; Rise       ; KEY[0]          ;
+;  SW[4]    ; KEY[0]     ; 0.094  ; 0.094  ; Rise       ; KEY[0]          ;
+;  SW[5]    ; KEY[0]     ; 0.112  ; 0.112  ; Rise       ; KEY[0]          ;
+;  SW[6]    ; KEY[0]     ; 0.338  ; 0.338  ; Rise       ; KEY[0]          ;
+;  SW[7]    ; KEY[0]     ; 0.402  ; 0.402  ; Rise       ; KEY[0]          ;
+; KEY[*]    ; KEY[0]     ; -2.629 ; -2.629 ; Fall       ; KEY[0]          ;
+;  KEY[2]   ; KEY[0]     ; -2.629 ; -2.629 ; Fall       ; KEY[0]          ;
+; SW[*]     ; KEY[0]     ; 0.714  ; 0.714  ; Fall       ; KEY[0]          ;
+;  SW[0]    ; KEY[0]     ; 0.389  ; 0.389  ; Fall       ; KEY[0]          ;
+;  SW[1]    ; KEY[0]     ; 0.384  ; 0.384  ; Fall       ; KEY[0]          ;
+;  SW[2]    ; KEY[0]     ; 0.558  ; 0.558  ; Fall       ; KEY[0]          ;
+;  SW[3]    ; KEY[0]     ; -0.157 ; -0.157 ; Fall       ; KEY[0]          ;
+;  SW[4]    ; KEY[0]     ; 0.015  ; 0.015  ; Fall       ; KEY[0]          ;
+;  SW[5]    ; KEY[0]     ; 0.130  ; 0.130  ; Fall       ; KEY[0]          ;
+;  SW[6]    ; KEY[0]     ; 0.206  ; 0.206  ; Fall       ; KEY[0]          ;
+;  SW[7]    ; KEY[0]     ; 0.714  ; 0.714  ; Fall       ; KEY[0]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; HEX0[*]   ; KEY[0]     ; 13.449 ; 13.449 ; Rise       ; KEY[0]          ;
+;  HEX0[0]  ; KEY[0]     ; 13.318 ; 13.318 ; Rise       ; KEY[0]          ;
+;  HEX0[1]  ; KEY[0]     ; 13.183 ; 13.183 ; Rise       ; KEY[0]          ;
+;  HEX0[2]  ; KEY[0]     ; 13.449 ; 13.449 ; Rise       ; KEY[0]          ;
+;  HEX0[3]  ; KEY[0]     ; 12.793 ; 12.793 ; Rise       ; KEY[0]          ;
+;  HEX0[4]  ; KEY[0]     ; 13.410 ; 13.410 ; Rise       ; KEY[0]          ;
+;  HEX0[5]  ; KEY[0]     ; 12.927 ; 12.927 ; Rise       ; KEY[0]          ;
+;  HEX0[6]  ; KEY[0]     ; 12.977 ; 12.977 ; Rise       ; KEY[0]          ;
+; HEX1[*]   ; KEY[0]     ; 11.109 ; 11.109 ; Rise       ; KEY[0]          ;
+;  HEX1[0]  ; KEY[0]     ; 10.935 ; 10.935 ; Rise       ; KEY[0]          ;
+;  HEX1[1]  ; KEY[0]     ; 11.109 ; 11.109 ; Rise       ; KEY[0]          ;
+;  HEX1[2]  ; KEY[0]     ; 10.605 ; 10.605 ; Rise       ; KEY[0]          ;
+;  HEX1[3]  ; KEY[0]     ; 10.778 ; 10.778 ; Rise       ; KEY[0]          ;
+;  HEX1[4]  ; KEY[0]     ; 11.024 ; 11.024 ; Rise       ; KEY[0]          ;
+;  HEX1[5]  ; KEY[0]     ; 10.693 ; 10.693 ; Rise       ; KEY[0]          ;
+;  HEX1[6]  ; KEY[0]     ; 10.698 ; 10.698 ; Rise       ; KEY[0]          ;
+; HEX0[*]   ; KEY[0]     ; 12.127 ; 12.127 ; Fall       ; KEY[0]          ;
+;  HEX0[0]  ; KEY[0]     ; 12.127 ; 12.127 ; Fall       ; KEY[0]          ;
+;  HEX0[1]  ; KEY[0]     ; 11.990 ; 11.990 ; Fall       ; KEY[0]          ;
+;  HEX0[2]  ; KEY[0]     ; 11.945 ; 11.945 ; Fall       ; KEY[0]          ;
+;  HEX0[3]  ; KEY[0]     ; 11.287 ; 11.287 ; Fall       ; KEY[0]          ;
+;  HEX0[4]  ; KEY[0]     ; 11.713 ; 11.713 ; Fall       ; KEY[0]          ;
+;  HEX0[5]  ; KEY[0]     ; 11.725 ; 11.725 ; Fall       ; KEY[0]          ;
+;  HEX0[6]  ; KEY[0]     ; 11.250 ; 11.250 ; Fall       ; KEY[0]          ;
+; HEX1[*]   ; KEY[0]     ; 10.694 ; 10.694 ; Fall       ; KEY[0]          ;
+;  HEX1[0]  ; KEY[0]     ; 9.360  ; 9.360  ; Fall       ; KEY[0]          ;
+;  HEX1[1]  ; KEY[0]     ; 10.630 ; 10.630 ; Fall       ; KEY[0]          ;
+;  HEX1[2]  ; KEY[0]     ; 10.445 ; 10.445 ; Fall       ; KEY[0]          ;
+;  HEX1[3]  ; KEY[0]     ; 10.382 ; 10.382 ; Fall       ; KEY[0]          ;
+;  HEX1[4]  ; KEY[0]     ; 10.406 ; 10.406 ; Fall       ; KEY[0]          ;
+;  HEX1[5]  ; KEY[0]     ; 10.694 ; 10.694 ; Fall       ; KEY[0]          ;
+;  HEX1[6]  ; KEY[0]     ; 10.508 ; 10.508 ; Fall       ; KEY[0]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; HEX0[*]   ; KEY[0]     ; 6.291 ; 6.291 ; Rise       ; KEY[0]          ;
+;  HEX0[0]  ; KEY[0]     ; 6.531 ; 6.531 ; Rise       ; KEY[0]          ;
+;  HEX0[1]  ; KEY[0]     ; 6.427 ; 6.427 ; Rise       ; KEY[0]          ;
+;  HEX0[2]  ; KEY[0]     ; 6.532 ; 6.532 ; Rise       ; KEY[0]          ;
+;  HEX0[3]  ; KEY[0]     ; 6.291 ; 6.291 ; Rise       ; KEY[0]          ;
+;  HEX0[4]  ; KEY[0]     ; 6.519 ; 6.519 ; Rise       ; KEY[0]          ;
+;  HEX0[5]  ; KEY[0]     ; 6.307 ; 6.307 ; Rise       ; KEY[0]          ;
+;  HEX0[6]  ; KEY[0]     ; 6.377 ; 6.377 ; Rise       ; KEY[0]          ;
+; HEX1[*]   ; KEY[0]     ; 5.395 ; 5.395 ; Rise       ; KEY[0]          ;
+;  HEX1[0]  ; KEY[0]     ; 5.592 ; 5.592 ; Rise       ; KEY[0]          ;
+;  HEX1[1]  ; KEY[0]     ; 5.666 ; 5.666 ; Rise       ; KEY[0]          ;
+;  HEX1[2]  ; KEY[0]     ; 5.395 ; 5.395 ; Rise       ; KEY[0]          ;
+;  HEX1[3]  ; KEY[0]     ; 5.459 ; 5.459 ; Rise       ; KEY[0]          ;
+;  HEX1[4]  ; KEY[0]     ; 5.573 ; 5.573 ; Rise       ; KEY[0]          ;
+;  HEX1[5]  ; KEY[0]     ; 5.428 ; 5.428 ; Rise       ; KEY[0]          ;
+;  HEX1[6]  ; KEY[0]     ; 5.448 ; 5.448 ; Rise       ; KEY[0]          ;
+; HEX0[*]   ; KEY[0]     ; 4.908 ; 4.908 ; Fall       ; KEY[0]          ;
+;  HEX0[0]  ; KEY[0]     ; 5.278 ; 5.278 ; Fall       ; KEY[0]          ;
+;  HEX0[1]  ; KEY[0]     ; 5.178 ; 5.178 ; Fall       ; KEY[0]          ;
+;  HEX0[2]  ; KEY[0]     ; 5.153 ; 5.153 ; Fall       ; KEY[0]          ;
+;  HEX0[3]  ; KEY[0]     ; 4.908 ; 4.908 ; Fall       ; KEY[0]          ;
+;  HEX0[4]  ; KEY[0]     ; 5.086 ; 5.086 ; Fall       ; KEY[0]          ;
+;  HEX0[5]  ; KEY[0]     ; 5.064 ; 5.064 ; Fall       ; KEY[0]          ;
+;  HEX0[6]  ; KEY[0]     ; 4.993 ; 4.993 ; Fall       ; KEY[0]          ;
+; HEX1[*]   ; KEY[0]     ; 4.458 ; 4.458 ; Fall       ; KEY[0]          ;
+;  HEX1[0]  ; KEY[0]     ; 4.708 ; 4.708 ; Fall       ; KEY[0]          ;
+;  HEX1[1]  ; KEY[0]     ; 4.707 ; 4.707 ; Fall       ; KEY[0]          ;
+;  HEX1[2]  ; KEY[0]     ; 4.570 ; 4.570 ; Fall       ; KEY[0]          ;
+;  HEX1[3]  ; KEY[0]     ; 4.458 ; 4.458 ; Fall       ; KEY[0]          ;
+;  HEX1[4]  ; KEY[0]     ; 4.610 ; 4.610 ; Fall       ; KEY[0]          ;
+;  HEX1[5]  ; KEY[0]     ; 4.602 ; 4.602 ; Fall       ; KEY[0]          ;
+;  HEX1[6]  ; KEY[0]     ; 4.607 ; 4.607 ; Fall       ; KEY[0]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; KEY[0]     ; KEY[0]   ; 16       ; 8        ; 72       ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; KEY[0]     ; KEY[0]   ; 16       ; 8        ; 72       ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 10    ; 10   ;
+; Unconstrained Input Port Paths  ; 65    ; 65   ;
+; Unconstrained Output Ports      ; 14    ; 14   ;
+; Unconstrained Output Port Paths ; 83    ; 83   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu Apr 20 09:32:51 2017
+Info: Command: quartus_sta guess_Game -c guess_Game
+Info: qsta_default_script.tcl version: #1
+Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 22 combinational loops as latches.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'guess_Game.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name KEY[0] KEY[0]
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.724
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.724       -17.236 KEY[0] 
+Info (332146): Worst-case hold slack is -0.982
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.982        -7.215 KEY[0] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.222
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.222        -1.222 KEY[0] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.185
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.185        -0.683 KEY[0] 
+Info (332146): Worst-case hold slack is -0.705
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.705        -5.563 KEY[0] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.222
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.222        -1.222 KEY[0] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 471 megabytes
+    Info: Processing ended: Thu Apr 20 09:32:52 2017
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

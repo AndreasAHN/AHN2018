@@ -1,0 +1,10 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity compare is
+port(
+	tm_watch : in	std_logic_vector(15 downto 0);
+	tm_alarm : in	std_logic_vector(15 downto 0);
+	alarm 	: out	std_logic;
+);
+end compare;

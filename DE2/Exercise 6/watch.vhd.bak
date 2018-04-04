@@ -1,0 +1,36 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity watch is
+port(
+	---in 	mode					: std_logic_vector(1 downto 0);
+	in		clk, speed, reset : std_logic;
+	out 	sec_1 				: std_logic_vector(6 downto 0);
+	out   sec_10				: std_logic_vector(6 downto 0);
+	out	min_1					: std_logic_vector(6 downto 0);
+	out 	min_10				: std_logic_vector(6 downto 0);
+	out 	hrs_1					: std_logic_vector(6 downto 0);
+	out   tm						: std_logic_vector(15 downto 8);
+	out	hrs_10				:std_logic_vector(6 downto 0)
+);
+end watch;
+
+
+architecture structural of watch is
+signal cout : std_logic_vector(5 downto 0);
+
+signal clkc : std_logic;
+begin
+									--- clock_gen ---
+	cg:   entity work.clock_gen 			port map(clk => CLOCK_50, speed =>KEY(0), reset => KEY(3), clk_out => clkc);
+									--- seconds   ---
+	mtc1: entity work.multi_counter 		port map(clk => clkc, mode => "00", reset => KEY(3), count => binc, cout => cout(0));
+	mtc2: entity work.multi_counter 		port map(clk => cout(0), mode => "01", reset => KEY(3), count => binc, cout => cout(1));
+									--- minutes   ---
+	mtc3: entity work.multi_counter 		port map(clk => cout(1), mode => "00", reset => KEY(3), count => binc, cout => cout(2));
+	mtc4: entity work.multi_counter 		port map(clk => cout(2), mode => "01", reset => KEY(3), count => binc, cout => cout(3));
+									--- houes     ---
+	mtc5: entity work.multi_counter 		port map(clk => cout(3), mode => "00", reset => KEY(3), count => binc, cout => cout(4));
+	mtc6: entity work.multi_counter 		port map(clk => cout(4), mode => "11", reset => KEY(3), count => binc, cout => cout(5));
+									--- reset     ---
+	rs:   entity work.reset_logic

@@ -1,0 +1,23 @@
+|tester
+KEY[0] => mee_moo:mee_moo_tester.clk
+KEY[1] => mee_moo:mee_moo_tester.reset
+SW[0] => mee_moo:mee_moo_tester.a
+SW[1] => mee_moo:mee_moo_tester.b
+LEDR[0] <= mee_moo:mee_moo_tester.moo_out
+LEDR[1] <= mee_moo:mee_moo_tester.mee_out
+
+
+|tester|MEE_MOO:mee_moo_tester
+a => process_2.IN0
+a => Selector3.IN2
+a => process_2.IN0
+a => process_2.IN0
+b => process_2.IN1
+b => process_2.IN1
+b => process_2.IN1
+reset => present_state~3.DATAIN
+clk => present_state~1.DATAIN
+moo_out <= moo_out.DB_MAX_OUTPUT_PORT_TYPE
+mee_out <= mee_out$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

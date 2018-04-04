@@ -1,0 +1,14 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity nand_8_tester is
+port(
+	sw : in std_logic_vector(7 downto 0);
+	ledr: out std_logic_vector(0 downto 0)
+);
+end nand_8_tester;
+
+architecture structural of nand_8_tester is
+begin
+	n8: entity work.nand_8 port map(a => sw, y => ledr(0));
+end structural;

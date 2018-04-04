@@ -1,0 +1,27 @@
+library ieee.
+use ieee.std_logic_1164.all;
+
+entity reset_logic is
+port(
+	in reset_in : std_logic;
+	out reset_out : std_logic;
+	in hours_bin1 : std_logic_vector(3 downto 0);
+	in hours_bin10: std_logic_vector(3 downto 0);
+);
+
+end reset_logic;
+
+architecture behavirual of reset_logic is
+begin
+	reset : process(reset_in, hours_bin1, hours_bin10)
+	begin
+		reset_out <= '0';
+		if reset_in = '1' then
+			reset_out <= '1';
+		elsif hours_bin1 = "0100" and hours_bin10 = "0010" then
+			reset_out <= '1';
+		else
+			reset_out <= '0';
+		end if;
+	end process;
+end behavirual;

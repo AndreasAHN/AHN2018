@@ -1,0 +1,51 @@
+-------- MEE_MOO --------
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity MEE_MOO is
+	port( a: in std_logic;
+			b: in std_logic;
+			reset: in std_logic;
+			clk: in std_logic;
+			moo_out: out std_logic;
+			mee_out: out std_logic);
+end MEE_MOO;
+
+architecture mee_moo_fsm of MEE_MOO is
+type state is (Idle, Init, active);
+signal present_state, next_state : state;
+
+begin
+state_reg: process (clk, reset)
+begin
+	if reset = '0' then
+		present_state <= Idle;
+	elsif rising_edge(clk) then
+		present_state <= next_state;
+	end if;
+end process;
+
+mee_moo_out: process (present_state, a,b)
+begin
+	next_state <= present_state;
+	case present_state is
+		when Idle =>
+			if a = '0' then
+				next_state <= Init;
+			end if;
+		when Init =>
+			if a = '1' then
+				moo_out <= a;
+				next_state <= active;
+			elsif a = '0' AND b = '0' then
+				
+			end if;
+		when active =>
+			if a = '0' AND b = '1' then
+				mee_out <= b;
+				next_state <= Init;
+			end if;
+	end case;
+end process;
+
+end mee_moo_fsm;

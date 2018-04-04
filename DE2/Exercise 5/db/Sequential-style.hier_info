@@ -1,0 +1,96 @@
+|count_ones
+sw[0] => process_with_loop:p1.a[0]
+sw[1] => process_with_loop:p1.a[1]
+sw[2] => process_with_loop:p1.a[2]
+sw[3] => process_with_loop:p1.a[3]
+sw[4] => process_with_loop:p1.a[4]
+sw[5] => process_with_loop:p1.a[5]
+sw[6] => process_with_loop:p1.a[6]
+sw[7] => process_with_loop:p1.a[7]
+hex0[0] <= sevenseg_decoder:bin2hex.seg[0]
+hex0[1] <= sevenseg_decoder:bin2hex.seg[1]
+hex0[2] <= sevenseg_decoder:bin2hex.seg[2]
+hex0[3] <= sevenseg_decoder:bin2hex.seg[3]
+hex0[4] <= sevenseg_decoder:bin2hex.seg[4]
+hex0[5] <= sevenseg_decoder:bin2hex.seg[5]
+hex0[6] <= sevenseg_decoder:bin2hex.seg[6]
+
+
+|count_ones|process_with_loop:p1
+a[0] => result.OUTPUTSELECT
+a[0] => result.OUTPUTSELECT
+a[0] => result.OUTPUTSELECT
+a[0] => result.OUTPUTSELECT
+a[1] => result.OUTPUTSELECT
+a[1] => result.OUTPUTSELECT
+a[1] => result.OUTPUTSELECT
+a[1] => result.OUTPUTSELECT
+a[1] => result.OUTPUTSELECT
+a[1] => result.OUTPUTSELECT
+a[1] => result.OUTPUTSELECT
+a[2] => result.OUTPUTSELECT
+a[2] => result.OUTPUTSELECT
+a[2] => result.OUTPUTSELECT
+a[2] => result.OUTPUTSELECT
+a[2] => result.OUTPUTSELECT
+a[2] => result.OUTPUTSELECT
+a[3] => result.OUTPUTSELECT
+a[3] => result.OUTPUTSELECT
+a[3] => result.OUTPUTSELECT
+a[3] => result.OUTPUTSELECT
+a[3] => result.OUTPUTSELECT
+a[4] => result.OUTPUTSELECT
+a[4] => result.OUTPUTSELECT
+a[4] => result.OUTPUTSELECT
+a[4] => result.OUTPUTSELECT
+a[5] => result.OUTPUTSELECT
+a[5] => result.OUTPUTSELECT
+a[5] => result.OUTPUTSELECT
+a[6] => result.OUTPUTSELECT
+a[6] => result.OUTPUTSELECT
+a[7] => Add0.IN2
+a[7] => result.DATAA
+ones[0] <= result.DB_MAX_OUTPUT_PORT_TYPE
+ones[1] <= result.DB_MAX_OUTPUT_PORT_TYPE
+ones[2] <= result.DB_MAX_OUTPUT_PORT_TYPE
+ones[3] <= result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|count_ones|sevenseg_decoder:bin2hex
+bin[0] => Mux0.IN19
+bin[0] => Mux1.IN19
+bin[0] => Mux2.IN19
+bin[0] => Mux3.IN19
+bin[0] => Mux4.IN19
+bin[0] => Mux5.IN19
+bin[0] => Mux6.IN19
+bin[1] => Mux0.IN18
+bin[1] => Mux1.IN18
+bin[1] => Mux2.IN18
+bin[1] => Mux3.IN18
+bin[1] => Mux4.IN18
+bin[1] => Mux5.IN18
+bin[1] => Mux6.IN18
+bin[2] => Mux0.IN17
+bin[2] => Mux1.IN17
+bin[2] => Mux2.IN17
+bin[2] => Mux3.IN17
+bin[2] => Mux4.IN17
+bin[2] => Mux5.IN17
+bin[2] => Mux6.IN17
+bin[3] => Mux0.IN16
+bin[3] => Mux1.IN16
+bin[3] => Mux2.IN16
+bin[3] => Mux3.IN16
+bin[3] => Mux4.IN16
+bin[3] => Mux5.IN16
+bin[3] => Mux6.IN16
+seg[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
