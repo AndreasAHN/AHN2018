@@ -1,0 +1,1237 @@
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cch2mtfe.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"getDistance.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.global	__aeabi_dmul
+  20              		.global	__aeabi_dsub
+  21              		.global	__aeabi_dadd
+  22              		.global	__aeabi_ddiv
+  23              		.section	.text.getDistancex,"ax",%progbits
+  24              		.align	2
+  25              		.global	getDistancex
+  26              		.thumb
+  27              		.thumb_func
+  28              		.type	getDistancex, %function
+  29              	getDistancex:
+  30              	.LFB1:
+  31              		.file 1 "getDistance.c"
+   1:getDistance.c **** /* ========================================
+   2:getDistance.c ****  *
+   3:getDistance.c ****  * Copyright YOUR COMPANY, THE YEAR
+   4:getDistance.c ****  * All Rights Reserved
+   5:getDistance.c ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:getDistance.c ****  *
+   7:getDistance.c ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:getDistance.c ****  * WHICH IS THE PROPERTY OF your company.
+   9:getDistance.c ****  *
+  10:getDistance.c ****  * ========================================
+  11:getDistance.c **** */
+  12:getDistance.c **** 
+  13:getDistance.c **** /* [] END OF FILE */
+  14:getDistance.c **** 
+  15:getDistance.c **** #include "getDistance.h"
+  16:getDistance.c **** 
+  17:getDistance.c **** 
+  18:getDistance.c **** double getDistancex(double a, double b, double c)
+  19:getDistance.c **** {
+  32              		.loc 1 19 0
+  33              		.cfi_startproc
+  34              		@ args = 8, pretend = 0, frame = 0
+  35              		@ frame_needed = 0, uses_anonymous_args = 0
+  36              	.LVL0:
+  37 0000 2DE9F843 		push	{r3, r4, r5, r6, r7, r8, r9, lr}
+  38              		.cfi_def_cfa_offset 32
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cch2mtfe.s 			page 2
+
+
+  39              		.cfi_offset 3, -32
+  40              		.cfi_offset 4, -28
+  41              		.cfi_offset 5, -24
+  42              		.cfi_offset 6, -20
+  43              		.cfi_offset 7, -16
+  44              		.cfi_offset 8, -12
+  45              		.cfi_offset 9, -8
+  46              		.cfi_offset 14, -4
+  47 0004 0446     		mov	r4, r0
+  48 0006 0D46     		mov	r5, r1
+  49 0008 1646     		mov	r6, r2
+  50 000a 1F46     		mov	r7, r3
+  20:getDistance.c **** 	double B1 = -(b * b) + a * a + c * c;
+  51              		.loc 1 20 0
+  52 000c 0246     		mov	r2, r0
+  53              	.LVL1:
+  54 000e 0B46     		mov	r3, r1
+  55 0010 FFF7FEFF 		bl	__aeabi_dmul
+  56              	.LVL2:
+  57 0014 8046     		mov	r8, r0
+  58 0016 8946     		mov	r9, r1
+  59 0018 3246     		mov	r2, r6
+  60 001a 3B46     		mov	r3, r7
+  61 001c 3046     		mov	r0, r6
+  62 001e 3946     		mov	r1, r7
+  63 0020 FFF7FEFF 		bl	__aeabi_dmul
+  64              	.LVL3:
+  65 0024 0246     		mov	r2, r0
+  66 0026 0B46     		mov	r3, r1
+  67 0028 4046     		mov	r0, r8
+  68 002a 4946     		mov	r1, r9
+  69 002c FFF7FEFF 		bl	__aeabi_dsub
+  70              	.LVL4:
+  71 0030 0646     		mov	r6, r0
+  72 0032 0F46     		mov	r7, r1
+  73 0034 DDE90823 		ldrd	r2, [sp, #32]
+  74 0038 1046     		mov	r0, r2
+  75 003a 1946     		mov	r1, r3
+  76 003c FFF7FEFF 		bl	__aeabi_dmul
+  77              	.LVL5:
+  78 0040 0246     		mov	r2, r0
+  79 0042 0B46     		mov	r3, r1
+  80 0044 3046     		mov	r0, r6
+  81 0046 3946     		mov	r1, r7
+  82 0048 FFF7FEFF 		bl	__aeabi_dadd
+  83              	.LVL6:
+  84 004c 0646     		mov	r6, r0
+  85 004e 0F46     		mov	r7, r1
+  86              	.LVL7:
+  21:getDistance.c **** 	double B2 = 2 * a*c;
+  87              		.loc 1 21 0
+  88 0050 2246     		mov	r2, r4
+  89 0052 2B46     		mov	r3, r5
+  90 0054 2046     		mov	r0, r4
+  91 0056 2946     		mov	r1, r5
+  92 0058 FFF7FEFF 		bl	__aeabi_dadd
+  93              	.LVL8:
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cch2mtfe.s 			page 3
+
+
+  94 005c 0246     		mov	r2, r0
+  95 005e 0B46     		mov	r3, r1
+  96 0060 DDE90801 		ldrd	r0, [sp, #32]
+  97 0064 FFF7FEFF 		bl	__aeabi_dmul
+  98              	.LVL9:
+  22:getDistance.c **** 	double B3 = B1 / B2;
+  99              		.loc 1 22 0
+ 100 0068 0246     		mov	r2, r0
+ 101 006a 0B46     		mov	r3, r1
+ 102 006c 3046     		mov	r0, r6
+ 103              	.LVL10:
+ 104 006e 3946     		mov	r1, r7
+ 105 0070 FFF7FEFF 		bl	__aeabi_ddiv
+ 106              	.LVL11:
+  23:getDistance.c **** 	double B = 90-((acos(B3)))*(360 / 2 / pi);
+ 107              		.loc 1 23 0
+ 108 0074 FFF7FEFF 		bl	acos
+ 109              	.LVL12:
+ 110 0078 11A3     		adr	r3, .L3
+ 111 007a D3E90023 		ldrd	r2, [r3]
+ 112 007e FFF7FEFF 		bl	__aeabi_dmul
+ 113              	.LVL13:
+ 114 0082 0246     		mov	r2, r0
+ 115 0084 0B46     		mov	r3, r1
+ 116 0086 0020     		movs	r0, #0
+ 117 0088 1149     		ldr	r1, .L3+16
+ 118 008a FFF7FEFF 		bl	__aeabi_dsub
+ 119              	.LVL14:
+  24:getDistance.c **** 	double C = 90;
+  25:getDistance.c **** 
+  26:getDistance.c **** 	double x1 = sin(B / 360 * 2 * pi) * a;
+ 120              		.loc 1 26 0
+ 121 008e 0022     		movs	r2, #0
+ 122 0090 104B     		ldr	r3, .L3+20
+ 123 0092 FFF7FEFF 		bl	__aeabi_ddiv
+ 124              	.LVL15:
+ 125 0096 0246     		mov	r2, r0
+ 126 0098 0B46     		mov	r3, r1
+ 127 009a FFF7FEFF 		bl	__aeabi_dadd
+ 128              	.LVL16:
+ 129 009e 0AA3     		adr	r3, .L3+8
+ 130 00a0 D3E90023 		ldrd	r2, [r3]
+ 131 00a4 FFF7FEFF 		bl	__aeabi_dmul
+ 132              	.LVL17:
+ 133 00a8 FFF7FEFF 		bl	sin
+ 134              	.LVL18:
+ 135 00ac 0246     		mov	r2, r0
+ 136 00ae 0B46     		mov	r3, r1
+ 137 00b0 2046     		mov	r0, r4
+ 138 00b2 2946     		mov	r1, r5
+ 139 00b4 FFF7FEFF 		bl	__aeabi_dmul
+ 140              	.LVL19:
+  27:getDistance.c **** 	double x2 = sin(C / 360 * 2 * pi);
+  28:getDistance.c **** 	double x = x1 / x2;
+  29:getDistance.c **** 
+  30:getDistance.c **** 	return x;
+  31:getDistance.c **** }
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cch2mtfe.s 			page 4
+
+
+ 141              		.loc 1 31 0
+ 142 00b8 BDE8F883 		pop	{r3, r4, r5, r6, r7, r8, r9, pc}
+ 143              	.LVL20:
+ 144              	.L4:
+ 145 00bc AFF30080 		.align	3
+ 146              	.L3:
+ 147 00c0 F8C1631A 		.word	442745336
+ 148 00c4 DCA54C40 		.word	1078765020
+ 149 00c8 182D4454 		.word	1413754136
+ 150 00cc FB210940 		.word	1074340347
+ 151 00d0 00805640 		.word	1079410688
+ 152 00d4 00807640 		.word	1081507840
+ 153              		.cfi_endproc
+ 154              	.LFE1:
+ 155              		.size	getDistancex, .-getDistancex
+ 156              		.section	.text.getDistancey,"ax",%progbits
+ 157              		.align	2
+ 158              		.global	getDistancey
+ 159              		.thumb
+ 160              		.thumb_func
+ 161              		.type	getDistancey, %function
+ 162              	getDistancey:
+ 163              	.LFB2:
+  32:getDistance.c **** 
+  33:getDistance.c **** double getDistancey(double a, double b, double c)
+  34:getDistance.c **** {
+ 164              		.loc 1 34 0
+ 165              		.cfi_startproc
+ 166              		@ args = 8, pretend = 0, frame = 0
+ 167              		@ frame_needed = 0, uses_anonymous_args = 0
+ 168              	.LVL21:
+ 169 0000 2DE9F843 		push	{r3, r4, r5, r6, r7, r8, r9, lr}
+ 170              		.cfi_def_cfa_offset 32
+ 171              		.cfi_offset 3, -32
+ 172              		.cfi_offset 4, -28
+ 173              		.cfi_offset 5, -24
+ 174              		.cfi_offset 6, -20
+ 175              		.cfi_offset 7, -16
+ 176              		.cfi_offset 8, -12
+ 177              		.cfi_offset 9, -8
+ 178              		.cfi_offset 14, -4
+ 179 0004 0446     		mov	r4, r0
+ 180 0006 0D46     		mov	r5, r1
+ 181 0008 1646     		mov	r6, r2
+ 182 000a 1F46     		mov	r7, r3
+  35:getDistance.c **** 	double B1 = -(b * b) + a * a + c * c;
+ 183              		.loc 1 35 0
+ 184 000c 0246     		mov	r2, r0
+ 185              	.LVL22:
+ 186 000e 0B46     		mov	r3, r1
+ 187 0010 FFF7FEFF 		bl	__aeabi_dmul
+ 188              	.LVL23:
+ 189 0014 8046     		mov	r8, r0
+ 190 0016 8946     		mov	r9, r1
+ 191 0018 3246     		mov	r2, r6
+ 192 001a 3B46     		mov	r3, r7
+ 193 001c 3046     		mov	r0, r6
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cch2mtfe.s 			page 5
+
+
+ 194 001e 3946     		mov	r1, r7
+ 195 0020 FFF7FEFF 		bl	__aeabi_dmul
+ 196              	.LVL24:
+ 197 0024 0246     		mov	r2, r0
+ 198 0026 0B46     		mov	r3, r1
+ 199 0028 4046     		mov	r0, r8
+ 200 002a 4946     		mov	r1, r9
+ 201 002c FFF7FEFF 		bl	__aeabi_dsub
+ 202              	.LVL25:
+ 203 0030 0646     		mov	r6, r0
+ 204 0032 0F46     		mov	r7, r1
+ 205 0034 DDE90823 		ldrd	r2, [sp, #32]
+ 206 0038 1046     		mov	r0, r2
+ 207 003a 1946     		mov	r1, r3
+ 208 003c FFF7FEFF 		bl	__aeabi_dmul
+ 209              	.LVL26:
+ 210 0040 0246     		mov	r2, r0
+ 211 0042 0B46     		mov	r3, r1
+ 212 0044 3046     		mov	r0, r6
+ 213 0046 3946     		mov	r1, r7
+ 214 0048 FFF7FEFF 		bl	__aeabi_dadd
+ 215              	.LVL27:
+ 216 004c 0646     		mov	r6, r0
+ 217 004e 0F46     		mov	r7, r1
+ 218              	.LVL28:
+  36:getDistance.c **** 	double B2 = 2 * a*c;
+ 219              		.loc 1 36 0
+ 220 0050 2246     		mov	r2, r4
+ 221 0052 2B46     		mov	r3, r5
+ 222 0054 2046     		mov	r0, r4
+ 223 0056 2946     		mov	r1, r5
+ 224 0058 FFF7FEFF 		bl	__aeabi_dadd
+ 225              	.LVL29:
+ 226 005c 0246     		mov	r2, r0
+ 227 005e 0B46     		mov	r3, r1
+ 228 0060 DDE90801 		ldrd	r0, [sp, #32]
+ 229 0064 FFF7FEFF 		bl	__aeabi_dmul
+ 230              	.LVL30:
+  37:getDistance.c **** 	double B3 = B1 / B2;
+ 231              		.loc 1 37 0
+ 232 0068 0246     		mov	r2, r0
+ 233 006a 0B46     		mov	r3, r1
+ 234 006c 3046     		mov	r0, r6
+ 235              	.LVL31:
+ 236 006e 3946     		mov	r1, r7
+ 237 0070 FFF7FEFF 		bl	__aeabi_ddiv
+ 238              	.LVL32:
+  38:getDistance.c **** 	double B = 90 - ((acos(B3)))*(360 / 2 / pi);
+ 239              		.loc 1 38 0
+ 240 0074 FFF7FEFF 		bl	acos
+ 241              	.LVL33:
+ 242 0078 15A3     		adr	r3, .L7
+ 243 007a D3E90023 		ldrd	r2, [r3]
+ 244 007e FFF7FEFF 		bl	__aeabi_dmul
+ 245              	.LVL34:
+ 246 0082 0246     		mov	r2, r0
+ 247 0084 0B46     		mov	r3, r1
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cch2mtfe.s 			page 6
+
+
+ 248 0086 0020     		movs	r0, #0
+ 249 0088 1549     		ldr	r1, .L7+16
+ 250 008a FFF7FEFF 		bl	__aeabi_dsub
+ 251              	.LVL35:
+  39:getDistance.c **** 	double C = 90;
+  40:getDistance.c **** 
+  41:getDistance.c **** 	double A = 180 - (B + C);
+ 252              		.loc 1 41 0
+ 253 008e 0022     		movs	r2, #0
+ 254 0090 134B     		ldr	r3, .L7+16
+ 255 0092 FFF7FEFF 		bl	__aeabi_dadd
+ 256              	.LVL36:
+ 257 0096 0246     		mov	r2, r0
+ 258 0098 0B46     		mov	r3, r1
+ 259 009a 0020     		movs	r0, #0
+ 260 009c 1149     		ldr	r1, .L7+20
+ 261 009e FFF7FEFF 		bl	__aeabi_dsub
+ 262              	.LVL37:
+  42:getDistance.c **** 	double y1 = sin(A / 360 * 2 * pi) * a;
+ 263              		.loc 1 42 0
+ 264 00a2 0022     		movs	r2, #0
+ 265 00a4 104B     		ldr	r3, .L7+24
+ 266 00a6 FFF7FEFF 		bl	__aeabi_ddiv
+ 267              	.LVL38:
+ 268 00aa 0246     		mov	r2, r0
+ 269 00ac 0B46     		mov	r3, r1
+ 270 00ae FFF7FEFF 		bl	__aeabi_dadd
+ 271              	.LVL39:
+ 272 00b2 09A3     		adr	r3, .L7+8
+ 273 00b4 D3E90023 		ldrd	r2, [r3]
+ 274 00b8 FFF7FEFF 		bl	__aeabi_dmul
+ 275              	.LVL40:
+ 276 00bc FFF7FEFF 		bl	sin
+ 277              	.LVL41:
+ 278 00c0 0246     		mov	r2, r0
+ 279 00c2 0B46     		mov	r3, r1
+ 280 00c4 2046     		mov	r0, r4
+ 281 00c6 2946     		mov	r1, r5
+ 282 00c8 FFF7FEFF 		bl	__aeabi_dmul
+ 283              	.LVL42:
+  43:getDistance.c **** 	double y2 = sin(C / 360 * 2 * pi);
+  44:getDistance.c **** 	double y = y1 / y2;
+  45:getDistance.c **** 
+  46:getDistance.c **** 	return y;
+  47:getDistance.c **** }...
+ 284              		.loc 1 47 0
+ 285 00cc BDE8F883 		pop	{r3, r4, r5, r6, r7, r8, r9, pc}
+ 286              	.LVL43:
+ 287              	.L8:
+ 288              		.align	3
+ 289              	.L7:
+ 290 00d0 F8C1631A 		.word	442745336
+ 291 00d4 DCA54C40 		.word	1078765020
+ 292 00d8 182D4454 		.word	1413754136
+ 293 00dc FB210940 		.word	1074340347
+ 294 00e0 00805640 		.word	1079410688
+ 295 00e4 00806640 		.word	1080459264
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cch2mtfe.s 			page 7
+
+
+ 296 00e8 00807640 		.word	1081507840
+ 297              		.cfi_endproc
+ 298              	.LFE2:
+ 299              		.size	getDistancey, .-getDistancey
+ 300              		.text
+ 301              	.Letext0:
+ 302              		.file 2 "d:\\program files (x86)\\cypress\\psoc creator\\4.1\\psoc creator\\import\\gnu\\arm\\5.4.
+ 303              		.section	.debug_info,"",%progbits
+ 304              	.Ldebug_info0:
+ 305 0000 4E020000 		.4byte	0x24e
+ 306 0004 0400     		.2byte	0x4
+ 307 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 308 000a 04       		.byte	0x4
+ 309 000b 01       		.uleb128 0x1
+ 310 000c 8E000000 		.4byte	.LASF17
+ 311 0010 0C       		.byte	0xc
+ 312 0011 86010000 		.4byte	.LASF18
+ 313 0015 00000000 		.4byte	.LASF19
+ 314 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 315 001d 00000000 		.4byte	0
+ 316 0021 00000000 		.4byte	.Ldebug_line0
+ 317 0025 02       		.uleb128 0x2
+ 318 0026 08       		.byte	0x8
+ 319 0027 04       		.byte	0x4
+ 320 0028 41010000 		.4byte	.LASF0
+ 321 002c 02       		.uleb128 0x2
+ 322 002d 01       		.byte	0x1
+ 323 002e 06       		.byte	0x6
+ 324 002f D4010000 		.4byte	.LASF1
+ 325 0033 02       		.uleb128 0x2
+ 326 0034 01       		.byte	0x1
+ 327 0035 08       		.byte	0x8
+ 328 0036 80000000 		.4byte	.LASF2
+ 329 003a 02       		.uleb128 0x2
+ 330 003b 02       		.byte	0x2
+ 331 003c 05       		.byte	0x5
+ 332 003d B5010000 		.4byte	.LASF3
+ 333 0041 02       		.uleb128 0x2
+ 334 0042 02       		.byte	0x2
+ 335 0043 07       		.byte	0x7
+ 336 0044 2E010000 		.4byte	.LASF4
+ 337 0048 02       		.uleb128 0x2
+ 338 0049 04       		.byte	0x4
+ 339 004a 05       		.byte	0x5
+ 340 004b BF010000 		.4byte	.LASF5
+ 341 004f 02       		.uleb128 0x2
+ 342 0050 04       		.byte	0x4
+ 343 0051 07       		.byte	0x7
+ 344 0052 1C010000 		.4byte	.LASF6
+ 345 0056 02       		.uleb128 0x2
+ 346 0057 08       		.byte	0x8
+ 347 0058 05       		.byte	0x5
+ 348 0059 A2010000 		.4byte	.LASF7
+ 349 005d 02       		.uleb128 0x2
+ 350 005e 08       		.byte	0x8
+ 351 005f 07       		.byte	0x7
+ 352 0060 6F010000 		.4byte	.LASF8
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cch2mtfe.s 			page 8
+
+
+ 353 0064 03       		.uleb128 0x3
+ 354 0065 04       		.byte	0x4
+ 355 0066 05       		.byte	0x5
+ 356 0067 696E7400 		.ascii	"int\000"
+ 357 006b 02       		.uleb128 0x2
+ 358 006c 04       		.byte	0x4
+ 359 006d 07       		.byte	0x7
+ 360 006e 62010000 		.4byte	.LASF9
+ 361 0072 02       		.uleb128 0x2
+ 362 0073 08       		.byte	0x8
+ 363 0074 04       		.byte	0x4
+ 364 0075 C8010000 		.4byte	.LASF10
+ 365 0079 02       		.uleb128 0x2
+ 366 007a 04       		.byte	0x4
+ 367 007b 07       		.byte	0x7
+ 368 007c 94010000 		.4byte	.LASF11
+ 369 0080 02       		.uleb128 0x2
+ 370 0081 01       		.byte	0x1
+ 371 0082 08       		.byte	0x8
+ 372 0083 B0010000 		.4byte	.LASF12
+ 373 0087 02       		.uleb128 0x2
+ 374 0088 04       		.byte	0x4
+ 375 0089 04       		.byte	0x4
+ 376 008a 7A000000 		.4byte	.LASF13
+ 377 008e 04       		.uleb128 0x4
+ 378 008f 48010000 		.4byte	.LASF14
+ 379 0093 01       		.byte	0x1
+ 380 0094 12       		.byte	0x12
+ 381 0095 25000000 		.4byte	0x25
+ 382 0099 00000000 		.4byte	.LFB1
+ 383 009d D8000000 		.4byte	.LFE1-.LFB1
+ 384 00a1 01       		.uleb128 0x1
+ 385 00a2 9C       		.byte	0x9c
+ 386 00a3 5E010000 		.4byte	0x15e
+ 387 00a7 05       		.uleb128 0x5
+ 388 00a8 6100     		.ascii	"a\000"
+ 389 00aa 01       		.byte	0x1
+ 390 00ab 12       		.byte	0x12
+ 391 00ac 25000000 		.4byte	0x25
+ 392 00b0 00000000 		.4byte	.LLST0
+ 393 00b4 05       		.uleb128 0x5
+ 394 00b5 6200     		.ascii	"b\000"
+ 395 00b7 01       		.byte	0x1
+ 396 00b8 12       		.byte	0x12
+ 397 00b9 25000000 		.4byte	0x25
+ 398 00bd 28000000 		.4byte	.LLST1
+ 399 00c1 05       		.uleb128 0x5
+ 400 00c2 6300     		.ascii	"c\000"
+ 401 00c4 01       		.byte	0x1
+ 402 00c5 12       		.byte	0x12
+ 403 00c6 25000000 		.4byte	0x25
+ 404 00ca 50000000 		.4byte	.LLST2
+ 405 00ce 06       		.uleb128 0x6
+ 406 00cf 423100   		.ascii	"B1\000"
+ 407 00d2 01       		.byte	0x1
+ 408 00d3 14       		.byte	0x14
+ 409 00d4 25000000 		.4byte	0x25
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cch2mtfe.s 			page 9
+
+
+ 410 00d8 70000000 		.4byte	.LLST3
+ 411 00dc 06       		.uleb128 0x6
+ 412 00dd 423200   		.ascii	"B2\000"
+ 413 00e0 01       		.byte	0x1
+ 414 00e1 15       		.byte	0x15
+ 415 00e2 25000000 		.4byte	0x25
+ 416 00e6 88000000 		.4byte	.LLST4
+ 417 00ea 06       		.uleb128 0x6
+ 418 00eb 423300   		.ascii	"B3\000"
+ 419 00ee 01       		.byte	0x1
+ 420 00ef 16       		.byte	0x16
+ 421 00f0 25000000 		.4byte	0x25
+ 422 00f4 A0000000 		.4byte	.LLST5
+ 423 00f8 06       		.uleb128 0x6
+ 424 00f9 4200     		.ascii	"B\000"
+ 425 00fb 01       		.byte	0x1
+ 426 00fc 17       		.byte	0x17
+ 427 00fd 25000000 		.4byte	0x25
+ 428 0101 B8000000 		.4byte	.LLST6
+ 429 0105 07       		.uleb128 0x7
+ 430 0106 4300     		.ascii	"C\000"
+ 431 0108 01       		.byte	0x1
+ 432 0109 18       		.byte	0x18
+ 433 010a 25000000 		.4byte	0x25
+ 434 010e 08       		.byte	0x8
+ 435 010f 00000000 		.4byte	0
+ 436 0113 00805640 		.4byte	0x40568000
+ 437 0117 08       		.uleb128 0x8
+ 438 0118 783100   		.ascii	"x1\000"
+ 439 011b 01       		.byte	0x1
+ 440 011c 1A       		.byte	0x1a
+ 441 011d 25000000 		.4byte	0x25
+ 442 0121 06       		.uleb128 0x6
+ 443 0122 50       		.byte	0x50
+ 444 0123 93       		.byte	0x93
+ 445 0124 04       		.uleb128 0x4
+ 446 0125 51       		.byte	0x51
+ 447 0126 93       		.byte	0x93
+ 448 0127 04       		.uleb128 0x4
+ 449 0128 07       		.uleb128 0x7
+ 450 0129 783200   		.ascii	"x2\000"
+ 451 012c 01       		.byte	0x1
+ 452 012d 1B       		.byte	0x1b
+ 453 012e 25000000 		.4byte	0x25
+ 454 0132 08       		.byte	0x8
+ 455 0133 00000000 		.4byte	0
+ 456 0137 0000F03F 		.4byte	0x3ff00000
+ 457 013b 08       		.uleb128 0x8
+ 458 013c 7800     		.ascii	"x\000"
+ 459 013e 01       		.byte	0x1
+ 460 013f 1C       		.byte	0x1c
+ 461 0140 25000000 		.4byte	0x25
+ 462 0144 06       		.uleb128 0x6
+ 463 0145 50       		.byte	0x50
+ 464 0146 93       		.byte	0x93
+ 465 0147 04       		.uleb128 0x4
+ 466 0148 51       		.byte	0x51
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cch2mtfe.s 			page 10
+
+
+ 467 0149 93       		.byte	0x93
+ 468 014a 04       		.uleb128 0x4
+ 469 014b 09       		.uleb128 0x9
+ 470 014c 78000000 		.4byte	.LVL12
+ 471 0150 3B020000 		.4byte	0x23b
+ 472 0154 09       		.uleb128 0x9
+ 473 0155 AC000000 		.4byte	.LVL18
+ 474 0159 46020000 		.4byte	0x246
+ 475 015d 00       		.byte	0
+ 476 015e 04       		.uleb128 0x4
+ 477 015f 55010000 		.4byte	.LASF15
+ 478 0163 01       		.byte	0x1
+ 479 0164 21       		.byte	0x21
+ 480 0165 25000000 		.4byte	0x25
+ 481 0169 00000000 		.4byte	.LFB2
+ 482 016d EC000000 		.4byte	.LFE2-.LFB2
+ 483 0171 01       		.uleb128 0x1
+ 484 0172 9C       		.byte	0x9c
+ 485 0173 3B020000 		.4byte	0x23b
+ 486 0177 05       		.uleb128 0x5
+ 487 0178 6100     		.ascii	"a\000"
+ 488 017a 01       		.byte	0x1
+ 489 017b 21       		.byte	0x21
+ 490 017c 25000000 		.4byte	0x25
+ 491 0180 D0000000 		.4byte	.LLST7
+ 492 0184 05       		.uleb128 0x5
+ 493 0185 6200     		.ascii	"b\000"
+ 494 0187 01       		.byte	0x1
+ 495 0188 21       		.byte	0x21
+ 496 0189 25000000 		.4byte	0x25
+ 497 018d F8000000 		.4byte	.LLST8
+ 498 0191 05       		.uleb128 0x5
+ 499 0192 6300     		.ascii	"c\000"
+ 500 0194 01       		.byte	0x1
+ 501 0195 21       		.byte	0x21
+ 502 0196 25000000 		.4byte	0x25
+ 503 019a 20010000 		.4byte	.LLST9
+ 504 019e 06       		.uleb128 0x6
+ 505 019f 423100   		.ascii	"B1\000"
+ 506 01a2 01       		.byte	0x1
+ 507 01a3 23       		.byte	0x23
+ 508 01a4 25000000 		.4byte	0x25
+ 509 01a8 40010000 		.4byte	.LLST10
+ 510 01ac 06       		.uleb128 0x6
+ 511 01ad 423200   		.ascii	"B2\000"
+ 512 01b0 01       		.byte	0x1
+ 513 01b1 24       		.byte	0x24
+ 514 01b2 25000000 		.4byte	0x25
+ 515 01b6 58010000 		.4byte	.LLST11
+ 516 01ba 06       		.uleb128 0x6
+ 517 01bb 423300   		.ascii	"B3\000"
+ 518 01be 01       		.byte	0x1
+ 519 01bf 25       		.byte	0x25
+ 520 01c0 25000000 		.4byte	0x25
+ 521 01c4 70010000 		.4byte	.LLST12
+ 522 01c8 06       		.uleb128 0x6
+ 523 01c9 4200     		.ascii	"B\000"
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cch2mtfe.s 			page 11
+
+
+ 524 01cb 01       		.byte	0x1
+ 525 01cc 26       		.byte	0x26
+ 526 01cd 25000000 		.4byte	0x25
+ 527 01d1 88010000 		.4byte	.LLST13
+ 528 01d5 07       		.uleb128 0x7
+ 529 01d6 4300     		.ascii	"C\000"
+ 530 01d8 01       		.byte	0x1
+ 531 01d9 27       		.byte	0x27
+ 532 01da 25000000 		.4byte	0x25
+ 533 01de 08       		.byte	0x8
+ 534 01df 00000000 		.4byte	0
+ 535 01e3 00805640 		.4byte	0x40568000
+ 536 01e7 06       		.uleb128 0x6
+ 537 01e8 4100     		.ascii	"A\000"
+ 538 01ea 01       		.byte	0x1
+ 539 01eb 29       		.byte	0x29
+ 540 01ec 25000000 		.4byte	0x25
+ 541 01f0 A0010000 		.4byte	.LLST14
+ 542 01f4 08       		.uleb128 0x8
+ 543 01f5 793100   		.ascii	"y1\000"
+ 544 01f8 01       		.byte	0x1
+ 545 01f9 2A       		.byte	0x2a
+ 546 01fa 25000000 		.4byte	0x25
+ 547 01fe 06       		.uleb128 0x6
+ 548 01ff 50       		.byte	0x50
+ 549 0200 93       		.byte	0x93
+ 550 0201 04       		.uleb128 0x4
+ 551 0202 51       		.byte	0x51
+ 552 0203 93       		.byte	0x93
+ 553 0204 04       		.uleb128 0x4
+ 554 0205 07       		.uleb128 0x7
+ 555 0206 793200   		.ascii	"y2\000"
+ 556 0209 01       		.byte	0x1
+ 557 020a 2B       		.byte	0x2b
+ 558 020b 25000000 		.4byte	0x25
+ 559 020f 08       		.byte	0x8
+ 560 0210 00000000 		.4byte	0
+ 561 0214 0000F03F 		.4byte	0x3ff00000
+ 562 0218 08       		.uleb128 0x8
+ 563 0219 7900     		.ascii	"y\000"
+ 564 021b 01       		.byte	0x1
+ 565 021c 2C       		.byte	0x2c
+ 566 021d 25000000 		.4byte	0x25
+ 567 0221 06       		.uleb128 0x6
+ 568 0222 50       		.byte	0x50
+ 569 0223 93       		.byte	0x93
+ 570 0224 04       		.uleb128 0x4
+ 571 0225 51       		.byte	0x51
+ 572 0226 93       		.byte	0x93
+ 573 0227 04       		.uleb128 0x4
+ 574 0228 09       		.uleb128 0x9
+ 575 0229 78000000 		.4byte	.LVL33
+ 576 022d 3B020000 		.4byte	0x23b
+ 577 0231 09       		.uleb128 0x9
+ 578 0232 C0000000 		.4byte	.LVL41
+ 579 0236 46020000 		.4byte	0x246
+ 580 023a 00       		.byte	0
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cch2mtfe.s 			page 12
+
+
+ 581 023b 0A       		.uleb128 0xa
+ 582 023c 9D010000 		.4byte	.LASF16
+ 583 0240 9D010000 		.4byte	.LASF16
+ 584 0244 02       		.byte	0x2
+ 585 0245 7D       		.byte	0x7d
+ 586 0246 0B       		.uleb128 0xb
+ 587 0247 73696E00 		.ascii	"sin\000"
+ 588 024b 73696E00 		.ascii	"sin\000"
+ 589 024f 02       		.byte	0x2
+ 590 0250 6F       		.byte	0x6f
+ 591 0251 00       		.byte	0
+ 592              		.section	.debug_abbrev,"",%progbits
+ 593              	.Ldebug_abbrev0:
+ 594 0000 01       		.uleb128 0x1
+ 595 0001 11       		.uleb128 0x11
+ 596 0002 01       		.byte	0x1
+ 597 0003 25       		.uleb128 0x25
+ 598 0004 0E       		.uleb128 0xe
+ 599 0005 13       		.uleb128 0x13
+ 600 0006 0B       		.uleb128 0xb
+ 601 0007 03       		.uleb128 0x3
+ 602 0008 0E       		.uleb128 0xe
+ 603 0009 1B       		.uleb128 0x1b
+ 604 000a 0E       		.uleb128 0xe
+ 605 000b 55       		.uleb128 0x55
+ 606 000c 17       		.uleb128 0x17
+ 607 000d 11       		.uleb128 0x11
+ 608 000e 01       		.uleb128 0x1
+ 609 000f 10       		.uleb128 0x10
+ 610 0010 17       		.uleb128 0x17
+ 611 0011 00       		.byte	0
+ 612 0012 00       		.byte	0
+ 613 0013 02       		.uleb128 0x2
+ 614 0014 24       		.uleb128 0x24
+ 615 0015 00       		.byte	0
+ 616 0016 0B       		.uleb128 0xb
+ 617 0017 0B       		.uleb128 0xb
+ 618 0018 3E       		.uleb128 0x3e
+ 619 0019 0B       		.uleb128 0xb
+ 620 001a 03       		.uleb128 0x3
+ 621 001b 0E       		.uleb128 0xe
+ 622 001c 00       		.byte	0
+ 623 001d 00       		.byte	0
+ 624 001e 03       		.uleb128 0x3
+ 625 001f 24       		.uleb128 0x24
+ 626 0020 00       		.byte	0
+ 627 0021 0B       		.uleb128 0xb
+ 628 0022 0B       		.uleb128 0xb
+ 629 0023 3E       		.uleb128 0x3e
+ 630 0024 0B       		.uleb128 0xb
+ 631 0025 03       		.uleb128 0x3
+ 632 0026 08       		.uleb128 0x8
+ 633 0027 00       		.byte	0
+ 634 0028 00       		.byte	0
+ 635 0029 04       		.uleb128 0x4
+ 636 002a 2E       		.uleb128 0x2e
+ 637 002b 01       		.byte	0x1
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cch2mtfe.s 			page 13
+
+
+ 638 002c 3F       		.uleb128 0x3f
+ 639 002d 19       		.uleb128 0x19
+ 640 002e 03       		.uleb128 0x3
+ 641 002f 0E       		.uleb128 0xe
+ 642 0030 3A       		.uleb128 0x3a
+ 643 0031 0B       		.uleb128 0xb
+ 644 0032 3B       		.uleb128 0x3b
+ 645 0033 0B       		.uleb128 0xb
+ 646 0034 27       		.uleb128 0x27
+ 647 0035 19       		.uleb128 0x19
+ 648 0036 49       		.uleb128 0x49
+ 649 0037 13       		.uleb128 0x13
+ 650 0038 11       		.uleb128 0x11
+ 651 0039 01       		.uleb128 0x1
+ 652 003a 12       		.uleb128 0x12
+ 653 003b 06       		.uleb128 0x6
+ 654 003c 40       		.uleb128 0x40
+ 655 003d 18       		.uleb128 0x18
+ 656 003e 9642     		.uleb128 0x2116
+ 657 0040 19       		.uleb128 0x19
+ 658 0041 01       		.uleb128 0x1
+ 659 0042 13       		.uleb128 0x13
+ 660 0043 00       		.byte	0
+ 661 0044 00       		.byte	0
+ 662 0045 05       		.uleb128 0x5
+ 663 0046 05       		.uleb128 0x5
+ 664 0047 00       		.byte	0
+ 665 0048 03       		.uleb128 0x3
+ 666 0049 08       		.uleb128 0x8
+ 667 004a 3A       		.uleb128 0x3a
+ 668 004b 0B       		.uleb128 0xb
+ 669 004c 3B       		.uleb128 0x3b
+ 670 004d 0B       		.uleb128 0xb
+ 671 004e 49       		.uleb128 0x49
+ 672 004f 13       		.uleb128 0x13
+ 673 0050 02       		.uleb128 0x2
+ 674 0051 17       		.uleb128 0x17
+ 675 0052 00       		.byte	0
+ 676 0053 00       		.byte	0
+ 677 0054 06       		.uleb128 0x6
+ 678 0055 34       		.uleb128 0x34
+ 679 0056 00       		.byte	0
+ 680 0057 03       		.uleb128 0x3
+ 681 0058 08       		.uleb128 0x8
+ 682 0059 3A       		.uleb128 0x3a
+ 683 005a 0B       		.uleb128 0xb
+ 684 005b 3B       		.uleb128 0x3b
+ 685 005c 0B       		.uleb128 0xb
+ 686 005d 49       		.uleb128 0x49
+ 687 005e 13       		.uleb128 0x13
+ 688 005f 02       		.uleb128 0x2
+ 689 0060 17       		.uleb128 0x17
+ 690 0061 00       		.byte	0
+ 691 0062 00       		.byte	0
+ 692 0063 07       		.uleb128 0x7
+ 693 0064 34       		.uleb128 0x34
+ 694 0065 00       		.byte	0
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cch2mtfe.s 			page 14
+
+
+ 695 0066 03       		.uleb128 0x3
+ 696 0067 08       		.uleb128 0x8
+ 697 0068 3A       		.uleb128 0x3a
+ 698 0069 0B       		.uleb128 0xb
+ 699 006a 3B       		.uleb128 0x3b
+ 700 006b 0B       		.uleb128 0xb
+ 701 006c 49       		.uleb128 0x49
+ 702 006d 13       		.uleb128 0x13
+ 703 006e 1C       		.uleb128 0x1c
+ 704 006f 0A       		.uleb128 0xa
+ 705 0070 00       		.byte	0
+ 706 0071 00       		.byte	0
+ 707 0072 08       		.uleb128 0x8
+ 708 0073 34       		.uleb128 0x34
+ 709 0074 00       		.byte	0
+ 710 0075 03       		.uleb128 0x3
+ 711 0076 08       		.uleb128 0x8
+ 712 0077 3A       		.uleb128 0x3a
+ 713 0078 0B       		.uleb128 0xb
+ 714 0079 3B       		.uleb128 0x3b
+ 715 007a 0B       		.uleb128 0xb
+ 716 007b 49       		.uleb128 0x49
+ 717 007c 13       		.uleb128 0x13
+ 718 007d 02       		.uleb128 0x2
+ 719 007e 18       		.uleb128 0x18
+ 720 007f 00       		.byte	0
+ 721 0080 00       		.byte	0
+ 722 0081 09       		.uleb128 0x9
+ 723 0082 898201   		.uleb128 0x4109
+ 724 0085 00       		.byte	0
+ 725 0086 11       		.uleb128 0x11
+ 726 0087 01       		.uleb128 0x1
+ 727 0088 31       		.uleb128 0x31
+ 728 0089 13       		.uleb128 0x13
+ 729 008a 00       		.byte	0
+ 730 008b 00       		.byte	0
+ 731 008c 0A       		.uleb128 0xa
+ 732 008d 2E       		.uleb128 0x2e
+ 733 008e 00       		.byte	0
+ 734 008f 3F       		.uleb128 0x3f
+ 735 0090 19       		.uleb128 0x19
+ 736 0091 3C       		.uleb128 0x3c
+ 737 0092 19       		.uleb128 0x19
+ 738 0093 6E       		.uleb128 0x6e
+ 739 0094 0E       		.uleb128 0xe
+ 740 0095 03       		.uleb128 0x3
+ 741 0096 0E       		.uleb128 0xe
+ 742 0097 3A       		.uleb128 0x3a
+ 743 0098 0B       		.uleb128 0xb
+ 744 0099 3B       		.uleb128 0x3b
+ 745 009a 0B       		.uleb128 0xb
+ 746 009b 00       		.byte	0
+ 747 009c 00       		.byte	0
+ 748 009d 0B       		.uleb128 0xb
+ 749 009e 2E       		.uleb128 0x2e
+ 750 009f 00       		.byte	0
+ 751 00a0 3F       		.uleb128 0x3f
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cch2mtfe.s 			page 15
+
+
+ 752 00a1 19       		.uleb128 0x19
+ 753 00a2 3C       		.uleb128 0x3c
+ 754 00a3 19       		.uleb128 0x19
+ 755 00a4 6E       		.uleb128 0x6e
+ 756 00a5 08       		.uleb128 0x8
+ 757 00a6 03       		.uleb128 0x3
+ 758 00a7 08       		.uleb128 0x8
+ 759 00a8 3A       		.uleb128 0x3a
+ 760 00a9 0B       		.uleb128 0xb
+ 761 00aa 3B       		.uleb128 0x3b
+ 762 00ab 0B       		.uleb128 0xb
+ 763 00ac 00       		.byte	0
+ 764 00ad 00       		.byte	0
+ 765 00ae 00       		.byte	0
+ 766              		.section	.debug_loc,"",%progbits
+ 767              	.Ldebug_loc0:
+ 768              	.LLST0:
+ 769 0000 00000000 		.4byte	.LVL0
+ 770 0004 13000000 		.4byte	.LVL2-1
+ 771 0008 0600     		.2byte	0x6
+ 772 000a 50       		.byte	0x50
+ 773 000b 93       		.byte	0x93
+ 774 000c 04       		.uleb128 0x4
+ 775 000d 51       		.byte	0x51
+ 776 000e 93       		.byte	0x93
+ 777 000f 04       		.uleb128 0x4
+ 778 0010 13000000 		.4byte	.LVL2-1
+ 779 0014 D8000000 		.4byte	.LFE1
+ 780 0018 0600     		.2byte	0x6
+ 781 001a F3       		.byte	0xf3
+ 782 001b 03       		.uleb128 0x3
+ 783 001c F5       		.byte	0xf5
+ 784 001d 00       		.uleb128 0
+ 785 001e 25       		.uleb128 0x25
+ 786 001f 9F       		.byte	0x9f
+ 787 0020 00000000 		.4byte	0
+ 788 0024 00000000 		.4byte	0
+ 789              	.LLST1:
+ 790 0028 00000000 		.4byte	.LVL0
+ 791 002c 0E000000 		.4byte	.LVL1
+ 792 0030 0600     		.2byte	0x6
+ 793 0032 52       		.byte	0x52
+ 794 0033 93       		.byte	0x93
+ 795 0034 04       		.uleb128 0x4
+ 796 0035 53       		.byte	0x53
+ 797 0036 93       		.byte	0x93
+ 798 0037 04       		.uleb128 0x4
+ 799 0038 0E000000 		.4byte	.LVL1
+ 800 003c D8000000 		.4byte	.LFE1
+ 801 0040 0600     		.2byte	0x6
+ 802 0042 F3       		.byte	0xf3
+ 803 0043 03       		.uleb128 0x3
+ 804 0044 F5       		.byte	0xf5
+ 805 0045 02       		.uleb128 0x2
+ 806 0046 25       		.uleb128 0x25
+ 807 0047 9F       		.byte	0x9f
+ 808 0048 00000000 		.4byte	0
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cch2mtfe.s 			page 16
+
+
+ 809 004c 00000000 		.4byte	0
+ 810              	.LLST2:
+ 811 0050 00000000 		.4byte	.LVL0
+ 812 0054 BC000000 		.4byte	.LVL20
+ 813 0058 0200     		.2byte	0x2
+ 814 005a 91       		.byte	0x91
+ 815 005b 00       		.sleb128 0
+ 816 005c BC000000 		.4byte	.LVL20
+ 817 0060 D8000000 		.4byte	.LFE1
+ 818 0064 0200     		.2byte	0x2
+ 819 0066 7D       		.byte	0x7d
+ 820 0067 00       		.sleb128 0
+ 821 0068 00000000 		.4byte	0
+ 822 006c 00000000 		.4byte	0
+ 823              	.LLST3:
+ 824 0070 50000000 		.4byte	.LVL7
+ 825 0074 BC000000 		.4byte	.LVL20
+ 826 0078 0600     		.2byte	0x6
+ 827 007a 56       		.byte	0x56
+ 828 007b 93       		.byte	0x93
+ 829 007c 04       		.uleb128 0x4
+ 830 007d 57       		.byte	0x57
+ 831 007e 93       		.byte	0x93
+ 832 007f 04       		.uleb128 0x4
+ 833 0080 00000000 		.4byte	0
+ 834 0084 00000000 		.4byte	0
+ 835              	.LLST4:
+ 836 0088 68000000 		.4byte	.LVL9
+ 837 008c 6E000000 		.4byte	.LVL10
+ 838 0090 0600     		.2byte	0x6
+ 839 0092 50       		.byte	0x50
+ 840 0093 93       		.byte	0x93
+ 841 0094 04       		.uleb128 0x4
+ 842 0095 51       		.byte	0x51
+ 843 0096 93       		.byte	0x93
+ 844 0097 04       		.uleb128 0x4
+ 845 0098 00000000 		.4byte	0
+ 846 009c 00000000 		.4byte	0
+ 847              	.LLST5:
+ 848 00a0 74000000 		.4byte	.LVL11
+ 849 00a4 77000000 		.4byte	.LVL12-1
+ 850 00a8 0600     		.2byte	0x6
+ 851 00aa 50       		.byte	0x50
+ 852 00ab 93       		.byte	0x93
+ 853 00ac 04       		.uleb128 0x4
+ 854 00ad 51       		.byte	0x51
+ 855 00ae 93       		.byte	0x93
+ 856 00af 04       		.uleb128 0x4
+ 857 00b0 00000000 		.4byte	0
+ 858 00b4 00000000 		.4byte	0
+ 859              	.LLST6:
+ 860 00b8 8E000000 		.4byte	.LVL14
+ 861 00bc 95000000 		.4byte	.LVL15-1
+ 862 00c0 0600     		.2byte	0x6
+ 863 00c2 50       		.byte	0x50
+ 864 00c3 93       		.byte	0x93
+ 865 00c4 04       		.uleb128 0x4
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cch2mtfe.s 			page 17
+
+
+ 866 00c5 51       		.byte	0x51
+ 867 00c6 93       		.byte	0x93
+ 868 00c7 04       		.uleb128 0x4
+ 869 00c8 00000000 		.4byte	0
+ 870 00cc 00000000 		.4byte	0
+ 871              	.LLST7:
+ 872 00d0 00000000 		.4byte	.LVL21
+ 873 00d4 13000000 		.4byte	.LVL23-1
+ 874 00d8 0600     		.2byte	0x6
+ 875 00da 50       		.byte	0x50
+ 876 00db 93       		.byte	0x93
+ 877 00dc 04       		.uleb128 0x4
+ 878 00dd 51       		.byte	0x51
+ 879 00de 93       		.byte	0x93
+ 880 00df 04       		.uleb128 0x4
+ 881 00e0 13000000 		.4byte	.LVL23-1
+ 882 00e4 EC000000 		.4byte	.LFE2
+ 883 00e8 0600     		.2byte	0x6
+ 884 00ea F3       		.byte	0xf3
+ 885 00eb 03       		.uleb128 0x3
+ 886 00ec F5       		.byte	0xf5
+ 887 00ed 00       		.uleb128 0
+ 888 00ee 25       		.uleb128 0x25
+ 889 00ef 9F       		.byte	0x9f
+ 890 00f0 00000000 		.4byte	0
+ 891 00f4 00000000 		.4byte	0
+ 892              	.LLST8:
+ 893 00f8 00000000 		.4byte	.LVL21
+ 894 00fc 0E000000 		.4byte	.LVL22
+ 895 0100 0600     		.2byte	0x6
+ 896 0102 52       		.byte	0x52
+ 897 0103 93       		.byte	0x93
+ 898 0104 04       		.uleb128 0x4
+ 899 0105 53       		.byte	0x53
+ 900 0106 93       		.byte	0x93
+ 901 0107 04       		.uleb128 0x4
+ 902 0108 0E000000 		.4byte	.LVL22
+ 903 010c EC000000 		.4byte	.LFE2
+ 904 0110 0600     		.2byte	0x6
+ 905 0112 F3       		.byte	0xf3
+ 906 0113 03       		.uleb128 0x3
+ 907 0114 F5       		.byte	0xf5
+ 908 0115 02       		.uleb128 0x2
+ 909 0116 25       		.uleb128 0x25
+ 910 0117 9F       		.byte	0x9f
+ 911 0118 00000000 		.4byte	0
+ 912 011c 00000000 		.4byte	0
+ 913              	.LLST9:
+ 914 0120 00000000 		.4byte	.LVL21
+ 915 0124 D0000000 		.4byte	.LVL43
+ 916 0128 0200     		.2byte	0x2
+ 917 012a 91       		.byte	0x91
+ 918 012b 00       		.sleb128 0
+ 919 012c D0000000 		.4byte	.LVL43
+ 920 0130 EC000000 		.4byte	.LFE2
+ 921 0134 0200     		.2byte	0x2
+ 922 0136 7D       		.byte	0x7d
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cch2mtfe.s 			page 18
+
+
+ 923 0137 00       		.sleb128 0
+ 924 0138 00000000 		.4byte	0
+ 925 013c 00000000 		.4byte	0
+ 926              	.LLST10:
+ 927 0140 50000000 		.4byte	.LVL28
+ 928 0144 D0000000 		.4byte	.LVL43
+ 929 0148 0600     		.2byte	0x6
+ 930 014a 56       		.byte	0x56
+ 931 014b 93       		.byte	0x93
+ 932 014c 04       		.uleb128 0x4
+ 933 014d 57       		.byte	0x57
+ 934 014e 93       		.byte	0x93
+ 935 014f 04       		.uleb128 0x4
+ 936 0150 00000000 		.4byte	0
+ 937 0154 00000000 		.4byte	0
+ 938              	.LLST11:
+ 939 0158 68000000 		.4byte	.LVL30
+ 940 015c 6E000000 		.4byte	.LVL31
+ 941 0160 0600     		.2byte	0x6
+ 942 0162 50       		.byte	0x50
+ 943 0163 93       		.byte	0x93
+ 944 0164 04       		.uleb128 0x4
+ 945 0165 51       		.byte	0x51
+ 946 0166 93       		.byte	0x93
+ 947 0167 04       		.uleb128 0x4
+ 948 0168 00000000 		.4byte	0
+ 949 016c 00000000 		.4byte	0
+ 950              	.LLST12:
+ 951 0170 74000000 		.4byte	.LVL32
+ 952 0174 77000000 		.4byte	.LVL33-1
+ 953 0178 0600     		.2byte	0x6
+ 954 017a 50       		.byte	0x50
+ 955 017b 93       		.byte	0x93
+ 956 017c 04       		.uleb128 0x4
+ 957 017d 51       		.byte	0x51
+ 958 017e 93       		.byte	0x93
+ 959 017f 04       		.uleb128 0x4
+ 960 0180 00000000 		.4byte	0
+ 961 0184 00000000 		.4byte	0
+ 962              	.LLST13:
+ 963 0188 8E000000 		.4byte	.LVL35
+ 964 018c 95000000 		.4byte	.LVL36-1
+ 965 0190 0600     		.2byte	0x6
+ 966 0192 50       		.byte	0x50
+ 967 0193 93       		.byte	0x93
+ 968 0194 04       		.uleb128 0x4
+ 969 0195 51       		.byte	0x51
+ 970 0196 93       		.byte	0x93
+ 971 0197 04       		.uleb128 0x4
+ 972 0198 00000000 		.4byte	0
+ 973 019c 00000000 		.4byte	0
+ 974              	.LLST14:
+ 975 01a0 A2000000 		.4byte	.LVL37
+ 976 01a4 A9000000 		.4byte	.LVL38-1
+ 977 01a8 0600     		.2byte	0x6
+ 978 01aa 50       		.byte	0x50
+ 979 01ab 93       		.byte	0x93
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cch2mtfe.s 			page 19
+
+
+ 980 01ac 04       		.uleb128 0x4
+ 981 01ad 51       		.byte	0x51
+ 982 01ae 93       		.byte	0x93
+ 983 01af 04       		.uleb128 0x4
+ 984 01b0 00000000 		.4byte	0
+ 985 01b4 00000000 		.4byte	0
+ 986              		.section	.debug_aranges,"",%progbits
+ 987 0000 24000000 		.4byte	0x24
+ 988 0004 0200     		.2byte	0x2
+ 989 0006 00000000 		.4byte	.Ldebug_info0
+ 990 000a 04       		.byte	0x4
+ 991 000b 00       		.byte	0
+ 992 000c 0000     		.2byte	0
+ 993 000e 0000     		.2byte	0
+ 994 0010 00000000 		.4byte	.LFB1
+ 995 0014 D8000000 		.4byte	.LFE1-.LFB1
+ 996 0018 00000000 		.4byte	.LFB2
+ 997 001c EC000000 		.4byte	.LFE2-.LFB2
+ 998 0020 00000000 		.4byte	0
+ 999 0024 00000000 		.4byte	0
+ 1000              		.section	.debug_ranges,"",%progbits
+ 1001              	.Ldebug_ranges0:
+ 1002 0000 00000000 		.4byte	.LFB1
+ 1003 0004 D8000000 		.4byte	.LFE1
+ 1004 0008 00000000 		.4byte	.LFB2
+ 1005 000c EC000000 		.4byte	.LFE2
+ 1006 0010 00000000 		.4byte	0
+ 1007 0014 00000000 		.4byte	0
+ 1008              		.section	.debug_line,"",%progbits
+ 1009              	.Ldebug_line0:
+ 1010 0000 CD000000 		.section	.debug_str,"MS",%progbits,1
+ 1010      02009600 
+ 1010      00000201 
+ 1010      FB0E0D00 
+ 1010      01010101 
+ 1011              	.LASF19:
+ 1012 0000 443A5C47 		.ascii	"D:\\Google Drive\\Aarhus Universitet\\Trejde Semest"
+ 1012      6F6F676C 
+ 1012      65204472 
+ 1012      6976655C 
+ 1012      41617268 
+ 1013 0030 65725C45 		.ascii	"er\\E3PRJ3\\Dokumenter\\AndreasAHN\\Software\\Ultra"
+ 1013      3350524A 
+ 1013      335C446F 
+ 1013      6B756D65 
+ 1013      6E746572 
+ 1014 005e 4C79645C 		.ascii	"Lyd\\UltraLyd\\UltraLyd.cydsn\000"
+ 1014      556C7472 
+ 1014      614C7964 
+ 1014      5C556C74 
+ 1014      72614C79 
+ 1015              	.LASF13:
+ 1016 007a 666C6F61 		.ascii	"float\000"
+ 1016      7400
+ 1017              	.LASF2:
+ 1018 0080 756E7369 		.ascii	"unsigned char\000"
+ 1018      676E6564 
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cch2mtfe.s 			page 20
+
+
+ 1018      20636861 
+ 1018      7200
+ 1019              	.LASF17:
+ 1020 008e 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1020      43313120 
+ 1020      352E342E 
+ 1020      31203230 
+ 1020      31363036 
+ 1021 00c1 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1021      20726576 
+ 1021      6973696F 
+ 1021      6E203233 
+ 1021      37373135 
+ 1022 00f4 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1022      66756E63 
+ 1022      74696F6E 
+ 1022      2D736563 
+ 1022      74696F6E 
+ 1023              	.LASF6:
+ 1024 011c 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1024      20756E73 
+ 1024      69676E65 
+ 1024      6420696E 
+ 1024      7400
+ 1025              	.LASF4:
+ 1026 012e 73686F72 		.ascii	"short unsigned int\000"
+ 1026      7420756E 
+ 1026      7369676E 
+ 1026      65642069 
+ 1026      6E7400
+ 1027              	.LASF0:
+ 1028 0141 646F7562 		.ascii	"double\000"
+ 1028      6C6500
+ 1029              	.LASF14:
+ 1030 0148 67657444 		.ascii	"getDistancex\000"
+ 1030      69737461 
+ 1030      6E636578 
+ 1030      00
+ 1031              	.LASF15:
+ 1032 0155 67657444 		.ascii	"getDistancey\000"
+ 1032      69737461 
+ 1032      6E636579 
+ 1032      00
+ 1033              	.LASF9:
+ 1034 0162 756E7369 		.ascii	"unsigned int\000"
+ 1034      676E6564 
+ 1034      20696E74 
+ 1034      00
+ 1035              	.LASF8:
+ 1036 016f 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1036      206C6F6E 
+ 1036      6720756E 
+ 1036      7369676E 
+ 1036      65642069 
+ 1037              	.LASF18:
+ 1038 0186 67657444 		.ascii	"getDistance.c\000"
+ 1038      69737461 
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cch2mtfe.s 			page 21
+
+
+ 1038      6E63652E 
+ 1038      6300
+ 1039              	.LASF11:
+ 1040 0194 73697A65 		.ascii	"sizetype\000"
+ 1040      74797065 
+ 1040      00
+ 1041              	.LASF16:
+ 1042 019d 61636F73 		.ascii	"acos\000"
+ 1042      00
+ 1043              	.LASF7:
+ 1044 01a2 6C6F6E67 		.ascii	"long long int\000"
+ 1044      206C6F6E 
+ 1044      6720696E 
+ 1044      7400
+ 1045              	.LASF12:
+ 1046 01b0 63686172 		.ascii	"char\000"
+ 1046      00
+ 1047              	.LASF3:
+ 1048 01b5 73686F72 		.ascii	"short int\000"
+ 1048      7420696E 
+ 1048      7400
+ 1049              	.LASF5:
+ 1050 01bf 6C6F6E67 		.ascii	"long int\000"
+ 1050      20696E74 
+ 1050      00
+ 1051              	.LASF10:
+ 1052 01c8 6C6F6E67 		.ascii	"long double\000"
+ 1052      20646F75 
+ 1052      626C6500 
+ 1053              	.LASF1:
+ 1054 01d4 7369676E 		.ascii	"signed char\000"
+ 1054      65642063 
+ 1054      68617200 
+ 1055              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

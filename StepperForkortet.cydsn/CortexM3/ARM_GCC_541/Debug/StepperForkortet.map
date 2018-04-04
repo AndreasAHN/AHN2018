@@ -1,0 +1,1356 @@
+Archive member included to satisfy reference by file (symbol)
+
+.\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A1.o)
+                              .\CortexM3\ARM_GCC_541\Debug\stepperLeft.o (A1_Write)
+.\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A2.o)
+                              .\CortexM3\ARM_GCC_541\Debug\stepperLeft.o (A2_Write)
+.\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B1.o)
+                              .\CortexM3\ARM_GCC_541\Debug\stepperLeft.o (B1_Write)
+.\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B2.o)
+                              .\CortexM3\ARM_GCC_541\Debug\stepperLeft.o (B2_Write)
+.\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1.o)
+                              .\CortexM3\ARM_GCC_541\Debug\main.o (UART_1_Enable)
+.\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(isr_UART_1_RX.o)
+                              .\CortexM3\ARM_GCC_541\Debug\main.o (isr_UART_1_RX_StartEx)
+.\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(LED.o)
+                              .\CortexM3\ARM_GCC_541\Debug\main.o (LED_Write)
+.\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1_IntClock.o)
+                              .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1.o) (UART_1_IntClock_Start)
+.\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+                              .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o (CyHalt)
+.\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(cyPm.o)
+                              .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o) (CyPmReadStatus)
+.\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A3.o)
+                              .\CortexM3\ARM_GCC_541\Debug\stepperRight.o (A3_Write)
+.\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A4.o)
+                              .\CortexM3\ARM_GCC_541\Debug\stepperRight.o (A4_Write)
+.\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B3.o)
+                              .\CortexM3\ARM_GCC_541\Debug\stepperRight.o (B3_Write)
+.\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B4.o)
+                              .\CortexM3\ARM_GCC_541\Debug\stepperRight.o (B4_Write)
+.\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyBootAsmGnu.o)
+                              .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o (CyDelayCycles)
+.\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyFlash.o)
+                              .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(cyPm.o) (CyFlash_SetWaitCycles)
+.\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CySpc.o)
+                              .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyFlash.o) (CySpcStart)
+d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+                              .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o (__errno)
+d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
+                              d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/crt0.o (exit)
+d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
+                              d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o) (_global_impure_ptr)
+d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+                              d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/crt0.o (__libc_init_array)
+d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy-stub.o)
+                              .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o (memcpy)
+d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
+                              d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/crt0.o (memset)
+
+Allocating common symbols
+Common symbol       size              file
+
+f                   0x24              .\CortexM3\ARM_GCC_541\Debug\main.o
+dieTemperature      0x2               .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyFlash.o)
+
+Discarded input sections
+
+ .text          0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crti.o
+ .data          0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crti.o
+ .bss           0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crti.o
+ .data          0x00000000        0x4 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+ .text          0x00000000       0x74 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+ .data          0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+ .bss           0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+ .ARM.extab     0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+ .ARM.exidx     0x00000000        0x8 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\main.o
+ COMMON         0x00000000       0x24 .\CortexM3\ARM_GCC_541\Debug\main.o
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\stepperLeft.o
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\stepperLeft.o
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\stepperLeft.o
+ .text.stepperLeft
+                0x00000000      0x1f0 .\CortexM3\ARM_GCC_541\Debug\stepperLeft.o
+ .text.resetLeft
+                0x00000000       0x1c .\CortexM3\ARM_GCC_541\Debug\stepperLeft.o
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\stepperRight.o
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\stepperRight.o
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\stepperRight.o
+ .text.stepperRight
+                0x00000000      0x1f0 .\CortexM3\ARM_GCC_541\Debug\stepperRight.o
+ .text.resetRight
+                0x00000000       0x1c .\CortexM3\ARM_GCC_541\Debug\stepperRight.o
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\drive.o
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\drive.o
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\drive.o
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .text.SetAnalogRoutingPumps
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .data          0x00000000        0x4 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .text._exit    0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .text._sbrk    0x00000000       0x30 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A1.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A1.o)
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A1.o)
+ .text.A1_SetDriveMode
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A1.o)
+ .text.A1_Read  0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A1.o)
+ .text.A1_ReadDataReg
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A1.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A2.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A2.o)
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A2.o)
+ .text.A2_SetDriveMode
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A2.o)
+ .text.A2_Read  0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A2.o)
+ .text.A2_ReadDataReg
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A2.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B1.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B1.o)
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B1.o)
+ .text.B1_SetDriveMode
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B1.o)
+ .text.B1_Read  0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B1.o)
+ .text.B1_ReadDataReg
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B1.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B2.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B2.o)
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B2.o)
+ .text.B2_SetDriveMode
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B2.o)
+ .text.B2_Read  0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B2.o)
+ .text.B2_ReadDataReg
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B2.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1.o)
+ .text.UART_1_Stop
+                0x00000000       0x3c .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1.o)
+ .text.UART_1_ReadControlRegister
+                0x00000000        0x4 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1.o)
+ .text.UART_1_WriteControlRegister
+                0x00000000        0x4 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1.o)
+ .text.UART_1_SetRxInterruptMode
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1.o)
+ .text.UART_1_ReadRxStatus
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1.o)
+ .text.UART_1_GetChar
+                0x00000000       0x2c .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1.o)
+ .text.UART_1_GetByte
+                0x00000000       0x14 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1.o)
+ .text.UART_1_GetRxBufferSize
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1.o)
+ .text.UART_1_ClearRxBuffer
+                0x00000000       0x24 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1.o)
+ .text.UART_1_SetRxAddressMode
+                0x00000000        0x4 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1.o)
+ .text.UART_1_SetRxAddress1
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1.o)
+ .text.UART_1_SetRxAddress2
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1.o)
+ .text.UART_1_SetTxInterruptMode
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1.o)
+ .text.UART_1_ReadTxStatus
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1.o)
+ .text.UART_1_PutArray
+                0x00000000       0x28 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1.o)
+ .text.UART_1_PutCRLF
+                0x00000000       0x20 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1.o)
+ .text.UART_1_GetTxBufferSize
+                0x00000000       0x24 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1.o)
+ .text.UART_1_ClearTxBuffer
+                0x00000000       0x24 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1.o)
+ .text.UART_1_SendBreak
+                0x00000000       0x58 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1.o)
+ .text.UART_1_SetTxAddressMode
+                0x00000000        0x4 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(isr_UART_1_RX.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(isr_UART_1_RX.o)
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(isr_UART_1_RX.o)
+ .text.isr_UART_1_RX_Interrupt
+                0x00000000        0x4 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(isr_UART_1_RX.o)
+ .text.isr_UART_1_RX_GetVector
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(isr_UART_1_RX.o)
+ .text.isr_UART_1_RX_GetPriority
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(isr_UART_1_RX.o)
+ .text.isr_UART_1_RX_GetState
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(isr_UART_1_RX.o)
+ .text.isr_UART_1_RX_Start
+                0x00000000       0x1c .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(isr_UART_1_RX.o)
+ .text.isr_UART_1_RX_Stop
+                0x00000000       0x14 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(isr_UART_1_RX.o)
+ .text.isr_UART_1_RX_SetPending
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(isr_UART_1_RX.o)
+ .text.isr_UART_1_RX_ClearPending
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(isr_UART_1_RX.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(LED.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(LED.o)
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(LED.o)
+ .text.LED_SetDriveMode
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(LED.o)
+ .text.LED_Read
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(LED.o)
+ .text.LED_ReadDataReg
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(LED.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1_IntClock.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1_IntClock.o)
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1_IntClock.o)
+ .text.UART_1_IntClock_Stop
+                0x00000000       0x1c .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1_IntClock.o)
+ .text.UART_1_IntClock_StopBlock
+                0x00000000       0x6c .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1_IntClock.o)
+ .text.UART_1_IntClock_StandbyPower
+                0x00000000       0x20 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1_IntClock.o)
+ .text.UART_1_IntClock_GetDividerRegister
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1_IntClock.o)
+ .text.UART_1_IntClock_SetModeRegister
+                0x00000000       0x14 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1_IntClock.o)
+ .text.UART_1_IntClock_ClearModeRegister
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1_IntClock.o)
+ .text.UART_1_IntClock_GetModeRegister
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1_IntClock.o)
+ .text.UART_1_IntClock_GetSourceRegister
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1_IntClock.o)
+ .text.UART_1_IntClock_SetDividerRegister
+                0x00000000       0xd8 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1_IntClock.o)
+ .text.UART_1_IntClock_SetSourceRegister
+                0x00000000       0x5c .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1_IntClock.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .bss           0x00000000       0x1c .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyUSB_PowerOnCheck
+                0x00000000       0x48 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyBusClk_Internal_SetDivider
+                0x00000000       0x48 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyPLL_OUT_Stop
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyIMO_Stop
+                0x00000000       0x1c .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyIMO_EnableDoubler
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyIMO_DisableDoubler
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyMasterClk_SetSource
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyMasterClk_SetDivider
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyBusClk_SetDivider
+                0x00000000       0x70 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyUsbClk_SetSource
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyILO_Start1K
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyILO_Stop1K
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyILO_Start100K
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyILO_Stop100K
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyPLL_OUT_Start
+                0x00000000       0x78 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyIMO_Start
+                0x00000000       0x60 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyILO_Enable33K
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyILO_Disable33K
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyILO_SetSource
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyILO_SetPowerMode
+                0x00000000       0x24 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyXTAL_32KHZ_Stop
+                0x00000000       0x30 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyXTAL_32KHZ_ReadStatus
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyXTAL_Start
+                0x00000000       0xac .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyXTAL_Stop
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyXTAL_EnableErrStatus
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyXTAL_DisableErrStatus
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyXTAL_ReadStatus
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyXTAL_EnableFaultRecovery
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyXTAL_DisableFaultRecovery
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyXTAL_SetStartup
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyXTAL_SetFbVoltage
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyXTAL_SetWdVoltage
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyHalt   0x00000000        0x4 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyPLL_OUT_SetPQ
+                0x00000000       0x60 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyPLL_OUT_SetSource
+                0x00000000       0x34 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyIMO_SetTrimValue
+                0x00000000       0xcc .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyIMO_SetFreq
+                0x00000000       0xf4 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyIMO_SetSource
+                0x00000000       0x58 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CySoftwareReset
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyDelay  0x00000000       0x2c .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyXTAL_32KHZ_SetPowerMode
+                0x00000000       0x84 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyXTAL_32KHZ_Start
+                0x00000000       0x74 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyDelayFreq
+                0x00000000       0x4c .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyWdtStart
+                0x00000000       0x40 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyWdtClear
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyVdStickyStatus
+                0x00000000       0x2c .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyVdLvDigitEnable
+                0x00000000       0x84 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyVdLvAnalogEnable
+                0x00000000       0x80 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyVdLvDigitDisable
+                0x00000000       0x30 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyVdLvAnalogDisable
+                0x00000000       0x28 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyVdHvAnalogEnable
+                0x00000000       0x54 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyVdHvAnalogDisable
+                0x00000000       0x20 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyVdRealTimeStatus
+                0x00000000       0x1c .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyDisableInts
+                0x00000000       0x1c .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyEnableInts
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyFlushCache
+                0x00000000       0x44 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyIntSetSysVector
+                0x00000000       0x28 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyIntGetSysVector
+                0x00000000       0x20 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyIntSetVector
+                0x00000000       0x28 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyIntGetVector
+                0x00000000       0x24 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyIntSetPriority
+                0x00000000       0x30 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyIntGetPriority
+                0x00000000       0x20 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyIntGetState
+                0x00000000       0x24 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CySysTickStop
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CySysTickEnableInterrupt
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CySysTickEnable
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CySysTickDisableInterrupt
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CySysTickSetReload
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CySysTickGetReload
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CySysTickGetValue
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CySysTickSetClockSource
+                0x00000000       0x20 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CySysTickGetClockSource
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CySysTickGetCountFlag
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CySysTickServiceCallbacks
+                0x00000000       0x28 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CySysTickClear
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CySysTickInit
+                0x00000000       0x58 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CySysTickStart
+                0x00000000       0x1c .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CySysTickSetCallback
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CySysTickGetCallback
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text.CyGetUniqueId
+                0x00000000       0x70 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(cyPm.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(cyPm.o)
+ .bss           0x00000000       0x43 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(cyPm.o)
+ .text.CyPmHibSlpSaveSet
+                0x00000000      0x1dc .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(cyPm.o)
+ .text.CyPmHibSlpRestore
+                0x00000000       0xd8 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(cyPm.o)
+ .text.CyPmHviLviSaveDisable
+                0x00000000       0xa0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(cyPm.o)
+ .text.CyPmHibSaveSet
+                0x00000000       0x98 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(cyPm.o)
+ .text.CyPmHviLviRestore
+                0x00000000       0x48 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(cyPm.o)
+ .text.CyPmHibRestore
+                0x00000000       0x60 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(cyPm.o)
+ .text.CyPmSaveClocks
+                0x00000000      0x218 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(cyPm.o)
+ .text.CyPmRestoreClocks
+                0x00000000      0x24c .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(cyPm.o)
+ .text.CyPmAltAct
+                0x00000000       0x6c .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(cyPm.o)
+ .text.CyPmSleep
+                0x00000000       0xf4 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(cyPm.o)
+ .text.CyPmHibernateEx
+                0x00000000       0xf4 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(cyPm.o)
+ .text.CyPmHibernate
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(cyPm.o)
+ .text.CyPmReadStatus
+                0x00000000       0x30 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(cyPm.o)
+ .text.CyPmCtwSetInterval
+                0x00000000       0x5c .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(cyPm.o)
+ .text.CyPmOppsSet
+                0x00000000       0x2c .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(cyPm.o)
+ .text.CyPmFtwSetInterval
+                0x00000000       0x5c .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(cyPm.o)
+ .rodata        0x00000000        0xf .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(cyPm.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A3.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A3.o)
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A3.o)
+ .text.A3_SetDriveMode
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A3.o)
+ .text.A3_Read  0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A3.o)
+ .text.A3_ReadDataReg
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A3.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A4.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A4.o)
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A4.o)
+ .text.A4_SetDriveMode
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A4.o)
+ .text.A4_Read  0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A4.o)
+ .text.A4_ReadDataReg
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A4.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B3.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B3.o)
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B3.o)
+ .text.B3_SetDriveMode
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B3.o)
+ .text.B3_Read  0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B3.o)
+ .text.B3_ReadDataReg
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B3.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B4.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B4.o)
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B4.o)
+ .text.B4_SetDriveMode
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B4.o)
+ .text.B4_Read  0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B4.o)
+ .text.B4_ReadDataReg
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B4.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyBootAsmGnu.o)
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyBootAsmGnu.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyFlash.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyFlash.o)
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyFlash.o)
+ .text.CyFlashGetSpcAlgorithm
+                0x00000000       0x4c .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyFlash.o)
+ .text.CySetTempInt
+                0x00000000       0x60 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyFlash.o)
+ .text.CyFlash_Start
+                0x00000000       0x54 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyFlash.o)
+ .text.CyFlash_Stop
+                0x00000000       0x24 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyFlash.o)
+ .text.CySetTemp
+                0x00000000       0x14 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyFlash.o)
+ .text.CySetFlashEEBuffer
+                0x00000000       0x20 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyFlash.o)
+ .text.CyWriteRowFull
+                0x00000000       0xf8 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyFlash.o)
+ .text.CyWriteRowData
+                0x00000000       0x14 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyFlash.o)
+ .text.CyFlash_SetWaitCycles
+                0x00000000       0x7c .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyFlash.o)
+ .text.CyEEPROM_Start
+                0x00000000       0x54 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyFlash.o)
+ .text.CyEEPROM_Stop
+                0x00000000       0x24 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyFlash.o)
+ .text.CyEEPROM_ReadReserve
+                0x00000000       0x1c .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyFlash.o)
+ .text.CyEEPROM_ReadRelease
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyFlash.o)
+ COMMON         0x00000000        0x2 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyFlash.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CySpc.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CySpc.o)
+ .bss           0x00000000        0x8 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CySpc.o)
+ .text.CySpcStart
+                0x00000000       0x24 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CySpc.o)
+ .text.CySpcStop
+                0x00000000       0x24 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CySpc.o)
+ .text.CySpcReadData
+                0x00000000       0x34 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CySpc.o)
+ .text.CySpcLoadMultiByte
+                0x00000000       0x78 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CySpc.o)
+ .text.CySpcLoadRow
+                0x00000000       0x50 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CySpc.o)
+ .text.CySpcLoadRowFull
+                0x00000000       0x80 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CySpc.o)
+ .text.CySpcWriteRow
+                0x00000000       0x4c .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CySpc.o)
+ .text.CySpcEraseSector
+                0x00000000       0x3c .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CySpc.o)
+ .text.CySpcGetTemp
+                0x00000000       0x3c .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CySpc.o)
+ .text.CySpcLock
+                0x00000000       0x4c .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CySpc.o)
+ .text.CySpcUnlock
+                0x00000000       0x38 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CySpc.o)
+ .text.CySpcGetAlgorithm
+                0x00000000       0x28 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CySpc.o)
+ .text          0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+ .data          0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+ .bss           0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+ .text          0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
+ .data          0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
+ .bss           0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
+ .text.exit     0x00000000       0x28 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
+ .text          0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
+ .data          0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
+ .bss           0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
+ .rodata._global_impure_ptr
+                0x00000000        0x4 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
+ .text          0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+ .data          0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+ .bss           0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+ .text          0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy-stub.o)
+ .data          0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy-stub.o)
+ .bss           0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy-stub.o)
+ .text          0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
+ .data          0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
+ .bss           0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
+ .text          0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtend.o
+ .data          0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtend.o
+ .bss           0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtend.o
+ .text          0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtn.o
+ .data          0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtn.o
+ .bss           0x00000000        0x0 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+rom              0x00000000         0x00040000         xr
+ram              0x1fff8000         0x00010000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crti.o
+LOAD d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+LOAD d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+START GROUP
+LOAD .\CortexM3\ARM_GCC_541\Debug\main.o
+LOAD .\CortexM3\ARM_GCC_541\Debug\stepperLeft.o
+LOAD .\CortexM3\ARM_GCC_541\Debug\stepperRight.o
+LOAD .\CortexM3\ARM_GCC_541\Debug\drive.o
+LOAD .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+LOAD .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+LOAD .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+LOAD .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a
+LOAD D:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_541\Debug\CyComponentLibrary.a
+END GROUP
+START GROUP
+LOAD d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a
+LOAD d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a
+LOAD d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc_nano.a
+END GROUP
+START GROUP
+LOAD d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a
+LOAD d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc_nano.a
+END GROUP
+LOAD d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtend.o
+LOAD d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtn.o
+START GROUP
+LOAD d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a
+LOAD d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a
+LOAD d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libnosys.a
+END GROUP
+                0x00000000                CY_APPL_ORIGIN = 0x0
+                0x00000100                CY_FLASH_ROW_SIZE = 0x100
+                0x00000020                CY_ECC_ROW_SIZE = 0x20
+                0x00000000                CY_EE_IN_BTLDR = 0x0
+                0x00000000                CY_APPL_LOADABLE = 0x0
+                0x00000800                CY_EE_SIZE = 0x800
+                0x00000001                CY_APPL_NUM = 0x1
+                0x00000001                CY_APPL_MAX = 0x1
+                0x00000040                CY_METADATA_SIZE = 0x40
+                0x00000000                CY_APPL_LOADABLE = 0x0
+                0x00000000                CY_CHECKSUM_EXCLUDE_SIZE = ALIGN (0x0, CY_FLASH_ROW_SIZE)
+                [!provide]                PROVIDE (__cy_heap_start, _end)
+                0x00000001                PROVIDE (__cy_region_num, ((__cy_regions_end - __cy_regions) / 0x10))
+                0x20008000                PROVIDE (__cy_stack, (ORIGIN (ram) + LENGTH (ram)))
+                [!provide]                PROVIDE (__cy_heap_end, (__cy_stack - 0x800))
+
+.cybootloader   0x00000000        0x0
+ *(.cybootloader)
+                0x00000000                appl1_start = CY_APPL_ORIGIN?CY_APPL_ORIGIN:ALIGN (CY_FLASH_ROW_SIZE)
+                0x0001ff00                appl2_start = (appl1_start + ALIGN ((((LENGTH (rom) - appl1_start) - (0x2 * CY_FLASH_ROW_SIZE)) / 0x2), CY_FLASH_ROW_SIZE))
+                0x00000000                appl_start = (CY_APPL_NUM == 0x1)?appl1_start:appl2_start
+                0x00000000                ecc_offset = ((appl_start / CY_FLASH_ROW_SIZE) * CY_ECC_ROW_SIZE)
+                0x00000000                ee_offset = (CY_APPL_LOADABLE && ! (CY_EE_IN_BTLDR))?((CY_EE_SIZE / CY_APPL_MAX) * (CY_APPL_NUM - 0x1)):0x0
+                0x00000800                ee_size = (CY_APPL_LOADABLE && ! (CY_EE_IN_BTLDR))?(CY_EE_SIZE / CY_APPL_MAX):CY_EE_SIZE
+                [!provide]                PROVIDE (CY_ECC_OFFSET, ecc_offset)
+
+.text           0x00000000      0xfde
+ CREATE_OBJECT_SYMBOLS
+                0x00000000                PROVIDE (__cy_interrupt_vector, RomVectors)
+ *(.romvectors)
+ .romvectors    0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                0x00000000                RomVectors
+                0x00000001                ASSERT ((. != __cy_interrupt_vector), No interrupt vector)
+                0x00000001                ASSERT (CY_APPL_ORIGIN?(SIZEOF (.cybootloader) <= CY_APPL_ORIGIN):0x1, Wrong image location)
+                0x00000010                PROVIDE (__cy_reset, Reset)
+ *(.text.Reset)
+ .text.Reset    0x00000010       0x18 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                0x00000010                Reset
+                0x00000001                ASSERT ((. != __cy_reset), No reset code)
+ *(.dma_init)
+                0x00000001                ASSERT ((((appl_start + .) <= 0x10000) || 0x1), DMA Init must be within the first 64k of flash)
+ *(.text .text.* .gnu.linkonce.t.*)
+ .text          0x00000028       0x5c d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+ .text.UART_1_Rx_Handler
+                0x00000084      0x1c4 .\CortexM3\ARM_GCC_541\Debug\main.o
+                0x00000084                UART_1_Rx_Handler
+ .text.main     0x00000248       0x38 .\CortexM3\ARM_GCC_541\Debug\main.o
+                0x00000248                main
+ .text.runForward
+                0x00000280      0x204 .\CortexM3\ARM_GCC_541\Debug\drive.o
+                0x00000280                runForward
+ .text.runBackward
+                0x00000484      0x204 .\CortexM3\ARM_GCC_541\Debug\drive.o
+                0x00000484                runBackward
+ .text.turnLeft
+                0x00000688      0x1d4 .\CortexM3\ARM_GCC_541\Debug\drive.o
+                0x00000688                turnLeft
+ .text.turnRight
+                0x0000085c      0x1d4 .\CortexM3\ARM_GCC_541\Debug\drive.o
+                0x0000085c                turnRight
+ .text.CyClockStartupError
+                0x00000a30        0x4 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .text.cfg_write_bytes32
+                0x00000a34       0x34 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .text.AnalogSetDefault
+                0x00000a68       0x28 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .text.CYMEMZERO
+                0x00000a90        0xc .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .text.ClockSetup
+                0x00000a9c       0xb8 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .text.CYCONFIGCPY
+                0x00000b54        0x8 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .text.cyfitter_cfg
+                0x00000b5c       0xf0 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x00000b5c                cyfitter_cfg
+ .text.IntDefaultHandler
+                0x00000c4c       0x10 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                0x00000c4c                IntDefaultHandler
+ .text.Start_c  0x00000c5c       0x4c .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                0x00000c5c                Start_c
+ .text.initialize_psoc
+                0x00000ca8       0x68 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                0x00000ca8                initialize_psoc
+ .text.A1_Write
+                0x00000d10       0x18 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A1.o)
+                0x00000d10                A1_Write
+ .text.A2_Write
+                0x00000d28       0x18 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A2.o)
+                0x00000d28                A2_Write
+ .text.B1_Write
+                0x00000d40       0x18 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B1.o)
+                0x00000d40                B1_Write
+ .text.B2_Write
+                0x00000d58       0x18 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B2.o)
+                0x00000d58                B2_Write
+ .text.UART_1_Init
+                0x00000d70       0x28 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1.o)
+                0x00000d70                UART_1_Init
+ .text.UART_1_Enable
+                0x00000d98       0x38 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1.o)
+                0x00000d98                UART_1_Enable
+ .text.UART_1_Start
+                0x00000dd0       0x1c .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1.o)
+                0x00000dd0                UART_1_Start
+ .text.UART_1_ReadRxData
+                0x00000dec        0xc .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1.o)
+                0x00000dec                UART_1_ReadRxData
+ .text.UART_1_WriteTxData
+                0x00000df8       0x14 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1.o)
+                0x00000df8                UART_1_WriteTxData
+ .text.UART_1_PutChar
+                0x00000e0c       0x18 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1.o)
+                0x00000e0c                UART_1_PutChar
+ .text.UART_1_PutString
+                0x00000e24       0x24 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1.o)
+                0x00000e24                UART_1_PutString
+ .text.isr_UART_1_RX_SetVector
+                0x00000e48        0xc .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(isr_UART_1_RX.o)
+                0x00000e48                isr_UART_1_RX_SetVector
+ .text.isr_UART_1_RX_SetPriority
+                0x00000e54       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(isr_UART_1_RX.o)
+                0x00000e54                isr_UART_1_RX_SetPriority
+ .text.isr_UART_1_RX_Enable
+                0x00000e64        0xc .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(isr_UART_1_RX.o)
+                0x00000e64                isr_UART_1_RX_Enable
+ .text.isr_UART_1_RX_Disable
+                0x00000e70        0xc .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(isr_UART_1_RX.o)
+                0x00000e70                isr_UART_1_RX_Disable
+ .text.isr_UART_1_RX_StartEx
+                0x00000e7c       0x1c .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(isr_UART_1_RX.o)
+                0x00000e7c                isr_UART_1_RX_StartEx
+ .text.LED_Write
+                0x00000e98       0x18 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(LED.o)
+                0x00000e98                LED_Write
+ .text.UART_1_IntClock_Start
+                0x00000eb0       0x1c .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1_IntClock.o)
+                0x00000eb0                UART_1_IntClock_Start
+ .text.CyDelayUs
+                0x00000ecc       0x14 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+                0x00000ecc                CyDelayUs
+ .text.A3_Write
+                0x00000ee0       0x18 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A3.o)
+                0x00000ee0                A3_Write
+ .text.A4_Write
+                0x00000ef8       0x18 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A4.o)
+                0x00000ef8                A4_Write
+ .text.B3_Write
+                0x00000f10       0x18 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B3.o)
+                0x00000f10                B3_Write
+ .text.B4_Write
+                0x00000f28       0x18 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B4.o)
+                0x00000f28                B4_Write
+ .text          0x00000f40       0x20 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyBootAsmGnu.o)
+                0x00000f40                CyDelayCycles
+                0x00000f50                CyEnterCriticalSection
+                0x00000f58                CyExitCriticalSection
+ .text.__errno  0x00000f60        0xc d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+                0x00000f60                __errno
+ .text.__libc_init_array
+                0x00000f6c       0x4c d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+                0x00000f6c                __libc_init_array
+ .text.memcpy   0x00000fb8       0x16 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy-stub.o)
+                0x00000fb8                memcpy
+ .text.memset   0x00000fce       0x10 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
+                0x00000fce                memset
+ *(.plt)
+ *(.gnu.warning)
+ *(.glue_7t)
+ .glue_7t       0x00000fde        0x0 linker stubs
+ *(.glue_7)
+ .glue_7        0x00000fde        0x0 linker stubs
+ *(.vfp11_veneer)
+ .vfp11_veneer  0x00000fde        0x0 linker stubs
+ *(.bootloader)
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+ *(.gcc_except_table)
+
+.v4_bx          0x00000fe0        0x0
+ .v4_bx         0x00000fe0        0x0 linker stubs
+
+.iplt           0x00000fe0        0x0
+ .iplt          0x00000fe0        0x0 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame       0x00000fe0        0x4
+ *(.eh_frame)
+ .eh_frame      0x00000fe0        0x0 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+ .eh_frame      0x00000fe0        0x4 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtend.o
+                [!provide]                PROVIDE (__exidx_start, .)
+
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x00000fe4                __exidx_end = .
+
+.rodata         0x00000fe4      0x334
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata.str1.4
+                0x00000fe4      0x2c8 .\CortexM3\ARM_GCC_541\Debug\main.o
+                                0x2c6 (size before relaxing)
+ .rodata        0x000012ac       0x30 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .rodata.str1.1
+                0x000012dc        0x2 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
+                0x000012e0                . = ALIGN (0x4)
+ *fill*         0x000012de        0x2 
+ *(.init)
+ .init          0x000012e0        0x4 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crti.o
+                0x000012e0                _init
+ .init          0x000012e4        0x8 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtn.o
+                0x000012ec                . = ALIGN (0x4)
+                0x000012ec                __preinit_array_start = .
+ *(.preinit_array)
+                0x000012ec                __preinit_array_end = .
+                0x000012ec                . = ALIGN (0x4)
+                0x000012ec                __init_array_start = .
+ *(SORT(.init_array.*))
+ *(.init_array)
+ .init_array    0x000012ec        0x4 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+ .init_array    0x000012f0        0x4 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                0x000012f4                __init_array_end = .
+                0x000012f4                . = ALIGN (0x4)
+ *(.fini)
+ .fini          0x000012f4        0x4 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crti.o
+                0x000012f4                _fini
+ .fini          0x000012f8        0x8 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtn.o
+                0x00001300                . = ALIGN (0x4)
+                0x00001300                __fini_array_start = .
+ *(.fini_array)
+ .fini_array    0x00001300        0x4 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+ *(SORT(.fini_array.*))
+                0x00001304                __fini_array_end = .
+                0x00001304                . = ALIGN (0x4)
+ *crtbegin.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *crtend.o(.ctors)
+                0x00001304                . = ALIGN (0x4)
+ *crtbegin.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *crtend.o(.dtors)
+                0x00001304                . = ALIGN (0x4)
+                0x00001304                __cy_regions = .
+                0x00001304        0x4 LONG 0x1318 __cy_region_init_ram
+                0x00001308        0x4 LONG 0x1fff80c8 __cy_region_start_data
+                0x0000130c        0x4 LONG 0x80 __cy_region_init_size_ram
+                0x00001310        0x4 LONG 0x30 __cy_region_zero_size_ram
+                0x00001314                __cy_regions_end = .
+                0x00001318                . = ALIGN (0x8)
+ *fill*         0x00001314        0x4 
+                0x00001318                _etext = .
+
+.cy_checksum_exclude
+                0x00001318        0x0
+ *(.cy_checksum_exclude)
+
+.ramvectors     0x1fff8000       0xc0
+                0x1fff8000                __cy_region_start_ram = .
+ *(.ramvectors)
+ .ramvectors    0x1fff8000       0xc0 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                0x1fff8000                CyRamVectors
+
+.noinit         0x1fff80c0        0x1
+ *(.noinit)
+ .noinit        0x1fff80c0        0x1 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+                0x1fff80c0                CyResetStatus
+
+.data           0x1fff80c8       0x80 load address 0x00001318
+                0x1fff80c8                __cy_region_start_data = .
+ *(.jcr)
+ .jcr           0x1fff80c8        0x0 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+ .jcr           0x1fff80c8        0x4 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtend.o
+ *(.got.plt)
+ *(.got)
+ *(.shdata)
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x1fff80cc        0x4 .\CortexM3\ARM_GCC_541\Debug\main.o
+                0x1fff80cc                hastighed
+ .data          0x1fff80d0       0x10 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+                0x1fff80d0                cydelay_32k_ms
+                0x1fff80d4                cydelay_freq_khz
+                0x1fff80d8                cydelay_freq_mhz
+                0x1fff80dc                cydelay_freq_hz
+ .data.impure_data
+                0x1fff80e0       0x60 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
+ .data._impure_ptr
+                0x1fff8140        0x4 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
+                0x1fff8140                _impure_ptr
+                0x1fff8148                . = ALIGN (0x8)
+ *fill*         0x1fff8144        0x4 
+ *(.ram)
+                0x1fff8148                _edata = .
+
+.igot.plt       0x1fff8148        0x0 load address 0x00001398
+ .igot.plt      0x1fff8148        0x0 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+
+.bss            0x1fff8148       0x30 load address 0x00001398
+                0x1fff8148                PROVIDE (__bss_start__, .)
+ *(.shbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x1fff8148       0x1c d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+ .bss           0x1fff8164        0xe .\CortexM3\ARM_GCC_541\Debug\main.o
+                0x1fff8164                status
+                0x1fff8168                stepMode
+                0x1fff816c                step
+                0x1fff8170                x
+                0x1fff8171                ledStatus
+ .bss           0x1fff8172        0x2 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1.o)
+                0x1fff8172                UART_1_initVar
+ *(COMMON)
+                0x1fff8178                . = ALIGN (0x8)
+ *fill*         0x1fff8174        0x4 
+ *(.ram.b)
+                0x1fff8178                _end = .
+                0x1fff8178                __end = .
+                0x1fff8178                PROVIDE (end, .)
+                0x1fff8178                PROVIDE (__bss_end__, .)
+                0x00001318                __cy_region_init_ram = LOADADDR (.data)
+                0x00000080                __cy_region_init_size_ram = (_edata - ADDR (.data))
+                0x00000030                __cy_region_zero_size_ram = (_end - _edata)
+
+.heap           0x1fff8178       0x80 load address 0x00001398
+                0x1fff8178                . = _end
+                0x1fff81f8                . = (. + 0x80)
+ *fill*         0x1fff8178       0x80 
+                0x1fff81f8                __cy_heap_limit = .
+
+.stack          0x20007800      0x800
+                0x20007800                __cy_stack_limit = .
+                0x20008000                . = (. + 0x800)
+ *fill*         0x20007800      0x800 
+                0x00000001                ASSERT ((__cy_stack_limit >= __cy_heap_limit), region RAM overflowed with stack)
+                0x00000000                cy_checksum_exclude_size = (CY_APPL_LOADABLE == 0x1)?SIZEOF (.cy_checksum_exclude):0x0
+                0x00000001                ASSERT ((cy_checksum_exclude_size <= CY_CHECKSUM_EXCLUDE_SIZE), CY_BOOT: Section .cy_checksum_exclude size exceedes specified limit.)
+
+.cyloadermeta
+ *(.cyloadermeta)
+
+.cyloadablemeta
+ *(.cyloadablemeta)
+
+.cyconfigecc    0x80000000      0x3c8
+ *(.cyconfigecc)
+ .cyconfigecc   0x80000000      0x3c8 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+                0x80000000                cy_meta_configecc
+
+.cycustnvl      0x90000000        0x4
+ *(.cycustnvl)
+ .cycustnvl     0x90000000        0x4 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+                0x90000000                cy_meta_custnvl
+
+.cywolatch      0x90100000        0x4
+ *(.cywolatch)
+ .cywolatch     0x90100000        0x4 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+                0x90100000                cy_meta_wonvl
+
+.cyeeprom       0x90200000        0x0
+ *(.cyeeprom)
+                0x00000001                ASSERT ((. <= ((0x90200000 + ee_offset) + ee_size)), .cyeeprom data will not fit in EEPROM)
+
+.cyflashprotect
+                0x90400000      0x100
+ *(.cyflashprotect)
+ .cyflashprotect
+                0x90400000      0x100 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+                0x90400000                cy_meta_flashprotect
+
+.cymeta         0x90500000        0xc
+ *(.cymeta)
+ .cymeta        0x90500000        0xc .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+                0x90500000                cy_metadata
+
+.rel.dyn        0x00001398        0x0 load address 0x9050000c
+ .rel.iplt      0x00001398        0x0 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x990
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x28 .\CortexM3\ARM_GCC_541\Debug\main.o
+ .debug_aranges
+                0x00000028       0x28 .\CortexM3\ARM_GCC_541\Debug\stepperLeft.o
+ .debug_aranges
+                0x00000050       0x28 .\CortexM3\ARM_GCC_541\Debug\stepperRight.o
+ .debug_aranges
+                0x00000078       0x38 .\CortexM3\ARM_GCC_541\Debug\drive.o
+ .debug_aranges
+                0x000000b0       0x58 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_aranges
+                0x00000108       0x18 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .debug_aranges
+                0x00000120       0x48 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_aranges
+                0x00000168       0x38 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A1.o)
+ .debug_aranges
+                0x000001a0       0x38 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A2.o)
+ .debug_aranges
+                0x000001d8       0x38 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B1.o)
+ .debug_aranges
+                0x00000210       0x38 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B2.o)
+ .debug_aranges
+                0x00000248       0xf0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1.o)
+ .debug_aranges
+                0x00000338       0x80 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(isr_UART_1_RX.o)
+ .debug_aranges
+                0x000003b8       0x38 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(LED.o)
+ .debug_aranges
+                0x000003f0       0x70 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1_IntClock.o)
+ .debug_aranges
+                0x00000460      0x2a0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .debug_aranges
+                0x00000700       0x98 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(cyPm.o)
+ .debug_aranges
+                0x00000798       0x38 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A3.o)
+ .debug_aranges
+                0x000007d0       0x38 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A4.o)
+ .debug_aranges
+                0x00000808       0x38 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B3.o)
+ .debug_aranges
+                0x00000840       0x38 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B4.o)
+ .debug_aranges
+                0x00000878       0x20 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyBootAsmGnu.o)
+ .debug_aranges
+                0x00000898       0x80 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyFlash.o)
+ .debug_aranges
+                0x00000918       0x78 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CySpc.o)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000     0x7826
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000      0x4c9 .\CortexM3\ARM_GCC_541\Debug\main.o
+ .debug_info    0x000004c9      0x7f4 .\CortexM3\ARM_GCC_541\Debug\stepperLeft.o
+ .debug_info    0x00000cbd      0x7f4 .\CortexM3\ARM_GCC_541\Debug\stepperRight.o
+ .debug_info    0x000014b1     0x1b7a .\CortexM3\ARM_GCC_541\Debug\drive.o
+ .debug_info    0x0000302b      0x4c9 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_info    0x000034f4      0x135 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .debug_info    0x00003629      0x3bb .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_info    0x000039e4      0x11f .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A1.o)
+ .debug_info    0x00003b03      0x11f .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A2.o)
+ .debug_info    0x00003c22      0x11f .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B1.o)
+ .debug_info    0x00003d41      0x11f .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B2.o)
+ .debug_info    0x00003e60      0x60c .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1.o)
+ .debug_info    0x0000446c      0x2d2 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(isr_UART_1_RX.o)
+ .debug_info    0x0000473e      0x11f .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(LED.o)
+ .debug_info    0x0000485d      0x283 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1_IntClock.o)
+ .debug_info    0x00004ae0     0x1374 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .debug_info    0x00005e54      0xa2a .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(cyPm.o)
+ .debug_info    0x0000687e      0x11f .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A3.o)
+ .debug_info    0x0000699d      0x11f .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A4.o)
+ .debug_info    0x00006abc      0x11f .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B3.o)
+ .debug_info    0x00006bdb      0x11f .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B4.o)
+ .debug_info    0x00006cfa       0x8b .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyBootAsmGnu.o)
+ .debug_info    0x00006d85      0x5b8 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyFlash.o)
+ .debug_info    0x0000733d      0x4e9 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CySpc.o)
+
+.debug_abbrev   0x00000000     0x1833
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x127 .\CortexM3\ARM_GCC_541\Debug\main.o
+ .debug_abbrev  0x00000127       0xc1 .\CortexM3\ARM_GCC_541\Debug\stepperLeft.o
+ .debug_abbrev  0x000001e8       0xc1 .\CortexM3\ARM_GCC_541\Debug\stepperRight.o
+ .debug_abbrev  0x000002a9       0xce .\CortexM3\ARM_GCC_541\Debug\drive.o
+ .debug_abbrev  0x00000377      0x1fe .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_abbrev  0x00000575       0x66 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .debug_abbrev  0x000005db      0x1e8 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_abbrev  0x000007c3       0x90 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A1.o)
+ .debug_abbrev  0x00000853       0x90 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A2.o)
+ .debug_abbrev  0x000008e3       0x90 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B1.o)
+ .debug_abbrev  0x00000973       0x90 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B2.o)
+ .debug_abbrev  0x00000a03      0x175 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1.o)
+ .debug_abbrev  0x00000b78      0x173 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(isr_UART_1_RX.o)
+ .debug_abbrev  0x00000ceb       0x90 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(LED.o)
+ .debug_abbrev  0x00000d7b      0x139 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1_IntClock.o)
+ .debug_abbrev  0x00000eb4      0x254 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .debug_abbrev  0x00001108      0x1ab .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(cyPm.o)
+ .debug_abbrev  0x000012b3       0x90 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A3.o)
+ .debug_abbrev  0x00001343       0x90 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A4.o)
+ .debug_abbrev  0x000013d3       0x90 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B3.o)
+ .debug_abbrev  0x00001463       0x90 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B4.o)
+ .debug_abbrev  0x000014f3       0x14 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyBootAsmGnu.o)
+ .debug_abbrev  0x00001507      0x198 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyFlash.o)
+ .debug_abbrev  0x0000169f      0x194 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CySpc.o)
+
+.debug_line     0x00000000     0x2978
+ *(.debug_line)
+ .debug_line    0x00000000      0x1f8 .\CortexM3\ARM_GCC_541\Debug\main.o
+ .debug_line    0x000001f8       0xa3 .\CortexM3\ARM_GCC_541\Debug\stepperLeft.o
+ .debug_line    0x0000029b       0xa4 .\CortexM3\ARM_GCC_541\Debug\stepperRight.o
+ .debug_line    0x0000033f      0x665 .\CortexM3\ARM_GCC_541\Debug\drive.o
+ .debug_line    0x000009a4      0x1d7 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_line    0x00000b7b      0x141 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .debug_line    0x00000cbc      0x234 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_line    0x00000ef0       0x8f .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A1.o)
+ .debug_line    0x00000f7f       0x8f .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A2.o)
+ .debug_line    0x0000100e       0x8f .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B1.o)
+ .debug_line    0x0000109d       0x8f .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B2.o)
+ .debug_line    0x0000112c      0x2c0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1.o)
+ .debug_line    0x000013ec      0x13a .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(isr_UART_1_RX.o)
+ .debug_line    0x00001526       0x90 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(LED.o)
+ .debug_line    0x000015b6      0x17e .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1_IntClock.o)
+ .debug_line    0x00001734      0x816 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .debug_line    0x00001f4a      0x367 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(cyPm.o)
+ .debug_line    0x000022b1       0x8f .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A3.o)
+ .debug_line    0x00002340       0x8f .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A4.o)
+ .debug_line    0x000023cf       0x8f .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B3.o)
+ .debug_line    0x0000245e       0x8f .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B4.o)
+ .debug_line    0x000024ed       0x66 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyBootAsmGnu.o)
+ .debug_line    0x00002553      0x1e9 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyFlash.o)
+ .debug_line    0x0000273c      0x23c .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CySpc.o)
+
+.debug_frame    0x00000000     0x16b8
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x48 .\CortexM3\ARM_GCC_541\Debug\main.o
+ .debug_frame   0x00000048       0x48 .\CortexM3\ARM_GCC_541\Debug\stepperLeft.o
+ .debug_frame   0x00000090       0x48 .\CortexM3\ARM_GCC_541\Debug\stepperRight.o
+ .debug_frame   0x000000d8       0x80 .\CortexM3\ARM_GCC_541\Debug\drive.o
+ .debug_frame   0x00000158       0xe4 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_frame   0x0000023c       0xb8 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_frame   0x000002f4       0x50 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A1.o)
+ .debug_frame   0x00000344       0x50 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A2.o)
+ .debug_frame   0x00000394       0x50 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B1.o)
+ .debug_frame   0x000003e4       0x50 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B2.o)
+ .debug_frame   0x00000434      0x250 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1.o)
+ .debug_frame   0x00000684      0x104 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(isr_UART_1_RX.o)
+ .debug_frame   0x00000788       0x50 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(LED.o)
+ .debug_frame   0x000007d8       0xe0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1_IntClock.o)
+ .debug_frame   0x000008b8      0x738 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .debug_frame   0x00000ff0      0x1f8 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(cyPm.o)
+ .debug_frame   0x000011e8       0x50 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A3.o)
+ .debug_frame   0x00001238       0x50 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A4.o)
+ .debug_frame   0x00001288       0x50 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B3.o)
+ .debug_frame   0x000012d8       0x50 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B4.o)
+ .debug_frame   0x00001328      0x174 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyFlash.o)
+ .debug_frame   0x0000149c      0x160 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CySpc.o)
+ .debug_frame   0x000015fc       0x20 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+ .debug_frame   0x0000161c       0x28 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
+ .debug_frame   0x00001644       0x2c d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+ .debug_frame   0x00001670       0x28 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x00001698       0x20 d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
+
+.debug_str      0x00000000     0x1c5c
+ *(.debug_str)
+ .debug_str     0x00000000      0x274 .\CortexM3\ARM_GCC_541\Debug\main.o
+                                0x2cb (size before relaxing)
+ .debug_str     0x00000274       0x52 .\CortexM3\ARM_GCC_541\Debug\stepperLeft.o
+                                0x161 (size before relaxing)
+ .debug_str     0x000002c6       0x4b .\CortexM3\ARM_GCC_541\Debug\stepperRight.o
+                                0x164 (size before relaxing)
+ .debug_str     0x00000311        0x8 .\CortexM3\ARM_GCC_541\Debug\drive.o
+                                0x182 (size before relaxing)
+ .debug_str     0x00000319      0x181 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                                0x33d (size before relaxing)
+ .debug_str     0x0000049a       0xb2 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+                                0x1df (size before relaxing)
+ .debug_str     0x0000054c      0x144 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                                0x338 (size before relaxing)
+ .debug_str     0x00000690       0x53 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A1.o)
+                                0x201 (size before relaxing)
+ .debug_str     0x000006e3       0x43 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A2.o)
+                                0x201 (size before relaxing)
+ .debug_str     0x00000726       0x43 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B1.o)
+                                0x201 (size before relaxing)
+ .debug_str     0x00000769       0x43 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B2.o)
+                                0x201 (size before relaxing)
+ .debug_str     0x000007ac      0x2c1 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1.o)
+                                0x4e1 (size before relaxing)
+ .debug_str     0x00000a6d      0x158 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(isr_UART_1_RX.o)
+                                0x344 (size before relaxing)
+ .debug_str     0x00000bc5       0x47 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(LED.o)
+                                0x206 (size before relaxing)
+ .debug_str     0x00000c0c      0x19d .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1_IntClock.o)
+                                0x37c (size before relaxing)
+ .debug_str     0x00000da9      0x7fa .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+                                0xa75 (size before relaxing)
+ .debug_str     0x000015a3      0x365 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(cyPm.o)
+                                0x761 (size before relaxing)
+ .debug_str     0x00001908       0x43 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A3.o)
+                                0x201 (size before relaxing)
+ .debug_str     0x0000194b       0x43 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A4.o)
+                                0x201 (size before relaxing)
+ .debug_str     0x0000198e       0x43 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B3.o)
+                                0x201 (size before relaxing)
+ .debug_str     0x000019d1       0x43 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B4.o)
+                                0x201 (size before relaxing)
+ .debug_str     0x00001a14      0x19c .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyFlash.o)
+                                0x3cf (size before relaxing)
+ .debug_str     0x00001bb0       0xac .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CySpc.o)
+                                0x358 (size before relaxing)
+
+.debug_loc      0x00000000     0x1fe6
+ *(.debug_loc)
+ .debug_loc     0x00000000       0x13 .\CortexM3\ARM_GCC_541\Debug\main.o
+ .debug_loc     0x00000013       0x6e .\CortexM3\ARM_GCC_541\Debug\stepperLeft.o
+ .debug_loc     0x00000081       0x6e .\CortexM3\ARM_GCC_541\Debug\stepperRight.o
+ .debug_loc     0x000000ef       0x7c .\CortexM3\ARM_GCC_541\Debug\drive.o
+ .debug_loc     0x0000016b      0x1d7 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_loc     0x00000342      0x144 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_loc     0x00000486       0x42 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A1.o)
+ .debug_loc     0x000004c8       0x42 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A2.o)
+ .debug_loc     0x0000050a       0x42 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B1.o)
+ .debug_loc     0x0000054c       0x42 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B2.o)
+ .debug_loc     0x0000058e      0x258 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1.o)
+ .debug_loc     0x000007e6       0x56 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(isr_UART_1_RX.o)
+ .debug_loc     0x0000083c       0x42 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(LED.o)
+ .debug_loc     0x0000087e      0x12c .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1_IntClock.o)
+ .debug_loc     0x000009aa      0xa11 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .debug_loc     0x000013bb      0x1e4 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(cyPm.o)
+ .debug_loc     0x0000159f       0x42 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A3.o)
+ .debug_loc     0x000015e1       0x42 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A4.o)
+ .debug_loc     0x00001623       0x42 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B3.o)
+ .debug_loc     0x00001665       0x42 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B4.o)
+ .debug_loc     0x000016a7      0x2f2 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyFlash.o)
+ .debug_loc     0x00001999      0x64d .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CySpc.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_ranges   0x00000000      0x7f8
+ *(.debug_ranges)
+ .debug_ranges  0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\main.o
+ .debug_ranges  0x00000018       0x18 .\CortexM3\ARM_GCC_541\Debug\stepperLeft.o
+ .debug_ranges  0x00000030       0x18 .\CortexM3\ARM_GCC_541\Debug\stepperRight.o
+ .debug_ranges  0x00000048       0x28 .\CortexM3\ARM_GCC_541\Debug\drive.o
+ .debug_ranges  0x00000070       0x48 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_ranges  0x000000b8       0x38 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_ranges  0x000000f0       0x28 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A1.o)
+ .debug_ranges  0x00000118       0x28 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A2.o)
+ .debug_ranges  0x00000140       0x28 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B1.o)
+ .debug_ranges  0x00000168       0x28 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B2.o)
+ .debug_ranges  0x00000190       0xe0 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1.o)
+ .debug_ranges  0x00000270       0x70 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(isr_UART_1_RX.o)
+ .debug_ranges  0x000002e0       0x28 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(LED.o)
+ .debug_ranges  0x00000308       0x60 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1_IntClock.o)
+ .debug_ranges  0x00000368      0x290 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .debug_ranges  0x000005f8       0x88 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(cyPm.o)
+ .debug_ranges  0x00000680       0x28 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A3.o)
+ .debug_ranges  0x000006a8       0x28 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A4.o)
+ .debug_ranges  0x000006d0       0x28 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B3.o)
+ .debug_ranges  0x000006f8       0x28 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B4.o)
+ .debug_ranges  0x00000720       0x70 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyFlash.o)
+ .debug_ranges  0x00000790       0x68 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CySpc.o)
+
+.comment        0x00000000       0x6e
+ .comment       0x00000000       0x6e .\CortexM3\ARM_GCC_541\Debug\main.o
+                                 0x6f (size before relaxing)
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\stepperLeft.o
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\stepperRight.o
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\drive.o
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A1.o)
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A2.o)
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B1.o)
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B2.o)
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1.o)
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(isr_UART_1_RX.o)
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(LED.o)
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1_IntClock.o)
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(cyPm.o)
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A3.o)
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A4.o)
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B3.o)
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B4.o)
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyFlash.o)
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CySpc.o)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+
+.ARM.attributes
+                0x00000000       0x29
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x1d d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crti.o
+ .ARM.attributes
+                0x0000001d       0x2d d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+ .ARM.attributes
+                0x0000004a       0x1b d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+ .ARM.attributes
+                0x00000065       0x33 .\CortexM3\ARM_GCC_541\Debug\main.o
+ .ARM.attributes
+                0x00000098       0x33 .\CortexM3\ARM_GCC_541\Debug\stepperLeft.o
+ .ARM.attributes
+                0x000000cb       0x33 .\CortexM3\ARM_GCC_541\Debug\stepperRight.o
+ .ARM.attributes
+                0x000000fe       0x33 .\CortexM3\ARM_GCC_541\Debug\drive.o
+ .ARM.attributes
+                0x00000131       0x33 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .ARM.attributes
+                0x00000164       0x33 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .ARM.attributes
+                0x00000197       0x33 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .ARM.attributes
+                0x000001ca       0x33 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A1.o)
+ .ARM.attributes
+                0x000001fd       0x33 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A2.o)
+ .ARM.attributes
+                0x00000230       0x33 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B1.o)
+ .ARM.attributes
+                0x00000263       0x33 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B2.o)
+ .ARM.attributes
+                0x00000296       0x33 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1.o)
+ .ARM.attributes
+                0x000002c9       0x33 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(isr_UART_1_RX.o)
+ .ARM.attributes
+                0x000002fc       0x33 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(LED.o)
+ .ARM.attributes
+                0x0000032f       0x33 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(UART_1_IntClock.o)
+ .ARM.attributes
+                0x00000362       0x33 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyLib.o)
+ .ARM.attributes
+                0x00000395       0x33 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(cyPm.o)
+ .ARM.attributes
+                0x000003c8       0x33 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A3.o)
+ .ARM.attributes
+                0x000003fb       0x33 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(A4.o)
+ .ARM.attributes
+                0x0000042e       0x33 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B3.o)
+ .ARM.attributes
+                0x00000461       0x33 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(B4.o)
+ .ARM.attributes
+                0x00000494       0x21 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyBootAsmGnu.o)
+ .ARM.attributes
+                0x000004b5       0x33 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CyFlash.o)
+ .ARM.attributes
+                0x000004e8       0x33 .\CortexM3\ARM_GCC_541\Debug\StepperForkortet.a(CySpc.o)
+ .ARM.attributes
+                0x0000051b       0x2d d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+ .ARM.attributes
+                0x00000548       0x2d d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
+ .ARM.attributes
+                0x00000575       0x2d d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
+ .ARM.attributes
+                0x000005a2       0x2d d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+ .ARM.attributes
+                0x000005cf       0x2d d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy-stub.o)
+ .ARM.attributes
+                0x000005fc       0x2d d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
+ .ARM.attributes
+                0x00000629       0x2d d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtend.o
+ .ARM.attributes
+                0x00000656       0x1d d:/program files (x86)/cypress/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtn.o
+
+/DISCARD/
+ *(.note.GNU-stack)
+OUTPUT(F:\Google Drive\Aarhus Universitet\Trejde Semester\E3PRJ3\Dokumenter\AndreasAHN\Software\StepperForkortet.cydsn\CortexM3\ARM_GCC_541\Debug\StepperForkortet.elf elf32-littlearm)

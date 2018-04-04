@@ -1,0 +1,6 @@
+D:\Google Drive\Aarhus Universitet\Trejde Semester\E3PRJ3\Dokumenter\AndreasAHN\Software\StepperForkortet.cydsn\StepperForkortet.cyprj|d8605410-e062-4d61-b7b2-7f5483af99a0
+D:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|18d0af51-de69-43e1-9762-28b83e7593f2
+D:\Users\andre\Documents\PSoC Creator\4.1\Downloads ( 4.1).cylib\Downloads ( 4.1).cyprj|cdf1a401-a8aa-4843-bf66-aec49f65c19f
+D:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|089acc9b-c5b8-4a1e-8a97-82a8caa2a0aa
+D:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|527356d5-988a-47bd-ae9f-9ddbbcb7145d
+D:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|5477904f-4031-4383-b6b8-1827d5603c76

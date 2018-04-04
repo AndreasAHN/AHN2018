@@ -1,0 +1,8 @@
+﻿  Musik.cpp
+  FremStart.cpp
+  Driver.cpp
+f:\dropbox\aarhusuni\andet 2016\bil\bil\bil\driver.cpp(12): error C3861: 'Lightsensor': identifier not found
+f:\dropbox\aarhusuni\andet 2016\bil\bil\bil\driver.cpp(30): error C3861: 'Drejhøjre': identifier not found
+f:\dropbox\aarhusuni\andet 2016\bil\bil\bil\driver.cpp(36): error C3861: 'Drejvenstre': identifier not found
+f:\dropbox\aarhusuni\andet 2016\bil\bil\bil\driver.cpp(11): fatal error C1075: the left brace '{' was unmatched at the end of the file
+  Generating Code...
