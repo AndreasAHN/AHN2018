@@ -1,6 +1,6 @@
 (DELAYFILE
  (SDFVERSION "IEEE 1497 4.0")
- (DATE "2017-10-02T23:59:34Z")
+ (DATE "2017-09-14T06:45:53Z")
  (DESIGN "Stepper")
  (VENDOR "Cypress Semiconductor")
  (PROGRAM "PSoC Creator")
@@ -180,10 +180,6 @@
     (INTERCONNECT Tx_1\(0\).pad_out Tx_1\(0\)_PAD (0.000:0.000:0.000))
     (INTERCONNECT Tx_1\(0\)_PAD Tx_1\(0\).pad_in (0.000:0.000:0.000))
     (INTERCONNECT LED\(0\)_PAD LED\(0\).pad_in (0.000:0.000:0.000))
-    (INTERCONNECT A3\(0\)_PAD A3\(0\).pad_in (0.000:0.000:0.000))
-    (INTERCONNECT A4\(0\)_PAD A4\(0\).pad_in (0.000:0.000:0.000))
-    (INTERCONNECT B3\(0\)_PAD B3\(0\).pad_in (0.000:0.000:0.000))
-    (INTERCONNECT B4\(0\)_PAD B4\(0\).pad_in (0.000:0.000:0.000))
    )
   )
  )

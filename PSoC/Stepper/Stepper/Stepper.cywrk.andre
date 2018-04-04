@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Stepper\Stepper\Source Files\stepperLeft.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Stepper\Stepper\Source Files\main.c">
 <ExpandedNodeIds>
 <v>Stepper</v>
 <v>Stepper\Stepper</v>
@@ -30,14 +30,8 @@
 <v>Stepper\Stepper\Stepper.cydwr\EEPROM</v>
 <v>Stepper\Stepper\Header Files</v>
 <v>Stepper\Stepper\Header Files\cyapicallbacks.h</v>
-<v>Stepper\Stepper\Header Files\drive.h</v>
-<v>Stepper\Stepper\Header Files\stepperLeft.h</v>
-<v>Stepper\Stepper\Header Files\stepperRight.h</v>
 <v>Stepper\Stepper\Source Files</v>
-<v>Stepper\Stepper\Source Files\drive.c</v>
 <v>Stepper\Stepper\Source Files\main.c</v>
-<v>Stepper\Stepper\Source Files\stepperLeft.c</v>
-<v>Stepper\Stepper\Source Files\stepperRight.c</v>
 <v>Stepper\Stepper\Generated_Source</v>
 <v>Stepper\Stepper\Generated_Source\PSoC5</v>
 </ExpandedNodeIds>
@@ -57,24 +51,14 @@
 <v>Stepper\Stepper\Stepper.cydwr\EEPROM</v>
 <v>Stepper\Stepper\Header Files</v>
 <v>Stepper\Stepper\Header Files\cyapicallbacks.h</v>
-<v>Stepper\Stepper\Header Files\drive.h</v>
-<v>Stepper\Stepper\Header Files\stepperLeft.h</v>
-<v>Stepper\Stepper\Header Files\stepperRight.h</v>
 <v>Stepper\Stepper\Source Files</v>
-<v>Stepper\Stepper\Source Files\drive.c</v>
 <v>Stepper\Stepper\Source Files\main.c</v>
-<v>Stepper\Stepper\Source Files\stepperLeft.c</v>
-<v>Stepper\Stepper\Source Files\stepperRight.c</v>
 <v>Stepper\Stepper\Generated_Source</v>
 <v>Stepper\Stepper\Generated_Source\PSoC5</v>
 <v>Stepper\Stepper\Generated_Source\PSoC5\A1</v>
 <v>Stepper\Stepper\Generated_Source\PSoC5\A2</v>
-<v>Stepper\Stepper\Generated_Source\PSoC5\A3</v>
-<v>Stepper\Stepper\Generated_Source\PSoC5\A4</v>
 <v>Stepper\Stepper\Generated_Source\PSoC5\B1</v>
 <v>Stepper\Stepper\Generated_Source\PSoC5\B2</v>
-<v>Stepper\Stepper\Generated_Source\PSoC5\B3</v>
-<v>Stepper\Stepper\Generated_Source\PSoC5\B4</v>
 <v>Stepper\Stepper\Generated_Source\PSoC5\cy_boot</v>
 <v>Stepper\Stepper\Generated_Source\PSoC5\isr_UART_1_RX</v>
 <v>Stepper\Stepper\Generated_Source\PSoC5\LED</v>
@@ -126,12 +110,8 @@
 <v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
 <v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\A1.lst</v>
 <v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\A2.lst</v>
-<v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\A3.lst</v>
-<v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\A4.lst</v>
 <v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\B1.lst</v>
 <v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\B2.lst</v>
-<v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\B3.lst</v>
-<v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\B4.lst</v>
 <v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
 <v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
 <v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
@@ -142,12 +122,9 @@
 <v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
 <v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
 <v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
-<v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\drive.lst</v>
 <v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_UART_1_RX.lst</v>
 <v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\LED.lst</v>
 <v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
-<v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\stepperLeft.lst</v>
-<v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\stepperRight.lst</v>
 <v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1.lst</v>
 <v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_BOOT.lst</v>
 <v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_INT.lst</v>
@@ -169,12 +146,8 @@
 <v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
 <v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\A1.lst</v>
 <v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\A2.lst</v>
-<v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\A3.lst</v>
-<v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\A4.lst</v>
 <v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\B1.lst</v>
 <v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\B2.lst</v>
-<v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\B3.lst</v>
-<v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\B4.lst</v>
 <v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
 <v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
 <v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
@@ -185,12 +158,9 @@
 <v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
 <v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
 <v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
-<v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\drive.lst</v>
 <v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_UART_1_RX.lst</v>
 <v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\LED.lst</v>
 <v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
-<v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\stepperLeft.lst</v>
-<v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\stepperRight.lst</v>
 <v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1.lst</v>
 <v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_BOOT.lst</v>
 <v>Stepper\Stepper\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_INT.lst</v>
@@ -242,7 +212,8 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
-<name v=".\Stepper.cydsn\stepperLeft.c" />
+<name v=".\Stepper.cydsn\Stepper.cydwr" />
+<name v=".\Stepper.cydsn\main.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -250,7 +221,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Vertical"><TabbedMdiContainer Size="2224, 1039" SelectedTabbedMdiWindow="be3cde2f-3096-40df-9bc4-1925466709ff"><DocumentWindow Key="D:\Dropbox\AarhusUNI\Andet2017\Stepper\Stepper\Stepper.cydsn\stepperLeft.c" Guid="be3cde2f-3096-40df-9bc4-1925466709ff" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Vertical"><TabbedMdiContainer Size="715, 688" SelectedTabbedMdiWindow="af2a39e8-db0c-42dc-8f9a-e7f98e219260"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="97c89940-716e-4d86-a5d2-005371f86242" /><DocumentWindow Key="D:\Google Drive\Aarhus Universitet\Trejde Semester\Graenseflader til den fysiske verden\Stepper\Stepper\Stepper.cydsn\Stepper.cydwr" Guid="37b8048a-9b67-404b-89f0-6ba367cc4bda" /><DocumentWindow Key="D:\Google Drive\Aarhus Universitet\Trejde Semester\Graenseflader til den fysiske verden\Stepper\Stepper\Stepper.cydsn\main.c" Guid="af2a39e8-db0c-42dc-8f9a-e7f98e219260" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

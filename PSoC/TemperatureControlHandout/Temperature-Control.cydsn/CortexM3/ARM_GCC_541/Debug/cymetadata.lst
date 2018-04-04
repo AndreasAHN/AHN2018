@@ -1,0 +1,2667 @@
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"cymetadata.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.global	cy_metadata
+  20              		.global	cy_meta_flashprotect
+  21              		.global	cy_meta_wonvl
+  22              		.global	cy_meta_custnvl
+  23              		.global	cy_meta_configecc
+  24              		.section	.cyconfigecc,"a",%progbits
+  25              		.align	2
+  26              		.type	cy_meta_configecc, %object
+  27              		.size	cy_meta_configecc, 2048
+  28              	cy_meta_configecc:
+  29 0000 01       		.byte	1
+  30 0001 52       		.byte	82
+  31 0002 00       		.byte	0
+  32 0003 40       		.byte	64
+  33 0004 03       		.byte	3
+  34 0005 64       		.byte	100
+  35 0006 00       		.byte	0
+  36 0007 40       		.byte	64
+  37 0008 03       		.byte	3
+  38 0009 65       		.byte	101
+  39 000a 00       		.byte	0
+  40 000b 40       		.byte	64
+  41 000c 4F       		.byte	79
+  42 000d 00       		.byte	0
+  43 000e 01       		.byte	1
+  44 000f 40       		.byte	64
+  45 0010 32       		.byte	50
+  46 0011 01       		.byte	1
+  47 0012 01       		.byte	1
+  48 0013 40       		.byte	64
+  49 0014 15       		.byte	21
+  50 0015 02       		.byte	2
+  51 0016 01       		.byte	1
+  52 0017 40       		.byte	64
+  53 0018 3B       		.byte	59
+  54 0019 03       		.byte	3
+  55 001a 01       		.byte	1
+  56 001b 40       		.byte	64
+  57 001c 5F       		.byte	95
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 2
+
+
+  58 001d 04       		.byte	4
+  59 001e 01       		.byte	1
+  60 001f 40       		.byte	64
+  61 0020 36       		.byte	54
+  62 0021 05       		.byte	5
+  63 0022 01       		.byte	1
+  64 0023 40       		.byte	64
+  65 0024 4B       		.byte	75
+  66 0025 06       		.byte	6
+  67 0026 01       		.byte	1
+  68 0027 40       		.byte	64
+  69 0028 3E       		.byte	62
+  70 0029 07       		.byte	7
+  71 002a 01       		.byte	1
+  72 002b 40       		.byte	64
+  73 002c 61       		.byte	97
+  74 002d 14       		.byte	20
+  75 002e 01       		.byte	1
+  76 002f 40       		.byte	64
+  77 0030 4C       		.byte	76
+  78 0031 15       		.byte	21
+  79 0032 01       		.byte	1
+  80 0033 40       		.byte	64
+  81 0034 5A       		.byte	90
+  82 0035 16       		.byte	22
+  83 0036 01       		.byte	1
+  84 0037 40       		.byte	64
+  85 0038 4D       		.byte	77
+  86 0039 17       		.byte	23
+  87 003a 01       		.byte	1
+  88 003b 40       		.byte	64
+  89 003c 01       		.byte	1
+  90 003d 19       		.byte	25
+  91 003e 01       		.byte	1
+  92 003f 40       		.byte	64
+  93 0040 01       		.byte	1
+  94 0041 1B       		.byte	27
+  95 0042 01       		.byte	1
+  96 0043 40       		.byte	64
+  97 0044 02       		.byte	2
+  98 0045 40       		.byte	64
+  99 0046 01       		.byte	1
+ 100 0047 40       		.byte	64
+ 101 0048 03       		.byte	3
+ 102 0049 41       		.byte	65
+ 103 004a 01       		.byte	1
+ 104 004b 40       		.byte	64
+ 105 004c 05       		.byte	5
+ 106 004d 42       		.byte	66
+ 107 004e 01       		.byte	1
+ 108 004f 40       		.byte	64
+ 109 0050 03       		.byte	3
+ 110 0051 43       		.byte	67
+ 111 0052 01       		.byte	1
+ 112 0053 40       		.byte	64
+ 113 0054 01       		.byte	1
+ 114 0055 48       		.byte	72
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 3
+
+
+ 115 0056 01       		.byte	1
+ 116 0057 40       		.byte	64
+ 117 0058 0A       		.byte	10
+ 118 0059 49       		.byte	73
+ 119 005a 01       		.byte	1
+ 120 005b 40       		.byte	64
+ 121 005c 03       		.byte	3
+ 122 005d 4C       		.byte	76
+ 123 005e 01       		.byte	1
+ 124 005f 40       		.byte	64
+ 125 0060 07       		.byte	7
+ 126 0061 4D       		.byte	77
+ 127 0062 01       		.byte	1
+ 128 0063 40       		.byte	64
+ 129 0064 09       		.byte	9
+ 130 0065 50       		.byte	80
+ 131 0066 01       		.byte	1
+ 132 0067 40       		.byte	64
+ 133 0068 01       		.byte	1
+ 134 0069 51       		.byte	81
+ 135 006a 01       		.byte	1
+ 136 006b 40       		.byte	64
+ 137 006c 04       		.byte	4
+ 138 006d 01       		.byte	1
+ 139 006e 80       		.byte	-128
+ 140 006f 0F       		.byte	15
+ 141 0070 81       		.byte	-127
+ 142 0071 72       		.byte	114
+ 143 0072 82       		.byte	-126
+ 144 0073 38       		.byte	56
+ 145 0074 24       		.byte	36
+ 146 0075 0F       		.byte	15
+ 147 0076 26       		.byte	38
+ 148 0077 04       		.byte	4
+ 149 0078 34       		.byte	52
+ 150 0079 08       		.byte	8
+ 151 007a 0A       		.byte	10
+ 152 007b 08       		.byte	8
+ 153 007c 10       		.byte	16
+ 154 007d 13       		.byte	19
+ 155 007e 12       		.byte	18
+ 156 007f 04       		.byte	4
+ 157 0080 15       		.byte	21
+ 158 0081 01       		.byte	1
+ 159 0082 16       		.byte	22
+ 160 0083 15       		.byte	21
+ 161 0084 18       		.byte	24
+ 162 0085 13       		.byte	19
+ 163 0086 1A       		.byte	26
+ 164 0087 0C       		.byte	12
+ 165 0088 1C       		.byte	28
+ 166 0089 0A       		.byte	10
+ 167 008a 1E       		.byte	30
+ 168 008b 14       		.byte	20
+ 169 008c 24       		.byte	36
+ 170 008d 03       		.byte	3
+ 171 008e 26       		.byte	38
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 4
+
+
+ 172 008f 14       		.byte	20
+ 173 0090 33       		.byte	51
+ 174 0091 01       		.byte	1
+ 175 0092 34       		.byte	52
+ 176 0093 0F       		.byte	15
+ 177 0094 36       		.byte	54
+ 178 0095 10       		.byte	16
+ 179 0096 3A       		.byte	58
+ 180 0097 20       		.byte	32
+ 181 0098 3E       		.byte	62
+ 182 0099 40       		.byte	64
+ 183 009a 3F       		.byte	63
+ 184 009b 04       		.byte	4
+ 185 009c 40       		.byte	64
+ 186 009d 23       		.byte	35
+ 187 009e 41       		.byte	65
+ 188 009f 05       		.byte	5
+ 189 00a0 45       		.byte	69
+ 190 00a1 0C       		.byte	12
+ 191 00a2 46       		.byte	70
+ 192 00a3 B0       		.byte	-80
+ 193 00a4 47       		.byte	71
+ 194 00a5 0E       		.byte	14
+ 195 00a6 48       		.byte	72
+ 196 00a7 19       		.byte	25
+ 197 00a8 49       		.byte	73
+ 198 00a9 FF       		.byte	-1
+ 199 00aa 4A       		.byte	74
+ 200 00ab FF       		.byte	-1
+ 201 00ac 4B       		.byte	75
+ 202 00ad FF       		.byte	-1
+ 203 00ae 4E       		.byte	78
+ 204 00af F0       		.byte	-16
+ 205 00b0 4F       		.byte	79
+ 206 00b1 44       		.byte	68
+ 207 00b2 50       		.byte	80
+ 208 00b3 0C       		.byte	12
+ 209 00b4 54       		.byte	84
+ 210 00b5 01       		.byte	1
+ 211 00b6 58       		.byte	88
+ 212 00b7 04       		.byte	4
+ 213 00b8 59       		.byte	89
+ 214 00b9 04       		.byte	4
+ 215 00ba 5A       		.byte	90
+ 216 00bb 04       		.byte	4
+ 217 00bc 5B       		.byte	91
+ 218 00bd 04       		.byte	4
+ 219 00be 5C       		.byte	92
+ 220 00bf 01       		.byte	1
+ 221 00c0 5D       		.byte	93
+ 222 00c1 11       		.byte	17
+ 223 00c2 5F       		.byte	95
+ 224 00c3 01       		.byte	1
+ 225 00c4 66       		.byte	102
+ 226 00c5 C0       		.byte	-64
+ 227 00c6 6A       		.byte	106
+ 228 00c7 40       		.byte	64
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 5
+
+
+ 229 00c8 6B       		.byte	107
+ 230 00c9 02       		.byte	2
+ 231 00ca 84       		.byte	-124
+ 232 00cb EF       		.byte	-17
+ 233 00cc 85       		.byte	-123
+ 234 00cd 02       		.byte	2
+ 235 00ce 88       		.byte	-120
+ 236 00cf 8C       		.byte	-116
+ 237 00d0 89       		.byte	-119
+ 238 00d1 02       		.byte	2
+ 239 00d2 8A       		.byte	-118
+ 240 00d3 63       		.byte	99
+ 241 00d4 8C       		.byte	-116
+ 242 00d5 8F       		.byte	-113
+ 243 00d6 8E       		.byte	-114
+ 244 00d7 60       		.byte	96
+ 245 00d8 8F       		.byte	-113
+ 246 00d9 01       		.byte	1
+ 247 00da 90       		.byte	-112
+ 248 00db 63       		.byte	99
+ 249 00dc 91       		.byte	-111
+ 250 00dd 02       		.byte	2
+ 251 00de 94       		.byte	-108
+ 252 00df 42       		.byte	66
+ 253 00e0 95       		.byte	-107
+ 254 00e1 01       		.byte	1
+ 255 00e2 98       		.byte	-104
+ 256 00e3 E3       		.byte	-29
+ 257 00e4 9A       		.byte	-102
+ 258 00e5 0C       		.byte	12
+ 259 00e6 9B       		.byte	-101
+ 260 00e7 01       		.byte	1
+ 261 00e8 9C       		.byte	-100
+ 262 00e9 21       		.byte	33
+ 263 00ea 9E       		.byte	-98
+ 264 00eb 10       		.byte	16
+ 265 00ec A0       		.byte	-96
+ 266 00ed 08       		.byte	8
+ 267 00ee A4       		.byte	-92
+ 268 00ef 0C       		.byte	12
+ 269 00f0 A5       		.byte	-91
+ 270 00f1 01       		.byte	1
+ 271 00f2 A8       		.byte	-88
+ 272 00f3 04       		.byte	4
+ 273 00f4 AE       		.byte	-82
+ 274 00f5 63       		.byte	99
+ 275 00f6 B0       		.byte	-80
+ 276 00f7 10       		.byte	16
+ 277 00f8 B1       		.byte	-79
+ 278 00f9 01       		.byte	1
+ 279 00fa B2       		.byte	-78
+ 280 00fb 80       		.byte	-128
+ 281 00fc B4       		.byte	-76
+ 282 00fd 0F       		.byte	15
+ 283 00fe B5       		.byte	-75
+ 284 00ff 02       		.byte	2
+ 285 0100 B6       		.byte	-74
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 6
+
+
+ 286 0101 60       		.byte	96
+ 287 0102 B9       		.byte	-71
+ 288 0103 02       		.byte	2
+ 289 0104 BA       		.byte	-70
+ 290 0105 20       		.byte	32
+ 291 0106 BE       		.byte	-66
+ 292 0107 04       		.byte	4
+ 293 0108 D6       		.byte	-42
+ 294 0109 02       		.byte	2
+ 295 010a D7       		.byte	-41
+ 296 010b 11       		.byte	17
+ 297 010c D8       		.byte	-40
+ 298 010d 04       		.byte	4
+ 299 010e D9       		.byte	-39
+ 300 010f 04       		.byte	4
+ 301 0110 DB       		.byte	-37
+ 302 0111 04       		.byte	4
+ 303 0112 DC       		.byte	-36
+ 304 0113 11       		.byte	17
+ 305 0114 DD       		.byte	-35
+ 306 0115 10       		.byte	16
+ 307 0116 DF       		.byte	-33
+ 308 0117 01       		.byte	1
+ 309 0118 03       		.byte	3
+ 310 0119 08       		.byte	8
+ 311 011a 04       		.byte	4
+ 312 011b 48       		.byte	72
+ 313 011c 05       		.byte	5
+ 314 011d 18       		.byte	24
+ 315 011e 09       		.byte	9
+ 316 011f 08       		.byte	8
+ 317 0120 0A       		.byte	10
+ 318 0121 85       		.byte	-123
+ 319 0122 0B       		.byte	11
+ 320 0123 40       		.byte	64
+ 321 0124 0E       		.byte	14
+ 322 0125 68       		.byte	104
+ 323 0126 0F       		.byte	15
+ 324 0127 02       		.byte	2
+ 325 0128 10       		.byte	16
+ 326 0129 30       		.byte	48
+ 327 012a 15       		.byte	21
+ 328 012b 80       		.byte	-128
+ 329 012c 16       		.byte	22
+ 330 012d 28       		.byte	40
+ 331 012e 17       		.byte	23
+ 332 012f 02       		.byte	2
+ 333 0130 19       		.byte	25
+ 334 0131 80       		.byte	-128
+ 335 0132 1A       		.byte	26
+ 336 0133 04       		.byte	4
+ 337 0134 1D       		.byte	29
+ 338 0135 21       		.byte	33
+ 339 0136 1E       		.byte	30
+ 340 0137 1A       		.byte	26
+ 341 0138 22       		.byte	34
+ 342 0139 04       		.byte	4
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 7
+
+
+ 343 013a 27       		.byte	39
+ 344 013b 84       		.byte	-124
+ 345 013c 2D       		.byte	45
+ 346 013d 08       		.byte	8
+ 347 013e 31       		.byte	49
+ 348 013f 04       		.byte	4
+ 349 0140 32       		.byte	50
+ 350 0141 08       		.byte	8
+ 351 0142 35       		.byte	53
+ 352 0143 10       		.byte	16
+ 353 0144 36       		.byte	54
+ 354 0145 04       		.byte	4
+ 355 0146 37       		.byte	55
+ 356 0147 01       		.byte	1
+ 357 0148 3C       		.byte	60
+ 358 0149 40       		.byte	64
+ 359 014a 3D       		.byte	61
+ 360 014b 28       		.byte	40
+ 361 014c 41       		.byte	65
+ 362 014d 0C       		.byte	12
+ 363 014e 42       		.byte	66
+ 364 014f 04       		.byte	4
+ 365 0150 48       		.byte	72
+ 366 0151 20       		.byte	32
+ 367 0152 4B       		.byte	75
+ 368 0153 40       		.byte	64
+ 369 0154 52       		.byte	82
+ 370 0155 18       		.byte	24
+ 371 0156 58       		.byte	88
+ 372 0157 12       		.byte	18
+ 373 0158 59       		.byte	89
+ 374 0159 80       		.byte	-128
+ 375 015a 5A       		.byte	90
+ 376 015b 08       		.byte	8
+ 377 015c 5E       		.byte	94
+ 378 015d 10       		.byte	16
+ 379 015e 6D       		.byte	109
+ 380 015f 28       		.byte	40
+ 381 0160 6F       		.byte	111
+ 382 0161 01       		.byte	1
+ 383 0162 76       		.byte	118
+ 384 0163 28       		.byte	40
+ 385 0164 77       		.byte	119
+ 386 0165 0A       		.byte	10
+ 387 0166 81       		.byte	-127
+ 388 0167 40       		.byte	64
+ 389 0168 83       		.byte	-125
+ 390 0169 04       		.byte	4
+ 391 016a C0       		.byte	-64
+ 392 016b E2       		.byte	-30
+ 393 016c C2       		.byte	-62
+ 394 016d FF       		.byte	-1
+ 395 016e C4       		.byte	-60
+ 396 016f F4       		.byte	-12
+ 397 0170 CA       		.byte	-54
+ 398 0171 40       		.byte	64
+ 399 0172 CC       		.byte	-52
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 8
+
+
+ 400 0173 E2       		.byte	-30
+ 401 0174 CE       		.byte	-50
+ 402 0175 70       		.byte	112
+ 403 0176 D0       		.byte	-48
+ 404 0177 06       		.byte	6
+ 405 0178 D2       		.byte	-46
+ 406 0179 08       		.byte	8
+ 407 017a D6       		.byte	-42
+ 408 017b 2F       		.byte	47
+ 409 017c 90       		.byte	-112
+ 410 017d 21       		.byte	33
+ 411 017e 92       		.byte	-110
+ 412 017f 0E       		.byte	14
+ 413 0180 96       		.byte	-106
+ 414 0181 1C       		.byte	28
+ 415 0182 98       		.byte	-104
+ 416 0183 21       		.byte	33
+ 417 0184 9A       		.byte	-102
+ 418 0185 16       		.byte	22
+ 419 0186 9C       		.byte	-100
+ 420 0187 1C       		.byte	28
+ 421 0188 9E       		.byte	-98
+ 422 0189 23       		.byte	35
+ 423 018a A2       		.byte	-94
+ 424 018b 08       		.byte	8
+ 425 018c A8       		.byte	-88
+ 426 018d 40       		.byte	64
+ 427 018e AA       		.byte	-86
+ 428 018f 03       		.byte	3
+ 429 0190 AF       		.byte	-81
+ 430 0191 01       		.byte	1
+ 431 0192 B0       		.byte	-80
+ 432 0193 1A       		.byte	26
+ 433 0194 B2       		.byte	-78
+ 434 0195 60       		.byte	96
+ 435 0196 B5       		.byte	-75
+ 436 0197 01       		.byte	1
+ 437 0198 B6       		.byte	-74
+ 438 0199 0F       		.byte	15
+ 439 019a B8       		.byte	-72
+ 440 019b 08       		.byte	8
+ 441 019c BA       		.byte	-70
+ 442 019d A2       		.byte	-94
+ 443 019e D8       		.byte	-40
+ 444 019f 04       		.byte	4
+ 445 01a0 D9       		.byte	-39
+ 446 01a1 04       		.byte	4
+ 447 01a2 DC       		.byte	-36
+ 448 01a3 01       		.byte	1
+ 449 01a4 DF       		.byte	-33
+ 450 01a5 01       		.byte	1
+ 451 01a6 04       		.byte	4
+ 452 01a7 40       		.byte	64
+ 453 01a8 05       		.byte	5
+ 454 01a9 11       		.byte	17
+ 455 01aa 06       		.byte	6
+ 456 01ab 20       		.byte	32
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 9
+
+
+ 457 01ac 0A       		.byte	10
+ 458 01ad A5       		.byte	-91
+ 459 01ae 0D       		.byte	13
+ 460 01af 09       		.byte	9
+ 461 01b0 0F       		.byte	15
+ 462 01b1 0A       		.byte	10
+ 463 01b2 12       		.byte	18
+ 464 01b3 44       		.byte	68
+ 465 01b4 17       		.byte	23
+ 466 01b5 9A       		.byte	-102
+ 467 01b6 18       		.byte	24
+ 468 01b7 08       		.byte	8
+ 469 01b8 19       		.byte	25
+ 470 01b9 20       		.byte	32
+ 471 01ba 1A       		.byte	26
+ 472 01bb A1       		.byte	-95
+ 473 01bc 1B       		.byte	27
+ 474 01bd 08       		.byte	8
+ 475 01be 1C       		.byte	28
+ 476 01bf 40       		.byte	64
+ 477 01c0 1D       		.byte	29
+ 478 01c1 10       		.byte	16
+ 479 01c2 1F       		.byte	31
+ 480 01c3 44       		.byte	68
+ 481 01c4 20       		.byte	32
+ 482 01c5 08       		.byte	8
+ 483 01c6 26       		.byte	38
+ 484 01c7 18       		.byte	24
+ 485 01c8 27       		.byte	39
+ 486 01c9 41       		.byte	65
+ 487 01ca 28       		.byte	40
+ 488 01cb 02       		.byte	2
+ 489 01cc 2C       		.byte	44
+ 490 01cd 40       		.byte	64
+ 491 01ce 2F       		.byte	47
+ 492 01cf 60       		.byte	96
+ 493 01d0 36       		.byte	54
+ 494 01d1 18       		.byte	24
+ 495 01d2 3D       		.byte	61
+ 496 01d3 28       		.byte	40
+ 497 01d4 3F       		.byte	63
+ 498 01d5 80       		.byte	-128
+ 499 01d6 42       		.byte	66
+ 500 01d7 80       		.byte	-128
+ 501 01d8 43       		.byte	67
+ 502 01d9 01       		.byte	1
+ 503 01da 44       		.byte	68
+ 504 01db 40       		.byte	64
+ 505 01dc 45       		.byte	69
+ 506 01dd 28       		.byte	40
+ 507 01de 47       		.byte	71
+ 508 01df 54       		.byte	84
+ 509 01e0 4C       		.byte	76
+ 510 01e1 04       		.byte	4
+ 511 01e2 57       		.byte	87
+ 512 01e3 44       		.byte	68
+ 513 01e4 5E       		.byte	94
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 10
+
+
+ 514 01e5 02       		.byte	2
+ 515 01e6 66       		.byte	102
+ 516 01e7 80       		.byte	-128
+ 517 01e8 67       		.byte	103
+ 518 01e9 08       		.byte	8
+ 519 01ea 85       		.byte	-123
+ 520 01eb 21       		.byte	33
+ 521 01ec 92       		.byte	-110
+ 522 01ed 04       		.byte	4
+ 523 01ee 94       		.byte	-108
+ 524 01ef 48       		.byte	72
+ 525 01f0 95       		.byte	-107
+ 526 01f1 08       		.byte	8
+ 527 01f2 96       		.byte	-106
+ 528 01f3 C1       		.byte	-63
+ 529 01f4 99       		.byte	-103
+ 530 01f5 01       		.byte	1
+ 531 01f6 9A       		.byte	-102
+ 532 01f7 30       		.byte	48
+ 533 01f8 9B       		.byte	-101
+ 534 01f9 8E       		.byte	-114
+ 535 01fa 9D       		.byte	-99
+ 536 01fb 10       		.byte	16
+ 537 01fc A1       		.byte	-95
+ 538 01fd 34       		.byte	52
+ 539 01fe A2       		.byte	-94
+ 540 01ff 01       		.byte	1
+ 541 0200 A6       		.byte	-90
+ 542 0201 10       		.byte	16
+ 543 0202 A7       		.byte	-89
+ 544 0203 09       		.byte	9
+ 545 0204 B4       		.byte	-76
+ 546 0205 02       		.byte	2
+ 547 0206 B5       		.byte	-75
+ 548 0207 04       		.byte	4
+ 549 0208 C0       		.byte	-64
+ 550 0209 F0       		.byte	-16
+ 551 020a C2       		.byte	-62
+ 552 020b FF       		.byte	-1
+ 553 020c C4       		.byte	-60
+ 554 020d FA       		.byte	-6
+ 555 020e CA       		.byte	-54
+ 556 020f C8       		.byte	-56
+ 557 0210 CC       		.byte	-52
+ 558 0211 60       		.byte	96
+ 559 0212 CE       		.byte	-50
+ 560 0213 70       		.byte	112
+ 561 0214 D0       		.byte	-48
+ 562 0215 F0       		.byte	-16
+ 563 0216 D2       		.byte	-46
+ 564 0217 20       		.byte	32
+ 565 0218 D6       		.byte	-42
+ 566 0219 80       		.byte	-128
+ 567 021a D8       		.byte	-40
+ 568 021b 30       		.byte	48
+ 569 021c 01       		.byte	1
+ 570 021d 04       		.byte	4
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 11
+
+
+ 571 021e 03       		.byte	3
+ 572 021f E0       		.byte	-32
+ 573 0220 05       		.byte	5
+ 574 0221 3D       		.byte	61
+ 575 0222 07       		.byte	7
+ 576 0223 C2       		.byte	-62
+ 577 0224 09       		.byte	9
+ 578 0225 92       		.byte	-110
+ 579 0226 0B       		.byte	11
+ 580 0227 60       		.byte	96
+ 581 0228 0D       		.byte	13
+ 582 0229 0D       		.byte	13
+ 583 022a 0E       		.byte	14
+ 584 022b 03       		.byte	3
+ 585 022c 10       		.byte	16
+ 586 022d 6C       		.byte	108
+ 587 022e 11       		.byte	17
+ 588 022f E2       		.byte	-30
+ 589 0230 12       		.byte	18
+ 590 0231 11       		.byte	17
+ 591 0232 14       		.byte	20
+ 592 0233 09       		.byte	9
+ 593 0234 15       		.byte	21
+ 594 0235 01       		.byte	1
+ 595 0236 16       		.byte	22
+ 596 0237 10       		.byte	16
+ 597 0238 18       		.byte	24
+ 598 0239 70       		.byte	112
+ 599 023a 19       		.byte	25
+ 600 023b 01       		.byte	1
+ 601 023c 1A       		.byte	26
+ 602 023d 0C       		.byte	12
+ 603 023e 1C       		.byte	28
+ 604 023f 5C       		.byte	92
+ 605 0240 1E       		.byte	30
+ 606 0241 02       		.byte	2
+ 607 0242 1F       		.byte	31
+ 608 0243 08       		.byte	8
+ 609 0244 20       		.byte	32
+ 610 0245 10       		.byte	16
+ 611 0246 21       		.byte	33
+ 612 0247 5D       		.byte	93
+ 613 0248 23       		.byte	35
+ 614 0249 A2       		.byte	-94
+ 615 024a 24       		.byte	36
+ 616 024b 14       		.byte	20
+ 617 024c 27       		.byte	39
+ 618 024d 02       		.byte	2
+ 619 024e 29       		.byte	41
+ 620 024f 40       		.byte	64
+ 621 0250 2A       		.byte	42
+ 622 0251 20       		.byte	32
+ 623 0252 2B       		.byte	43
+ 624 0253 1D       		.byte	29
+ 625 0254 2F       		.byte	47
+ 626 0255 FF       		.byte	-1
+ 627 0256 30       		.byte	48
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 12
+
+
+ 628 0257 1F       		.byte	31
+ 629 0258 31       		.byte	49
+ 630 0259 FF       		.byte	-1
+ 631 025a 34       		.byte	52
+ 632 025b 60       		.byte	96
+ 633 025c 38       		.byte	56
+ 634 025d 20       		.byte	32
+ 635 025e 3E       		.byte	62
+ 636 025f 10       		.byte	16
+ 637 0260 3F       		.byte	63
+ 638 0261 01       		.byte	1
+ 639 0262 40       		.byte	64
+ 640 0263 06       		.byte	6
+ 641 0264 46       		.byte	70
+ 642 0265 04       		.byte	4
+ 643 0266 49       		.byte	73
+ 644 0267 FF       		.byte	-1
+ 645 0268 4A       		.byte	74
+ 646 0269 07       		.byte	7
+ 647 026a 4B       		.byte	75
+ 648 026b FF       		.byte	-1
+ 649 026c 4C       		.byte	76
+ 650 026d 40       		.byte	64
+ 651 026e 4D       		.byte	77
+ 652 026f 20       		.byte	32
+ 653 0270 4E       		.byte	78
+ 654 0271 F0       		.byte	-16
+ 655 0272 4F       		.byte	79
+ 656 0273 05       		.byte	5
+ 657 0274 50       		.byte	80
+ 658 0275 08       		.byte	8
+ 659 0276 58       		.byte	88
+ 660 0277 04       		.byte	4
+ 661 0278 59       		.byte	89
+ 662 0279 04       		.byte	4
+ 663 027a 5A       		.byte	90
+ 664 027b 04       		.byte	4
+ 665 027c 5C       		.byte	92
+ 666 027d 01       		.byte	1
+ 667 027e 5D       		.byte	93
+ 668 027f 01       		.byte	1
+ 669 0280 5F       		.byte	95
+ 670 0281 01       		.byte	1
+ 671 0282 60       		.byte	96
+ 672 0283 40       		.byte	64
+ 673 0284 61       		.byte	97
+ 674 0285 A8       		.byte	-88
+ 675 0286 62       		.byte	98
+ 676 0287 40       		.byte	64
+ 677 0288 63       		.byte	99
+ 678 0289 20       		.byte	32
+ 679 028a 80       		.byte	-128
+ 680 028b 40       		.byte	64
+ 681 028c 81       		.byte	-127
+ 682 028d 80       		.byte	-128
+ 683 028e 82       		.byte	-126
+ 684 028f 14       		.byte	20
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 13
+
+
+ 685 0290 83       		.byte	-125
+ 686 0291 56       		.byte	86
+ 687 0292 84       		.byte	-124
+ 688 0293 48       		.byte	72
+ 689 0294 86       		.byte	-122
+ 690 0295 02       		.byte	2
+ 691 0296 88       		.byte	-120
+ 692 0297 01       		.byte	1
+ 693 0298 8C       		.byte	-116
+ 694 0299 03       		.byte	3
+ 695 029a 8D       		.byte	-115
+ 696 029b 33       		.byte	51
+ 697 029c 8E       		.byte	-114
+ 698 029d 20       		.byte	32
+ 699 029e 8F       		.byte	-113
+ 700 029f 0C       		.byte	12
+ 701 02a0 90       		.byte	-112
+ 702 02a1 1F       		.byte	31
+ 703 02a2 91       		.byte	-111
+ 704 02a3 FF       		.byte	-1
+ 705 02a4 94       		.byte	-108
+ 706 02a5 4F       		.byte	79
+ 707 02a6 95       		.byte	-107
+ 708 02a7 40       		.byte	64
+ 709 02a8 97       		.byte	-105
+ 710 02a9 13       		.byte	19
+ 711 02aa 98       		.byte	-104
+ 712 02ab 01       		.byte	1
+ 713 02ac 99       		.byte	-103
+ 714 02ad 46       		.byte	70
+ 715 02ae 9B       		.byte	-101
+ 716 02af A9       		.byte	-87
+ 717 02b0 9C       		.byte	-100
+ 718 02b1 90       		.byte	-112
+ 719 02b2 9D       		.byte	-99
+ 720 02b3 2A       		.byte	42
+ 721 02b4 9E       		.byte	-98
+ 722 02b5 0B       		.byte	11
+ 723 02b6 9F       		.byte	-97
+ 724 02b7 54       		.byte	84
+ 725 02b8 A0       		.byte	-96
+ 726 02b9 42       		.byte	66
+ 727 02ba A2       		.byte	-94
+ 728 02bb 09       		.byte	9
+ 729 02bc A3       		.byte	-93
+ 730 02bd 01       		.byte	1
+ 731 02be A6       		.byte	-90
+ 732 02bf 01       		.byte	1
+ 733 02c0 A8       		.byte	-88
+ 734 02c1 40       		.byte	64
+ 735 02c2 A9       		.byte	-87
+ 736 02c3 0E       		.byte	14
+ 737 02c4 AA       		.byte	-86
+ 738 02c5 0B       		.byte	11
+ 739 02c6 AB       		.byte	-85
+ 740 02c7 30       		.byte	48
+ 741 02c8 AC       		.byte	-84
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 14
+
+
+ 742 02c9 03       		.byte	3
+ 743 02ca B0       		.byte	-80
+ 744 02cb 1F       		.byte	31
+ 745 02cc B3       		.byte	-77
+ 746 02cd FF       		.byte	-1
+ 747 02ce B4       		.byte	-76
+ 748 02cf E0       		.byte	-32
+ 749 02d0 B8       		.byte	-72
+ 750 02d1 20       		.byte	32
+ 751 02d2 BE       		.byte	-66
+ 752 02d3 10       		.byte	16
+ 753 02d4 D8       		.byte	-40
+ 754 02d5 04       		.byte	4
+ 755 02d6 D9       		.byte	-39
+ 756 02d7 04       		.byte	4
+ 757 02d8 DF       		.byte	-33
+ 758 02d9 01       		.byte	1
+ 759 02da 00       		.byte	0
+ 760 02db 40       		.byte	64
+ 761 02dc 04       		.byte	4
+ 762 02dd 80       		.byte	-128
+ 763 02de 05       		.byte	5
+ 764 02df 05       		.byte	5
+ 765 02e0 06       		.byte	6
+ 766 02e1 20       		.byte	32
+ 767 02e2 07       		.byte	7
+ 768 02e3 04       		.byte	4
+ 769 02e4 0A       		.byte	10
+ 770 02e5 A5       		.byte	-91
+ 771 02e6 0C       		.byte	12
+ 772 02e7 21       		.byte	33
+ 773 02e8 0E       		.byte	14
+ 774 02e9 20       		.byte	32
+ 775 02ea 0F       		.byte	15
+ 776 02eb 02       		.byte	2
+ 777 02ec 12       		.byte	18
+ 778 02ed 54       		.byte	84
+ 779 02ee 14       		.byte	20
+ 780 02ef 40       		.byte	64
+ 781 02f0 15       		.byte	21
+ 782 02f1 05       		.byte	5
+ 783 02f2 17       		.byte	23
+ 784 02f3 50       		.byte	80
+ 785 02f4 18       		.byte	24
+ 786 02f5 40       		.byte	64
+ 787 02f6 19       		.byte	25
+ 788 02f7 10       		.byte	16
+ 789 02f8 1D       		.byte	29
+ 790 02f9 21       		.byte	33
+ 791 02fa 1E       		.byte	30
+ 792 02fb 40       		.byte	64
+ 793 02fc 21       		.byte	33
+ 794 02fd 01       		.byte	1
+ 795 02fe 24       		.byte	36
+ 796 02ff 20       		.byte	32
+ 797 0300 27       		.byte	39
+ 798 0301 10       		.byte	16
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 15
+
+
+ 799 0302 29       		.byte	41
+ 800 0303 09       		.byte	9
+ 801 0304 2A       		.byte	42
+ 802 0305 20       		.byte	32
+ 803 0306 2B       		.byte	43
+ 804 0307 01       		.byte	1
+ 805 0308 2F       		.byte	47
+ 806 0309 44       		.byte	68
+ 807 030a 30       		.byte	48
+ 808 030b 29       		.byte	41
+ 809 030c 32       		.byte	50
+ 810 030d 02       		.byte	2
+ 811 030e 33       		.byte	51
+ 812 030f C4       		.byte	-60
+ 813 0310 34       		.byte	52
+ 814 0311 40       		.byte	64
+ 815 0312 35       		.byte	53
+ 816 0313 04       		.byte	4
+ 817 0314 36       		.byte	54
+ 818 0315 02       		.byte	2
+ 819 0316 37       		.byte	55
+ 820 0317 10       		.byte	16
+ 821 0318 38       		.byte	56
+ 822 0319 A0       		.byte	-96
+ 823 031a 39       		.byte	57
+ 824 031b 01       		.byte	1
+ 825 031c 3B       		.byte	59
+ 826 031d 88       		.byte	-120
+ 827 031e 3E       		.byte	62
+ 828 031f 40       		.byte	64
+ 829 0320 3F       		.byte	63
+ 830 0321 02       		.byte	2
+ 831 0322 49       		.byte	73
+ 832 0323 10       		.byte	16
+ 833 0324 51       		.byte	81
+ 834 0325 04       		.byte	4
+ 835 0326 52       		.byte	82
+ 836 0327 44       		.byte	68
+ 837 0328 92       		.byte	-110
+ 838 0329 A5       		.byte	-91
+ 839 032a 95       		.byte	-107
+ 840 032b 08       		.byte	8
+ 841 032c 9A       		.byte	-102
+ 842 032d 10       		.byte	16
+ 843 032e 9C       		.byte	-100
+ 844 032f 02       		.byte	2
+ 845 0330 9E       		.byte	-98
+ 846 0331 44       		.byte	68
+ 847 0332 A0       		.byte	-96
+ 848 0333 04       		.byte	4
+ 849 0334 AA       		.byte	-86
+ 850 0335 48       		.byte	72
+ 851 0336 AF       		.byte	-81
+ 852 0337 21       		.byte	33
+ 853 0338 C0       		.byte	-64
+ 854 0339 F1       		.byte	-15
+ 855 033a C2       		.byte	-62
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 16
+
+
+ 856 033b FF       		.byte	-1
+ 857 033c C4       		.byte	-60
+ 858 033d FE       		.byte	-2
+ 859 033e CA       		.byte	-54
+ 860 033f AF       		.byte	-81
+ 861 0340 CC       		.byte	-52
+ 862 0341 FF       		.byte	-1
+ 863 0342 CE       		.byte	-50
+ 864 0343 9F       		.byte	-97
+ 865 0344 D2       		.byte	-46
+ 866 0345 04       		.byte	4
+ 867 0346 00       		.byte	0
+ 868 0347 98       		.byte	-104
+ 869 0348 01       		.byte	1
+ 870 0349 C0       		.byte	-64
+ 871 034a 02       		.byte	2
+ 872 034b 06       		.byte	6
+ 873 034c 03       		.byte	3
+ 874 034d 07       		.byte	7
+ 875 034e 04       		.byte	4
+ 876 034f 22       		.byte	34
+ 877 0350 05       		.byte	5
+ 878 0351 01       		.byte	1
+ 879 0352 08       		.byte	8
+ 880 0353 9C       		.byte	-100
+ 881 0354 09       		.byte	9
+ 882 0355 01       		.byte	1
+ 883 0356 0A       		.byte	10
+ 884 0357 22       		.byte	34
+ 885 0358 0C       		.byte	12
+ 886 0359 3F       		.byte	63
+ 887 035a 0D       		.byte	13
+ 888 035b 3A       		.byte	58
+ 889 035c 0F       		.byte	15
+ 890 035d 04       		.byte	4
+ 891 035e 10       		.byte	16
+ 892 035f 01       		.byte	1
+ 893 0360 11       		.byte	17
+ 894 0361 FF       		.byte	-1
+ 895 0362 12       		.byte	18
+ 896 0363 1E       		.byte	30
+ 897 0364 14       		.byte	20
+ 898 0365 04       		.byte	4
+ 899 0366 15       		.byte	21
+ 900 0367 08       		.byte	8
+ 901 0368 17       		.byte	23
+ 902 0369 07       		.byte	7
+ 903 036a 19       		.byte	25
+ 904 036b 10       		.byte	16
+ 905 036c 1A       		.byte	26
+ 906 036d 40       		.byte	64
+ 907 036e 1B       		.byte	27
+ 908 036f 07       		.byte	7
+ 909 0370 1C       		.byte	28
+ 910 0371 01       		.byte	1
+ 911 0372 1D       		.byte	29
+ 912 0373 22       		.byte	34
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 17
+
+
+ 913 0374 1F       		.byte	31
+ 914 0375 05       		.byte	5
+ 915 0376 20       		.byte	32
+ 916 0377 A2       		.byte	-94
+ 917 0378 21       		.byte	33
+ 918 0379 03       		.byte	3
+ 919 037a 22       		.byte	34
+ 920 037b 18       		.byte	24
+ 921 037c 24       		.byte	36
+ 922 037d AA       		.byte	-86
+ 923 037e 25       		.byte	37
+ 924 037f 01       		.byte	1
+ 925 0380 26       		.byte	38
+ 926 0381 10       		.byte	16
+ 927 0382 28       		.byte	40
+ 928 0383 B2       		.byte	-78
+ 929 0384 29       		.byte	41
+ 930 0385 05       		.byte	5
+ 931 0386 2A       		.byte	42
+ 932 0387 08       		.byte	8
+ 933 0388 2B       		.byte	43
+ 934 0389 78       		.byte	120
+ 935 038a 2C       		.byte	44
+ 936 038b 06       		.byte	6
+ 937 038c 2D       		.byte	45
+ 938 038d 03       		.byte	3
+ 939 038e 30       		.byte	48
+ 940 038f 80       		.byte	-128
+ 941 0390 32       		.byte	50
+ 942 0391 60       		.byte	96
+ 943 0392 33       		.byte	51
+ 944 0393 7F       		.byte	127
+ 945 0394 36       		.byte	54
+ 946 0395 1F       		.byte	31
+ 947 0396 37       		.byte	55
+ 948 0397 80       		.byte	-128
+ 949 0398 38       		.byte	56
+ 950 0399 82       		.byte	-126
+ 951 039a 39       		.byte	57
+ 952 039b 80       		.byte	-128
+ 953 039c 3E       		.byte	62
+ 954 039d 01       		.byte	1
+ 955 039e 3F       		.byte	63
+ 956 039f 04       		.byte	4
+ 957 03a0 58       		.byte	88
+ 958 03a1 04       		.byte	4
+ 959 03a2 59       		.byte	89
+ 960 03a3 04       		.byte	4
+ 961 03a4 5F       		.byte	95
+ 962 03a5 01       		.byte	1
+ 963 03a6 80       		.byte	-128
+ 964 03a7 02       		.byte	2
+ 965 03a8 84       		.byte	-124
+ 966 03a9 CC       		.byte	-52
+ 967 03aa 86       		.byte	-122
+ 968 03ab 13       		.byte	19
+ 969 03ac 88       		.byte	-120
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 18
+
+
+ 970 03ad 4D       		.byte	77
+ 971 03ae 8A       		.byte	-118
+ 972 03af 92       		.byte	-110
+ 973 03b0 8C       		.byte	-116
+ 974 03b1 FF       		.byte	-1
+ 975 03b2 8D       		.byte	-115
+ 976 03b3 01       		.byte	1
+ 977 03b4 90       		.byte	-112
+ 978 03b5 A9       		.byte	-87
+ 979 03b6 92       		.byte	-110
+ 980 03b7 54       		.byte	84
+ 981 03b8 96       		.byte	-106
+ 982 03b9 04       		.byte	4
+ 983 03ba 98       		.byte	-104
+ 984 03bb 1A       		.byte	26
+ 985 03bc 9A       		.byte	-102
+ 986 03bd 60       		.byte	96
+ 987 03be 9C       		.byte	-100
+ 988 03bf A5       		.byte	-91
+ 989 03c0 9E       		.byte	-98
+ 990 03c1 4A       		.byte	74
+ 991 03c2 A2       		.byte	-94
+ 992 03c3 B5       		.byte	-75
+ 993 03c4 A4       		.byte	-92
+ 994 03c5 04       		.byte	4
+ 995 03c6 AA       		.byte	-86
+ 996 03c7 02       		.byte	2
+ 997 03c8 AE       		.byte	-82
+ 998 03c9 01       		.byte	1
+ 999 03ca B6       		.byte	-74
+ 1000 03cb FF       		.byte	-1
+ 1001 03cc B7       		.byte	-73
+ 1002 03cd 01       		.byte	1
+ 1003 03ce BE       		.byte	-66
+ 1004 03cf 40       		.byte	64
+ 1005 03d0 BF       		.byte	-65
+ 1006 03d1 40       		.byte	64
+ 1007 03d2 D2       		.byte	-46
+ 1008 03d3 F6       		.byte	-10
+ 1009 03d4 D8       		.byte	-40
+ 1010 03d5 04       		.byte	4
+ 1011 03d6 D9       		.byte	-39
+ 1012 03d7 04       		.byte	4
+ 1013 03d8 DB       		.byte	-37
+ 1014 03d9 04       		.byte	4
+ 1015 03da DF       		.byte	-33
+ 1016 03db 01       		.byte	1
+ 1017 03dc 02       		.byte	2
+ 1018 03dd 02       		.byte	2
+ 1019 03de 03       		.byte	3
+ 1020 03df 95       		.byte	-107
+ 1021 03e0 04       		.byte	4
+ 1022 03e1 10       		.byte	16
+ 1023 03e2 05       		.byte	5
+ 1024 03e3 09       		.byte	9
+ 1025 03e4 07       		.byte	7
+ 1026 03e5 01       		.byte	1
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 19
+
+
+ 1027 03e6 08       		.byte	8
+ 1028 03e7 40       		.byte	64
+ 1029 03e8 0A       		.byte	10
+ 1030 03e9 60       		.byte	96
+ 1031 03ea 0B       		.byte	11
+ 1032 03eb 08       		.byte	8
+ 1033 03ec 0E       		.byte	14
+ 1034 03ed 8A       		.byte	-118
+ 1035 03ee 0F       		.byte	15
+ 1036 03ef 20       		.byte	32
+ 1037 03f0 10       		.byte	16
+ 1038 03f1 2A       		.byte	42
+ 1039 03f2 12       		.byte	18
+ 1040 03f3 40       		.byte	64
+ 1041 03f4 14       		.byte	20
+ 1042 03f5 41       		.byte	65
+ 1043 03f6 17       		.byte	23
+ 1044 03f7 14       		.byte	20
+ 1045 03f8 1A       		.byte	26
+ 1046 03f9 01       		.byte	1
+ 1047 03fa 1C       		.byte	28
+ 1048 03fb 10       		.byte	16
+ 1049 03fc 1E       		.byte	30
+ 1050 03fd 22       		.byte	34
+ 1051 03fe 1F       		.byte	31
+ 1052 03ff 05       		.byte	5
+ 1053 0400 22       		.byte	34
+ 1054 0401 40       		.byte	64
+ 1055 0402 26       		.byte	38
+ 1056 0403 44       		.byte	68
+ 1057 0404 2C       		.byte	44
+ 1058 0405 21       		.byte	33
+ 1059 0406 2D       		.byte	45
+ 1060 0407 01       		.byte	1
+ 1061 0408 2F       		.byte	47
+ 1062 0409 04       		.byte	4
+ 1063 040a 34       		.byte	52
+ 1064 040b 40       		.byte	64
+ 1065 040c 35       		.byte	53
+ 1066 040d 04       		.byte	4
+ 1067 040e 36       		.byte	54
+ 1068 040f 02       		.byte	2
+ 1069 0410 37       		.byte	55
+ 1070 0411 14       		.byte	20
+ 1071 0412 38       		.byte	56
+ 1072 0413 40       		.byte	64
+ 1073 0414 3E       		.byte	62
+ 1074 0415 44       		.byte	68
+ 1075 0416 3F       		.byte	63
+ 1076 0417 12       		.byte	18
+ 1077 0418 69       		.byte	105
+ 1078 0419 14       		.byte	20
+ 1079 041a 6A       		.byte	106
+ 1080 041b 04       		.byte	4
+ 1081 041c 70       		.byte	112
+ 1082 041d 2A       		.byte	42
+ 1083 041e 72       		.byte	114
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 20
+
+
+ 1084 041f 02       		.byte	2
+ 1085 0420 73       		.byte	115
+ 1086 0421 10       		.byte	16
+ 1087 0422 78       		.byte	120
+ 1088 0423 01       		.byte	1
+ 1089 0424 7B       		.byte	123
+ 1090 0425 80       		.byte	-128
+ 1091 0426 81       		.byte	-127
+ 1092 0427 08       		.byte	8
+ 1093 0428 82       		.byte	-126
+ 1094 0429 12       		.byte	18
+ 1095 042a 8E       		.byte	-114
+ 1096 042b 01       		.byte	1
+ 1097 042c 90       		.byte	-112
+ 1098 042d 60       		.byte	96
+ 1099 042e 91       		.byte	-111
+ 1100 042f 02       		.byte	2
+ 1101 0430 92       		.byte	-110
+ 1102 0431 40       		.byte	64
+ 1103 0432 94       		.byte	-108
+ 1104 0433 80       		.byte	-128
+ 1105 0434 95       		.byte	-107
+ 1106 0435 04       		.byte	4
+ 1107 0436 97       		.byte	-105
+ 1108 0437 08       		.byte	8
+ 1109 0438 99       		.byte	-103
+ 1110 0439 01       		.byte	1
+ 1111 043a 9B       		.byte	-101
+ 1112 043b 10       		.byte	16
+ 1113 043c 9C       		.byte	-100
+ 1114 043d 42       		.byte	66
+ 1115 043e 9D       		.byte	-99
+ 1116 043f 0C       		.byte	12
+ 1117 0440 A0       		.byte	-96
+ 1118 0441 04       		.byte	4
+ 1119 0442 A1       		.byte	-95
+ 1120 0443 20       		.byte	32
+ 1121 0444 A4       		.byte	-92
+ 1122 0445 28       		.byte	40
+ 1123 0446 A6       		.byte	-90
+ 1124 0447 12       		.byte	18
+ 1125 0448 A7       		.byte	-89
+ 1126 0449 81       		.byte	-127
+ 1127 044a C0       		.byte	-64
+ 1128 044b FF       		.byte	-1
+ 1129 044c C2       		.byte	-62
+ 1130 044d FF       		.byte	-1
+ 1131 044e C4       		.byte	-60
+ 1132 044f FF       		.byte	-1
+ 1133 0450 CA       		.byte	-54
+ 1134 0451 F0       		.byte	-16
+ 1135 0452 CC       		.byte	-52
+ 1136 0453 F0       		.byte	-16
+ 1137 0454 CE       		.byte	-50
+ 1138 0455 F8       		.byte	-8
+ 1139 0456 E2       		.byte	-30
+ 1140 0457 10       		.byte	16
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 21
+
+
+ 1141 0458 00       		.byte	0
+ 1142 0459 90       		.byte	-112
+ 1143 045a 03       		.byte	3
+ 1144 045b 14       		.byte	20
+ 1145 045c 05       		.byte	5
+ 1146 045d 40       		.byte	64
+ 1147 045e 08       		.byte	8
+ 1148 045f 01       		.byte	1
+ 1149 0460 0A       		.byte	10
+ 1150 0461 0E       		.byte	14
+ 1151 0462 0B       		.byte	11
+ 1152 0463 40       		.byte	64
+ 1153 0464 0C       		.byte	12
+ 1154 0465 02       		.byte	2
+ 1155 0466 0E       		.byte	14
+ 1156 0467 05       		.byte	5
+ 1157 0468 10       		.byte	16
+ 1158 0469 03       		.byte	3
+ 1159 046a 11       		.byte	17
+ 1160 046b 3F       		.byte	63
+ 1161 046c 12       		.byte	18
+ 1162 046d 04       		.byte	4
+ 1163 046e 14       		.byte	20
+ 1164 046f 90       		.byte	-112
+ 1165 0470 17       		.byte	23
+ 1166 0471 20       		.byte	32
+ 1167 0472 18       		.byte	24
+ 1168 0473 27       		.byte	39
+ 1169 0474 19       		.byte	25
+ 1170 0475 0F       		.byte	15
+ 1171 0476 1A       		.byte	26
+ 1172 0477 40       		.byte	64
+ 1173 0478 1D       		.byte	29
+ 1174 0479 04       		.byte	4
+ 1175 047a 1F       		.byte	31
+ 1176 047b 08       		.byte	8
+ 1177 047c 20       		.byte	32
+ 1178 047d 27       		.byte	39
+ 1179 047e 21       		.byte	33
+ 1180 047f 10       		.byte	16
+ 1181 0480 22       		.byte	34
+ 1182 0481 40       		.byte	64
+ 1183 0482 23       		.byte	35
+ 1184 0483 02       		.byte	2
+ 1185 0484 25       		.byte	37
+ 1186 0485 10       		.byte	16
+ 1187 0486 27       		.byte	39
+ 1188 0487 01       		.byte	1
+ 1189 0488 28       		.byte	40
+ 1190 0489 06       		.byte	6
+ 1191 048a 2A       		.byte	42
+ 1192 048b 01       		.byte	1
+ 1193 048c 2B       		.byte	43
+ 1194 048d 18       		.byte	24
+ 1195 048e 2C       		.byte	44
+ 1196 048f 81       		.byte	-127
+ 1197 0490 2E       		.byte	46
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 22
+
+
+ 1198 0491 08       		.byte	8
+ 1199 0492 2F       		.byte	47
+ 1200 0493 08       		.byte	8
+ 1201 0494 30       		.byte	48
+ 1202 0495 80       		.byte	-128
+ 1203 0496 31       		.byte	49
+ 1204 0497 40       		.byte	64
+ 1205 0498 32       		.byte	50
+ 1206 0499 0F       		.byte	15
+ 1207 049a 33       		.byte	51
+ 1208 049b 3F       		.byte	63
+ 1209 049c 34       		.byte	52
+ 1210 049d 70       		.byte	112
+ 1211 049e 36       		.byte	54
+ 1212 049f 10       		.byte	16
+ 1213 04a0 38       		.byte	56
+ 1214 04a1 A2       		.byte	-94
+ 1215 04a2 39       		.byte	57
+ 1216 04a3 0A       		.byte	10
+ 1217 04a4 3A       		.byte	58
+ 1218 04a5 08       		.byte	8
+ 1219 04a6 3E       		.byte	62
+ 1220 04a7 50       		.byte	80
+ 1221 04a8 40       		.byte	64
+ 1222 04a9 12       		.byte	18
+ 1223 04aa 45       		.byte	69
+ 1224 04ab 20       		.byte	32
+ 1225 04ac 46       		.byte	70
+ 1226 04ad 50       		.byte	80
+ 1227 04ae 48       		.byte	72
+ 1228 04af 0A       		.byte	10
+ 1229 04b0 49       		.byte	73
+ 1230 04b1 FF       		.byte	-1
+ 1231 04b2 4A       		.byte	74
+ 1232 04b3 FF       		.byte	-1
+ 1233 04b4 4B       		.byte	75
+ 1234 04b5 FF       		.byte	-1
+ 1235 04b6 4C       		.byte	76
+ 1236 04b7 42       		.byte	66
+ 1237 04b8 4D       		.byte	77
+ 1238 04b9 A0       		.byte	-96
+ 1239 04ba 4E       		.byte	78
+ 1240 04bb 70       		.byte	112
+ 1241 04bc 50       		.byte	80
+ 1242 04bd 08       		.byte	8
+ 1243 04be 51       		.byte	81
+ 1244 04bf 10       		.byte	16
+ 1245 04c0 58       		.byte	88
+ 1246 04c1 04       		.byte	4
+ 1247 04c2 59       		.byte	89
+ 1248 04c3 04       		.byte	4
+ 1249 04c4 5A       		.byte	90
+ 1250 04c5 04       		.byte	4
+ 1251 04c6 5F       		.byte	95
+ 1252 04c7 01       		.byte	1
+ 1253 04c8 61       		.byte	97
+ 1254 04c9 48       		.byte	72
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 23
+
+
+ 1255 04ca 62       		.byte	98
+ 1256 04cb 40       		.byte	64
+ 1257 04cc 63       		.byte	99
+ 1258 04cd 48       		.byte	72
+ 1259 04ce 64       		.byte	100
+ 1260 04cf 80       		.byte	-128
+ 1261 04d0 65       		.byte	101
+ 1262 04d1 48       		.byte	72
+ 1263 04d2 66       		.byte	102
+ 1264 04d3 80       		.byte	-128
+ 1265 04d4 67       		.byte	103
+ 1266 04d5 48       		.byte	72
+ 1267 04d6 81       		.byte	-127
+ 1268 04d7 45       		.byte	69
+ 1269 04d8 83       		.byte	-125
+ 1270 04d9 20       		.byte	32
+ 1271 04da 89       		.byte	-119
+ 1272 04db 44       		.byte	68
+ 1273 04dc 8B       		.byte	-117
+ 1274 04dd 21       		.byte	33
+ 1275 04de 8D       		.byte	-115
+ 1276 04df 31       		.byte	49
+ 1277 04e0 8F       		.byte	-113
+ 1278 04e1 08       		.byte	8
+ 1279 04e2 91       		.byte	-111
+ 1280 04e3 44       		.byte	68
+ 1281 04e4 92       		.byte	-110
+ 1282 04e5 04       		.byte	4
+ 1283 04e6 93       		.byte	-109
+ 1284 04e7 01       		.byte	1
+ 1285 04e8 94       		.byte	-108
+ 1286 04e9 01       		.byte	1
+ 1287 04ea 95       		.byte	-107
+ 1288 04eb 31       		.byte	49
+ 1289 04ec 96       		.byte	-106
+ 1290 04ed 02       		.byte	2
+ 1291 04ee 97       		.byte	-105
+ 1292 04ef 02       		.byte	2
+ 1293 04f0 9B       		.byte	-101
+ 1294 04f1 10       		.byte	16
+ 1295 04f2 9D       		.byte	-99
+ 1296 04f3 01       		.byte	1
+ 1297 04f4 9F       		.byte	-97
+ 1298 04f5 0E       		.byte	14
+ 1299 04f6 A1       		.byte	-95
+ 1300 04f7 65       		.byte	101
+ 1301 04f8 A4       		.byte	-92
+ 1302 04f9 01       		.byte	1
+ 1303 04fa A5       		.byte	-91
+ 1304 04fb 80       		.byte	-128
+ 1305 04fc A6       		.byte	-90
+ 1306 04fd 0A       		.byte	10
+ 1307 04fe A9       		.byte	-87
+ 1308 04ff 65       		.byte	101
+ 1309 0500 AF       		.byte	-81
+ 1310 0501 40       		.byte	64
+ 1311 0502 B0       		.byte	-80
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 24
+
+
+ 1312 0503 04       		.byte	4
+ 1313 0504 B2       		.byte	-78
+ 1314 0505 08       		.byte	8
+ 1315 0506 B3       		.byte	-77
+ 1316 0507 C0       		.byte	-64
+ 1317 0508 B4       		.byte	-76
+ 1318 0509 03       		.byte	3
+ 1319 050a B5       		.byte	-75
+ 1320 050b 30       		.byte	48
+ 1321 050c B7       		.byte	-73
+ 1322 050d 0F       		.byte	15
+ 1323 050e B9       		.byte	-71
+ 1324 050f 08       		.byte	8
+ 1325 0510 BB       		.byte	-69
+ 1326 0511 80       		.byte	-128
+ 1327 0512 BF       		.byte	-65
+ 1328 0513 04       		.byte	4
+ 1329 0514 D8       		.byte	-40
+ 1330 0515 04       		.byte	4
+ 1331 0516 D9       		.byte	-39
+ 1332 0517 04       		.byte	4
+ 1333 0518 DF       		.byte	-33
+ 1334 0519 01       		.byte	1
+ 1335 051a 00       		.byte	0
+ 1336 051b 10       		.byte	16
+ 1337 051c 01       		.byte	1
+ 1338 051d 02       		.byte	2
+ 1339 051e 03       		.byte	3
+ 1340 051f 01       		.byte	1
+ 1341 0520 08       		.byte	8
+ 1342 0521 10       		.byte	16
+ 1343 0522 09       		.byte	9
+ 1344 0523 09       		.byte	9
+ 1345 0524 0B       		.byte	11
+ 1346 0525 08       		.byte	8
+ 1347 0526 0D       		.byte	13
+ 1348 0527 04       		.byte	4
+ 1349 0528 0E       		.byte	14
+ 1350 0529 80       		.byte	-128
+ 1351 052a 10       		.byte	16
+ 1352 052b 80       		.byte	-128
+ 1353 052c 11       		.byte	17
+ 1354 052d 20       		.byte	32
+ 1355 052e 12       		.byte	18
+ 1356 052f 02       		.byte	2
+ 1357 0530 17       		.byte	23
+ 1358 0531 08       		.byte	8
+ 1359 0532 18       		.byte	24
+ 1360 0533 10       		.byte	16
+ 1361 0534 19       		.byte	25
+ 1362 0535 08       		.byte	8
+ 1363 0536 1A       		.byte	26
+ 1364 0537 89       		.byte	-119
+ 1365 0538 1B       		.byte	27
+ 1366 0539 01       		.byte	1
+ 1367 053a 1D       		.byte	29
+ 1368 053b 06       		.byte	6
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 25
+
+
+ 1369 053c 1F       		.byte	31
+ 1370 053d 20       		.byte	32
+ 1371 053e 21       		.byte	33
+ 1372 053f 04       		.byte	4
+ 1373 0540 22       		.byte	34
+ 1374 0541 0A       		.byte	10
+ 1375 0542 23       		.byte	35
+ 1376 0543 40       		.byte	64
+ 1377 0544 24       		.byte	36
+ 1378 0545 08       		.byte	8
+ 1379 0546 26       		.byte	38
+ 1380 0547 90       		.byte	-112
+ 1381 0548 27       		.byte	39
+ 1382 0549 12       		.byte	18
+ 1383 054a 28       		.byte	40
+ 1384 054b 11       		.byte	17
+ 1385 054c 29       		.byte	41
+ 1386 054d 01       		.byte	1
+ 1387 054e 2A       		.byte	42
+ 1388 054f 20       		.byte	32
+ 1389 0550 2C       		.byte	44
+ 1390 0551 80       		.byte	-128
+ 1391 0552 2E       		.byte	46
+ 1392 0553 80       		.byte	-128
+ 1393 0554 2F       		.byte	47
+ 1394 0555 24       		.byte	36
+ 1395 0556 31       		.byte	49
+ 1396 0557 08       		.byte	8
+ 1397 0558 32       		.byte	50
+ 1398 0559 62       		.byte	98
+ 1399 055a 34       		.byte	52
+ 1400 055b 09       		.byte	9
+ 1401 055c 36       		.byte	54
+ 1402 055d 90       		.byte	-112
+ 1403 055e 37       		.byte	55
+ 1404 055f 01       		.byte	1
+ 1405 0560 39       		.byte	57
+ 1406 0561 14       		.byte	20
+ 1407 0562 3B       		.byte	59
+ 1408 0563 01       		.byte	1
+ 1409 0564 3D       		.byte	61
+ 1410 0565 22       		.byte	34
+ 1411 0566 3E       		.byte	62
+ 1412 0567 20       		.byte	32
+ 1413 0568 3F       		.byte	63
+ 1414 0569 41       		.byte	65
+ 1415 056a 42       		.byte	66
+ 1416 056b 01       		.byte	1
+ 1417 056c 43       		.byte	67
+ 1418 056d 10       		.byte	16
+ 1419 056e 49       		.byte	73
+ 1420 056f 02       		.byte	2
+ 1421 0570 52       		.byte	82
+ 1422 0571 20       		.byte	32
+ 1423 0572 80       		.byte	-128
+ 1424 0573 40       		.byte	64
+ 1425 0574 82       		.byte	-126
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 26
+
+
+ 1426 0575 80       		.byte	-128
+ 1427 0576 86       		.byte	-122
+ 1428 0577 40       		.byte	64
+ 1429 0578 87       		.byte	-121
+ 1430 0579 18       		.byte	24
+ 1431 057a 89       		.byte	-119
+ 1432 057b 04       		.byte	4
+ 1433 057c 8E       		.byte	-114
+ 1434 057d 08       		.byte	8
+ 1435 057e 90       		.byte	-112
+ 1436 057f 80       		.byte	-128
+ 1437 0580 91       		.byte	-111
+ 1438 0581 10       		.byte	16
+ 1439 0582 93       		.byte	-109
+ 1440 0583 09       		.byte	9
+ 1441 0584 94       		.byte	-108
+ 1442 0585 08       		.byte	8
+ 1443 0586 96       		.byte	-106
+ 1444 0587 08       		.byte	8
+ 1445 0588 97       		.byte	-105
+ 1446 0589 60       		.byte	96
+ 1447 058a 98       		.byte	-104
+ 1448 058b 08       		.byte	8
+ 1449 058c 99       		.byte	-103
+ 1450 058d 01       		.byte	1
+ 1451 058e 9A       		.byte	-102
+ 1452 058f 20       		.byte	32
+ 1453 0590 9B       		.byte	-101
+ 1454 0591 01       		.byte	1
+ 1455 0592 9D       		.byte	-99
+ 1456 0593 0C       		.byte	12
+ 1457 0594 9F       		.byte	-97
+ 1458 0595 02       		.byte	2
+ 1459 0596 A0       		.byte	-96
+ 1460 0597 80       		.byte	-128
+ 1461 0598 A1       		.byte	-95
+ 1462 0599 08       		.byte	8
+ 1463 059a A5       		.byte	-91
+ 1464 059b 02       		.byte	2
+ 1465 059c A6       		.byte	-90
+ 1466 059d 0A       		.byte	10
+ 1467 059e A7       		.byte	-89
+ 1468 059f 01       		.byte	1
+ 1469 05a0 A8       		.byte	-88
+ 1470 05a1 84       		.byte	-124
+ 1471 05a2 C0       		.byte	-64
+ 1472 05a3 0B       		.byte	11
+ 1473 05a4 C2       		.byte	-62
+ 1474 05a5 3E       		.byte	62
+ 1475 05a6 C4       		.byte	-60
+ 1476 05a7 2B       		.byte	43
+ 1477 05a8 CA       		.byte	-54
+ 1478 05a9 FF       		.byte	-1
+ 1479 05aa CC       		.byte	-52
+ 1480 05ab FF       		.byte	-1
+ 1481 05ac CE       		.byte	-50
+ 1482 05ad B7       		.byte	-73
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 27
+
+
+ 1483 05ae D0       		.byte	-48
+ 1484 05af 0C       		.byte	12
+ 1485 05b0 E6       		.byte	-26
+ 1486 05b1 40       		.byte	64
+ 1487 05b2 03       		.byte	3
+ 1488 05b3 10       		.byte	16
+ 1489 05b4 09       		.byte	9
+ 1490 05b5 61       		.byte	97
+ 1491 05b6 0B       		.byte	11
+ 1492 05b7 02       		.byte	2
+ 1493 05b8 0D       		.byte	13
+ 1494 05b9 2F       		.byte	47
+ 1495 05ba 0F       		.byte	15
+ 1496 05bb 80       		.byte	-128
+ 1497 05bc 11       		.byte	17
+ 1498 05bd 05       		.byte	5
+ 1499 05be 12       		.byte	18
+ 1500 05bf 01       		.byte	1
+ 1501 05c0 13       		.byte	19
+ 1502 05c1 6A       		.byte	106
+ 1503 05c2 15       		.byte	21
+ 1504 05c3 20       		.byte	32
+ 1505 05c4 17       		.byte	23
+ 1506 05c5 C0       		.byte	-64
+ 1507 05c6 19       		.byte	25
+ 1508 05c7 01       		.byte	1
+ 1509 05c8 1B       		.byte	27
+ 1510 05c9 64       		.byte	100
+ 1511 05ca 1D       		.byte	29
+ 1512 05cb 08       		.byte	8
+ 1513 05cc 1F       		.byte	31
+ 1514 05cd 65       		.byte	101
+ 1515 05ce 21       		.byte	33
+ 1516 05cf 01       		.byte	1
+ 1517 05d0 23       		.byte	35
+ 1518 05d1 02       		.byte	2
+ 1519 05d2 25       		.byte	37
+ 1520 05d3 40       		.byte	64
+ 1521 05d4 27       		.byte	39
+ 1522 05d5 20       		.byte	32
+ 1523 05d6 29       		.byte	41
+ 1524 05d7 06       		.byte	6
+ 1525 05d8 2B       		.byte	43
+ 1526 05d9 60       		.byte	96
+ 1527 05da 2D       		.byte	45
+ 1528 05db 60       		.byte	96
+ 1529 05dc 2F       		.byte	47
+ 1530 05dd 02       		.byte	2
+ 1531 05de 35       		.byte	53
+ 1532 05df E0       		.byte	-32
+ 1533 05e0 36       		.byte	54
+ 1534 05e1 01       		.byte	1
+ 1535 05e2 37       		.byte	55
+ 1536 05e3 1F       		.byte	31
+ 1537 05e4 3B       		.byte	59
+ 1538 05e5 20       		.byte	32
+ 1539 05e6 40       		.byte	64
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 28
+
+
+ 1540 05e7 26       		.byte	38
+ 1541 05e8 44       		.byte	68
+ 1542 05e9 04       		.byte	4
+ 1543 05ea 45       		.byte	69
+ 1544 05eb D0       		.byte	-48
+ 1545 05ec 46       		.byte	70
+ 1546 05ed B0       		.byte	-80
+ 1547 05ee 48       		.byte	72
+ 1548 05ef 0A       		.byte	10
+ 1549 05f0 49       		.byte	73
+ 1550 05f1 FF       		.byte	-1
+ 1551 05f2 4A       		.byte	74
+ 1552 05f3 7F       		.byte	127
+ 1553 05f4 4B       		.byte	75
+ 1554 05f5 FF       		.byte	-1
+ 1555 05f6 4C       		.byte	76
+ 1556 05f7 42       		.byte	66
+ 1557 05f8 4D       		.byte	77
+ 1558 05f9 A0       		.byte	-96
+ 1559 05fa 4E       		.byte	78
+ 1560 05fb 70       		.byte	112
+ 1561 05fc 50       		.byte	80
+ 1562 05fd 0C       		.byte	12
+ 1563 05fe 54       		.byte	84
+ 1564 05ff 20       		.byte	32
+ 1565 0600 56       		.byte	86
+ 1566 0601 04       		.byte	4
+ 1567 0602 58       		.byte	88
+ 1568 0603 04       		.byte	4
+ 1569 0604 59       		.byte	89
+ 1570 0605 04       		.byte	4
+ 1571 0606 5A       		.byte	90
+ 1572 0607 04       		.byte	4
+ 1573 0608 5B       		.byte	91
+ 1574 0609 04       		.byte	4
+ 1575 060a 5F       		.byte	95
+ 1576 060b 01       		.byte	1
+ 1577 060c 61       		.byte	97
+ 1578 060d 09       		.byte	9
+ 1579 060e 62       		.byte	98
+ 1580 060f 40       		.byte	64
+ 1581 0610 63       		.byte	99
+ 1582 0611 09       		.byte	9
+ 1583 0612 64       		.byte	100
+ 1584 0613 30       		.byte	48
+ 1585 0614 65       		.byte	101
+ 1586 0615 09       		.byte	9
+ 1587 0616 82       		.byte	-126
+ 1588 0617 20       		.byte	32
+ 1589 0618 83       		.byte	-125
+ 1590 0619 40       		.byte	64
+ 1591 061a 84       		.byte	-124
+ 1592 061b 12       		.byte	18
+ 1593 061c 86       		.byte	-122
+ 1594 061d 01       		.byte	1
+ 1595 061e 87       		.byte	-121
+ 1596 061f 11       		.byte	17
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 29
+
+
+ 1597 0620 88       		.byte	-120
+ 1598 0621 01       		.byte	1
+ 1599 0622 8A       		.byte	-118
+ 1600 0623 06       		.byte	6
+ 1601 0624 8B       		.byte	-117
+ 1602 0625 08       		.byte	8
+ 1603 0626 8E       		.byte	-114
+ 1604 0627 13       		.byte	19
+ 1605 0628 8F       		.byte	-113
+ 1606 0629 34       		.byte	52
+ 1607 062a 90       		.byte	-112
+ 1608 062b 01       		.byte	1
+ 1609 062c 92       		.byte	-110
+ 1610 062d 12       		.byte	18
+ 1611 062e 93       		.byte	-109
+ 1612 062f 20       		.byte	32
+ 1613 0630 96       		.byte	-106
+ 1614 0631 1B       		.byte	27
+ 1615 0632 97       		.byte	-105
+ 1616 0633 0F       		.byte	15
+ 1617 0634 98       		.byte	-104
+ 1618 0635 20       		.byte	32
+ 1619 0636 9B       		.byte	-101
+ 1620 0637 0F       		.byte	15
+ 1621 0638 9F       		.byte	-97
+ 1622 0639 08       		.byte	8
+ 1623 063a A3       		.byte	-93
+ 1624 063b 12       		.byte	18
+ 1625 063c A5       		.byte	-91
+ 1626 063d 0F       		.byte	15
+ 1627 063e A6       		.byte	-90
+ 1628 063f 13       		.byte	19
+ 1629 0640 A7       		.byte	-89
+ 1630 0641 80       		.byte	-128
+ 1631 0642 AC       		.byte	-84
+ 1632 0643 21       		.byte	33
+ 1633 0644 AD       		.byte	-83
+ 1634 0645 0F       		.byte	15
+ 1635 0646 AE       		.byte	-82
+ 1636 0647 04       		.byte	4
+ 1637 0648 AF       		.byte	-81
+ 1638 0649 10       		.byte	16
+ 1639 064a B0       		.byte	-80
+ 1640 064b 08       		.byte	8
+ 1641 064c B2       		.byte	-78
+ 1642 064d 07       		.byte	7
+ 1643 064e B3       		.byte	-77
+ 1644 064f 0F       		.byte	15
+ 1645 0650 B4       		.byte	-76
+ 1646 0651 10       		.byte	16
+ 1647 0652 B5       		.byte	-75
+ 1648 0653 80       		.byte	-128
+ 1649 0654 B6       		.byte	-74
+ 1650 0655 20       		.byte	32
+ 1651 0656 B7       		.byte	-73
+ 1652 0657 70       		.byte	112
+ 1653 0658 BA       		.byte	-70
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 30
+
+
+ 1654 0659 08       		.byte	8
+ 1655 065a BB       		.byte	-69
+ 1656 065b 80       		.byte	-128
+ 1657 065c BE       		.byte	-66
+ 1658 065d 10       		.byte	16
+ 1659 065e BF       		.byte	-65
+ 1660 065f 04       		.byte	4
+ 1661 0660 D8       		.byte	-40
+ 1662 0661 04       		.byte	4
+ 1663 0662 D9       		.byte	-39
+ 1664 0663 04       		.byte	4
+ 1665 0664 DF       		.byte	-33
+ 1666 0665 01       		.byte	1
+ 1667 0666 00       		.byte	0
+ 1668 0667 48       		.byte	72
+ 1669 0668 03       		.byte	3
+ 1670 0669 88       		.byte	-120
+ 1671 066a 08       		.byte	8
+ 1672 066b 02       		.byte	2
+ 1673 066c 09       		.byte	9
+ 1674 066d 20       		.byte	32
+ 1675 066e 0A       		.byte	10
+ 1676 066f 20       		.byte	32
+ 1677 0670 0B       		.byte	11
+ 1678 0671 80       		.byte	-128
+ 1679 0672 0D       		.byte	13
+ 1680 0673 02       		.byte	2
+ 1681 0674 10       		.byte	16
+ 1682 0675 10       		.byte	16
+ 1683 0676 12       		.byte	18
+ 1684 0677 02       		.byte	2
+ 1685 0678 18       		.byte	24
+ 1686 0679 40       		.byte	64
+ 1687 067a 19       		.byte	25
+ 1688 067b 20       		.byte	32
+ 1689 067c 1B       		.byte	27
+ 1690 067d 88       		.byte	-120
+ 1691 067e 1F       		.byte	31
+ 1692 067f 40       		.byte	64
+ 1693 0680 21       		.byte	33
+ 1694 0681 48       		.byte	72
+ 1695 0682 22       		.byte	34
+ 1696 0683 10       		.byte	16
+ 1697 0684 23       		.byte	35
+ 1698 0685 01       		.byte	1
+ 1699 0686 26       		.byte	38
+ 1700 0687 90       		.byte	-112
+ 1701 0688 27       		.byte	39
+ 1702 0689 09       		.byte	9
+ 1703 068a 28       		.byte	40
+ 1704 068b 10       		.byte	16
+ 1705 068c 29       		.byte	41
+ 1706 068d 85       		.byte	-123
+ 1707 068e 2A       		.byte	42
+ 1708 068f 40       		.byte	64
+ 1709 0690 2B       		.byte	43
+ 1710 0691 01       		.byte	1
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 31
+
+
+ 1711 0692 2D       		.byte	45
+ 1712 0693 01       		.byte	1
+ 1713 0694 2E       		.byte	46
+ 1714 0695 80       		.byte	-128
+ 1715 0696 2F       		.byte	47
+ 1716 0697 14       		.byte	20
+ 1717 0698 30       		.byte	48
+ 1718 0699 40       		.byte	64
+ 1719 069a 32       		.byte	50
+ 1720 069b 9A       		.byte	-102
+ 1721 069c 35       		.byte	53
+ 1722 069d 80       		.byte	-128
+ 1723 069e 37       		.byte	55
+ 1724 069f 19       		.byte	25
+ 1725 06a0 38       		.byte	56
+ 1726 06a1 20       		.byte	32
+ 1727 06a2 39       		.byte	57
+ 1728 06a3 82       		.byte	-126
+ 1729 06a4 3A       		.byte	58
+ 1730 06a5 A0       		.byte	-96
+ 1731 06a6 3B       		.byte	59
+ 1732 06a7 08       		.byte	8
+ 1733 06a8 3E       		.byte	62
+ 1734 06a9 21       		.byte	33
+ 1735 06aa 3F       		.byte	63
+ 1736 06ab 40       		.byte	64
+ 1737 06ac 44       		.byte	68
+ 1738 06ad 08       		.byte	8
+ 1739 06ae 45       		.byte	69
+ 1740 06af 22       		.byte	34
+ 1741 06b0 4C       		.byte	76
+ 1742 06b1 40       		.byte	64
+ 1743 06b2 4D       		.byte	77
+ 1744 06b3 01       		.byte	1
+ 1745 06b4 4E       		.byte	78
+ 1746 06b5 04       		.byte	4
+ 1747 06b6 57       		.byte	87
+ 1748 06b7 10       		.byte	16
+ 1749 06b8 5C       		.byte	92
+ 1750 06b9 80       		.byte	-128
+ 1751 06ba 5D       		.byte	93
+ 1752 06bb 08       		.byte	8
+ 1753 06bc 5E       		.byte	94
+ 1754 06bd 20       		.byte	32
+ 1755 06be 5F       		.byte	95
+ 1756 06bf 02       		.byte	2
+ 1757 06c0 65       		.byte	101
+ 1758 06c1 20       		.byte	32
+ 1759 06c2 66       		.byte	102
+ 1760 06c3 01       		.byte	1
+ 1761 06c4 67       		.byte	103
+ 1762 06c5 02       		.byte	2
+ 1763 06c6 80       		.byte	-128
+ 1764 06c7 80       		.byte	-128
+ 1765 06c8 81       		.byte	-127
+ 1766 06c9 41       		.byte	65
+ 1767 06ca 83       		.byte	-125
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 32
+
+
+ 1768 06cb 14       		.byte	20
+ 1769 06cc 90       		.byte	-112
+ 1770 06cd 20       		.byte	32
+ 1771 06ce 91       		.byte	-111
+ 1772 06cf 12       		.byte	18
+ 1773 06d0 92       		.byte	-110
+ 1774 06d1 01       		.byte	1
+ 1775 06d2 93       		.byte	-109
+ 1776 06d3 0A       		.byte	10
+ 1777 06d4 94       		.byte	-108
+ 1778 06d5 80       		.byte	-128
+ 1779 06d6 95       		.byte	-107
+ 1780 06d7 01       		.byte	1
+ 1781 06d8 99       		.byte	-103
+ 1782 06d9 01       		.byte	1
+ 1783 06da 9C       		.byte	-100
+ 1784 06db 42       		.byte	66
+ 1785 06dc 9E       		.byte	-98
+ 1786 06dd 41       		.byte	65
+ 1787 06de 9F       		.byte	-97
+ 1788 06df 04       		.byte	4
+ 1789 06e0 A0       		.byte	-96
+ 1790 06e1 04       		.byte	4
+ 1791 06e2 A1       		.byte	-95
+ 1792 06e3 20       		.byte	32
+ 1793 06e4 A6       		.byte	-90
+ 1794 06e5 02       		.byte	2
+ 1795 06e6 A7       		.byte	-89
+ 1796 06e7 91       		.byte	-111
+ 1797 06e8 B6       		.byte	-74
+ 1798 06e9 41       		.byte	65
+ 1799 06ea C0       		.byte	-64
+ 1800 06eb 0F       		.byte	15
+ 1801 06ec C2       		.byte	-62
+ 1802 06ed 1E       		.byte	30
+ 1803 06ee C4       		.byte	-60
+ 1804 06ef 05       		.byte	5
+ 1805 06f0 CA       		.byte	-54
+ 1806 06f1 FB       		.byte	-5
+ 1807 06f2 CC       		.byte	-52
+ 1808 06f3 FF       		.byte	-1
+ 1809 06f4 CE       		.byte	-50
+ 1810 06f5 BF       		.byte	-65
+ 1811 06f6 D0       		.byte	-48
+ 1812 06f7 A0       		.byte	-96
+ 1813 06f8 D2       		.byte	-46
+ 1814 06f9 20       		.byte	32
+ 1815 06fa D6       		.byte	-42
+ 1816 06fb F0       		.byte	-16
+ 1817 06fc D8       		.byte	-40
+ 1818 06fd B0       		.byte	-80
+ 1819 06fe EE       		.byte	-18
+ 1820 06ff 40       		.byte	64
+ 1821 0700 E8       		.byte	-24
+ 1822 0701 10       		.byte	16
+ 1823 0702 E2       		.byte	-30
+ 1824 0703 20       		.byte	32
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 33
+
+
+ 1825 0704 30       		.byte	48
+ 1826 0705 80       		.byte	-128
+ 1827 0706 CC       		.byte	-52
+ 1828 0707 10       		.byte	16
+ 1829 0708 03       		.byte	3
+ 1830 0709 80       		.byte	-128
+ 1831 070a A4       		.byte	-92
+ 1832 070b 80       		.byte	-128
+ 1833 070c C0       		.byte	-64
+ 1834 070d 10       		.byte	16
+ 1835 070e 57       		.byte	87
+ 1836 070f 10       		.byte	16
+ 1837 0710 A4       		.byte	-92
+ 1838 0711 80       		.byte	-128
+ 1839 0712 AF       		.byte	-81
+ 1840 0713 80       		.byte	-128
+ 1841 0714 D4       		.byte	-44
+ 1842 0715 40       		.byte	64
+ 1843 0716 EC       		.byte	-20
+ 1844 0717 10       		.byte	16
+ 1845 0718 8F       		.byte	-113
+ 1846 0719 10       		.byte	16
+ 1847 071a A4       		.byte	-92
+ 1848 071b 80       		.byte	-128
+ 1849 071c A7       		.byte	-89
+ 1850 071d 10       		.byte	16
+ 1851 071e B4       		.byte	-76
+ 1852 071f 80       		.byte	-128
+ 1853 0720 12       		.byte	18
+ 1854 0721 40       		.byte	64
+ 1855 0722 15       		.byte	21
+ 1856 0723 04       		.byte	4
+ 1857 0724 74       		.byte	116
+ 1858 0725 02       		.byte	2
+ 1859 0726 85       		.byte	-123
+ 1860 0727 04       		.byte	4
+ 1861 0728 86       		.byte	-122
+ 1862 0729 40       		.byte	64
+ 1863 072a 8C       		.byte	-116
+ 1864 072b 02       		.byte	2
+ 1865 072c C4       		.byte	-60
+ 1866 072d 30       		.byte	48
+ 1867 072e DE       		.byte	-34
+ 1868 072f 20       		.byte	32
+ 1869 0730 E0       		.byte	-32
+ 1870 0731 10       		.byte	16
+ 1871 0732 E4       		.byte	-28
+ 1872 0733 40       		.byte	64
+ 1873 0734 90       		.byte	-112
+ 1874 0735 08       		.byte	8
+ 1875 0736 B4       		.byte	-76
+ 1876 0737 04       		.byte	4
+ 1877 0738 E8       		.byte	-24
+ 1878 0739 08       		.byte	8
+ 1879 073a 10       		.byte	16
+ 1880 073b 10       		.byte	16
+ 1881 073c 70       		.byte	112
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 34
+
+
+ 1882 073d 04       		.byte	4
+ 1883 073e 88       		.byte	-120
+ 1884 073f 10       		.byte	16
+ 1885 0740 90       		.byte	-112
+ 1886 0741 08       		.byte	8
+ 1887 0742 C4       		.byte	-60
+ 1888 0743 08       		.byte	8
+ 1889 0744 DC       		.byte	-36
+ 1890 0745 01       		.byte	1
+ 1891 0746 E2       		.byte	-30
+ 1892 0747 04       		.byte	4
+ 1893 0748 00       		.byte	0
+ 1894 0749 03       		.byte	3
+ 1895 074a 01       		.byte	1
+ 1896 074b 01       		.byte	1
+ 1897 074c 08       		.byte	8
+ 1898 074d 03       		.byte	3
+ 1899 074e 09       		.byte	9
+ 1900 074f 01       		.byte	1
+ 1901 0750 0A       		.byte	10
+ 1902 0751 03       		.byte	3
+ 1903 0752 10       		.byte	16
+ 1904 0753 01       		.byte	1
+ 1905 0754 11       		.byte	17
+ 1906 0755 01       		.byte	1
+ 1907 0756 1A       		.byte	26
+ 1908 0757 01       		.byte	1
+ 1909 0758 1B       		.byte	27
+ 1910 0759 01       		.byte	1
+ 1911 075a 00       		.byte	0
+ 1912 075b 03       		.byte	3
+ 1913 075c 03       		.byte	3
+ 1914 075d 82       		.byte	-126
+ 1915 075e 00       		.byte	0
+ 1916 075f 00       		.byte	0
+ 1917 0760 43       		.byte	67
+ 1918 0761 00       		.byte	0
+ 1919 0762 00       		.byte	0
+ 1920 0763 00       		.byte	0
+ 1921 0764 00       		.byte	0
+ 1922 0765 00       		.byte	0
+ 1923 0766 04       		.byte	4
+ 1924 0767 00       		.byte	0
+ 1925 0768 18       		.byte	24
+ 1926 0769 F8       		.byte	-8
+ 1927 076a 00       		.byte	0
+ 1928 076b 00       		.byte	0
+ 1929 076c 9C       		.byte	-100
+ 1930 076d F8       		.byte	-8
+ 1931 076e 22       		.byte	34
+ 1932 076f 00       		.byte	0
+ 1933 0770 1C       		.byte	28
+ 1934 0771 00       		.byte	0
+ 1935 0772 A1       		.byte	-95
+ 1936 0773 04       		.byte	4
+ 1937 0774 BF       		.byte	-65
+ 1938 0775 00       		.byte	0
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 35
+
+
+ 1939 0776 00       		.byte	0
+ 1940 0777 00       		.byte	0
+ 1941 0778 00       		.byte	0
+ 1942 0779 20       		.byte	32
+ 1943 077a A3       		.byte	-93
+ 1944 077b C1       		.byte	-63
+ 1945 077c 00       		.byte	0
+ 1946 077d 90       		.byte	-112
+ 1947 077e 40       		.byte	64
+ 1948 077f 2A       		.byte	42
+ 1949 0780 04       		.byte	4
+ 1950 0781 00       		.byte	0
+ 1951 0782 00       		.byte	0
+ 1952 0783 00       		.byte	0
+ 1953 0784 10       		.byte	16
+ 1954 0785 00       		.byte	0
+ 1955 0786 00       		.byte	0
+ 1956 0787 04       		.byte	4
+ 1957 0788 08       		.byte	8
+ 1958 0789 48       		.byte	72
+ 1959 078a 00       		.byte	0
+ 1960 078b 32       		.byte	50
+ 1961 078c A7       		.byte	-89
+ 1962 078d 00       		.byte	0
+ 1963 078e 18       		.byte	24
+ 1964 078f 00       		.byte	0
+ 1965 0790 00       		.byte	0
+ 1966 0791 00       		.byte	0
+ 1967 0792 40       		.byte	64
+ 1968 0793 00       		.byte	0
+ 1969 0794 38       		.byte	56
+ 1970 0795 03       		.byte	3
+ 1971 0796 40       		.byte	64
+ 1972 0797 E0       		.byte	-32
+ 1973 0798 1F       		.byte	31
+ 1974 0799 18       		.byte	24
+ 1975 079a 98       		.byte	-104
+ 1976 079b 04       		.byte	4
+ 1977 079c 00       		.byte	0
+ 1978 079d 00       		.byte	0
+ 1979 079e 22       		.byte	34
+ 1980 079f 00       		.byte	0
+ 1981 07a0 00       		.byte	0
+ 1982 07a1 00       		.byte	0
+ 1983 07a2 04       		.byte	4
+ 1984 07a3 41       		.byte	65
+ 1985 07a4 23       		.byte	35
+ 1986 07a5 06       		.byte	6
+ 1987 07a6 04       		.byte	4
+ 1988 07a7 00       		.byte	0
+ 1989 07a8 01       		.byte	1
+ 1990 07a9 00       		.byte	0
+ 1991 07aa 0C       		.byte	12
+ 1992 07ab 0E       		.byte	14
+ 1993 07ac 14       		.byte	20
+ 1994 07ad FF       		.byte	-1
+ 1995 07ae FF       		.byte	-1
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 36
+
+
+ 1996 07af FF       		.byte	-1
+ 1997 07b0 62       		.byte	98
+ 1998 07b1 A0       		.byte	-96
+ 1999 07b2 F0       		.byte	-16
+ 2000 07b3 41       		.byte	65
+ 2001 07b4 0C       		.byte	12
+ 2002 07b5 00       		.byte	0
+ 2003 07b6 00       		.byte	0
+ 2004 07b7 00       		.byte	0
+ 2005 07b8 18       		.byte	24
+ 2006 07b9 00       		.byte	0
+ 2007 07ba 00       		.byte	0
+ 2008 07bb 00       		.byte	0
+ 2009 07bc 04       		.byte	4
+ 2010 07bd 04       		.byte	4
+ 2011 07be 04       		.byte	4
+ 2012 07bf 04       		.byte	4
+ 2013 07c0 11       		.byte	17
+ 2014 07c1 11       		.byte	17
+ 2015 07c2 00       		.byte	0
+ 2016 07c3 01       		.byte	1
+ 2017 07c4 00       		.byte	0
+ 2018 07c5 00       		.byte	0
+ 2019 07c6 00       		.byte	0
+ 2020 07c7 00       		.byte	0
+ 2021 07c8 00       		.byte	0
+ 2022 07c9 00       		.byte	0
+ 2023 07ca 40       		.byte	64
+ 2024 07cb 02       		.byte	2
+ 2025 07cc 00       		.byte	0
+ 2026 07cd 10       		.byte	16
+ 2027 07ce 30       		.byte	48
+ 2028 07cf 10       		.byte	16
+ 2029 07d0 00       		.byte	0
+ 2030 07d1 10       		.byte	16
+ 2031 07d2 10       		.byte	16
+ 2032 07d3 12       		.byte	18
+ 2033 07d4 00       		.byte	0
+ 2034 07d5 00       		.byte	0
+ 2035 07d6 00       		.byte	0
+ 2036 07d7 00       		.byte	0
+ 2037 07d8 00       		.byte	0
+ 2038 07d9 00       		.byte	0
+ 2039 07da 00       		.byte	0
+ 2040 07db 00       		.byte	0
+ 2041 07dc 00       		.byte	0
+ 2042 07dd 00       		.byte	0
+ 2043 07de 00       		.byte	0
+ 2044 07df 00       		.byte	0
+ 2045 07e0 00       		.byte	0
+ 2046 07e1 00       		.byte	0
+ 2047 07e2 00       		.byte	0
+ 2048 07e3 00       		.byte	0
+ 2049 07e4 01       		.byte	1
+ 2050 07e5 00       		.byte	0
+ 2051 07e6 00       		.byte	0
+ 2052 07e7 00       		.byte	0
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 37
+
+
+ 2053 07e8 00       		.byte	0
+ 2054 07e9 00       		.byte	0
+ 2055 07ea 00       		.byte	0
+ 2056 07eb 00       		.byte	0
+ 2057 07ec 83       		.byte	-125
+ 2058 07ed 00       		.byte	0
+ 2059 07ee 40       		.byte	64
+ 2060 07ef 80       		.byte	-128
+ 2061 07f0 83       		.byte	-125
+ 2062 07f1 00       		.byte	0
+ 2063 07f2 83       		.byte	-125
+ 2064 07f3 00       		.byte	0
+ 2065 07f4 00       		.byte	0
+ 2066 07f5 00       		.byte	0
+ 2067 07f6 00       		.byte	0
+ 2068 07f7 00       		.byte	0
+ 2069 07f8 00       		.byte	0
+ 2070 07f9 0B       		.byte	11
+ 2071 07fa 0B       		.byte	11
+ 2072 07fb 00       		.byte	0
+ 2073 07fc 00       		.byte	0
+ 2074 07fd 00       		.byte	0
+ 2075 07fe 00       		.byte	0
+ 2076 07ff 00       		.byte	0
+ 2077              		.section	.cywolatch,"a",%progbits
+ 2078              		.align	2
+ 2079              		.type	cy_meta_wonvl, %object
+ 2080              		.size	cy_meta_wonvl, 4
+ 2081              	cy_meta_wonvl:
+ 2082 0000 BC       		.byte	-68
+ 2083 0001 90       		.byte	-112
+ 2084 0002 AC       		.byte	-84
+ 2085 0003 AF       		.byte	-81
+ 2086              		.section	.cycustnvl,"a",%progbits
+ 2087              		.align	2
+ 2088              		.type	cy_meta_custnvl, %object
+ 2089              		.size	cy_meta_custnvl, 4
+ 2090              	cy_meta_custnvl:
+ 2091 0000 00       		.byte	0
+ 2092 0001 00       		.byte	0
+ 2093 0002 40       		.byte	64
+ 2094 0003 05       		.byte	5
+ 2095              		.section	.cymeta,"a",%progbits
+ 2096              		.align	2
+ 2097              		.type	cy_metadata, %object
+ 2098              		.size	cy_metadata, 12
+ 2099              	cy_metadata:
+ 2100 0000 00       		.byte	0
+ 2101 0001 01       		.byte	1
+ 2102 0002 2E       		.byte	46
+ 2103 0003 16       		.byte	22
+ 2104 0004 10       		.byte	16
+ 2105 0005 69       		.byte	105
+ 2106 0006 00       		.byte	0
+ 2107 0007 01       		.byte	1
+ 2108 0008 00       		.byte	0
+ 2109 0009 00       		.byte	0
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 38
+
+
+ 2110 000a 00       		.byte	0
+ 2111 000b 00       		.byte	0
+ 2112              		.section	.cyflashprotect,"a",%progbits
+ 2113              		.align	2
+ 2114              		.type	cy_meta_flashprotect, %object
+ 2115              		.size	cy_meta_flashprotect, 256
+ 2116              	cy_meta_flashprotect:
+ 2117 0000 00000000 		.space	256
+ 2117      00000000 
+ 2117      00000000 
+ 2117      00000000 
+ 2117      00000000 
+ 2118              		.text
+ 2119              	.Letext0:
+ 2120              		.file 1 "d:\\program files (x86)\\cypress\\psoc creator\\4.1\\psoc creator\\import\\gnu\\arm\\5.4.
+ 2121              		.file 2 "d:\\program files (x86)\\cypress\\psoc creator\\4.1\\psoc creator\\import\\gnu\\arm\\5.4.
+ 2122              		.file 3 "Generated_Source\\PSoC5\\cymetadata.c"
+ 2123              		.section	.debug_info,"",%progbits
+ 2124              	.Ldebug_info0:
+ 2125 0000 35010000 		.4byte	0x135
+ 2126 0004 0400     		.2byte	0x4
+ 2127 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 2128 000a 04       		.byte	0x4
+ 2129 000b 01       		.uleb128 0x1
+ 2130 000c 24000000 		.4byte	.LASF17
+ 2131 0010 0C       		.byte	0xc
+ 2132 0011 0F020000 		.4byte	.LASF18
+ 2133 0015 D7000000 		.4byte	.LASF19
+ 2134 0019 00000000 		.4byte	.Ldebug_line0
+ 2135 001d 02       		.uleb128 0x2
+ 2136 001e 01       		.byte	0x1
+ 2137 001f 06       		.byte	0x6
+ 2138 0020 03020000 		.4byte	.LASF0
+ 2139 0024 03       		.uleb128 0x3
+ 2140 0025 00000000 		.4byte	.LASF9
+ 2141 0029 01       		.byte	0x1
+ 2142 002a 1D       		.byte	0x1d
+ 2143 002b 2F000000 		.4byte	0x2f
+ 2144 002f 02       		.uleb128 0x2
+ 2145 0030 01       		.byte	0x1
+ 2146 0031 08       		.byte	0x8
+ 2147 0032 16000000 		.4byte	.LASF1
+ 2148 0036 02       		.uleb128 0x2
+ 2149 0037 02       		.byte	0x2
+ 2150 0038 05       		.byte	0x5
+ 2151 0039 F0010000 		.4byte	.LASF2
+ 2152 003d 02       		.uleb128 0x2
+ 2153 003e 02       		.byte	0x2
+ 2154 003f 07       		.byte	0x7
+ 2155 0040 C4000000 		.4byte	.LASF3
+ 2156 0044 02       		.uleb128 0x2
+ 2157 0045 04       		.byte	0x4
+ 2158 0046 05       		.byte	0x5
+ 2159 0047 FA010000 		.4byte	.LASF4
+ 2160 004b 02       		.uleb128 0x2
+ 2161 004c 04       		.byte	0x4
+ 2162 004d 07       		.byte	0x7
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 39
+
+
+ 2163 004e B2000000 		.4byte	.LASF5
+ 2164 0052 02       		.uleb128 0x2
+ 2165 0053 08       		.byte	0x8
+ 2166 0054 05       		.byte	0x5
+ 2167 0055 E2010000 		.4byte	.LASF6
+ 2168 0059 02       		.uleb128 0x2
+ 2169 005a 08       		.byte	0x8
+ 2170 005b 07       		.byte	0x7
+ 2171 005c 97010000 		.4byte	.LASF7
+ 2172 0060 04       		.uleb128 0x4
+ 2173 0061 04       		.byte	0x4
+ 2174 0062 05       		.byte	0x5
+ 2175 0063 696E7400 		.ascii	"int\000"
+ 2176 0067 02       		.uleb128 0x2
+ 2177 0068 04       		.byte	0x4
+ 2178 0069 07       		.byte	0x7
+ 2179 006a 8A010000 		.4byte	.LASF8
+ 2180 006e 03       		.uleb128 0x3
+ 2181 006f AE010000 		.4byte	.LASF10
+ 2182 0073 02       		.byte	0x2
+ 2183 0074 18       		.byte	0x18
+ 2184 0075 24000000 		.4byte	0x24
+ 2185 0079 05       		.uleb128 0x5
+ 2186 007a 91000000 		.4byte	0x91
+ 2187 007e 8A000000 		.4byte	0x8a
+ 2188 0082 06       		.uleb128 0x6
+ 2189 0083 8A000000 		.4byte	0x8a
+ 2190 0087 FF07     		.2byte	0x7ff
+ 2191 0089 00       		.byte	0
+ 2192 008a 02       		.uleb128 0x2
+ 2193 008b 04       		.byte	0x4
+ 2194 008c 07       		.byte	0x7
+ 2195 008d D9010000 		.4byte	.LASF11
+ 2196 0091 07       		.uleb128 0x7
+ 2197 0092 6E000000 		.4byte	0x6e
+ 2198 0096 08       		.uleb128 0x8
+ 2199 0097 78010000 		.4byte	.LASF12
+ 2200 009b 03       		.byte	0x3
+ 2201 009c 1F       		.byte	0x1f
+ 2202 009d A7000000 		.4byte	0xa7
+ 2203 00a1 05       		.uleb128 0x5
+ 2204 00a2 03       		.byte	0x3
+ 2205 00a3 00000000 		.4byte	cy_meta_configecc
+ 2206 00a7 07       		.uleb128 0x7
+ 2207 00a8 79000000 		.4byte	0x79
+ 2208 00ac 05       		.uleb128 0x5
+ 2209 00ad 91000000 		.4byte	0x91
+ 2210 00b1 BC000000 		.4byte	0xbc
+ 2211 00b5 09       		.uleb128 0x9
+ 2212 00b6 8A000000 		.4byte	0x8a
+ 2213 00ba 03       		.byte	0x3
+ 2214 00bb 00       		.byte	0
+ 2215 00bc 0A       		.uleb128 0xa
+ 2216 00bd 68010000 		.4byte	.LASF13
+ 2217 00c1 03       		.byte	0x3
+ 2218 00c2 2C01     		.2byte	0x12c
+ 2219 00c4 CE000000 		.4byte	0xce
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 40
+
+
+ 2220 00c8 05       		.uleb128 0x5
+ 2221 00c9 03       		.byte	0x3
+ 2222 00ca 00000000 		.4byte	cy_meta_custnvl
+ 2223 00ce 07       		.uleb128 0x7
+ 2224 00cf AC000000 		.4byte	0xac
+ 2225 00d3 0A       		.uleb128 0xa
+ 2226 00d4 CB010000 		.4byte	.LASF14
+ 2227 00d8 03       		.byte	0x3
+ 2228 00d9 3A01     		.2byte	0x13a
+ 2229 00db E5000000 		.4byte	0xe5
+ 2230 00df 05       		.uleb128 0x5
+ 2231 00e0 03       		.byte	0x3
+ 2232 00e1 00000000 		.4byte	cy_meta_wonvl
+ 2233 00e5 07       		.uleb128 0x7
+ 2234 00e6 AC000000 		.4byte	0xac
+ 2235 00ea 05       		.uleb128 0x5
+ 2236 00eb 91000000 		.4byte	0x91
+ 2237 00ef FA000000 		.4byte	0xfa
+ 2238 00f3 09       		.uleb128 0x9
+ 2239 00f4 8A000000 		.4byte	0x8a
+ 2240 00f8 FF       		.byte	0xff
+ 2241 00f9 00       		.byte	0
+ 2242 00fa 0A       		.uleb128 0xa
+ 2243 00fb B6010000 		.4byte	.LASF15
+ 2244 00ff 03       		.byte	0x3
+ 2245 0100 4801     		.2byte	0x148
+ 2246 0102 0C010000 		.4byte	0x10c
+ 2247 0106 05       		.uleb128 0x5
+ 2248 0107 03       		.byte	0x3
+ 2249 0108 00000000 		.4byte	cy_meta_flashprotect
+ 2250 010c 07       		.uleb128 0x7
+ 2251 010d EA000000 		.4byte	0xea
+ 2252 0111 05       		.uleb128 0x5
+ 2253 0112 91000000 		.4byte	0x91
+ 2254 0116 21010000 		.4byte	0x121
+ 2255 011a 09       		.uleb128 0x9
+ 2256 011b 8A000000 		.4byte	0x8a
+ 2257 011f 0B       		.byte	0xb
+ 2258 0120 00       		.byte	0
+ 2259 0121 0A       		.uleb128 0xa
+ 2260 0122 0A000000 		.4byte	.LASF16
+ 2261 0126 03       		.byte	0x3
+ 2262 0127 7501     		.2byte	0x175
+ 2263 0129 33010000 		.4byte	0x133
+ 2264 012d 05       		.uleb128 0x5
+ 2265 012e 03       		.byte	0x3
+ 2266 012f 00000000 		.4byte	cy_metadata
+ 2267 0133 07       		.uleb128 0x7
+ 2268 0134 11010000 		.4byte	0x111
+ 2269 0138 00       		.byte	0
+ 2270              		.section	.debug_abbrev,"",%progbits
+ 2271              	.Ldebug_abbrev0:
+ 2272 0000 01       		.uleb128 0x1
+ 2273 0001 11       		.uleb128 0x11
+ 2274 0002 01       		.byte	0x1
+ 2275 0003 25       		.uleb128 0x25
+ 2276 0004 0E       		.uleb128 0xe
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 41
+
+
+ 2277 0005 13       		.uleb128 0x13
+ 2278 0006 0B       		.uleb128 0xb
+ 2279 0007 03       		.uleb128 0x3
+ 2280 0008 0E       		.uleb128 0xe
+ 2281 0009 1B       		.uleb128 0x1b
+ 2282 000a 0E       		.uleb128 0xe
+ 2283 000b 10       		.uleb128 0x10
+ 2284 000c 17       		.uleb128 0x17
+ 2285 000d 00       		.byte	0
+ 2286 000e 00       		.byte	0
+ 2287 000f 02       		.uleb128 0x2
+ 2288 0010 24       		.uleb128 0x24
+ 2289 0011 00       		.byte	0
+ 2290 0012 0B       		.uleb128 0xb
+ 2291 0013 0B       		.uleb128 0xb
+ 2292 0014 3E       		.uleb128 0x3e
+ 2293 0015 0B       		.uleb128 0xb
+ 2294 0016 03       		.uleb128 0x3
+ 2295 0017 0E       		.uleb128 0xe
+ 2296 0018 00       		.byte	0
+ 2297 0019 00       		.byte	0
+ 2298 001a 03       		.uleb128 0x3
+ 2299 001b 16       		.uleb128 0x16
+ 2300 001c 00       		.byte	0
+ 2301 001d 03       		.uleb128 0x3
+ 2302 001e 0E       		.uleb128 0xe
+ 2303 001f 3A       		.uleb128 0x3a
+ 2304 0020 0B       		.uleb128 0xb
+ 2305 0021 3B       		.uleb128 0x3b
+ 2306 0022 0B       		.uleb128 0xb
+ 2307 0023 49       		.uleb128 0x49
+ 2308 0024 13       		.uleb128 0x13
+ 2309 0025 00       		.byte	0
+ 2310 0026 00       		.byte	0
+ 2311 0027 04       		.uleb128 0x4
+ 2312 0028 24       		.uleb128 0x24
+ 2313 0029 00       		.byte	0
+ 2314 002a 0B       		.uleb128 0xb
+ 2315 002b 0B       		.uleb128 0xb
+ 2316 002c 3E       		.uleb128 0x3e
+ 2317 002d 0B       		.uleb128 0xb
+ 2318 002e 03       		.uleb128 0x3
+ 2319 002f 08       		.uleb128 0x8
+ 2320 0030 00       		.byte	0
+ 2321 0031 00       		.byte	0
+ 2322 0032 05       		.uleb128 0x5
+ 2323 0033 01       		.uleb128 0x1
+ 2324 0034 01       		.byte	0x1
+ 2325 0035 49       		.uleb128 0x49
+ 2326 0036 13       		.uleb128 0x13
+ 2327 0037 01       		.uleb128 0x1
+ 2328 0038 13       		.uleb128 0x13
+ 2329 0039 00       		.byte	0
+ 2330 003a 00       		.byte	0
+ 2331 003b 06       		.uleb128 0x6
+ 2332 003c 21       		.uleb128 0x21
+ 2333 003d 00       		.byte	0
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 42
+
+
+ 2334 003e 49       		.uleb128 0x49
+ 2335 003f 13       		.uleb128 0x13
+ 2336 0040 2F       		.uleb128 0x2f
+ 2337 0041 05       		.uleb128 0x5
+ 2338 0042 00       		.byte	0
+ 2339 0043 00       		.byte	0
+ 2340 0044 07       		.uleb128 0x7
+ 2341 0045 26       		.uleb128 0x26
+ 2342 0046 00       		.byte	0
+ 2343 0047 49       		.uleb128 0x49
+ 2344 0048 13       		.uleb128 0x13
+ 2345 0049 00       		.byte	0
+ 2346 004a 00       		.byte	0
+ 2347 004b 08       		.uleb128 0x8
+ 2348 004c 34       		.uleb128 0x34
+ 2349 004d 00       		.byte	0
+ 2350 004e 03       		.uleb128 0x3
+ 2351 004f 0E       		.uleb128 0xe
+ 2352 0050 3A       		.uleb128 0x3a
+ 2353 0051 0B       		.uleb128 0xb
+ 2354 0052 3B       		.uleb128 0x3b
+ 2355 0053 0B       		.uleb128 0xb
+ 2356 0054 49       		.uleb128 0x49
+ 2357 0055 13       		.uleb128 0x13
+ 2358 0056 3F       		.uleb128 0x3f
+ 2359 0057 19       		.uleb128 0x19
+ 2360 0058 02       		.uleb128 0x2
+ 2361 0059 18       		.uleb128 0x18
+ 2362 005a 00       		.byte	0
+ 2363 005b 00       		.byte	0
+ 2364 005c 09       		.uleb128 0x9
+ 2365 005d 21       		.uleb128 0x21
+ 2366 005e 00       		.byte	0
+ 2367 005f 49       		.uleb128 0x49
+ 2368 0060 13       		.uleb128 0x13
+ 2369 0061 2F       		.uleb128 0x2f
+ 2370 0062 0B       		.uleb128 0xb
+ 2371 0063 00       		.byte	0
+ 2372 0064 00       		.byte	0
+ 2373 0065 0A       		.uleb128 0xa
+ 2374 0066 34       		.uleb128 0x34
+ 2375 0067 00       		.byte	0
+ 2376 0068 03       		.uleb128 0x3
+ 2377 0069 0E       		.uleb128 0xe
+ 2378 006a 3A       		.uleb128 0x3a
+ 2379 006b 0B       		.uleb128 0xb
+ 2380 006c 3B       		.uleb128 0x3b
+ 2381 006d 05       		.uleb128 0x5
+ 2382 006e 49       		.uleb128 0x49
+ 2383 006f 13       		.uleb128 0x13
+ 2384 0070 3F       		.uleb128 0x3f
+ 2385 0071 19       		.uleb128 0x19
+ 2386 0072 02       		.uleb128 0x2
+ 2387 0073 18       		.uleb128 0x18
+ 2388 0074 00       		.byte	0
+ 2389 0075 00       		.byte	0
+ 2390 0076 00       		.byte	0
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 43
+
+
+ 2391              		.section	.debug_aranges,"",%progbits
+ 2392 0000 14000000 		.4byte	0x14
+ 2393 0004 0200     		.2byte	0x2
+ 2394 0006 00000000 		.4byte	.Ldebug_info0
+ 2395 000a 04       		.byte	0x4
+ 2396 000b 00       		.byte	0
+ 2397 000c 0000     		.2byte	0
+ 2398 000e 0000     		.2byte	0
+ 2399 0010 00000000 		.4byte	0
+ 2400 0014 00000000 		.4byte	0
+ 2401              		.section	.debug_line,"",%progbits
+ 2402              	.Ldebug_line0:
+ 2403 0000 3D010000 		.section	.debug_str,"MS",%progbits,1
+ 2403      02003701 
+ 2403      00000201 
+ 2403      FB0E0D00 
+ 2403      01010101 
+ 2404              	.LASF9:
+ 2405 0000 5F5F7569 		.ascii	"__uint8_t\000"
+ 2405      6E74385F 
+ 2405      7400
+ 2406              	.LASF16:
+ 2407 000a 63795F6D 		.ascii	"cy_metadata\000"
+ 2407      65746164 
+ 2407      61746100 
+ 2408              	.LASF1:
+ 2409 0016 756E7369 		.ascii	"unsigned char\000"
+ 2409      676E6564 
+ 2409      20636861 
+ 2409      7200
+ 2410              	.LASF17:
+ 2411 0024 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 2411      43313120 
+ 2411      352E342E 
+ 2411      31203230 
+ 2411      31363036 
+ 2412 0057 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 2412      20726576 
+ 2412      6973696F 
+ 2412      6E203233 
+ 2412      37373135 
+ 2413 008a 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 2413      66756E63 
+ 2413      74696F6E 
+ 2413      2D736563 
+ 2413      74696F6E 
+ 2414              	.LASF5:
+ 2415 00b2 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2415      20756E73 
+ 2415      69676E65 
+ 2415      6420696E 
+ 2415      7400
+ 2416              	.LASF3:
+ 2417 00c4 73686F72 		.ascii	"short unsigned int\000"
+ 2417      7420756E 
+ 2417      7369676E 
+ 2417      65642069 
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 44
+
+
+ 2417      6E7400
+ 2418              	.LASF19:
+ 2419 00d7 443A5C47 		.ascii	"D:\\Google Drive\\Aarhus Universitet\\Trejde Semest"
+ 2419      6F6F676C 
+ 2419      65204472 
+ 2419      6976655C 
+ 2419      41617268 
+ 2420 0107 65725C47 		.ascii	"er\\Graenseflader_til_den_fysiske_verden\\LAB4\\Tem"
+ 2420      7261656E 
+ 2420      7365666C 
+ 2420      61646572 
+ 2420      5F74696C 
+ 2421 0137 70657261 		.ascii	"peratureControlHandout\\Temperature-Control.cydsn\000"
+ 2421      74757265 
+ 2421      436F6E74 
+ 2421      726F6C48 
+ 2421      616E646F 
+ 2422              	.LASF13:
+ 2423 0168 63795F6D 		.ascii	"cy_meta_custnvl\000"
+ 2423      6574615F 
+ 2423      63757374 
+ 2423      6E766C00 
+ 2424              	.LASF12:
+ 2425 0178 63795F6D 		.ascii	"cy_meta_configecc\000"
+ 2425      6574615F 
+ 2425      636F6E66 
+ 2425      69676563 
+ 2425      6300
+ 2426              	.LASF8:
+ 2427 018a 756E7369 		.ascii	"unsigned int\000"
+ 2427      676E6564 
+ 2427      20696E74 
+ 2427      00
+ 2428              	.LASF7:
+ 2429 0197 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2429      206C6F6E 
+ 2429      6720756E 
+ 2429      7369676E 
+ 2429      65642069 
+ 2430              	.LASF10:
+ 2431 01ae 75696E74 		.ascii	"uint8_t\000"
+ 2431      385F7400 
+ 2432              	.LASF15:
+ 2433 01b6 63795F6D 		.ascii	"cy_meta_flashprotect\000"
+ 2433      6574615F 
+ 2433      666C6173 
+ 2433      6870726F 
+ 2433      74656374 
+ 2434              	.LASF14:
+ 2435 01cb 63795F6D 		.ascii	"cy_meta_wonvl\000"
+ 2435      6574615F 
+ 2435      776F6E76 
+ 2435      6C00
+ 2436              	.LASF11:
+ 2437 01d9 73697A65 		.ascii	"sizetype\000"
+ 2437      74797065 
+ 2437      00
+ARM GAS  C:\Users\andre\AppData\Local\Temp\cct8JERX.s 			page 45
+
+
+ 2438              	.LASF6:
+ 2439 01e2 6C6F6E67 		.ascii	"long long int\000"
+ 2439      206C6F6E 
+ 2439      6720696E 
+ 2439      7400
+ 2440              	.LASF2:
+ 2441 01f0 73686F72 		.ascii	"short int\000"
+ 2441      7420696E 
+ 2441      7400
+ 2442              	.LASF4:
+ 2443 01fa 6C6F6E67 		.ascii	"long int\000"
+ 2443      20696E74 
+ 2443      00
+ 2444              	.LASF0:
+ 2445 0203 7369676E 		.ascii	"signed char\000"
+ 2445      65642063 
+ 2445      68617200 
+ 2446              	.LASF18:
+ 2447 020f 47656E65 		.ascii	"Generated_Source\\PSoC5\\cymetadata.c\000"
+ 2447      72617465 
+ 2447      645F536F 
+ 2447      75726365 
+ 2447      5C50536F 
+ 2448              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

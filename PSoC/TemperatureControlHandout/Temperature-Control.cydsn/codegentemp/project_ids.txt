@@ -1,0 +1,6 @@
+D:\Google Drive\Aarhus Universitet\Trejde Semester\Graenseflader_til_den_fysiske_verden\LAB4\TemperatureControlHandout\Temperature-Control.cydsn\Temperature-Control.cyprj|4f7b32fd-8448-46c2-826e-71e447f722f0
+D:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|a94c5c2a-861e-44f1-b15b-0a03ab513d51
+D:\Users\andre\Documents\PSoC Creator\4.1\Downloads ( 4.1).cylib\Downloads ( 4.1).cyprj|40a4e25b-4c45-407a-acbe-a435b5bcf851
+D:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|ca5f2e4c-ccfb-4258-acf0-d389b1f56e3e
+D:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|62ce37d7-46fd-4bd5-a5ba-b944019ab82c
+D:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|68fa2be4-1865-4094-891f-3df4eedfb7db

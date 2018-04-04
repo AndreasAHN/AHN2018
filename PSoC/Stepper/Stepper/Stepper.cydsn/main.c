@@ -7,21 +7,17 @@
  * 
  * ========================================
  */
-#include <stdio.h>
+
 #include "project.h"
 #include <stdio.h>
 #include <CyLib.h>
-#include "stepperRight.h"
-#include "stepperLeft.h"
-#include "drive.h"
 
 int status = 0;
 unsigned long hastighed = 1;
 char ledStatus = 0;
 int stepMode = 0;
 int step = 0;
-char f[36];
-uint8 x =0;
+
 
 
 CY_ISR(UART_1_Rx_Handler)
@@ -132,9 +128,8 @@ CY_ISR(UART_1_Rx_Handler)
 int main(void)
 {
     CyGlobalIntEnable; /* Enable global interrupts. */
-    int k = 0;
+    
     isr_UART_1_RX_StartEx(UART_1_Rx_Handler);
-    UART_1_Enable();
     UART_1_Start();
     UART_1_PutString("Application started\r\n");
     LED_Write(0);
@@ -142,28 +137,359 @@ int main(void)
     
     for(;;)
     {
-        /*
-        //test kode til tælning
-          if(status == 1 || status == 2)
-        {
-            turnRight();
-            
-            k++;
-            snprintf(f, sizeof(f),"verdi:  %d  \r\n", k);
-            UART_1_PutString(f);
-        }
-        */
-        runBackward();
-        turnRight();
         
-        while(1)
-        {
-            runForward();
-            turnLeft();
-        }
+        //Reset mod kortslutning
+        A1_Write(0);
+        A2_Write(0);
+        B1_Write(0);
+        B2_Write(0);
         
-        
-    
+             if(stepMode == 1) //Full mode
+            {
+                 while(status == 1)//Kører forlæns
+                    {
+                        //Step 1
+                        A1_Write(1);
+                        A2_Write(0);
+                        B1_Write(0);
+                        B2_Write(1);
+                        CyDelay(hastighed);
+                        
+                        //Step 2
+                        A1_Write(1);
+                        A2_Write(1);
+                        B1_Write(0);
+                        B2_Write(0);
+                        CyDelay(hastighed);
+                                                           
+                        //Step 3
+                        A1_Write(0);
+                        A2_Write(1);
+                        B1_Write(1);
+                        B2_Write(0);
+                        CyDelay(hastighed);
+                                    
+                                                         
+                        //Step 4
+                        A1_Write(0);
+                        A2_Write(0);
+                        B1_Write(1);
+                        B2_Write(1);
+                        CyDelay(hastighed);
+                        
+                        ledStatus = ! ledStatus;
+                        LED_Write(ledStatus);
+                        
+                        if(step == 1)
+                        {
+                          status = 0;   
+                        }
+                    }
+                    
+                    //Reset mod kortslutning
+                    A1_Write(0);
+                    A2_Write(0);
+                    B1_Write(0);
+                    B2_Write(0);
+                    
+                   while(status == 2) //Kører baglæns
+                    {
+                        //Step 1
+                        A1_Write(0);
+                        A2_Write(0);
+                        B1_Write(1);
+                        B2_Write(1);
+                        CyDelay(hastighed);
+                        
+                        //Step 2
+                        A1_Write(0);
+                        A2_Write(1);
+                        B1_Write(1);
+                        B2_Write(0);
+                        CyDelay(hastighed);
+                                                           
+                        //Step 3
+                        A1_Write(1);
+                        A2_Write(1);
+                        B1_Write(0);
+                        B2_Write(0);
+                        CyDelay(hastighed);
+                                    
+                                                         
+                        //Step 4
+                        A1_Write(1);
+                        A2_Write(0);
+                        B1_Write(0);
+                        B2_Write(1);
+                        CyDelay(hastighed);
+                        
+                        ledStatus = ! ledStatus;
+                        LED_Write(ledStatus);
+                        
+                        if(step == 1)
+                        {
+                          status = 0; 
+                          step = 0;
+                        }
+                    }
+                    
+                    //Reset mod kortslutning
+                    A1_Write(0);
+                    A2_Write(0);
+                    B1_Write(0);
+                    B2_Write(0);
+                    
+            }
+            else if(stepMode == 2) //Half mode
+            {
+                
+                while(status == 1)//Kører forlæns
+                    {
+                        //Step 1
+                        A1_Write(0);
+                        A2_Write(0);
+                        B1_Write(0);
+                        B2_Write(1);
+                        CyDelay(hastighed);
+                                    
+                        //Step 2
+                        A1_Write(1);
+                        A2_Write(0);
+                        B1_Write(0);
+                        B2_Write(1);
+                        CyDelay(hastighed);
+                                    
+                        //Step 3
+                        A1_Write(1);
+                        A2_Write(0);
+                        B1_Write(0);
+                        B2_Write(0);
+                        CyDelay(hastighed);
+                                   
+                        //Step 4
+                        A1_Write(1);
+                        A2_Write(1);
+                        B1_Write(0);
+                        B2_Write(0);
+                        CyDelay(hastighed);
+                        
+                        //Step 5
+                        A1_Write(0);
+                        A2_Write(1);
+                        B1_Write(0);
+                        B2_Write(0);
+                        CyDelay(hastighed);
+                        
+                        //Step 6
+                        A1_Write(0);
+                        A2_Write(1);
+                        B1_Write(1);
+                        B2_Write(0);
+                        CyDelay(hastighed);
+                                    
+                        //Step 7
+                        A1_Write(0);
+                        A2_Write(0);
+                        B1_Write(1);
+                        B2_Write(0);
+                        CyDelay(hastighed);
+                                    
+                        //Step 8
+                        A1_Write(0);
+                        A2_Write(0);
+                        B1_Write(1);
+                        B2_Write(1);
+                        CyDelay(hastighed);
+                                   
+                                             
+                        ledStatus = ! ledStatus;
+                        LED_Write(ledStatus);
+                        
+                        if(step == 1)
+                        {
+                          status = 0;
+                            step = 0;
+                        }
+                    }
+                    
+                    //Reset mod kortslutning
+                    A1_Write(0);
+                    A2_Write(0);
+                    B1_Write(0);
+                    B2_Write(0);
+                    
+                   while(status == 2) //Kører baglæns
+                    {
+                        //Step 1
+                        A1_Write(0);
+                        A2_Write(0);
+                        B1_Write(0);
+                        B2_Write(1);
+                        CyDelay(hastighed);
+                                    
+                        //Step 2
+                        A1_Write(0);
+                        A2_Write(0);
+                        B1_Write(1);
+                        B2_Write(1);
+                        CyDelay(hastighed);
+                                    
+                        //Step 3
+                        A1_Write(0);
+                        A2_Write(0);
+                        B1_Write(1);
+                        B2_Write(0);
+                        CyDelay(hastighed);
+                                   
+                        //Step 4
+                        A1_Write(0);
+                        A2_Write(1);
+                        B1_Write(1);
+                        B2_Write(0);
+                        CyDelay(hastighed);
+                        
+                        //Step 5
+                        A1_Write(0);
+                        A2_Write(1);
+                        B1_Write(0);
+                        B2_Write(0);
+                        CyDelay(hastighed);
+                                    
+                        //Step 6
+                        A1_Write(1);
+                        A2_Write(1);
+                        B1_Write(0);
+                        B2_Write(0);
+                        CyDelay(hastighed);
+                                    
+                        //Step 7
+                        A1_Write(1);
+                        A2_Write(0);
+                        B1_Write(0);
+                        B2_Write(0);
+                        CyDelay(hastighed);
+                                   
+                        //Step 8
+                        A1_Write(1);
+                        A2_Write(0);
+                        B1_Write(0);
+                        B2_Write(1);
+                        CyDelay(hastighed);
+                        
+                        ledStatus = ! ledStatus;
+                        LED_Write(ledStatus);
+                        
+                        if(step == 1)
+                        {
+                          status = 0;   
+                            step = 0;
+                        }
+                    }
+                    
+                    //Reset mod kortslutning
+                    A1_Write(0);
+                    A2_Write(0);
+                    B1_Write(0);
+                    B2_Write(0);
+                
+            }
+            else if(stepMode == 3) //wave mode
+            {
+                 while(status == 1)//Kører forlæns
+                    {
+                        //Step 1
+                        A1_Write(0);
+                        A2_Write(0);
+                        B1_Write(0);
+                        B2_Write(1);
+                        CyDelay(hastighed);
+                        
+                        //Step 2
+                        A1_Write(1);
+                        A2_Write(0);
+                        B1_Write(0);
+                        B2_Write(0);
+                        CyDelay(hastighed);
+                                                           
+                        //Step 3
+                        A1_Write(0);
+                        A2_Write(1);
+                        B1_Write(0);
+                        B2_Write(0);
+                        CyDelay(hastighed);
+                                    
+                                                         
+                        //Step 4
+                        A1_Write(0);
+                        A2_Write(0);
+                        B1_Write(1);
+                        B2_Write(0);
+                        CyDelay(hastighed);
+                        
+                        ledStatus = ! ledStatus;
+                        LED_Write(ledStatus);
+                        
+                        if(step == 1)
+                        {
+                          status = 0;   
+                            step = 0;
+                        }
+                    }
+                    
+                    //Reset mod kortslutning
+                    A1_Write(0);
+                    A2_Write(0);
+                    B1_Write(0);
+                    B2_Write(0);
+                    
+                   while(status == 2) //Kører baglæns
+                    {
+                        //Step 1
+                        A1_Write(0);
+                        A2_Write(0);
+                        B1_Write(0);
+                        B2_Write(1);
+                        CyDelay(hastighed);
+                        
+                        //Step 2
+                        A1_Write(0);
+                        A2_Write(0);
+                        B1_Write(1);
+                        B2_Write(0);
+                        CyDelay(hastighed);
+                                                           
+                        //Step 3
+                        A1_Write(0);
+                        A2_Write(1);
+                        B1_Write(0);
+                        B2_Write(0);
+                        CyDelay(hastighed);
+                                    
+                                                         
+                        //Step 4
+                        A1_Write(1);
+                        A2_Write(0);
+                        B1_Write(0);
+                        B2_Write(0);
+                        CyDelay(hastighed);
+                        
+                        ledStatus = ! ledStatus;
+                        LED_Write(ledStatus);
+                        
+                        if(step == 1)
+                        {
+                          status = 0;   
+                            step = 0;
+                        }
+                    }
+                    
+                    //Reset mod kortslutning
+                    A1_Write(0);
+                    A2_Write(0);
+                    B1_Write(0);
+                    B2_Write(0);
+                    
+            }
     }
     
     

@@ -42,7 +42,3 @@ set_io "B1(0)" iocell 2 6
 set_io "A2(0)" iocell 2 5
 set_io "B2(0)" iocell 2 7
 set_io "LED(0)" iocell 2 1
-set_io "A3(0)" iocell 1 6
-set_io "B3(0)" iocell 2 3
-set_io "A4(0)" iocell 2 0
-set_io "B4(0)" iocell 1 7

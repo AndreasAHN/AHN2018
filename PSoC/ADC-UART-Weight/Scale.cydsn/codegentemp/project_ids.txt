@@ -1,0 +1,6 @@
+D:\Google Drive\Aarhus Universitet\Trejde Semester\Graenseflader_til_den_fysiske_verden\LAB3\ADC-and-UART-Basic-Setup\Scale.cydsn\Scale.cyprj|f99e10ee-34cd-4e60-a558-ae950278fe13
+D:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|7bb93ba5-fdd1-4d9c-8e9d-a3729e854758
+D:\Users\andre\Documents\PSoC Creator\4.1\Downloads ( 4.1).cylib\Downloads ( 4.1).cyprj|e75e96ca-a1d0-4409-8c05-1f5ac4f44d58
+D:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|7d811814-d0bc-420c-b962-42f028a4b4fb
+D:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|46371cd2-9041-45ca-b1ed-035dbdcbb74e
+D:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|050b685b-734c-481a-af52-cb0322ad121d

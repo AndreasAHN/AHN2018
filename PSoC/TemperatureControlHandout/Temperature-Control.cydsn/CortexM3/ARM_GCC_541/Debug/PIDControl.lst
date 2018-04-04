@@ -1,0 +1,1148 @@
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccWJiggb.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"PIDControl.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.PIDControl_init,"ax",%progbits
+  20              		.align	2
+  21              		.global	PIDControl_init
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	PIDControl_init, %function
+  25              	PIDControl_init:
+  26              	.LFB0:
+  27              		.file 1 "PIDControl.c"
+   1:PIDControl.c  **** /* ========================================
+   2:PIDControl.c  ****  *
+   3:PIDControl.c  ****  * Copyright YOUR COMPANY, THE YEAR
+   4:PIDControl.c  ****  * All Rights Reserved
+   5:PIDControl.c  ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:PIDControl.c  ****  *
+   7:PIDControl.c  ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:PIDControl.c  ****  * WHICH IS THE PROPERTY OF your company.
+   9:PIDControl.c  ****  *
+  10:PIDControl.c  ****  * ========================================
+  11:PIDControl.c  **** */
+  12:PIDControl.c  **** #include "PIDControl.h"
+  13:PIDControl.c  **** 
+  14:PIDControl.c  **** static float Kp = 0;
+  15:PIDControl.c  **** static float Ki = 0;
+  16:PIDControl.c  **** static float Kd = 0;
+  17:PIDControl.c  **** static float dt = 0;
+  18:PIDControl.c  **** static float integralMax = 0;
+  19:PIDControl.c  **** static float integralMin = 0;
+  20:PIDControl.c  **** static float setPoint = 0;
+  21:PIDControl.c  **** static float integral = 0;
+  22:PIDControl.c  **** static float previousError = 0;
+  23:PIDControl.c  **** 
+  24:PIDControl.c  **** void PIDControl_init(float _Kp, float _Ki, float _Kd, float _integralMax, float _integralMin, float
+  25:PIDControl.c  **** {
+  28              		.loc 1 25 0
+  29              		.cfi_startproc
+  30              		@ args = 8, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccWJiggb.s 			page 2
+
+
+  33              	.LVL0:
+  34 0000 10B4     		push	{r4}
+  35              		.cfi_def_cfa_offset 4
+  36              		.cfi_offset 4, -4
+  26:PIDControl.c  ****     Kp = _Kp;
+  37              		.loc 1 26 0
+  38 0002 054C     		ldr	r4, .L3
+  39 0004 2060     		str	r0, [r4]	@ float
+  27:PIDControl.c  ****     Ki = _Ki;
+  40              		.loc 1 27 0
+  41 0006 6160     		str	r1, [r4, #4]	@ float
+  28:PIDControl.c  ****     Kd = _Kd;
+  42              		.loc 1 28 0
+  43 0008 A260     		str	r2, [r4, #8]	@ float
+  29:PIDControl.c  ****     integralMax = _integralMax;
+  44              		.loc 1 29 0
+  45 000a E360     		str	r3, [r4, #12]	@ float
+  30:PIDControl.c  ****     integralMin = _integralMin;
+  46              		.loc 1 30 0
+  47 000c 019B     		ldr	r3, [sp, #4]	@ float
+  48              	.LVL1:
+  49 000e 2361     		str	r3, [r4, #16]	@ float
+  31:PIDControl.c  ****     dt = _dt;
+  50              		.loc 1 31 0
+  51 0010 029B     		ldr	r3, [sp, #8]	@ float
+  52 0012 6361     		str	r3, [r4, #20]	@ float
+  32:PIDControl.c  **** }
+  53              		.loc 1 32 0
+  54 0014 10BC     		pop	{r4}
+  55              		.cfi_restore 4
+  56              		.cfi_def_cfa_offset 0
+  57              	.LVL2:
+  58 0016 7047     		bx	lr
+  59              	.L4:
+  60              		.align	2
+  61              	.L3:
+  62 0018 00000000 		.word	.LANCHOR0
+  63              		.cfi_endproc
+  64              	.LFE0:
+  65              		.size	PIDControl_init, .-PIDControl_init
+  66              		.section	.text.PIDControl_changeSetPoint,"ax",%progbits
+  67              		.align	2
+  68              		.global	PIDControl_changeSetPoint
+  69              		.thumb
+  70              		.thumb_func
+  71              		.type	PIDControl_changeSetPoint, %function
+  72              	PIDControl_changeSetPoint:
+  73              	.LFB1:
+  33:PIDControl.c  **** 
+  34:PIDControl.c  **** void PIDControl_changeSetPoint(float _setPoint)
+  35:PIDControl.c  **** {
+  74              		.loc 1 35 0
+  75              		.cfi_startproc
+  76              		@ args = 0, pretend = 0, frame = 0
+  77              		@ frame_needed = 0, uses_anonymous_args = 0
+  78              		@ link register save eliminated.
+  79              	.LVL3:
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccWJiggb.s 			page 3
+
+
+  36:PIDControl.c  ****     setPoint = _setPoint;
+  80              		.loc 1 36 0
+  81 0000 014B     		ldr	r3, .L6
+  82 0002 9861     		str	r0, [r3, #24]	@ float
+  83 0004 7047     		bx	lr
+  84              	.L7:
+  85 0006 00BF     		.align	2
+  86              	.L6:
+  87 0008 00000000 		.word	.LANCHOR0
+  88              		.cfi_endproc
+  89              	.LFE1:
+  90              		.size	PIDControl_changeSetPoint, .-PIDControl_changeSetPoint
+  91              		.global	__aeabi_fsub
+  92              		.global	__aeabi_fmul
+  93              		.global	__aeabi_fadd
+  94              		.global	__aeabi_fcmpgt
+  95              		.global	__aeabi_fcmplt
+  96              		.global	__aeabi_fdiv
+  97              		.section	.text.PIDControl_doStep,"ax",%progbits
+  98              		.align	2
+  99              		.global	PIDControl_doStep
+ 100              		.thumb
+ 101              		.thumb_func
+ 102              		.type	PIDControl_doStep, %function
+ 103              	PIDControl_doStep:
+ 104              	.LFB2:
+  37:PIDControl.c  **** }
+  38:PIDControl.c  **** 
+  39:PIDControl.c  **** float PIDControl_doStep(float systemOutput, float* proportionalPart, float* integralPart, float* de
+  40:PIDControl.c  **** {
+ 105              		.loc 1 40 0
+ 106              		.cfi_startproc
+ 107              		@ args = 0, pretend = 0, frame = 0
+ 108              		@ frame_needed = 0, uses_anonymous_args = 0
+ 109              	.LVL4:
+ 110 0000 2DE9F84F 		push	{r3, r4, r5, r6, r7, r8, r9, r10, fp, lr}
+ 111              		.cfi_def_cfa_offset 40
+ 112              		.cfi_offset 3, -40
+ 113              		.cfi_offset 4, -36
+ 114              		.cfi_offset 5, -32
+ 115              		.cfi_offset 6, -28
+ 116              		.cfi_offset 7, -24
+ 117              		.cfi_offset 8, -20
+ 118              		.cfi_offset 9, -16
+ 119              		.cfi_offset 10, -12
+ 120              		.cfi_offset 11, -8
+ 121              		.cfi_offset 14, -4
+ 122 0004 8946     		mov	r9, r1
+ 123 0006 9046     		mov	r8, r2
+ 124 0008 1F46     		mov	r7, r3
+ 125              	.LVL5:
+  41:PIDControl.c  ****     float output = 0;
+  42:PIDControl.c  ****     float proportional = 0;
+  43:PIDControl.c  ****     float derivative = 0;
+  44:PIDControl.c  ****     float currentError = 0;
+  45:PIDControl.c  ****     
+  46:PIDControl.c  ****     // calculate current error
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccWJiggb.s 			page 4
+
+
+  47:PIDControl.c  ****     currentError = setPoint - systemOutput;
+ 126              		.loc 1 47 0
+ 127 000a 214C     		ldr	r4, .L16
+ 128 000c 0146     		mov	r1, r0
+ 129              	.LVL6:
+ 130 000e A069     		ldr	r0, [r4, #24]	@ float
+ 131              	.LVL7:
+ 132 0010 FFF7FEFF 		bl	__aeabi_fsub
+ 133              	.LVL8:
+ 134 0014 0546     		mov	r5, r0
+ 135              	.LVL9:
+  48:PIDControl.c  ****     
+  49:PIDControl.c  ****     // calculate proportional part
+  50:PIDControl.c  ****     proportional = currentError;
+  51:PIDControl.c  ****     
+  52:PIDControl.c  ****     // calculate integral part
+  53:PIDControl.c  ****     integral = integral + (currentError * dt);
+ 136              		.loc 1 53 0
+ 137 0016 6669     		ldr	r6, [r4, #20]	@ float
+ 138 0018 3146     		mov	r1, r6
+ 139 001a FFF7FEFF 		bl	__aeabi_fmul
+ 140              	.LVL10:
+ 141 001e E169     		ldr	r1, [r4, #28]	@ float
+ 142 0020 FFF7FEFF 		bl	__aeabi_fadd
+ 143              	.LVL11:
+ 144 0024 E061     		str	r0, [r4, #28]	@ float
+  54:PIDControl.c  ****     
+  55:PIDControl.c  ****     // limit the integral
+  56:PIDControl.c  ****     if (integral > integralMax) integral = integralMax;
+ 145              		.loc 1 56 0
+ 146 0026 E468     		ldr	r4, [r4, #12]	@ float
+ 147 0028 2146     		mov	r1, r4
+ 148 002a FFF7FEFF 		bl	__aeabi_fcmpgt
+ 149              	.LVL12:
+ 150 002e 08B1     		cbz	r0, .L9
+ 151              		.loc 1 56 0 is_stmt 0 discriminator 1
+ 152 0030 174B     		ldr	r3, .L16
+ 153 0032 DC61     		str	r4, [r3, #28]	@ float
+ 154              	.L9:
+  57:PIDControl.c  ****     if (integral < integralMin) integral = integralMin;
+ 155              		.loc 1 57 0 is_stmt 1
+ 156 0034 164B     		ldr	r3, .L16
+ 157 0036 1C69     		ldr	r4, [r3, #16]	@ float
+ 158 0038 2146     		mov	r1, r4
+ 159 003a D869     		ldr	r0, [r3, #28]	@ float
+ 160 003c FFF7FEFF 		bl	__aeabi_fcmplt
+ 161              	.LVL13:
+ 162 0040 08B1     		cbz	r0, .L11
+ 163              		.loc 1 57 0 is_stmt 0 discriminator 1
+ 164 0042 134B     		ldr	r3, .L16
+ 165 0044 DC61     		str	r4, [r3, #28]	@ float
+ 166              	.L11:
+  58:PIDControl.c  ****     
+  59:PIDControl.c  ****     // calculate derivative part
+  60:PIDControl.c  ****     derivative = (currentError - previousError) / dt;
+ 167              		.loc 1 60 0 is_stmt 1
+ 168 0046 3146     		mov	r1, r6
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccWJiggb.s 			page 5
+
+
+ 169 0048 2846     		mov	r0, r5
+ 170 004a FFF7FEFF 		bl	__aeabi_fdiv
+ 171              	.LVL14:
+ 172 004e 8346     		mov	fp, r0
+ 173              	.LVL15:
+  61:PIDControl.c  ****     
+  62:PIDControl.c  ****     output = proportional * Kp + integral * Ki + derivative * Kd;
+ 174              		.loc 1 62 0
+ 175 0050 0F4C     		ldr	r4, .L16
+ 176 0052 2168     		ldr	r1, [r4]	@ float
+ 177 0054 2846     		mov	r0, r5
+ 178              	.LVL16:
+ 179 0056 FFF7FEFF 		bl	__aeabi_fmul
+ 180              	.LVL17:
+ 181 005a 0646     		mov	r6, r0
+ 182 005c 6168     		ldr	r1, [r4, #4]	@ float
+ 183 005e E069     		ldr	r0, [r4, #28]	@ float
+ 184 0060 FFF7FEFF 		bl	__aeabi_fmul
+ 185              	.LVL18:
+ 186 0064 0546     		mov	r5, r0
+ 187              	.LVL19:
+ 188 0066 0146     		mov	r1, r0
+ 189 0068 3046     		mov	r0, r6
+ 190 006a FFF7FEFF 		bl	__aeabi_fadd
+ 191              	.LVL20:
+ 192 006e 8246     		mov	r10, r0
+ 193 0070 A168     		ldr	r1, [r4, #8]	@ float
+ 194 0072 5846     		mov	r0, fp
+ 195 0074 FFF7FEFF 		bl	__aeabi_fmul
+ 196              	.LVL21:
+ 197 0078 0446     		mov	r4, r0
+ 198 007a 0146     		mov	r1, r0
+ 199 007c 5046     		mov	r0, r10
+ 200 007e FFF7FEFF 		bl	__aeabi_fadd
+ 201              	.LVL22:
+  63:PIDControl.c  ****     *proportionalPart = proportional * Kp;
+ 202              		.loc 1 63 0
+ 203 0082 C9F80060 		str	r6, [r9]	@ float
+  64:PIDControl.c  ****     *integralPart = integral * Ki;
+ 204              		.loc 1 64 0
+ 205 0086 C8F80050 		str	r5, [r8]	@ float
+  65:PIDControl.c  ****     *derivativePart = derivative * Kd;
+ 206              		.loc 1 65 0
+ 207 008a 3C60     		str	r4, [r7]	@ float
+  66:PIDControl.c  ****     
+  67:PIDControl.c  ****     return output;
+  68:PIDControl.c  **** }
+ 208              		.loc 1 68 0
+ 209 008c BDE8F88F 		pop	{r3, r4, r5, r6, r7, r8, r9, r10, fp, pc}
+ 210              	.LVL23:
+ 211              	.L17:
+ 212              		.align	2
+ 213              	.L16:
+ 214 0090 00000000 		.word	.LANCHOR0
+ 215              		.cfi_endproc
+ 216              	.LFE2:
+ 217              		.size	PIDControl_doStep, .-PIDControl_doStep
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccWJiggb.s 			page 6
+
+
+ 218              		.bss
+ 219              		.align	2
+ 220              		.set	.LANCHOR0,. + 0
+ 221              		.type	Kp, %object
+ 222              		.size	Kp, 4
+ 223              	Kp:
+ 224 0000 00000000 		.space	4
+ 225              		.type	Ki, %object
+ 226              		.size	Ki, 4
+ 227              	Ki:
+ 228 0004 00000000 		.space	4
+ 229              		.type	Kd, %object
+ 230              		.size	Kd, 4
+ 231              	Kd:
+ 232 0008 00000000 		.space	4
+ 233              		.type	integralMax, %object
+ 234              		.size	integralMax, 4
+ 235              	integralMax:
+ 236 000c 00000000 		.space	4
+ 237              		.type	integralMin, %object
+ 238              		.size	integralMin, 4
+ 239              	integralMin:
+ 240 0010 00000000 		.space	4
+ 241              		.type	dt, %object
+ 242              		.size	dt, 4
+ 243              	dt:
+ 244 0014 00000000 		.space	4
+ 245              		.type	setPoint, %object
+ 246              		.size	setPoint, 4
+ 247              	setPoint:
+ 248 0018 00000000 		.space	4
+ 249              		.type	integral, %object
+ 250              		.size	integral, 4
+ 251              	integral:
+ 252 001c 00000000 		.space	4
+ 253              		.text
+ 254              	.Letext0:
+ 255              		.section	.debug_info,"",%progbits
+ 256              	.Ldebug_info0:
+ 257 0000 E7010000 		.4byte	0x1e7
+ 258 0004 0400     		.2byte	0x4
+ 259 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 260 000a 04       		.byte	0x4
+ 261 000b 01       		.uleb128 0x1
+ 262 000c 52000000 		.4byte	.LASF18
+ 263 0010 0C       		.byte	0xc
+ 264 0011 85010000 		.4byte	.LASF19
+ 265 0015 9F010000 		.4byte	.LASF20
+ 266 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 267 001d 00000000 		.4byte	0
+ 268 0021 00000000 		.4byte	.Ldebug_line0
+ 269 0025 02       		.uleb128 0x2
+ 270 0026 04       		.byte	0x4
+ 271 0027 04       		.byte	0x4
+ 272 0028 7F010000 		.4byte	.LASF21
+ 273 002c 03       		.uleb128 0x3
+ 274 002d 28000000 		.4byte	.LASF2
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccWJiggb.s 			page 7
+
+
+ 275 0031 01       		.byte	0x1
+ 276 0032 18       		.byte	0x18
+ 277 0033 00000000 		.4byte	.LFB0
+ 278 0037 1C000000 		.4byte	.LFE0-.LFB0
+ 279 003b 01       		.uleb128 0x1
+ 280 003c 9C       		.byte	0x9c
+ 281 003d 96000000 		.4byte	0x96
+ 282 0041 04       		.uleb128 0x4
+ 283 0042 5F4B7000 		.ascii	"_Kp\000"
+ 284 0046 01       		.byte	0x1
+ 285 0047 18       		.byte	0x18
+ 286 0048 25000000 		.4byte	0x25
+ 287 004c 01       		.uleb128 0x1
+ 288 004d 50       		.byte	0x50
+ 289 004e 04       		.uleb128 0x4
+ 290 004f 5F4B6900 		.ascii	"_Ki\000"
+ 291 0053 01       		.byte	0x1
+ 292 0054 18       		.byte	0x18
+ 293 0055 25000000 		.4byte	0x25
+ 294 0059 01       		.uleb128 0x1
+ 295 005a 51       		.byte	0x51
+ 296 005b 04       		.uleb128 0x4
+ 297 005c 5F4B6400 		.ascii	"_Kd\000"
+ 298 0060 01       		.byte	0x1
+ 299 0061 18       		.byte	0x18
+ 300 0062 25000000 		.4byte	0x25
+ 301 0066 01       		.uleb128 0x1
+ 302 0067 52       		.byte	0x52
+ 303 0068 05       		.uleb128 0x5
+ 304 0069 F6000000 		.4byte	.LASF0
+ 305 006d 01       		.byte	0x1
+ 306 006e 18       		.byte	0x18
+ 307 006f 25000000 		.4byte	0x25
+ 308 0073 00000000 		.4byte	.LLST0
+ 309 0077 05       		.uleb128 0x5
+ 310 0078 00000000 		.4byte	.LASF1
+ 311 007c 01       		.byte	0x1
+ 312 007d 18       		.byte	0x18
+ 313 007e 25000000 		.4byte	0x25
+ 314 0082 22000000 		.4byte	.LLST1
+ 315 0086 06       		.uleb128 0x6
+ 316 0087 5F647400 		.ascii	"_dt\000"
+ 317 008b 01       		.byte	0x1
+ 318 008c 18       		.byte	0x18
+ 319 008d 25000000 		.4byte	0x25
+ 320 0091 42000000 		.4byte	.LLST2
+ 321 0095 00       		.byte	0
+ 322 0096 03       		.uleb128 0x3
+ 323 0097 38000000 		.4byte	.LASF3
+ 324 009b 01       		.byte	0x1
+ 325 009c 22       		.byte	0x22
+ 326 009d 00000000 		.4byte	.LFB1
+ 327 00a1 0C000000 		.4byte	.LFE1-.LFB1
+ 328 00a5 01       		.uleb128 0x1
+ 329 00a6 9C       		.byte	0x9c
+ 330 00a7 B9000000 		.4byte	0xb9
+ 331 00ab 07       		.uleb128 0x7
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccWJiggb.s 			page 8
+
+
+ 332 00ac E0000000 		.4byte	.LASF4
+ 333 00b0 01       		.byte	0x1
+ 334 00b1 22       		.byte	0x22
+ 335 00b2 25000000 		.4byte	0x25
+ 336 00b6 01       		.uleb128 0x1
+ 337 00b7 50       		.byte	0x50
+ 338 00b8 00       		.byte	0
+ 339 00b9 08       		.uleb128 0x8
+ 340 00ba 3B010000 		.4byte	.LASF22
+ 341 00be 01       		.byte	0x1
+ 342 00bf 27       		.byte	0x27
+ 343 00c0 25000000 		.4byte	0x25
+ 344 00c4 00000000 		.4byte	.LFB2
+ 345 00c8 94000000 		.4byte	.LFE2-.LFB2
+ 346 00cc 01       		.uleb128 0x1
+ 347 00cd 9C       		.byte	0x9c
+ 348 00ce 4B010000 		.4byte	0x14b
+ 349 00d2 05       		.uleb128 0x5
+ 350 00d3 92010000 		.4byte	.LASF5
+ 351 00d7 01       		.byte	0x1
+ 352 00d8 27       		.byte	0x27
+ 353 00d9 25000000 		.4byte	0x25
+ 354 00dd 62000000 		.4byte	.LLST3
+ 355 00e1 05       		.uleb128 0x5
+ 356 00e2 2A010000 		.4byte	.LASF6
+ 357 00e6 01       		.byte	0x1
+ 358 00e7 27       		.byte	0x27
+ 359 00e8 4B010000 		.4byte	0x14b
+ 360 00ec 90000000 		.4byte	.LLST4
+ 361 00f0 05       		.uleb128 0x5
+ 362 00f1 1D010000 		.4byte	.LASF7
+ 363 00f5 01       		.byte	0x1
+ 364 00f6 27       		.byte	0x27
+ 365 00f7 4B010000 		.4byte	0x14b
+ 366 00fb BC000000 		.4byte	.LLST5
+ 367 00ff 05       		.uleb128 0x5
+ 368 0100 67010000 		.4byte	.LASF8
+ 369 0104 01       		.byte	0x1
+ 370 0105 27       		.byte	0x27
+ 371 0106 4B010000 		.4byte	0x14b
+ 372 010a E8000000 		.4byte	.LLST6
+ 373 010e 09       		.uleb128 0x9
+ 374 010f 0D000000 		.4byte	.LASF9
+ 375 0113 01       		.byte	0x1
+ 376 0114 29       		.byte	0x29
+ 377 0115 25000000 		.4byte	0x25
+ 378 0119 14010000 		.4byte	.LLST7
+ 379 011d 09       		.uleb128 0x9
+ 380 011e 03010000 		.4byte	.LASF10
+ 381 0122 01       		.byte	0x1
+ 382 0123 2A       		.byte	0x2a
+ 383 0124 25000000 		.4byte	0x25
+ 384 0128 37010000 		.4byte	.LLST8
+ 385 012c 09       		.uleb128 0x9
+ 386 012d 14000000 		.4byte	.LASF11
+ 387 0131 01       		.byte	0x1
+ 388 0132 2B       		.byte	0x2b
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccWJiggb.s 			page 9
+
+
+ 389 0133 25000000 		.4byte	0x25
+ 390 0137 65010000 		.4byte	.LLST9
+ 391 013b 09       		.uleb128 0x9
+ 392 013c 10010000 		.4byte	.LASF12
+ 393 0140 01       		.byte	0x1
+ 394 0141 2C       		.byte	0x2c
+ 395 0142 25000000 		.4byte	0x25
+ 396 0146 37010000 		.4byte	.LLST8
+ 397 014a 00       		.byte	0
+ 398 014b 0A       		.uleb128 0xa
+ 399 014c 04       		.byte	0x4
+ 400 014d 25000000 		.4byte	0x25
+ 401 0151 0B       		.uleb128 0xb
+ 402 0152 4B7000   		.ascii	"Kp\000"
+ 403 0155 01       		.byte	0x1
+ 404 0156 0E       		.byte	0xe
+ 405 0157 25000000 		.4byte	0x25
+ 406 015b 05       		.uleb128 0x5
+ 407 015c 03       		.byte	0x3
+ 408 015d 00000000 		.4byte	Kp
+ 409 0161 0B       		.uleb128 0xb
+ 410 0162 4B6900   		.ascii	"Ki\000"
+ 411 0165 01       		.byte	0x1
+ 412 0166 0F       		.byte	0xf
+ 413 0167 25000000 		.4byte	0x25
+ 414 016b 05       		.uleb128 0x5
+ 415 016c 03       		.byte	0x3
+ 416 016d 04000000 		.4byte	Ki
+ 417 0171 0B       		.uleb128 0xb
+ 418 0172 4B6400   		.ascii	"Kd\000"
+ 419 0175 01       		.byte	0x1
+ 420 0176 10       		.byte	0x10
+ 421 0177 25000000 		.4byte	0x25
+ 422 017b 05       		.uleb128 0x5
+ 423 017c 03       		.byte	0x3
+ 424 017d 08000000 		.4byte	Kd
+ 425 0181 0B       		.uleb128 0xb
+ 426 0182 647400   		.ascii	"dt\000"
+ 427 0185 01       		.byte	0x1
+ 428 0186 11       		.byte	0x11
+ 429 0187 25000000 		.4byte	0x25
+ 430 018b 05       		.uleb128 0x5
+ 431 018c 03       		.byte	0x3
+ 432 018d 14000000 		.4byte	dt
+ 433 0191 0C       		.uleb128 0xc
+ 434 0192 5B010000 		.4byte	.LASF13
+ 435 0196 01       		.byte	0x1
+ 436 0197 12       		.byte	0x12
+ 437 0198 25000000 		.4byte	0x25
+ 438 019c 05       		.uleb128 0x5
+ 439 019d 03       		.byte	0x3
+ 440 019e 0C000000 		.4byte	integralMax
+ 441 01a2 0C       		.uleb128 0xc
+ 442 01a3 EA000000 		.4byte	.LASF14
+ 443 01a7 01       		.byte	0x1
+ 444 01a8 13       		.byte	0x13
+ 445 01a9 25000000 		.4byte	0x25
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccWJiggb.s 			page 10
+
+
+ 446 01ad 05       		.uleb128 0x5
+ 447 01ae 03       		.byte	0x3
+ 448 01af 10000000 		.4byte	integralMin
+ 449 01b3 0C       		.uleb128 0xc
+ 450 01b4 76010000 		.4byte	.LASF15
+ 451 01b8 01       		.byte	0x1
+ 452 01b9 14       		.byte	0x14
+ 453 01ba 25000000 		.4byte	0x25
+ 454 01be 05       		.uleb128 0x5
+ 455 01bf 03       		.byte	0x3
+ 456 01c0 18000000 		.4byte	setPoint
+ 457 01c4 0C       		.uleb128 0xc
+ 458 01c5 1F000000 		.4byte	.LASF16
+ 459 01c9 01       		.byte	0x1
+ 460 01ca 15       		.byte	0x15
+ 461 01cb 25000000 		.4byte	0x25
+ 462 01cf 05       		.uleb128 0x5
+ 463 01d0 03       		.byte	0x3
+ 464 01d1 1C000000 		.4byte	integral
+ 465 01d5 0D       		.uleb128 0xd
+ 466 01d6 4D010000 		.4byte	.LASF17
+ 467 01da 01       		.byte	0x1
+ 468 01db 16       		.byte	0x16
+ 469 01dc E5010000 		.4byte	0x1e5
+ 470 01e0 04       		.byte	0x4
+ 471 01e1 00000000 		.4byte	0
+ 472 01e5 0E       		.uleb128 0xe
+ 473 01e6 25000000 		.4byte	0x25
+ 474 01ea 00       		.byte	0
+ 475              		.section	.debug_abbrev,"",%progbits
+ 476              	.Ldebug_abbrev0:
+ 477 0000 01       		.uleb128 0x1
+ 478 0001 11       		.uleb128 0x11
+ 479 0002 01       		.byte	0x1
+ 480 0003 25       		.uleb128 0x25
+ 481 0004 0E       		.uleb128 0xe
+ 482 0005 13       		.uleb128 0x13
+ 483 0006 0B       		.uleb128 0xb
+ 484 0007 03       		.uleb128 0x3
+ 485 0008 0E       		.uleb128 0xe
+ 486 0009 1B       		.uleb128 0x1b
+ 487 000a 0E       		.uleb128 0xe
+ 488 000b 55       		.uleb128 0x55
+ 489 000c 17       		.uleb128 0x17
+ 490 000d 11       		.uleb128 0x11
+ 491 000e 01       		.uleb128 0x1
+ 492 000f 10       		.uleb128 0x10
+ 493 0010 17       		.uleb128 0x17
+ 494 0011 00       		.byte	0
+ 495 0012 00       		.byte	0
+ 496 0013 02       		.uleb128 0x2
+ 497 0014 24       		.uleb128 0x24
+ 498 0015 00       		.byte	0
+ 499 0016 0B       		.uleb128 0xb
+ 500 0017 0B       		.uleb128 0xb
+ 501 0018 3E       		.uleb128 0x3e
+ 502 0019 0B       		.uleb128 0xb
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccWJiggb.s 			page 11
+
+
+ 503 001a 03       		.uleb128 0x3
+ 504 001b 0E       		.uleb128 0xe
+ 505 001c 00       		.byte	0
+ 506 001d 00       		.byte	0
+ 507 001e 03       		.uleb128 0x3
+ 508 001f 2E       		.uleb128 0x2e
+ 509 0020 01       		.byte	0x1
+ 510 0021 3F       		.uleb128 0x3f
+ 511 0022 19       		.uleb128 0x19
+ 512 0023 03       		.uleb128 0x3
+ 513 0024 0E       		.uleb128 0xe
+ 514 0025 3A       		.uleb128 0x3a
+ 515 0026 0B       		.uleb128 0xb
+ 516 0027 3B       		.uleb128 0x3b
+ 517 0028 0B       		.uleb128 0xb
+ 518 0029 27       		.uleb128 0x27
+ 519 002a 19       		.uleb128 0x19
+ 520 002b 11       		.uleb128 0x11
+ 521 002c 01       		.uleb128 0x1
+ 522 002d 12       		.uleb128 0x12
+ 523 002e 06       		.uleb128 0x6
+ 524 002f 40       		.uleb128 0x40
+ 525 0030 18       		.uleb128 0x18
+ 526 0031 9742     		.uleb128 0x2117
+ 527 0033 19       		.uleb128 0x19
+ 528 0034 01       		.uleb128 0x1
+ 529 0035 13       		.uleb128 0x13
+ 530 0036 00       		.byte	0
+ 531 0037 00       		.byte	0
+ 532 0038 04       		.uleb128 0x4
+ 533 0039 05       		.uleb128 0x5
+ 534 003a 00       		.byte	0
+ 535 003b 03       		.uleb128 0x3
+ 536 003c 08       		.uleb128 0x8
+ 537 003d 3A       		.uleb128 0x3a
+ 538 003e 0B       		.uleb128 0xb
+ 539 003f 3B       		.uleb128 0x3b
+ 540 0040 0B       		.uleb128 0xb
+ 541 0041 49       		.uleb128 0x49
+ 542 0042 13       		.uleb128 0x13
+ 543 0043 02       		.uleb128 0x2
+ 544 0044 18       		.uleb128 0x18
+ 545 0045 00       		.byte	0
+ 546 0046 00       		.byte	0
+ 547 0047 05       		.uleb128 0x5
+ 548 0048 05       		.uleb128 0x5
+ 549 0049 00       		.byte	0
+ 550 004a 03       		.uleb128 0x3
+ 551 004b 0E       		.uleb128 0xe
+ 552 004c 3A       		.uleb128 0x3a
+ 553 004d 0B       		.uleb128 0xb
+ 554 004e 3B       		.uleb128 0x3b
+ 555 004f 0B       		.uleb128 0xb
+ 556 0050 49       		.uleb128 0x49
+ 557 0051 13       		.uleb128 0x13
+ 558 0052 02       		.uleb128 0x2
+ 559 0053 17       		.uleb128 0x17
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccWJiggb.s 			page 12
+
+
+ 560 0054 00       		.byte	0
+ 561 0055 00       		.byte	0
+ 562 0056 06       		.uleb128 0x6
+ 563 0057 05       		.uleb128 0x5
+ 564 0058 00       		.byte	0
+ 565 0059 03       		.uleb128 0x3
+ 566 005a 08       		.uleb128 0x8
+ 567 005b 3A       		.uleb128 0x3a
+ 568 005c 0B       		.uleb128 0xb
+ 569 005d 3B       		.uleb128 0x3b
+ 570 005e 0B       		.uleb128 0xb
+ 571 005f 49       		.uleb128 0x49
+ 572 0060 13       		.uleb128 0x13
+ 573 0061 02       		.uleb128 0x2
+ 574 0062 17       		.uleb128 0x17
+ 575 0063 00       		.byte	0
+ 576 0064 00       		.byte	0
+ 577 0065 07       		.uleb128 0x7
+ 578 0066 05       		.uleb128 0x5
+ 579 0067 00       		.byte	0
+ 580 0068 03       		.uleb128 0x3
+ 581 0069 0E       		.uleb128 0xe
+ 582 006a 3A       		.uleb128 0x3a
+ 583 006b 0B       		.uleb128 0xb
+ 584 006c 3B       		.uleb128 0x3b
+ 585 006d 0B       		.uleb128 0xb
+ 586 006e 49       		.uleb128 0x49
+ 587 006f 13       		.uleb128 0x13
+ 588 0070 02       		.uleb128 0x2
+ 589 0071 18       		.uleb128 0x18
+ 590 0072 00       		.byte	0
+ 591 0073 00       		.byte	0
+ 592 0074 08       		.uleb128 0x8
+ 593 0075 2E       		.uleb128 0x2e
+ 594 0076 01       		.byte	0x1
+ 595 0077 3F       		.uleb128 0x3f
+ 596 0078 19       		.uleb128 0x19
+ 597 0079 03       		.uleb128 0x3
+ 598 007a 0E       		.uleb128 0xe
+ 599 007b 3A       		.uleb128 0x3a
+ 600 007c 0B       		.uleb128 0xb
+ 601 007d 3B       		.uleb128 0x3b
+ 602 007e 0B       		.uleb128 0xb
+ 603 007f 27       		.uleb128 0x27
+ 604 0080 19       		.uleb128 0x19
+ 605 0081 49       		.uleb128 0x49
+ 606 0082 13       		.uleb128 0x13
+ 607 0083 11       		.uleb128 0x11
+ 608 0084 01       		.uleb128 0x1
+ 609 0085 12       		.uleb128 0x12
+ 610 0086 06       		.uleb128 0x6
+ 611 0087 40       		.uleb128 0x40
+ 612 0088 18       		.uleb128 0x18
+ 613 0089 9642     		.uleb128 0x2116
+ 614 008b 19       		.uleb128 0x19
+ 615 008c 01       		.uleb128 0x1
+ 616 008d 13       		.uleb128 0x13
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccWJiggb.s 			page 13
+
+
+ 617 008e 00       		.byte	0
+ 618 008f 00       		.byte	0
+ 619 0090 09       		.uleb128 0x9
+ 620 0091 34       		.uleb128 0x34
+ 621 0092 00       		.byte	0
+ 622 0093 03       		.uleb128 0x3
+ 623 0094 0E       		.uleb128 0xe
+ 624 0095 3A       		.uleb128 0x3a
+ 625 0096 0B       		.uleb128 0xb
+ 626 0097 3B       		.uleb128 0x3b
+ 627 0098 0B       		.uleb128 0xb
+ 628 0099 49       		.uleb128 0x49
+ 629 009a 13       		.uleb128 0x13
+ 630 009b 02       		.uleb128 0x2
+ 631 009c 17       		.uleb128 0x17
+ 632 009d 00       		.byte	0
+ 633 009e 00       		.byte	0
+ 634 009f 0A       		.uleb128 0xa
+ 635 00a0 0F       		.uleb128 0xf
+ 636 00a1 00       		.byte	0
+ 637 00a2 0B       		.uleb128 0xb
+ 638 00a3 0B       		.uleb128 0xb
+ 639 00a4 49       		.uleb128 0x49
+ 640 00a5 13       		.uleb128 0x13
+ 641 00a6 00       		.byte	0
+ 642 00a7 00       		.byte	0
+ 643 00a8 0B       		.uleb128 0xb
+ 644 00a9 34       		.uleb128 0x34
+ 645 00aa 00       		.byte	0
+ 646 00ab 03       		.uleb128 0x3
+ 647 00ac 08       		.uleb128 0x8
+ 648 00ad 3A       		.uleb128 0x3a
+ 649 00ae 0B       		.uleb128 0xb
+ 650 00af 3B       		.uleb128 0x3b
+ 651 00b0 0B       		.uleb128 0xb
+ 652 00b1 49       		.uleb128 0x49
+ 653 00b2 13       		.uleb128 0x13
+ 654 00b3 02       		.uleb128 0x2
+ 655 00b4 18       		.uleb128 0x18
+ 656 00b5 00       		.byte	0
+ 657 00b6 00       		.byte	0
+ 658 00b7 0C       		.uleb128 0xc
+ 659 00b8 34       		.uleb128 0x34
+ 660 00b9 00       		.byte	0
+ 661 00ba 03       		.uleb128 0x3
+ 662 00bb 0E       		.uleb128 0xe
+ 663 00bc 3A       		.uleb128 0x3a
+ 664 00bd 0B       		.uleb128 0xb
+ 665 00be 3B       		.uleb128 0x3b
+ 666 00bf 0B       		.uleb128 0xb
+ 667 00c0 49       		.uleb128 0x49
+ 668 00c1 13       		.uleb128 0x13
+ 669 00c2 02       		.uleb128 0x2
+ 670 00c3 18       		.uleb128 0x18
+ 671 00c4 00       		.byte	0
+ 672 00c5 00       		.byte	0
+ 673 00c6 0D       		.uleb128 0xd
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccWJiggb.s 			page 14
+
+
+ 674 00c7 34       		.uleb128 0x34
+ 675 00c8 00       		.byte	0
+ 676 00c9 03       		.uleb128 0x3
+ 677 00ca 0E       		.uleb128 0xe
+ 678 00cb 3A       		.uleb128 0x3a
+ 679 00cc 0B       		.uleb128 0xb
+ 680 00cd 3B       		.uleb128 0x3b
+ 681 00ce 0B       		.uleb128 0xb
+ 682 00cf 49       		.uleb128 0x49
+ 683 00d0 13       		.uleb128 0x13
+ 684 00d1 1C       		.uleb128 0x1c
+ 685 00d2 0A       		.uleb128 0xa
+ 686 00d3 00       		.byte	0
+ 687 00d4 00       		.byte	0
+ 688 00d5 0E       		.uleb128 0xe
+ 689 00d6 26       		.uleb128 0x26
+ 690 00d7 00       		.byte	0
+ 691 00d8 49       		.uleb128 0x49
+ 692 00d9 13       		.uleb128 0x13
+ 693 00da 00       		.byte	0
+ 694 00db 00       		.byte	0
+ 695 00dc 00       		.byte	0
+ 696              		.section	.debug_loc,"",%progbits
+ 697              	.Ldebug_loc0:
+ 698              	.LLST0:
+ 699 0000 00000000 		.4byte	.LVL0
+ 700 0004 0E000000 		.4byte	.LVL1
+ 701 0008 0100     		.2byte	0x1
+ 702 000a 53       		.byte	0x53
+ 703 000b 0E000000 		.4byte	.LVL1
+ 704 000f 1C000000 		.4byte	.LFE0
+ 705 0013 0500     		.2byte	0x5
+ 706 0015 03       		.byte	0x3
+ 707 0016 0C000000 		.4byte	integralMax
+ 708 001a 00000000 		.4byte	0
+ 709 001e 00000000 		.4byte	0
+ 710              	.LLST1:
+ 711 0022 00000000 		.4byte	.LVL0
+ 712 0026 16000000 		.4byte	.LVL2
+ 713 002a 0200     		.2byte	0x2
+ 714 002c 91       		.byte	0x91
+ 715 002d 00       		.sleb128 0
+ 716 002e 16000000 		.4byte	.LVL2
+ 717 0032 1C000000 		.4byte	.LFE0
+ 718 0036 0200     		.2byte	0x2
+ 719 0038 7D       		.byte	0x7d
+ 720 0039 00       		.sleb128 0
+ 721 003a 00000000 		.4byte	0
+ 722 003e 00000000 		.4byte	0
+ 723              	.LLST2:
+ 724 0042 00000000 		.4byte	.LVL0
+ 725 0046 16000000 		.4byte	.LVL2
+ 726 004a 0200     		.2byte	0x2
+ 727 004c 91       		.byte	0x91
+ 728 004d 04       		.sleb128 4
+ 729 004e 16000000 		.4byte	.LVL2
+ 730 0052 1C000000 		.4byte	.LFE0
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccWJiggb.s 			page 15
+
+
+ 731 0056 0200     		.2byte	0x2
+ 732 0058 7D       		.byte	0x7d
+ 733 0059 04       		.sleb128 4
+ 734 005a 00000000 		.4byte	0
+ 735 005e 00000000 		.4byte	0
+ 736              	.LLST3:
+ 737 0062 00000000 		.4byte	.LVL4
+ 738 0066 10000000 		.4byte	.LVL7
+ 739 006a 0100     		.2byte	0x1
+ 740 006c 50       		.byte	0x50
+ 741 006d 10000000 		.4byte	.LVL7
+ 742 0071 13000000 		.4byte	.LVL8-1
+ 743 0075 0100     		.2byte	0x1
+ 744 0077 51       		.byte	0x51
+ 745 0078 13000000 		.4byte	.LVL8-1
+ 746 007c 94000000 		.4byte	.LFE2
+ 747 0080 0600     		.2byte	0x6
+ 748 0082 F3       		.byte	0xf3
+ 749 0083 03       		.uleb128 0x3
+ 750 0084 F5       		.byte	0xf5
+ 751 0085 00       		.uleb128 0
+ 752 0086 25       		.uleb128 0x25
+ 753 0087 9F       		.byte	0x9f
+ 754 0088 00000000 		.4byte	0
+ 755 008c 00000000 		.4byte	0
+ 756              	.LLST4:
+ 757 0090 00000000 		.4byte	.LVL4
+ 758 0094 0E000000 		.4byte	.LVL6
+ 759 0098 0100     		.2byte	0x1
+ 760 009a 51       		.byte	0x51
+ 761 009b 0E000000 		.4byte	.LVL6
+ 762 009f 90000000 		.4byte	.LVL23
+ 763 00a3 0100     		.2byte	0x1
+ 764 00a5 59       		.byte	0x59
+ 765 00a6 90000000 		.4byte	.LVL23
+ 766 00aa 94000000 		.4byte	.LFE2
+ 767 00ae 0400     		.2byte	0x4
+ 768 00b0 F3       		.byte	0xf3
+ 769 00b1 01       		.uleb128 0x1
+ 770 00b2 51       		.byte	0x51
+ 771 00b3 9F       		.byte	0x9f
+ 772 00b4 00000000 		.4byte	0
+ 773 00b8 00000000 		.4byte	0
+ 774              	.LLST5:
+ 775 00bc 00000000 		.4byte	.LVL4
+ 776 00c0 13000000 		.4byte	.LVL8-1
+ 777 00c4 0100     		.2byte	0x1
+ 778 00c6 52       		.byte	0x52
+ 779 00c7 13000000 		.4byte	.LVL8-1
+ 780 00cb 90000000 		.4byte	.LVL23
+ 781 00cf 0100     		.2byte	0x1
+ 782 00d1 58       		.byte	0x58
+ 783 00d2 90000000 		.4byte	.LVL23
+ 784 00d6 94000000 		.4byte	.LFE2
+ 785 00da 0400     		.2byte	0x4
+ 786 00dc F3       		.byte	0xf3
+ 787 00dd 01       		.uleb128 0x1
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccWJiggb.s 			page 16
+
+
+ 788 00de 52       		.byte	0x52
+ 789 00df 9F       		.byte	0x9f
+ 790 00e0 00000000 		.4byte	0
+ 791 00e4 00000000 		.4byte	0
+ 792              	.LLST6:
+ 793 00e8 00000000 		.4byte	.LVL4
+ 794 00ec 13000000 		.4byte	.LVL8-1
+ 795 00f0 0100     		.2byte	0x1
+ 796 00f2 53       		.byte	0x53
+ 797 00f3 13000000 		.4byte	.LVL8-1
+ 798 00f7 90000000 		.4byte	.LVL23
+ 799 00fb 0100     		.2byte	0x1
+ 800 00fd 57       		.byte	0x57
+ 801 00fe 90000000 		.4byte	.LVL23
+ 802 0102 94000000 		.4byte	.LFE2
+ 803 0106 0400     		.2byte	0x4
+ 804 0108 F3       		.byte	0xf3
+ 805 0109 01       		.uleb128 0x1
+ 806 010a 53       		.byte	0x53
+ 807 010b 9F       		.byte	0x9f
+ 808 010c 00000000 		.4byte	0
+ 809 0110 00000000 		.4byte	0
+ 810              	.LLST7:
+ 811 0114 0A000000 		.4byte	.LVL5
+ 812 0118 82000000 		.4byte	.LVL22
+ 813 011c 0600     		.2byte	0x6
+ 814 011e 9E       		.byte	0x9e
+ 815 011f 04       		.uleb128 0x4
+ 816 0120 00000000 		.4byte	0
+ 817 0124 82000000 		.4byte	.LVL22
+ 818 0128 94000000 		.4byte	.LFE2
+ 819 012c 0100     		.2byte	0x1
+ 820 012e 50       		.byte	0x50
+ 821 012f 00000000 		.4byte	0
+ 822 0133 00000000 		.4byte	0
+ 823              	.LLST8:
+ 824 0137 0A000000 		.4byte	.LVL5
+ 825 013b 16000000 		.4byte	.LVL9
+ 826 013f 0600     		.2byte	0x6
+ 827 0141 9E       		.byte	0x9e
+ 828 0142 04       		.uleb128 0x4
+ 829 0143 00000000 		.4byte	0
+ 830 0147 16000000 		.4byte	.LVL9
+ 831 014b 1D000000 		.4byte	.LVL10-1
+ 832 014f 0100     		.2byte	0x1
+ 833 0151 50       		.byte	0x50
+ 834 0152 1D000000 		.4byte	.LVL10-1
+ 835 0156 66000000 		.4byte	.LVL19
+ 836 015a 0100     		.2byte	0x1
+ 837 015c 55       		.byte	0x55
+ 838 015d 00000000 		.4byte	0
+ 839 0161 00000000 		.4byte	0
+ 840              	.LLST9:
+ 841 0165 0A000000 		.4byte	.LVL5
+ 842 0169 50000000 		.4byte	.LVL15
+ 843 016d 0600     		.2byte	0x6
+ 844 016f 9E       		.byte	0x9e
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccWJiggb.s 			page 17
+
+
+ 845 0170 04       		.uleb128 0x4
+ 846 0171 00000000 		.4byte	0
+ 847 0175 50000000 		.4byte	.LVL15
+ 848 0179 56000000 		.4byte	.LVL16
+ 849 017d 0100     		.2byte	0x1
+ 850 017f 50       		.byte	0x50
+ 851 0180 56000000 		.4byte	.LVL16
+ 852 0184 90000000 		.4byte	.LVL23
+ 853 0188 0100     		.2byte	0x1
+ 854 018a 5B       		.byte	0x5b
+ 855 018b 00000000 		.4byte	0
+ 856 018f 00000000 		.4byte	0
+ 857              		.section	.debug_aranges,"",%progbits
+ 858 0000 2C000000 		.4byte	0x2c
+ 859 0004 0200     		.2byte	0x2
+ 860 0006 00000000 		.4byte	.Ldebug_info0
+ 861 000a 04       		.byte	0x4
+ 862 000b 00       		.byte	0
+ 863 000c 0000     		.2byte	0
+ 864 000e 0000     		.2byte	0
+ 865 0010 00000000 		.4byte	.LFB0
+ 866 0014 1C000000 		.4byte	.LFE0-.LFB0
+ 867 0018 00000000 		.4byte	.LFB1
+ 868 001c 0C000000 		.4byte	.LFE1-.LFB1
+ 869 0020 00000000 		.4byte	.LFB2
+ 870 0024 94000000 		.4byte	.LFE2-.LFB2
+ 871 0028 00000000 		.4byte	0
+ 872 002c 00000000 		.4byte	0
+ 873              		.section	.debug_ranges,"",%progbits
+ 874              	.Ldebug_ranges0:
+ 875 0000 00000000 		.4byte	.LFB0
+ 876 0004 1C000000 		.4byte	.LFE0
+ 877 0008 00000000 		.4byte	.LFB1
+ 878 000c 0C000000 		.4byte	.LFE1
+ 879 0010 00000000 		.4byte	.LFB2
+ 880 0014 94000000 		.4byte	.LFE2
+ 881 0018 00000000 		.4byte	0
+ 882 001c 00000000 		.4byte	0
+ 883              		.section	.debug_line,"",%progbits
+ 884              	.Ldebug_line0:
+ 885 0000 77000000 		.section	.debug_str,"MS",%progbits,1
+ 885      02002300 
+ 885      00000201 
+ 885      FB0E0D00 
+ 885      01010101 
+ 886              	.LASF1:
+ 887 0000 5F696E74 		.ascii	"_integralMin\000"
+ 887      65677261 
+ 887      6C4D696E 
+ 887      00
+ 888              	.LASF9:
+ 889 000d 6F757470 		.ascii	"output\000"
+ 889      757400
+ 890              	.LASF11:
+ 891 0014 64657269 		.ascii	"derivative\000"
+ 891      76617469 
+ 891      766500
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccWJiggb.s 			page 18
+
+
+ 892              	.LASF16:
+ 893 001f 696E7465 		.ascii	"integral\000"
+ 893      6772616C 
+ 893      00
+ 894              	.LASF2:
+ 895 0028 50494443 		.ascii	"PIDControl_init\000"
+ 895      6F6E7472 
+ 895      6F6C5F69 
+ 895      6E697400 
+ 896              	.LASF3:
+ 897 0038 50494443 		.ascii	"PIDControl_changeSetPoint\000"
+ 897      6F6E7472 
+ 897      6F6C5F63 
+ 897      68616E67 
+ 897      65536574 
+ 898              	.LASF18:
+ 899 0052 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 899      43313120 
+ 899      352E342E 
+ 899      31203230 
+ 899      31363036 
+ 900 0085 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 900      20726576 
+ 900      6973696F 
+ 900      6E203233 
+ 900      37373135 
+ 901 00b8 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 901      66756E63 
+ 901      74696F6E 
+ 901      2D736563 
+ 901      74696F6E 
+ 902              	.LASF4:
+ 903 00e0 5F736574 		.ascii	"_setPoint\000"
+ 903      506F696E 
+ 903      7400
+ 904              	.LASF14:
+ 905 00ea 696E7465 		.ascii	"integralMin\000"
+ 905      6772616C 
+ 905      4D696E00 
+ 906              	.LASF0:
+ 907 00f6 5F696E74 		.ascii	"_integralMax\000"
+ 907      65677261 
+ 907      6C4D6178 
+ 907      00
+ 908              	.LASF10:
+ 909 0103 70726F70 		.ascii	"proportional\000"
+ 909      6F727469 
+ 909      6F6E616C 
+ 909      00
+ 910              	.LASF12:
+ 911 0110 63757272 		.ascii	"currentError\000"
+ 911      656E7445 
+ 911      72726F72 
+ 911      00
+ 912              	.LASF7:
+ 913 011d 696E7465 		.ascii	"integralPart\000"
+ 913      6772616C 
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccWJiggb.s 			page 19
+
+
+ 913      50617274 
+ 913      00
+ 914              	.LASF6:
+ 915 012a 70726F70 		.ascii	"proportionalPart\000"
+ 915      6F727469 
+ 915      6F6E616C 
+ 915      50617274 
+ 915      00
+ 916              	.LASF22:
+ 917 013b 50494443 		.ascii	"PIDControl_doStep\000"
+ 917      6F6E7472 
+ 917      6F6C5F64 
+ 917      6F537465 
+ 917      7000
+ 918              	.LASF17:
+ 919 014d 70726576 		.ascii	"previousError\000"
+ 919      696F7573 
+ 919      4572726F 
+ 919      7200
+ 920              	.LASF13:
+ 921 015b 696E7465 		.ascii	"integralMax\000"
+ 921      6772616C 
+ 921      4D617800 
+ 922              	.LASF8:
+ 923 0167 64657269 		.ascii	"derivativePart\000"
+ 923      76617469 
+ 923      76655061 
+ 923      727400
+ 924              	.LASF15:
+ 925 0176 73657450 		.ascii	"setPoint\000"
+ 925      6F696E74 
+ 925      00
+ 926              	.LASF21:
+ 927 017f 666C6F61 		.ascii	"float\000"
+ 927      7400
+ 928              	.LASF19:
+ 929 0185 50494443 		.ascii	"PIDControl.c\000"
+ 929      6F6E7472 
+ 929      6F6C2E63 
+ 929      00
+ 930              	.LASF5:
+ 931 0192 73797374 		.ascii	"systemOutput\000"
+ 931      656D4F75 
+ 931      74707574 
+ 931      00
+ 932              	.LASF20:
+ 933 019f 443A5C47 		.ascii	"D:\\Google Drive\\Aarhus Universitet\\Trejde Semest"
+ 933      6F6F676C 
+ 933      65204472 
+ 933      6976655C 
+ 933      41617268 
+ 934 01cf 65725C47 		.ascii	"er\\Graenseflader_til_den_fysiske_verden\\LAB4\\Tem"
+ 934      7261656E 
+ 934      7365666C 
+ 934      61646572 
+ 934      5F74696C 
+ 935 01ff 70657261 		.ascii	"peratureControlHandout\\Temperature-Control.cydsn\000"
+ARM GAS  C:\Users\andre\AppData\Local\Temp\ccWJiggb.s 			page 20
+
+
+ 935      74757265 
+ 935      436F6E74 
+ 935      726F6C48 
+ 935      616E646F 
+ 936              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

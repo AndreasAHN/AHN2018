@@ -1,5 +1,5 @@
 # Stepper
-# 2017-10-02 23:59:30Z
+# 2017-09-14 06:45:50Z
 
 # IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
 dont_use_io iocell 1 0
@@ -14,7 +14,3 @@ set_io "B2(0)" iocell 2 7
 set_io "Rx_1(0)" iocell 12 6
 set_io "Tx_1(0)" iocell 12 7
 set_io "LED(0)" iocell 2 1
-set_io "A3(0)" iocell 1 6
-set_io "A4(0)" iocell 2 0
-set_io "B3(0)" iocell 2 3
-set_io "B4(0)" iocell 1 7
