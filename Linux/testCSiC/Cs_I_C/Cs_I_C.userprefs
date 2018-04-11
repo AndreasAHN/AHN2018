@@ -1,0 +1,13 @@
+﻿<Properties StartupItem="Cs_I_C/Cs_I_C.cproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Cs_I_C/main.c">
+    <Files>
+      <File FileName="Cs_I_C/main.c" Line="2" Column="3" />
+      <File FileName="Cs_I_C/communikation.h" Line="2" Column="25" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

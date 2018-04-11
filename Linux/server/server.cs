@@ -22,11 +22,25 @@ namespace tcp
 		/// <summary>
 		/// The PORT
 		/// </summary>
-		const int PORT = 9000;
+		const int PORT = 9003;
 		/// <summary>
 		/// The BUFSIZE
 		/// </summary>
 		const int BUFSIZE = 1000; //Må ikke sættes over jombo buffer på lan er den 9000 på wifi er den efter IEEE på 7935
+
+
+		private Communication()
+		{
+			Socket boks = openConnection(PORT);
+			Socket boks_connected = waitForClient(boks);
+
+
+
+
+
+		}
+
+
 
 
 		private Socket waitForClient(Socket Sock)
@@ -183,7 +197,9 @@ namespace tcp
 			while (true) 
 			{
 				Console.WriteLine ("Server starts...");
-				//new Communication (); //Start class
+				new Communication (); //Start class
+
+
 			}
 		}
 	}

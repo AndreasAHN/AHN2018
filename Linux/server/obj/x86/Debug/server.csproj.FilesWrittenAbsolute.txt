@@ -8,3 +8,8 @@
 /root/AHN2018/server/bin/Debug/file_server.exe
 /root/AHN2018/server/obj/x86/Debug/file_server.exe
 /root/AHN2018/server/obj/x86/Debug/file_server.exe.mdb
+/root/AHN2018/Linux/server/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/root/AHN2018/Linux/server/bin/Debug/file_server.exe.mdb
+/root/AHN2018/Linux/server/bin/Debug/file_server.exe
+/root/AHN2018/Linux/server/obj/x86/Debug/file_server.exe
+/root/AHN2018/Linux/server/obj/x86/Debug/file_server.exe.mdb
