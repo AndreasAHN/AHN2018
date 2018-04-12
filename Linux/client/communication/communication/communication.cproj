@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{1AF3883C-290B-4BE7-9724-A8ECAD769DF0}</ProjectGuid>
     <Compiler>
-      <Compiler ctype="GppCompiler" xmlns="" />
+      <Compiler ctype="GppCompiler" />
     </Compiler>
     <Language>CPP</Language>
     <Target>Bin</Target>
@@ -30,5 +30,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="main.cpp" />
+    <Compile Include="protocol.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="protocol.h" />
   </ItemGroup>
 </Project>

@@ -112,7 +112,7 @@ namespace tcp
 			return decoded;
 		}
 
-		private int decodeMessageInt(byte[] msg)
+		private int decodeMessageInt-(byte[] msg)
 		{
 			int decoded = BitConverter.ToInt32(msg, 0);
 			return decoded;

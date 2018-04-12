@@ -1,8 +1,10 @@
 ﻿<Properties StartupItem="communication/communication.cproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="communication/main.cpp">
+  <MonoDevelop.Ide.Workbench ActiveDocument="communication/protocol.cpp">
     <Files>
-      <File FileName="communication/main.cpp" Line="21" Column="34" />
+      <File FileName="communication/main.cpp" Line="66" Column="5" />
+      <File FileName="communication/protocol.cpp" Line="1" Column="1" />
+      <File FileName="communication/protocol.h" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
