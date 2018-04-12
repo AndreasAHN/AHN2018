@@ -82,8 +82,8 @@ SIGNAL(TIMER1_COMPA_vect)
 
 //how many clients should be able to telnet to this ESP8266
 #define MAX_SRV_CLIENTS 1
-const char* ssid = "Nielsen-Klanen";
-const char* password = "NiElSeN-KlAnEn132Hervert48";
+const char* ssid = "";
+const char* password = "";
 
 WiFiServer server(23);
 WiFiClient serverClients[MAX_SRV_CLIENTS];
